@@ -1,0 +1,19 @@
+{
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.1",
+    "@emotion/primitives": "^10.0.1",
+    "emotion": "^10.0.1",
+    "next": "^7.0.2",
+    "react": "^16.6.3",
+    "react-art": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-native-web": "^0.9.8",
+    "react-primitives": "^0.7.0"
+  }
+}
