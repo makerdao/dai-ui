@@ -1,9 +1,10 @@
 {
-  "name": "create-next-example-app",
+  "name": "makerdao-design-system-web",
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
     "@emotion/core": "^10.0.1",
