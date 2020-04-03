@@ -1,4 +1,4 @@
-export {
+import {
   base,
   system,
   funk,
@@ -12,3 +12,7 @@ export {
   bulma,
   tailwind
 } from "@theme-ui/presets";
+
+import MakerDefault from '../../../default-ds-tokens/src/index';
+
+export {MakerDefault, base, system, funk, future, roboto};

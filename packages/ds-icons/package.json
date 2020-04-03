@@ -1,0 +1,26 @@
+{
+  "name": "ds-icons",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Adrian le Bas <adrianleb@gmail.com>",
+  "homepage": "https://github.com/makerdao/design-system#readme",
+  "license": "ISC",
+  "main": "lib/ds-icons.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makerdao/design-system.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/makerdao/design-system/issues"
+  }
+}

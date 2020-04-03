@@ -3,9 +3,9 @@ module.exports = {
   outputPath: './dist/playroom',
 
   // Optional:
-  title: 'Theme-UI Starter Playground',
+  title: 'Maker Style Playground',
   themes: './src/themes',
-  frameComponent: 'src/FrameComponent.jsx',
+  frameComponent: './src/FrameComponent.jsx',
   widths: [320, 375, 768, 1024],
   port: 9000,
   openBrowser: true,
