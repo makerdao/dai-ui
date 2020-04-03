@@ -14,10 +14,10 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "playroom": "^0.14.5"
+    "playroom": "^0.16.1"
   },
   "scripts": {
     "playroom:start": "playroom start",
-    "playroom:build": "playroom build"
+    "build": "playroom build"
   }
 }

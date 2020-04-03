@@ -1,6 +1,6 @@
 module.exports = {
   components: '@theme-ui/components',
-  outputPath: './dist/playroom',
+  outputPath: './dist',
 
   // Optional:
   title: 'Maker Style Playground',
@@ -9,6 +9,7 @@ module.exports = {
   widths: [320, 375, 768, 1024],
   port: 9000,
   openBrowser: true,
+  baseUrl: '/packages/playroom/',
   exampleCode: `
     <Heading>
       Hello World!
