@@ -1,0 +1,16 @@
+0 silly argv { _: [ 'create' ], lernaVersion: '3.20.2', '$0': 'lerna', name: 'web' }
+1 notice cli v3.20.2
+2 verbose rootPath /Users/ad/dev/makerdao/design-system
+3 error Error: canceled
+3 error     at Interface.<anonymous> (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/read/lib/read.js:66:13)
+3 error     at Interface.emit (events.js:196:13)
+3 error     at Interface._ttyWrite (readline.js:877:16)
+3 error     at ReadStream.onkeypress (readline.js:189:10)
+3 error     at ReadStream.emit (events.js:196:13)
+3 error     at emitKeys (internal/readline.js:424:14)
+3 error     at emitKeys.next (<anonymous>)
+3 error     at ReadStream.onData (readline.js:1145:36)
+3 error     at ReadStream.emit (events.js:196:13)
+3 error     at addChunk (_stream_readable.js:290:12)
+3 error     at readableAddChunk (_stream_readable.js:271:11)
+3 error     at ReadStream.Readable.push (_stream_readable.js:226:10)

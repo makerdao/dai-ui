@@ -1,0 +1,23 @@
+{
+  "name": "themeui-playroom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.3",
+    "@theme-ui/components": "^0.2.50",
+    "@theme-ui/presets": "^0.2.44",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "theme-ui": "^0.2.52"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "playroom": "^0.14.5"
+  },
+  "scripts": {
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build"
+  }
+}
