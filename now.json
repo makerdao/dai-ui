@@ -1,5 +1,0 @@
-{
-  "version": 2,
-  "alias": "makerdao-design-system-staging",
-  "builds": [{ "src": "web/package.json", "use": "@now/next" }]
-}
