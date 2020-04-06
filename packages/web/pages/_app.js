@@ -1,9 +1,9 @@
-import React from 'react'
-import App from 'next/app'
-import { ThemeProvider, Styled } from 'theme-ui'
+import React from 'react';
+import App from 'next/app';
+import { ThemeProvider, Styled } from 'theme-ui';
 
-import Header from '../components/Header'
-import theme from '../src/theme'
+import Header from '../components/Header';
+import { selectors, sysAPI } from '../stores/system';
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -19,16 +19,28 @@ class MyApp extends App {
   // }
 
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
+    // const currentTheme = useSystemStore(selectors.currentTheme);
+    const currentTheme = selectors.currentTheme({
+      currentTheme: sysAPI.getState().currentTheme,
+    });
+
+    console.log(
+      currentTheme,
+      'here',
+      sysAPI.getState().currentTheme,
+      selectors
+    );
+
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={currentTheme}>
         <Header />
         <Styled.root>
           <Component {...pageProps} />
         </Styled.root>
       </ThemeProvider>
-    )
+    );
   }
 }
 
-export default MyApp
+export default MyApp;

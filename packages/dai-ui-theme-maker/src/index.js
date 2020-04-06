@@ -5,8 +5,8 @@ export default {
 
   breakpoints: ['40em', '52em', '64em'],
 
-  space: [0, 4, 8, 12, 14, 16, 24, 32, 64, 128, 256, 512],
-  sizes: [0, 4, 8, 12, 14, 16, 24, 32, 64, 128, 256, 512],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
       '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
@@ -15,7 +15,7 @@ export default {
     monospace: 'monospace'
   },
 
-  fontSizes: [11, 13, 14, 15, 16, 18, 20, 24, 32, 48, 64, 96],
+  fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
 
   fontWeights: {
     body: 400,
@@ -67,9 +67,9 @@ export default {
     primary: {
       outline: 'none',
       fontFamily: 'body',
-      fontSize: 4,
-      px: 6,
-      py: 3,
+      fontSize: 2,
+      px: 4,
+      py: 2,
       color: 'white',
       fontWeight: 'semiBold',
       letterSpacing: '0.03em',
@@ -109,8 +109,8 @@ export default {
       variant: 'text.caps',
       letterSpacing: '0.05em',
       cursor: 'pointer',
-      py: 2,
-      px: 4,
+      py: 1,
+      px: 3,
       color: 'white',
       bg: 'primary',
       border: '1px solid',
@@ -192,7 +192,7 @@ export default {
       fontSize: 8
     },
     boldBody: {
-      fontSize: 4,
+      fontSize: 3,
       fontWeight: 'semiBold',
       letterSpacing: '0.3px'
     },
@@ -255,7 +255,7 @@ export default {
     roundedCard: {
       border: '1px solid',
       borderColor: 'border',
-      p: 6,
+      p: 3,
       borderRadius: 6,
       bg: 'white'
     },
