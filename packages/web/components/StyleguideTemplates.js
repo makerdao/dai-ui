@@ -4,65 +4,87 @@ import {
   useThemeUI,
   Button,
   Text,
-  Textarea,
   Box,
-  Card,
+  Flex,
   Grid,
   Link,
 } from 'theme-ui';
 
 const WrappedButton = ({ variant }) => {
   return (
-    <Grid gap={2} columns={1}>
-      <Text variant="boldBody" pb={2}>
-        {variant}
-      </Text>
-      <Textarea rows={1}>{`<Button variant="${variant}" />`}</Textarea>
-      <Box>
-      <Button variant={variant}>Click Me! </Button>
+    <Flex
+      sx={{
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
+      <Flex
+        sx={{
+          mb: 'auto',
+        }}
+      >
+        <Button variant={variant}>Click Me! </Button>
+      </Flex>
+      <Box mt={3}>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="small">{`<Button variant="${variant}" />`}</Text>
       </Box>
-    </Grid>
+    </Flex>
   );
 };
 
 const WrappedText = ({ variant }) => {
   return (
-    <Grid gap={2} columns={1}>
-      <Text variant="boldBody" pb={2}>
-        {variant}
+    <Flex
+      sx={{
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
+      <Text variant={variant} mb="auto">
+        Hello World
       </Text>
-      <Textarea rows={1}>{`<Text variant="${variant}" />`}</Textarea>
-      <Text variant={variant}>Hello World</Text>
-    </Grid>
+
+      <Box mt={3}>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="small">{`<Text variant="${variant}" />`}</Text>
+      </Box>
+    </Flex>
   );
 };
 
 const WrappedLinks = ({ variant }) => {
   return (
-    <Grid gap={2} columns={1}>
-      <Text variant="boldBody" pb={2}>
-        {variant}
-      </Text>
-      <Textarea rows={1}>{`<Link variant="${variant}" />`}</Textarea>
+    <Flex
+      sx={{
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
       <Link variant={variant}>Anchors are a page's best friend</Link>
-    </Grid>
+
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="small">{`<Link variant="${variant}" />`}</Text>
+      </Box>
+    </Flex>
   );
 };
 
 const WrappedColor = ({ variant, variants }) => {
   return (
-    <Grid gap={2} columns={1}>
-      <Text variant="boldBody" pb={1}>
-        {variant}
-      </Text>
-      <Text>{variants[variant]}</Text>
+    <Grid gap={2} columns={1} p={2}>
       <Box
         sx={{
           width: 6,
-          height: 6,
+          height: 4,
           bg: variant,
         }}
       ></Box>
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody">{variants[variant]}</Text>
+      </Box>
     </Grid>
   );
 };

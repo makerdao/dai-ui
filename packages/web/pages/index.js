@@ -21,23 +21,29 @@ export default () => {
   const parsedTheme = parseTheme(t.theme, themeTemplateMapping);
 
   return (
-    <Container
-      sx={{
-        maxWidth: 1140,
-      }}
-    >
+    <Container>
       {Object.keys(parsedTheme).map((k) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
+        const isStyleguide = ['colors', 'space'].includes(k);
+        const isTextVariants = k === 'text';
         return (
           <Box pb={6}>
-            <Heading pb={4}>{k}</Heading>
-            <Grid gap={2} columns={4}>
+            <Heading
+              variant="h2"
+              pb={4}
+              sx={{
+                textTransform: 'capitalize',
+              }}
+            >
+              {k}
+            </Heading>
+            <Grid gap={2} columns={isTextVariants ? 2 : 4}>
               {parsedTheme[k].map((el) => {
                 return (
                   <Box
                     sx={{
-                      variant: 'styles.roundedCard',
+                      variant: isStyleguide ? '' : 'styles.roundedCard',
                     }}
                   >
                     {el}

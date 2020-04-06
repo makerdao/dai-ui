@@ -20,18 +20,11 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    // const currentTheme = useSystemStore(selectors.currentTheme);
+
+    // TODO this is not really needed for now?
     const currentTheme = selectors.currentTheme({
       currentTheme: sysAPI.getState().currentTheme,
     });
-
-    console.log(
-      currentTheme,
-      'here',
-      sysAPI.getState().currentTheme,
-      selectors
-    );
-
     return (
       <ThemeProvider theme={currentTheme}>
         <Header />

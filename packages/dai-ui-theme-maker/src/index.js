@@ -1,5 +1,5 @@
 
-export default {
+const theme = {
   useBorderBox: true,
   useBodyStyles: true,
 
@@ -7,6 +7,7 @@ export default {
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+
   fonts: {
     body:
       '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
@@ -342,3 +343,7 @@ export default {
     // },
   }
 };
+
+theme.sizes.container = 1140;
+
+export default theme;
