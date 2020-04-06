@@ -13,6 +13,6 @@ import {
   tailwind
 } from "@theme-ui/presets";
 
-import MakerDefault from '../../../default-ds-tokens/src/index';
+import MakerDefault from '../../../dai-ui-theme-maker/src/index';
 
 export {MakerDefault, base, system, funk, future, roboto};
