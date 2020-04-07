@@ -34,7 +34,10 @@ const theme = {
   colors: {
     text: '#231536',
     background: '#F6F8F9',
+    muted: '#d4d9e1',
     primary: '#1AAB9B',
+    accent: '#447afb',
+    highlight: '#e7fcfa',
     primaryHover: '#139D8D',
     primaryActive: '#098C7D',
     lightGreen: '#B6EDE7',
