@@ -89,6 +89,39 @@ const WrappedColor = ({ variant, variants }) => {
   );
 };
 
+const WrappedSizes = ({ variant, variants }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Box
+        sx={{
+          width: 6,
+          height: 4,
+          width: variant,
+          height: 3,
+          bg: "primary",
+        }}
+      ></Box>
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody">{variants[variant]}px</Text>
+      </Box>
+    </Grid>
+  );
+};
+
+const WrappedFontSizes = ({ variant, variants }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody" sx={{
+          fontSize: variant
+        }}>{variants[variant]}px</Text>
+      </Box>
+    </Grid>
+  );
+};
+
 export const themeVariants = ['buttons', 'text', 'links'];
 
 export const themeTemplateMapping = {
@@ -97,5 +130,11 @@ export const themeTemplateMapping = {
   links: (variant) => <WrappedLinks variant={variant} />,
   colors: (variant, variants) => (
     <WrappedColor variant={variant} variants={variants} />
+  ),
+  fontSizes: (variant, variants) => (
+    <WrappedFontSizes variant={variant} variants={variants} />
+  ),
+  sizes: (variant, variants) => (
+    <WrappedSizes variant={variant} variants={variants} />
   ),
 };

@@ -25,8 +25,13 @@ export default () => {
       {Object.keys(parsedTheme).map((k) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
-        const isStyleguide = ['colors', 'space'].includes(k);
+        const isStyleguide = ['colors', 'space', 'fontSizes', 'sizes'].includes(
+          k
+        );
         const isTextVariants = k === 'text';
+        const isFontSizesVariants = k === 'fontSizes';
+        const isSizesVariants = k === 'sizes';
+
         return (
           <Box pb={6}>
             <Heading
@@ -38,7 +43,22 @@ export default () => {
             >
               {k}
             </Heading>
-            <Grid gap={2} columns={isTextVariants ? 2 : 4}>
+            <Grid
+              gap={2}
+              columns={
+                isTextVariants
+                  ? 2
+                  : isFontSizesVariants
+                  ? "repeat(12,auto)"
+                  : isSizesVariants
+                  ? "repeat(9,auto)"
+                  : 4
+              }
+              sx={{
+                overflow: 'hidden'
+
+              }}
+            >
               {parsedTheme[k].map((el) => {
                 return (
                   <Box
