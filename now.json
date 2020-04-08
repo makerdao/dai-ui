@@ -2,20 +2,16 @@
   "name": "design system",
   "version": 2,
   "public": false,
-  "files": [".babelrc", "package-lock.json", "packages"],
   "builds": [
     {
       "src": "packages/playroom/package.json",
       "use": "@now/static-build",
-      "config": {"distDir": "dist"}
+      "config": { "distDir": "dist" }
     },
     { "src": "packages/web/package.json", "use": "@now/next" }
-
-   
   ],
   "routes": [
-    {"src": "/playroom(/.*)?", "dest": "/packages/playroom/index.html"},
-    {"src": "/(/.*)?", "dest": "/packages/web/$1"}
-
+    { "src": "/playroom(/.*)?", "dest": "/packages/playroom/index.html" },
+    { "src": "/(/.*)?", "dest": "/packages/web/$1" }
   ]
 }
