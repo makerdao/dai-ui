@@ -30,18 +30,18 @@ export default function Header() {
                 // px: [4, 6]
               }}
             >
-              Home
+              Styleguide
             </NavLink>
           </Link>
-          <Link href="/components">
+          <Link href="/recipes">
             <NavLink
-              href="/components"
+              href="/recipes"
               p={2}
               sx={{
                 cursor: 'default',
               }}
             >
-              Components
+              Recipes
             </NavLink>
           </Link>
           <Link href="/playroom">
