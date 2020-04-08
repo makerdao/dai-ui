@@ -80,6 +80,7 @@ const Components = () => {
                 maxHeight: 6,
                 height: 6,
                 overflow: 'scroll',
+                zoom: 1 / 2,
                 mb: 4
               }}>
               <LiveProvider
