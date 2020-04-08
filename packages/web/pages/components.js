@@ -154,7 +154,17 @@ const Components = () => {
   return (
     <Container>
       <Box m="2">
-        <NextLink href="/playroom">Edit This</NextLink>
+        <NextLink href="/playroom" passHref>
+          <Link
+            target="_blank"
+            sx={{
+              cursor: 'pointer',
+              textDecoration: 'underline',
+            }}
+          >
+            Edit This
+          </Link>
+        </NextLink>
       </Box>
       <PlayroomComponents />
     </Container>

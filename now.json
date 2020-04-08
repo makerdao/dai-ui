@@ -12,6 +12,6 @@
   ],
   "routes": [
     { "src": "/playroom(/.*)?", "dest": "/packages/playroom/index.html" },
-    { "src": "/(/.*)?", "dest": "/packages/web/$1" }
+    { "src": "/(.*)?", "dest": "/packages/web/$1" }
   ]
 }
