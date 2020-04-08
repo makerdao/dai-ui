@@ -21,7 +21,30 @@ export default function Header() {
             mr: [null, 6],
           }}
         >
-          <Link href="/playroom" target="_blank">
+          <Link href="/">
+            <NavLink
+              href="/"
+              p={2}
+              sx={{
+                cursor: 'default',
+                // px: [4, 6]
+              }}
+            >
+              Home
+            </NavLink>
+          </Link>
+          <Link href="/components">
+            <NavLink
+              href="/components"
+              p={2}
+              sx={{
+                cursor: 'default',
+              }}
+            >
+              Components
+            </NavLink>
+          </Link>
+          <Link href="/playroom">
             <NavLink
               target="_blank"
               href="/playroom"
