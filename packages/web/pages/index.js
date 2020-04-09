@@ -22,7 +22,7 @@ export default () => {
 
   return (
     <Container>
-      {Object.keys(parsedTheme).map((k) => {
+      {Object.keys(parsedTheme).map((k, key) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
         const isStyleguide = ['colors', 'space', 'fontSizes', 'sizes'].includes(
@@ -33,7 +33,7 @@ export default () => {
         const isSizesVariants = k === 'sizes';
 
         return (
-          <Box pb={6}>
+          <Box pb={6} key={key}>
             <Heading
               variant="h2"
               pb={4}
@@ -59,16 +59,10 @@ export default () => {
 
               }}
             >
-              {parsedTheme[k].map((el) => {
-                return (
-                  <Box
-                    sx={{
-                      variant: isStyleguide ? '' : 'styles.roundedCard',
-                    }}
-                  >
-                    {el}
-                  </Box>
-                );
+              {parsedTheme[k].map((el, key) => {
+                const Wrapper = isStyleguide ? Box : Card
+
+                return <Wrapper key={key}>{el}</Wrapper>;
               })}
             </Grid>
           </Box>
