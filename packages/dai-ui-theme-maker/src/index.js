@@ -4,32 +4,6 @@ const theme = {
 
   breakpoints: ['40em', '52em', '64em'],
 
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-
-  fonts: {
-    body:
-      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
-    heading:
-      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
-    monospace: 'monospace',
-  },
-
-  fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
-
-  fontWeights: {
-    body: 400,
-    heading: 700,
-    bold: 700,
-    semiBold: 500,
-  },
-
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-    tight: 1.05,
-    loose: 1.2,
-  },
   colors: {
     text: '#231536',
     background: '#F6F8F9',
@@ -54,6 +28,8 @@ const theme = {
     orange: '#E67002',
     lightOrange: '#FFF9ED',
     borderOrange: '#FBCC5F',
+    red1: '#cd532d',
+    orange1: '#e47f09'
 
     // text: '#000',
     // background: '#fff',
@@ -62,8 +38,72 @@ const theme = {
     // muted: '#f6f6f6',
   },
 
+  
+  fonts: {
+    body:
+      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
+    heading:
+      '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
+    monospace: 'monospace',
+  },
+
+  fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
+
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+    semiBold: 500,
+  },
+
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+    tight: 1.05,
+    loose: 1.2,
+  },
+
   borders: {
     light: '1px solid',
+  },
+
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+
+
+  radii: {
+    small: 4,
+    medium: 6,
+    roundish: 12,
+    round: 24,
+  },
+
+  shadows: {
+    floater: '0 0 8px rgba(0, 0, 0, 0.125)',
+    deep: '2px 2px 8px rgba(0, 0, 0, 0.925)',
+
+  },
+  badges: {
+    primary: {
+      py: 1,
+      px: 4,
+      borderRadius: 'roundish',
+      variant: 'text.caps',
+      color: 'primary',
+      bg: 'white',
+      border: '1px solid',
+      borderColor: 'primary'
+    },
+    warning: {
+      variant: 'badges.primary',
+      borderColor: 'orange1',
+      color: 'orange1'
+    },
+    danger: {
+      variant: 'badges.primary',
+      borderColor: 'red1',
+      color: 'red1'
+    },
   },
 
   buttons: {
@@ -171,7 +211,7 @@ const theme = {
       borderStyle: 'solid',
       borderColor: 'border',
       bg: 'white',
-      borderRadius: 4,
+      borderRadius: 'small',
       fontSize: 4,
       py: 1,
       px: 3,
@@ -189,7 +229,7 @@ const theme = {
     },
     input: {
       outline: 'none',
-      borderRadius: 4,
+      borderRadius: 'small',
       borderColor: 'border',
       color: 'muted',
       p: 2,
@@ -209,7 +249,7 @@ const theme = {
     },
     slider: {
       height: '2px',
-      borderRadius: 4,
+      borderRadius: 'small',
       color: 'blackThree',
     },
     sliderActive: {
@@ -223,7 +263,7 @@ const theme = {
       border: '1px solid',
       borderColor: 'border',
       p: 3,
-      borderRadius: 6,
+      borderRadius: 'medium',
       bg: 'white',
     },
   },
@@ -322,7 +362,7 @@ const theme = {
     statusBox: {
       layout: {
         border: '1px solid',
-        borderRadius: 6,
+        borderRadius: 'medium',
         fontSize: 2,
         fontWeight: 'bold',
         py: 3,

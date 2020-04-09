@@ -25,12 +25,18 @@ export default () => {
       {Object.keys(parsedTheme).map((k, key) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
-        const isStyleguide = ['colors', 'space', 'fontSizes', 'sizes'].includes(
-          k
-        );
+        const isStyleguide = [
+          'colors',
+          'space',
+          'fontSizes',
+          'sizes',
+          'radii','shadows', 'badges', 
+          'fonts',
+        ].includes(k);
         const isTextVariants = k === 'text';
         const isFontSizesVariants = k === 'fontSizes';
         const isSizesVariants = k === 'sizes';
+        const isFonts = k === 'fonts';
 
         return (
           <Box pb={6} key={key}>
@@ -49,18 +55,19 @@ export default () => {
                 isTextVariants
                   ? 2
                   : isFontSizesVariants
-                  ? "repeat(12,auto)"
+                  ? 'repeat(12,auto)'
                   : isSizesVariants
-                  ? "repeat(9,auto)"
+                  ? 'repeat(9,auto)'
+                  : isFonts
+                  ? 1
                   : 4
               }
               sx={{
-                overflow: 'hidden'
-
+                overflow: 'hidden',
               }}
             >
               {parsedTheme[k].map((el, key) => {
-                const Wrapper = isStyleguide ? Box : Card
+                const Wrapper = isStyleguide ? Box : Card;
 
                 return <Wrapper key={key}>{el}</Wrapper>;
               })}

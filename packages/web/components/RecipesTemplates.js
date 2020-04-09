@@ -64,7 +64,7 @@ sx={{
 <Card
   sx={{
     boxShadow: "0 1px 2px rgba(90, 90, 90, 0.06)",
-    borderRadius: 24
+    borderRadius: 'round'
   }}
 >
   <Flex
@@ -267,8 +267,8 @@ sx={{
           sx={{
             maxWidth: 256,
             padding: 2,
-            borderRadius: 4,
-            boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+            borderRadius: 'small',
+            boxShadow: 'floater',
           }}
         >
           <Embed src="https://www.youtube.com/embed/GNCd_ERZvZM" />

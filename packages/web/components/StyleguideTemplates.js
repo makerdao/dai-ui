@@ -3,6 +3,7 @@ import {
   Styled,
   useThemeUI,
   Button,
+  Badge,
   Text,
   Box,
   Flex,
@@ -32,6 +33,31 @@ const WrappedButton = ({ variant }) => {
     </Flex>
   );
 };
+
+
+const WrappedBadge = ({ variant }) => {
+  return (
+    <Flex
+      sx={{
+        flexDirection: 'column',
+        height: '100%',
+      }}
+    >
+      <Flex
+        sx={{
+          mb: 'auto',
+        }}
+      >
+        <Badge variant={variant}> Winning Proposal </Badge>
+      </Flex>
+      <Box mt={3}>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="small">{`<Badge variant="${variant}" />`}</Text>
+      </Box>
+    </Flex>
+  );
+};
+
 
 const WrappedText = ({ variant }) => {
   return (
@@ -109,6 +135,44 @@ const WrappedSizes = ({ variant, variants }) => {
   );
 };
 
+const WrappedRadii = ({ variant, variants }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Box
+        sx={{
+          width: 5,
+          height: 4,
+          borderRadius: variant,
+          bg: "primary",
+        }}
+      ></Box>
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody">{variants[variant]}px</Text>
+      </Box>
+    </Grid>
+  );
+};
+
+const WrappedShadows = ({ variant, variants }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Box
+        sx={{
+          width: 5,
+          height: 4,
+          boxShadow: variant,
+          bg: "primary",
+        }}
+      ></Box>
+      <Box>
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody">{variants[variant]}</Text>
+      </Box>
+    </Grid>
+  );
+};
+
 const WrappedFontSizes = ({ variant, variants }) => {
   return (
     <Grid gap={2} columns={1} p={2}>
@@ -122,17 +186,46 @@ const WrappedFontSizes = ({ variant, variants }) => {
   );
 };
 
+const WrappedFonts = ({ variant, variants }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Box>
+
+        <Text variant="boldBody">{variant}</Text>
+        <Text variant="boldBody" sx={{
+          fontSize: 6,
+          fontFamily: variant
+        }}>{variants[variant]}</Text>
+
+      </Box>
+    </Grid>
+  );
+};
+
+
+
 export const themeVariants = ['buttons', 'text', 'links'];
 
 export const themeTemplateMapping = {
   buttons: (variant) => <WrappedButton variant={variant} />,
+  badges: (variant) => <WrappedBadge variant={variant} />,
   text: (variant) => <WrappedText variant={variant} />,
   links: (variant) => <WrappedLinks variant={variant} />,
   colors: (variant, variants) => (
     <WrappedColor variant={variant} variants={variants} />
   ),
+  radii: (variant, variants) => (
+    <WrappedRadii variant={variant} variants={variants} />
+    
+  ),
   fontSizes: (variant, variants) => (
     <WrappedFontSizes variant={variant} variants={variants} />
+  ),
+  fonts: (variant, variants) => (
+    <WrappedFonts variant={variant} variants={variants} />
+  ),
+  shadows: (variant, variants) => (
+    <WrappedShadows variant={variant} variants={variants} />
   ),
   sizes: (variant, variants) => (
     <WrappedSizes variant={variant} variants={variants} />
