@@ -7,26 +7,20 @@ export default [
   [
     'Forms',
     'Forms with labels and error state.',
-    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIBmQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AKKKAFupgBXALaEAglCgYYNGkgD0ewyYJaxEgAYkYwdIQAbpgUaEoMuCAAZmF0AHSqAjaKiZqBQQCS+FmK2N5FJXla3qHhVSRe8koqahoB2k3Kqur1Qb7GZpbW9k4ubh7e-f4y1bUR0ZRxignJqRnF2bnt+UgV2WVee6Xb2l5z9d6dLT0nqApdrb0kU4NWbiPOru6ePgYDJ0E5lEYksVilwusSgAROKsdRbGaBXYbUrlFFPGqpDEAFXCilojGYhDswgADBJxMDFvFEjQ7GgjEYYfg4RgEfliKYMBgIBhid80HC2BB3IQ3jAAQ1cXRjojLvdrm0ZN5yFRpJdMDgCCAADQgIZ2dwIADaIAAsmgANbqKEwJJoGxGRQgAC6ep4VEsNBNIgATKSdQB2ABsAA4XeIgA',
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIBmQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AKKKAFupgBXALaEAglCgYYNGkgD0ewyYJaxEgAkvgCNorY3qHhkQHaXvJKKmoa8UFJyqrqmoG6BsZmltb2Ti5uHt6+henaMRGEsABmaDZGigBqaEY2MAy4IAAiMC1tioQAKjB0igNRXvVxMkGJClmpuRlrKTm1QdUm5lZupc6u7p4+Bf7LdWENAG6YFGhK-SCqsYOvrOpz0fcloESFMZrRGMxCHZhAAGCTiQhPSivRTvGh2bpGb74X4YOZ7WSmDAYCAYKEXNC-NgQdyEY4wAneUFAhKZHZpGTechUaTedBYaQgAA0IGKdncCAA2iAALJoADW6mGo3aIAAuiKeFRLDQpSIAEwwoUAdgAbAAONXiIA',
     `<Card>
     <Grid sx={{ gridRowGap: 3 }}>
       <Container>
         <Label>Ethereum Address</Label>
-        <Flex variant="flex.input">
-          <Input></Input>
-        </Flex>
+        <Input></Input>
       </Container>
       <Container>
         <Label>Ethereum Address</Label>
-        <Flex variant="flex.input">
-          <Input></Input>
-        </Flex>
+        <Input defaultValue="Default Text"></Input>
       </Container>
       <Container>
         <Label>Ethereum Address</Label>
-        <Flex variant="flex.inputDanger">
-          <Input></Input>
-        </Flex>
+        <Input variant="inputDanger"></Input>
         <Text sx={{ m: 0 }} variant="smallDanger">
           Error message goes here
         </Text>

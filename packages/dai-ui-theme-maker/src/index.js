@@ -184,13 +184,28 @@ const theme = {
 
   forms: {
     label: {
-      fontSize: 1,
-      fontWeight: 'bold',
+      fontSize: 3,
+      fontWeight: 'semiBold',
     },
     input: {
-      border: 'none',
       outline: 'none',
-      p: 0,
+      borderRadius: 4,
+      borderColor: 'border',
+      color: 'muted',
+      p: 2,
+      '&:focus': {
+        borderColor: 'graphite',
+        color: 'text',
+      },
+    },
+    inputDanger: {
+      variant: 'forms.input',
+      borderColor: 'red',
+      color: 'text',
+      '&:focus': {
+        borderColor: 'red',
+        color: 'text',
+      },
     },
     slider: {
       height: '2px',
