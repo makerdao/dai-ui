@@ -441,6 +441,11 @@ const theme = {
     //   borderBottomStyle: 'solid',
     // },
   },
+  layout: {
+    container: {
+      px: 2,
+    }
+  }
 };
 
 theme.sizes.container = 1140;

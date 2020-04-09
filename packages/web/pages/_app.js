@@ -28,9 +28,7 @@ class MyApp extends App {
     return (
       <ThemeProvider theme={currentTheme}>
         <Header />
-        <Styled.root>
-          <Component {...pageProps} />
-        </Styled.root>
+        <Component {...pageProps} />
       </ThemeProvider>
     );
   }
