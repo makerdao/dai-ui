@@ -262,7 +262,7 @@ const theme = {
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
-      fontWeight: 'body'
+      fontWeight: 'body',
     },
     statusBox: {
       layout: {
@@ -345,6 +345,11 @@ const theme = {
     //   textAlign: 'left',
     //   borderBottomStyle: 'solid',
     // },
+  },
+  layout: {
+    container: {
+      px: 2,
+    }
   }
 };
 
