@@ -1,4 +1,3 @@
-
 const theme = {
   useBorderBox: true,
   useBodyStyles: true,
@@ -13,7 +12,7 @@ const theme = {
       '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
     heading:
       '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
-    monospace: 'monospace'
+    monospace: 'monospace',
   },
 
   fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
@@ -22,14 +21,14 @@ const theme = {
     body: 400,
     heading: 700,
     bold: 700,
-    semiBold: 500
+    semiBold: 500,
   },
 
   lineHeights: {
     body: 1.5,
     heading: 1.125,
     tight: 1.05,
-    loose: 1.2
+    loose: 1.2,
   },
   colors: {
     text: '#231536',
@@ -54,7 +53,7 @@ const theme = {
     yellow: '#FFF1CF',
     orange: '#E67002',
     lightOrange: '#FFF9ED',
-    borderOrange: '#FBCC5F'
+    borderOrange: '#FBCC5F',
 
     // text: '#000',
     // background: '#fff',
@@ -64,11 +63,12 @@ const theme = {
   },
 
   borders: {
-    light: '1px solid'
+    light: '1px solid',
   },
 
   buttons: {
     primary: {
+      maxWidth: ['100%', '224px'],
       outline: 'none',
       fontFamily: 'body',
       fontSize: 2,
@@ -79,16 +79,16 @@ const theme = {
       letterSpacing: '0.03em',
       bg: 'primary',
       '&:hover': {
-        bg: 'primaryHover'
+        bg: 'primaryHover',
       },
       '&:active': {
-        bg: 'primaryActive'
+        bg: 'primaryActive',
       },
       '&:disabled': {
         bg: 'lightGreen',
         pointerEvents: 'none',
-        cursor: 'not-allowed'
-      }
+        cursor: 'not-allowed',
+      },
     },
     outline: {
       variant: 'buttons.primary',
@@ -100,12 +100,12 @@ const theme = {
       '&:hover': {
         bg: 'transparent',
         color: 'lightGraphite',
-        borderColor: 'lightGraphite'
+        borderColor: 'lightGraphite',
       },
       '&:active': {
         borderColor: 'text',
-        color: 'text'
-      }
+        color: 'text',
+      },
     },
 
     pill: {
@@ -120,17 +120,17 @@ const theme = {
       border: '1px solid',
       borderColor: 'primary',
       '&:hover': {
-        bg: 'primaryHover'
+        bg: 'primaryHover',
       },
       '&:active': {
-        bg: 'primaryActive'
+        bg: 'primaryActive',
       },
       '&:disabled': {
         opacity: 0.5,
         // bg: 'lightGreen',
         pointerEvents: 'none',
-        cursor: 'not-allowed'
-      }
+        cursor: 'not-allowed',
+      },
     },
     pillInactive: {
       variant: 'buttons.pill',
@@ -141,17 +141,17 @@ const theme = {
       '&:hover': {
         bg: 'transparent',
         color: 'graphite',
-        borderColor: 'lightGraphite'
+        borderColor: 'lightGraphite',
       },
       '&:active': {
         bg: 'transparent',
         borderColor: 'text',
-        color: 'text'
-      }
+        color: 'text',
+      },
     },
     clear: {
       bg: 'transparent',
-      p: 1
+      p: 1,
       // p: 0
     },
 
@@ -160,15 +160,51 @@ const theme = {
       color: 'purple',
       outline: 'none',
       cursor: 'pointer',
-      fontSize: 1
-    }
+      fontSize: 1,
+    },
+  },
+
+  flex: {
+    input: {
+      maxWidth: ['100%', '224px'],
+      borderWidth: '1px',
+      borderStyle: 'solid',
+      borderColor: 'border',
+      bg: 'white',
+      borderRadius: 4,
+      fontSize: 4,
+      py: 1,
+      px: 3,
+    },
+    inputDanger: {
+      variant: 'flex.input',
+      borderColor: 'red',
+    },
+  },
+
+  forms: {
+    input: {
+      border: 'none',
+      outline: 'none',
+      p: 0,
+    },
+  },
+
+  cards: {
+    primary: {
+      border: '1px solid',
+      borderColor: 'border',
+      p: 3,
+      borderRadius: 6,
+      bg: 'white',
+    },
   },
 
   text: {
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',
-      fontWeight: 'heading'
+      fontWeight: 'heading',
     },
 
     caps: {
@@ -176,46 +212,46 @@ const theme = {
       letterSpacing: '0.05em',
       color: 'graphite',
       fontSize: 0,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
     },
 
     h1: {
       fontSize: 8,
       letterSpacing: '0.3px',
-      fontWeight: 'semiBold'
+      fontWeight: 'semiBold',
     },
 
     h2: {
       fontSize: 6,
       lineHeight: 'loose',
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px'
+      letterSpacing: '0.4px',
     },
 
     bigText: {
-      fontSize: 8
+      fontSize: 8,
     },
     boldBody: {
       fontSize: 3,
       fontWeight: 'semiBold',
-      letterSpacing: '0.3px'
+      letterSpacing: '0.3px',
     },
     small: {
-      fontSize: 1
+      fontSize: 1,
     },
     inputText: {
       fontSize: 3,
-      fontWeight: 'normal'
+      fontWeight: 'normal',
     },
     smallDanger: {
       fontSize: 1,
-      color: 'red'
+      color: 'red',
     },
     muted: {
       color: 'grayishBlue',
       fontSize: 4,
-      lineHeight: 'body'
-    }
+      lineHeight: 'body',
+    },
   },
   links: {
     nav: {
@@ -226,8 +262,8 @@ const theme = {
       cursor: 'pointer',
       '&:hover': {
         color: 'primary',
-        cursor: 'pointer'
-      }
+        cursor: 'pointer',
+      },
     },
 
     footer: {
@@ -235,33 +271,33 @@ const theme = {
       fontWeight: 'semiBold',
       letterSpacing: '0.4px',
       color: 'blackThree',
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   styles: {
     time: {
       display: 'inline',
       major: {
         fontSize: 4,
-        fontWeight: 'semiBold'
+        fontWeight: 'semiBold',
       },
       minor: {
         fontSize: 1,
         fontWeight: 'body',
-        color: 'darkGrayishBlue'
-      }
+        color: 'darkGrayishBlue',
+      },
     },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
-      fontWeight: 'body'
+      fontWeight: 'body',
     },
     roundedCard: {
       border: '1px solid',
       borderColor: 'border',
       p: 3,
       borderRadius: 6,
-      bg: 'white'
+      bg: 'white',
     },
     statusBox: {
       layout: {
@@ -273,49 +309,49 @@ const theme = {
         px: 4,
         mt: 7,
         lineHeight: 'body',
-        width: '100%'
+        width: '100%',
       },
       warning: {
         variant: 'styles.statusBox.layout',
         bg: 'lightOrange',
         borderColor: 'orangeBorder',
-        color: 'orange'
+        color: 'orange',
       },
       success: {
         variant: 'styles.statusBox.layout',
         bg: 'lightCyan',
         borderColor: 'darkCyan',
-        color: 'primaryActive'
-      }
+        color: 'primaryActive',
+      },
     },
     h1: {
       variant: 'text.heading',
-      fontSize: 7
+      fontSize: 7,
     },
     h2: {
       variant: 'text.heading',
       fontSize: 6,
-      fontWeight: 'body'
+      fontWeight: 'body',
     },
     h3: {
       variant: 'text.heading',
       fontSize: 4,
       py: 4,
       pb: 3,
-      fontWeight: 500
+      fontWeight: 500,
     },
     h4: {
       variant: 'text.heading',
-      fontSize: 4
+      fontSize: 4,
     },
     h5: {
       variant: 'text.heading',
-      fontSize: 3
+      fontSize: 3,
     },
     a: {
       color: 'purple',
-      textDecoration: 'none'
-    }
+      textDecoration: 'none',
+    },
     // h6: {
     //   variant: 'text.heading',
     //   fontSize: 2,
@@ -344,7 +380,7 @@ const theme = {
     //   textAlign: 'left',
     //   borderBottomStyle: 'solid',
     // },
-  }
+  },
 };
 
 theme.sizes.container = 1140;

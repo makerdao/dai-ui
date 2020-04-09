@@ -1,15 +1,49 @@
 /** @jsx jsx */
 import React from 'react';
 
-import {Text
-} from 'theme-ui';
+import { Text } from 'theme-ui';
 
 export default [
   [
+    'Forms',
+    'Forms with labels and error state.',
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygHQHYAJ8BnADwF5hg9DCAHAT3nwGYAaamtAGwEsBzXAEkALjAC2RJtnAxcojNI4BfJXgB8HJAHEMPKMXKV8fXVABKEAO5a0tJs3wqNBGqghy0PXDAzOargBk0ACMYLjUAUWEACx8YAFcxfABBKCgMGCIiJAB6INDwjn8kADEuGBJ8ADdMHjQ5MmkAM3KSADovWnjhaT9-V0FcLuE1XMHhvuKcsorJ-FyUd2FPb18i+cWPLx85wiR8sMiYuMSUtIys3IPCl2KZyprdeuFGkBaKjqHu3vXi8e7Rjl-iNfvNpq05gslisdus3FtVrt5tcjrEMqdUulMtk8iFDqDSq1qrVnq93u1Ot0ACL1Pg+H63fpIYGAlkE8GzAkAFQqwgMFGA+DETAADI4lMSng1pEQxNwuDTcHSFCAkYQIhgMBAMELsWg6cYIJl8GiYOyeSQQYyoQjYS5cjo9M4FpgoM4QKwQMcxJkEABtEAAWTQAGsfFSYE00PEuMIQABdT2WPQxIj+5gAJhFrAA7AA2AAc8aUQA',
+    `<Card
+    sx={{
+      py: 3,
+      alignItems: "center"
+    }}
+  >
+    <Grid sx={{ gridRowGap: 3 }}>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Flex variant="flex.input">
+          <Input></Input>
+        </Flex>
+      </Container>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Flex variant="flex.input">
+          <Input></Input>
+        </Flex>
+      </Container>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Flex variant="flex.inputDanger">
+          <Input></Input>
+        </Flex>
+        <Text sx={{ m: 0 }} variant="smallDanger">
+          Error message goes here
+        </Text>
+      </Container>
+    </Grid>
+  </Card>`,
+  ],
+  [
     'Privacy Policy Thing',
-    "Usually uses position:fixed, \n Remember to integrate the Link component properly, \n The X should be an icon (TODO).",
-'#?code=N4Igxg9gJgpiBcIAEKkB4BiAbGAPAOgHaqoDOuAvMMESSQA4SkCWALsxIfEgOQCGAI1IQsAV1YweAGlp0UAiK1YQAttwAMM4nKQB3ZlFYALbjwCM69QFJpsuQCtRpdgDMAngGFOEwq1NgYXxgAJ1ttOUYWdk5TF2ZcGCgwnSR6bgBmO1QAX2ysgD4slEwcAnC6cioacrkANz5g5j5fU2c3HFIAOmCIUUJYKA8GpK0UlHo3DNGxvixmAHNCAEkJFVJ-QIlQ6ZSFXABlIz4oCF1TdSQzelwkACZrpGD5gT4ACgBOTSRPqW+v9U66gAbABKZJjBTBWDBABKx2YTm4twALEUcnkakhCpjigAVPCsNEkSrUIl0FTBJE7Mb1RrNPy8CS4VidZiEejifHMnhklC5MnYsZIABCbiQTjZ8yQxmYpD0MCEbBgSDcvSQfHmwRgyuUSF6wWAPF4GN5qDQABk2QBrU3EyiknE0hpNFq8NodTp8cFCkhQWX0LB8Sa8NlzQiSak+pBgUTBYSU3iMNlbHmOuT8tOoQVR1KNepgMWMOYF23oAD0lsIVuxZLQZa5rHyZRSteF4mUhFNJOA0dj8dMSaCoSQGaFtJdrAo+HAOAa06JAtNJTwpe7pZQjmczHcXiCrp4ASH3p9swWy1W614h5TpdHY2zQqXZeweAfOlrZbbSk4b+Kz9Kb51i+uD5CAUggMYMAqDApAIAA2iAACyfBWiEAAiMAuHwohYKwIAALrgfohhGLB8BwektyaAA7ECAAc+HZEAA',
-`<Flex
+    'Usually uses position:fixed, \n Remember to integrate the Link component properly, \n The X should be an icon (TODO).',
+    '#?code=N4Igxg9gJgpiBcIAEKkB4BiAbGAPAOgHaqoDOuAvMMESSQA4SkCWALsxIfEgOQCGAI1IQsAV1YweAGlp0UAiK1YQAttwAMM4nKQB3ZlFYALbjwCM69QFJpsuQCtRpdgDMAngGFOEwq1NgYXxgAJ1ttOUYWdk5TF2ZcGCgwnSR6bgBmO1QAX2ysgD4slEwcAnC6cioacrkANz5g5j5fU2c3HFIAOmCIUUJYKA8GpK0UlHo3DNGxvixmAHNCAEkJFVJ-QIlQ6ZSFXABlIz4oCF1TdSQzelwkACZrpGD5gT4ACgBOTSRPqW+v9U66gAbABKZJjBTBWDBABKx2YTm4twALEUcnkakhCpjigAVPCsNEkSrUIl0FTBJE7Mb1RrNPy8CS4VidZiEejifHMnhklC5MnYsZIABCbiQTjZ8yQxmYpD0MCEbBgSDcvSQfHmwRgyuUSF6wWAPF4GN5qDQABk2QBrU3EyiknE0hpNFq8NodTp8cFCkhQWX0LB8Sa8NlzQiSak+pBgUTBYSU3iMNlbHmOuT8tOoQVR1KNepgMWMOYF23oAD0lsIVuxZLQZa5rHyZRSteF4mUhFNJOA0dj8dMSaCoSQGaFtJdrAo+HAOAa06JAtNJTwpe7pZQjmczHcXiCrp4ASH3p9swWy1W614h5TpdHY2zQqXZeweAfOlrZbbSk4b+Kz9Kb51i+uD5CAUggMYMAqDApAIAA2iAACyfBWiEAAiMAuHwohYKwIAALrgfohhGLB8BwektyaAA7ECAAc+HZEAA',
+    `<Flex
 sx={{
   position: "absolute",
   bottom: 0,
@@ -56,7 +90,7 @@ sx={{
   </Button>
 </Flex>
 </Flex>
-`
+`,
   ],
   [
     'Inputs and Buttons',
@@ -99,10 +133,10 @@ sx={{
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-eye"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="feather feather-eye"
       >
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
         <circle cx="12" cy="12" r="3"></circle>
