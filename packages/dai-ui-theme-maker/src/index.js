@@ -163,7 +163,15 @@ const theme = {
       fontSize: 1
     }
   },
-
+  cards: {
+    primary: {
+      border: '1px solid',
+      borderColor: 'border',
+      p: 3,
+      borderRadius: 6,
+      bg: 'white'
+    }
+  },
   text: {
     heading: {
       fontFamily: 'heading',
@@ -255,13 +263,6 @@ const theme = {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body'
-    },
-    roundedCard: {
-      border: '1px solid',
-      borderColor: 'border',
-      p: 3,
-      borderRadius: 6,
-      bg: 'white'
     },
     statusBox: {
       layout: {
