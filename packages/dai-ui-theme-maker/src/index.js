@@ -183,10 +183,24 @@ const theme = {
   },
 
   forms: {
+    label: {
+      fontSize: 1,
+      fontWeight: 'bold',
+    },
     input: {
       border: 'none',
       outline: 'none',
       p: 0,
+    },
+    slider: {
+      height: '2px',
+      borderRadius: 4,
+      color: 'blackThree',
+    },
+    sliderActive: {
+      variant: 'forms.slider',
+      color: 'primary',
+      bg: 'primary',
     },
   },
 

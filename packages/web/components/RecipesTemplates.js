@@ -7,13 +7,8 @@ export default [
   [
     'Forms',
     'Forms with labels and error state.',
-    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygHQHYAJ8BnADwF5hg9DCAHAT3nwGYAaamtAGwEsBzXAEkALjAC2RJtnAxcojNI4BfJXgB8HJAHEMPKMXKV8fXVABKEAO5a0tJs3wqNBGqghy0PXDAzOargBk0ACMYLjUAUWEACx8YAFcxfABBKCgMGCIiJAB6INDwjn8kADEuGBJ8ADdMHjQ5MmkAM3KSADovWnjhaT9-V0FcLuE1XMHhvuKcsorJ-FyUd2FPb18i+cWPLx85wiR8sMiYuMSUtIys3IPCl2KZyprdeuFGkBaKjqHu3vXi8e7Rjl-iNfvNpq05gslisdus3FtVrt5tcjrEMqdUulMtk8iFDqDSq1qrVnq93u1Ot0ACL1Pg+H63fpIYGAlkE8GzAkAFQqwgMFGA+DETAADI4lMSng1pEQxNwuDTcHSFCAkYQIhgMBAMELsWg6cYIJl8GiYOyeSQQYyoQjYS5cjo9M4FpgoM4QKwQMcxJkEABtEAAWTQAGsfFSYE00PEuMIQABdT2WPQxIj+5gAJhFrAA7AA2AAc8aUQA',
-    `<Card
-    sx={{
-      py: 3,
-      alignItems: "center"
-    }}
-  >
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIBmQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AKKKAFupgBXALaEAglCgYYNGkgD0ewyYJaxEgAYkYwdIQAbpgUaEoMuCAAZmF0AHSqAjaKiZqBQQCS+FmK2N5FJXla3qHhVSRe8koqahoB2k3Kqur1Qb7GZpbW9k4ubh7e-f4y1bUR0ZRxignJqRnF2bnt+UgV2WVee6Xb2l5z9d6dLT0nqApdrb0kU4NWbiPOru6ePgYDJ0E5lEYksVilwusSgAROKsdRbGaBXYbUrlFFPGqpDEAFXCilojGYhDswgADBJxMDFvFEjQ7GgjEYYfg4RgEfliKYMBgIBhid80HC2BB3IQ3jAAQ1cXRjojLvdrm0ZN5yFRpJdMDgCCAADQgIZ2dwIADaIAAsmgANbqKEwJJoGxGRQgAC6ep4VEsNBNIgATKSdQB2ABsAA4XeIgA',
+    `<Card>
     <Grid sx={{ gridRowGap: 3 }}>
       <Container>
         <Label>Ethereum Address</Label>
@@ -37,7 +32,26 @@ export default [
         </Text>
       </Container>
     </Grid>
-  </Card>`,
+  </Card>
+  `,
+  ],
+  [
+    'Sliders',
+    'Sliders with labels and error state.',
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIAWQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AMpGq6wkYPGkAej2GTBLcSTnLGh59gbX2vbySipq-jLuwcqq6ppuurYmvlZoYIoUAG4wDk7GcVoeFn6EGZgUaEoMuCA0ReoAgmmZMNXYPnXhBUEK0WFxDuRU0g7oWNIgADQgigAWMAC2MDQIANogALJoANbqACIwAGZoAK5GiiAAulM8VLPL8CsAzABMAAwTAOwAbAAcF+JAA',
+    `<Card>
+    <Grid sx={{ gridRowGap: 4 }}>
+      <Container>
+        <Label>Slider label</Label>
+        <Slider></Slider>
+      </Container>
+      <Container>
+        <Label>Slider active</Label>
+        <Slider variant="sliderActive"></Slider>
+      </Container>
+    </Grid>
+  </Card>
+  `,
   ],
   [
     'Privacy Policy Thing',
