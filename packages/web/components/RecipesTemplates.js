@@ -1,15 +1,57 @@
 /** @jsx jsx */
 import React from 'react';
 
-import {Text
-} from 'theme-ui';
+import { Text } from 'theme-ui';
 
 export default [
   [
+    'Forms',
+    'Forms with labels and error state.',
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIBmQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AKKKAFupgBXALaEAglCgYYNGkgD0ewyYJaxEgAkvgCNorY3qHhkQHaXvJKKmoa8UFJyqrqmoG6BsZmltb2Ti5uHt6+henaMRGEsABmaDZGigBqaEY2MAy4IAAiMC1tioQAKjB0igNRXvVxMkGJClmpuRlrKTm1QdUm5lZupc6u7p4+Bf7LdWENAG6YFGhK-SCqsYOvrOpz0fcloESFMZrRGMxCHZhAAGCTiQhPSivRTvGh2bpGb74X4YOZ7WSmDAYCAYKEXNC-NgQdyEY4wAneUFAhKZHZpGTechUaTedBYaQgAA0IGKdncCAA2iAALJoADW6mGo3aIAAuiKeFRLDQpSIAEwwoUAdgAbAAONXiIA',
+    `<Card>
+    <Grid sx={{ gridRowGap: 3 }}>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Input></Input>
+      </Container>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Input defaultValue="Default Text"></Input>
+      </Container>
+      <Container>
+        <Label>Ethereum Address</Label>
+        <Input variant="inputDanger"></Input>
+        <Text sx={{ m: 0 }} variant="smallDanger">
+          Error message goes here
+        </Text>
+      </Container>
+    </Grid>
+  </Card>
+  `,
+  ],
+  [
+    'Sliders',
+    'Sliders with labels and error state.',
+    '#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEspCBnADwF5hhCBzSqAJQgHdS0ADvEIAWQgF9xeIsRIoI+AC5oK+GBmmzZSADJoARjAA22AMpGq6wkYPGkAej2GTBLcSTnLGh59gbX2vbySipq-jLuwcqq6ppuurYmvlZoYIoUAG4wDk7GcVoeFn6EGZgUaEoMuCA0ReoAgmmZMNXYPnXhBUEK0WFxDuRU0g7oWNIgADQgigAWMAC2MDQIANogALJoANbqACIwAGZoAK5GiiAAulM8VLPL8CsAzABMAAwTAOwAbAAcF+JAA',
+    `<Card>
+    <Grid sx={{ gridRowGap: 4 }}>
+      <Container>
+        <Label>Slider label</Label>
+        <Slider></Slider>
+      </Container>
+      <Container>
+        <Label>Slider active</Label>
+        <Slider variant="sliderActive"></Slider>
+      </Container>
+    </Grid>
+  </Card>
+  `,
+  ],
+  [
     'Privacy Policy Thing',
-    "Usually uses position:fixed, \n Remember to integrate the Link component properly, \n The X should be an icon (TODO).",
-'#?code=N4Igxg9gJgpiBcIAEKkB4BiAbGAPAOgHaqoDOuAvMMESSQA4SkCWALsxIfEgOQCGAI1IQsAV1YweAGlp0UAiK1YQAttwAMM4nKQB3ZlFYALbjwCM69QFJpsuQCtRpdgDMAngGFOEwq1NgYXxgAJ1ttOUYWdk5TF2ZcGCgwnSR6bgBmO1QAX2ysgD4slEwcAnC6cioacrkANz5g5j5fU2c3HFIAOmCIUUJYKA8GpK0UlHo3DNGxvixmAHNCAEkJFVJ-QIlQ6ZSFXABlIz4oCF1TdSQzelwkACZrpGD5gT4ACgBOTSRPqW+v9U66gAbABKZJjBTBWDBABKx2YTm4twALEUcnkakhCpjigAVPCsNEkSrUIl0FTBJE7Mb1RrNPy8CS4VidZiEejifHMnhklC5MnYsZIABCbiQTjZ8yQxmYpD0MCEbBgSDcvSQfHmwRgyuUSF6wWAPF4GN5qDQABk2QBrU3EyiknE0hpNFq8NodTp8cFCkhQWX0LB8Sa8NlzQiSak+pBgUTBYSU3iMNlbHmOuT8tOoQVR1KNepgMWMOYF23oAD0lsIVuxZLQZa5rHyZRSteF4mUhFNJOA0dj8dMSaCoSQGaFtJdrAo+HAOAa06JAtNJTwpe7pZQjmczHcXiCrp4ASH3p9swWy1W614h5TpdHY2zQqXZeweAfOlrZbbSk4b+Kz9Kb51i+uD5CAUggMYMAqDApAIAA2iAACyfBWiEAAiMAuHwohYKwIAALrgfohhGLB8BwektyaAA7ECAAc+HZEAA',
-`<Flex
+    'Usually uses position:fixed, \n Remember to integrate the Link component properly, \n The X should be an icon (TODO).',
+    '#?code=N4Igxg9gJgpiBcIAEKkB4BiAbGAPAOgHaqoDOuAvMMESSQA4SkCWALsxIfEgOQCGAI1IQsAV1YweAGlp0UAiK1YQAttwAMM4nKQB3ZlFYALbjwCM69QFJpsuQCtRpdgDMAngGFOEwq1NgYXxgAJ1ttOUYWdk5TF2ZcGCgwnSR6bgBmO1QAX2ysgD4slEwcAnC6cioacrkANz5g5j5fU2c3HFIAOmCIUUJYKA8GpK0UlHo3DNGxvixmAHNCAEkJFVJ-QIlQ6ZSFXABlIz4oCF1TdSQzelwkACZrpGD5gT4ACgBOTSRPqW+v9U66gAbABKZJjBTBWDBABKx2YTm4twALEUcnkakhCpjigAVPCsNEkSrUIl0FTBJE7Mb1RrNPy8CS4VidZiEejifHMnhklC5MnYsZIABCbiQTjZ8yQxmYpD0MCEbBgSDcvSQfHmwRgyuUSF6wWAPF4GN5qDQABk2QBrU3EyiknE0hpNFq8NodTp8cFCkhQWX0LB8Sa8NlzQiSak+pBgUTBYSU3iMNlbHmOuT8tOoQVR1KNepgMWMOYF23oAD0lsIVuxZLQZa5rHyZRSteF4mUhFNJOA0dj8dMSaCoSQGaFtJdrAo+HAOAa06JAtNJTwpe7pZQjmczHcXiCrp4ASH3p9swWy1W614h5TpdHY2zQqXZeweAfOlrZbbSk4b+Kz9Kb51i+uD5CAUggMYMAqDApAIAA2iAACyfBWiEAAiMAuHwohYKwIAALrgfohhGLB8BwektyaAA7ECAAc+HZEAA',
+    `<Flex
 sx={{
   position: "absolute",
   bottom: 0,
@@ -57,7 +99,7 @@ sx={{
   </Flex>
 </Card>
 </Flex>
-`
+`,
   ],
   [
     'Inputs and Buttons',
@@ -100,10 +142,10 @@ sx={{
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="feather feather-eye"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="feather feather-eye"
       >
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
         <circle cx="12" cy="12" r="3"></circle>
