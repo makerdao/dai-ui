@@ -29,7 +29,7 @@ const theme = {
     lightOrange: '#FFF9ED',
     borderOrange: '#FBCC5F',
     red1: '#cd532d',
-    orange1: '#e47f09'
+    orange1: '#e47f09',
 
     // text: '#000',
     // background: '#fff',
@@ -38,7 +38,6 @@ const theme = {
     // muted: '#f6f6f6',
   },
 
-  
   fonts: {
     body:
       '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
@@ -70,7 +69,6 @@ const theme = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 
-
   radii: {
     small: 4,
     medium: 6,
@@ -81,7 +79,9 @@ const theme = {
   shadows: {
     floater: '0 0 8px rgba(0, 0, 0, 0.125)',
     deep: '2px 2px 8px rgba(0, 0, 0, 0.925)',
-
+  },
+  alerts: {
+    primary: {},
   },
   badges: {
     primary: {
@@ -92,17 +92,17 @@ const theme = {
       color: 'primary',
       bg: 'white',
       border: '1px solid',
-      borderColor: 'primary'
+      borderColor: 'primary',
     },
     warning: {
       variant: 'badges.primary',
       borderColor: 'orange1',
-      color: 'orange1'
+      color: 'orange1',
     },
     danger: {
       variant: 'badges.primary',
       borderColor: 'red1',
-      color: 'red1'
+      color: 'red1',
     },
   },
 
@@ -192,9 +192,10 @@ const theme = {
     clear: {
       bg: 'transparent',
       p: 1,
-      // p: 0
     },
-
+    close: {},
+    icon: {},
+    menu: {},
     textual: {
       background: 'transparent',
       color: 'purple',
@@ -257,6 +258,10 @@ const theme = {
       color: 'primary',
       bg: 'primary',
     },
+    select: {},
+    textarea: {},
+    radio: {},
+    checkbox: {},
   },
   cards: {
     primary: {
@@ -267,6 +272,7 @@ const theme = {
       bg: 'white',
     },
   },
+  messages: {},
   text: {
     heading: {
       fontFamily: 'heading',
@@ -341,6 +347,9 @@ const theme = {
       cursor: 'pointer',
     },
   },
+  images: {
+    avatar: {},
+  },
   styles: {
     time: {
       display: 'inline',
@@ -412,6 +421,7 @@ const theme = {
       color: 'purple',
       textDecoration: 'none',
     },
+    hr: {},
     // h6: {
     //   variant: 'text.heading',
     //   fontSize: 2,
@@ -444,8 +454,8 @@ const theme = {
   layout: {
     container: {
       px: 2,
-    }
-  }
+    },
+  },
 };
 
 theme.sizes.container = 1140;
