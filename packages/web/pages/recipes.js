@@ -4,6 +4,7 @@ import { default as NextLink } from 'next/link';
 import {
   jsx,
   Box,
+  Card,
   Grid,
   Button,
   Link,
@@ -42,15 +43,11 @@ const Components = () => {
       <Grid columns={2}>
         {recipes.map(([title, description, playroomHash, component]) => {
           return (
-            <Box
-              sx={{
-                variant: 'styles.roundedCard',
-              }}
-            >
+            <Card>
               <Box sx={{
                 maxHeight: 6,
                 height: 6,
-                overflow: 'scroll',
+                overflow: 'auto',
                 zoom: 1 / 2,
                 mb: 5
               }}>
@@ -100,7 +97,7 @@ const Components = () => {
               </NextLink>
               </Box>
               </Flex>
-            </Box>
+            </Card>
           );
         })}
       </Grid>
