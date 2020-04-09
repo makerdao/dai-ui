@@ -19,15 +19,15 @@ sx={{
   p: 3
 }}
 >
-<Flex
+<Card
   sx={{
-    variant: "styles.roundedCard",
-    py: 3,
-    alignItems: "center",
     boxShadow: "0 1px 2px rgba(90, 90, 90, 0.06)",
     borderRadius: 24
   }}
 >
+  <Flex
+    sx={{ alignItems: "center" }}
+  >
   <Text
     sx={{
       mr: 2,
@@ -54,7 +54,8 @@ sx={{
       }}
     ></Flex>
   </Button>
-</Flex>
+  </Flex>
+</Card>
 </Flex>
 `
   ],
