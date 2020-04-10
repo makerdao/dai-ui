@@ -248,6 +248,8 @@ const theme = {
         color: 'text',
       },
     },
+    textarea: { variant: 'forms.input' },
+    textareaDanger: { variant: 'forms.inputDanger' },
     slider: {
       height: '2px',
       borderRadius: 'small',
@@ -259,7 +261,6 @@ const theme = {
       bg: 'primary',
     },
     select: {},
-    textarea: {},
     radio: {},
     checkbox: {},
   },
