@@ -250,6 +250,7 @@ const theme = {
     },
     textarea: { variant: 'forms.input' },
     textareaDanger: { variant: 'forms.inputDanger' },
+    select: { variant: 'forms.input' },
     slider: {
       height: '2px',
       borderRadius: 'small',
@@ -260,7 +261,6 @@ const theme = {
       color: 'primary',
       bg: 'primary',
     },
-    select: {},
     radio: {},
     checkbox: {},
   },
