@@ -15,6 +15,7 @@ import {
 import * as themeUI from "theme-ui";
 import recipes from "../components/RecipesTemplates";
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from "react-live";
+import ContributeMDX from "./contribute.mdx";
 
 const scope = {
   ...themeUI,
@@ -34,7 +35,8 @@ const liveTheme = { styles: [] };
 const Components = () => (
   <Container>
     <Box m="2"></Box>
-    <Heading variant="h2" pb={4}>
+    <ContributeMDX />
+    <Heading variant="h2" py={4}>
       Recipes
     </Heading>
     <Grid columns={2}>
