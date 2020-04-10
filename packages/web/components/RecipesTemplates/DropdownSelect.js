@@ -1,29 +1,27 @@
 const title = "Select Dropdown";
 const description = "Select dropdown with labels.";
 const playroomHash =
-  "#?code=N4Igxg9gJgpiBcIA8BhAhgJygPgDoDsACQpAcQwEscDjjUJ8AXNC-GDPI2ugGTQCMYAG2wBRRgAt2MAK4BbQgEEoUDDADO6pAHo+gkTW4kAysJhhGhWADM0MoYwBqaITJgBeXCAASwoRC9OI1okCAAHRgoGbF8hfx1wyOjDYNCIqPxsAEl1QgpLORgE9OSuVMSM7ABNCBkAcjVCfwgAa1YAc0JrCAwAfmKkzJSQ7VMhc0YgkZQGZlZ2KboZphY2DmHeAWExSWl5JRU1TR09bY2TMwsrGFt7Jxc3Tx8-AJBFozTBmJeByvO6CrRHJ5ApFbSAoZlD4Q6q1BowJoQVodLo9frgkqQ1KjS6TYY6ZZzNZTHTkKicAmYaj4EAAGhAu0K6gQAG0QABZNAtdgAERudgcIAAuvSAO5USTM+AsgDMACYAAy0gDsADYABxCgC+QA";
+  "#?code=N4Igxg9gJgpiBcIA8BhCA7ALgQwJbpgCcACAW0wF4AdEAJhoD4r1jjVtComXW2BxQri7NevJABlsAIxgAbBgFFMACyIwArqWIBBKFEIwAzoaQB6STPkjRbAMpyYYTMVgAzbOtmYAatlnqYahAACTlZCEZrGzYIAAdMXAwGUNlwsziEpKibJAzE9AYASUNiXGdSGHT4-O5o1lzqpIBNCHUAcgNicIgAa3wAc2JXCEIAfirMguz603tZR0xanIs5RRU1TR09A2MzFaseUSQ5hZcYd08fPwCglPDIw5y8pLuICZrpsWeC4tLyytM3yW0QakwYLXanW6fXQg2GY3eWUeMxOTmBbFMAiESzMKA4wnQuIwOHwRG4IAANCB1hVDAgANogACy2B6RAAIucPF4QABdKkAdyEKjp8HpAGZaAAGCkAdgAbAAOXkAXyAA";
 
 const component = `
-  <Card>
-    <Grid>
-      <Container>
-        <Label>Ethereum Address</Label>
-        <Select defaultValue="Hello">
-          <option>Hello</option>
-          <option>Is it me</option>
-          <option>You're looking for?</option>
-        </Select>
-      </Container>
-      <Container>
-        <Label>Ethereum Address</Label>
-        <Select defaultValue="Hello">
-          <option>Hello</option>
-          <option>Is it me</option>
-          <option>You're looking for?</option>
-        </Select>
-      </Container>
-    </Grid>
-  </Card>  
+<Container mt="2">
+<Card>
+  <Grid>
+    <Label>Ethereum Address</Label>
+    <Select defaultValue="Hello">
+      <option>Hello</option>
+      <option>Is it me</option>
+      <option>You're looking for?</option>
+    </Select>
+    <Label>Ethereum Address</Label>
+    <Select defaultValue="Hello">
+      <option>Hello</option>
+      <option>Is it me</option>
+      <option>You're looking for?</option>
+    </Select>
+  </Grid>
+</Card>
+</Container>
 `;
 
 export default {
