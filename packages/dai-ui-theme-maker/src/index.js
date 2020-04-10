@@ -231,8 +231,8 @@ const theme = {
     input: {
       outline: 'none',
       borderRadius: 'small',
-      borderColor: 'border',
-      color: 'muted',
+      borderColor: 'muted',
+      color: 'darkGrayishBlue',
       p: 2,
       '&:focus': {
         borderColor: 'graphite',
