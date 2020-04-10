@@ -6,8 +6,10 @@ import Sliders from "./Sliders";
 import PrivacyPolicy from "./PrivacyPolicy";
 import InputsButtons from "./InputsButtons";
 import Everything from "./Everything";
+import NavHeader from "./NavHeader";
 
 export default [
+  NavHeader,
   Forms,
   Textareas,
   DropdownSelect,

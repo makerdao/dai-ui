@@ -29,6 +29,7 @@ const theme = {
     lightOrange: "#FFF9ED",
     borderOrange: "#FBCC5F",
     red1: "#cd532d",
+    lightRed1: "#FFF2EE",
     orange1: "#e47f09",
 
     // text: '#000',
@@ -240,6 +241,10 @@ const theme = {
       variant: "flex.input",
       borderColor: "red",
     },
+    header: {
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
   },
 
   forms: {
@@ -348,6 +353,7 @@ const theme = {
   },
   links: {
     nav: {
+      p: 2,
       fontSize: 5,
       fontWeight: "body",
       letterSpacing: "0.4px",
