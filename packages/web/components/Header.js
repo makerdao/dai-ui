@@ -24,7 +24,6 @@ export default function Header() {
           <Link href="/">
             <NavLink
               href="/"
-              p={2}
               sx={{
                 cursor: 'default',
                 // px: [4, 6]
@@ -36,7 +35,6 @@ export default function Header() {
           <Link href="/recipes">
             <NavLink
               href="/recipes"
-              p={2}
               sx={{
                 cursor: 'default',
               }}
@@ -48,7 +46,6 @@ export default function Header() {
             <NavLink
               target="_blank"
               href="/playroom"
-              p={2}
               sx={{
                 cursor: 'default',
                 // px: [4, 6]

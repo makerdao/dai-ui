@@ -241,6 +241,10 @@ const theme = {
       variant: 'flex.input',
       borderColor: 'red',
     },
+    header: {
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
   },
 
   forms: {
@@ -349,6 +353,7 @@ const theme = {
   },
   links: {
     nav: {
+      p: 2,
       fontSize: 5,
       fontWeight: 'body',
       letterSpacing: '0.4px',
