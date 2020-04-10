@@ -29,6 +29,7 @@ const theme = {
     lightOrange: '#FFF9ED',
     borderOrange: '#FBCC5F',
     red1: '#cd532d',
+    lightRed1: '#FFF2EE',
     orange1: '#e47f09',
 
     // text: '#000',
@@ -70,6 +71,7 @@ const theme = {
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 
   radii: {
+    xs: 2,
     small: 4,
     medium: 6,
     roundish: 12,
@@ -81,7 +83,25 @@ const theme = {
     deep: '2px 2px 8px rgba(0, 0, 0, 0.925)',
   },
   alerts: {
-    primary: {},
+    primary: {
+      borderRadius: 'xs',
+      border: '1px solid',
+      borderColor: 'primaryActive',
+      bg: 'highlight',
+      color: 'primaryActive',
+    },
+    danger: {
+      variant: 'alerts.primary',
+      borderColor: 'red1',
+      bg: 'lightRed1',
+      color: 'red1',
+    },
+    warning: {
+      variant: 'alerts.primary',
+      borderColor: 'orange1',
+      bg: 'lightOrange',
+      color: 'orange1',
+    },
   },
   badges: {
     primary: {
@@ -231,8 +251,8 @@ const theme = {
     input: {
       outline: 'none',
       borderRadius: 'small',
-      borderColor: 'border',
-      color: 'muted',
+      borderColor: 'muted',
+      color: 'darkGrayishBlue',
       p: 2,
       '&:focus': {
         borderColor: 'graphite',
@@ -250,6 +270,7 @@ const theme = {
     },
     textarea: { variant: 'forms.input' },
     textareaDanger: { variant: 'forms.inputDanger' },
+    select: { variant: 'forms.input' },
     slider: {
       height: '2px',
       borderRadius: 'small',
@@ -260,7 +281,6 @@ const theme = {
       color: 'primary',
       bg: 'primary',
     },
-    select: {},
     radio: {},
     checkbox: {},
   },

@@ -30,7 +30,10 @@ export default () => {
           'space',
           'fontSizes',
           'sizes',
-          'radii','shadows', 'badges', 
+          'radii',
+          'shadows',
+          'badges',
+          'alerts',
           'fonts',
         ].includes(k);
         const isTextVariants = k === 'text';
