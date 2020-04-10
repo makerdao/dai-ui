@@ -1,6 +1,5 @@
 import App from "next/app";
 import { ThemeProvider, Styled } from "theme-ui";
-import { Global } from "@emotion/core";
 
 import Header from "../components/Header";
 import { selectors, sysAPI } from "../stores/system";
@@ -27,13 +26,6 @@ class MyApp extends App {
     });
     return (
       <ThemeProvider theme={currentTheme}>
-        <Global
-          styles={(theme) => ({
-            "*, *:before, *:after": {
-              flexShrink: "0",
-            },
-          })}
-        />
         <Header />
         <Component {...pageProps} />
       </ThemeProvider>
