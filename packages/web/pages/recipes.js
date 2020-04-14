@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { default as NextLink } from "next/link";
 import {
   jsx,
@@ -116,15 +116,7 @@ export async function getStaticProps() {
   const recipes = filenames.map((filename) => {
     const filePath = path.join(recipesDirectory, filename);
     const fileContents = fs.readFileSync(filePath, "utf8");
-
-    // Generally you would parse/transform the contents
-    // For example you can transform markdown to HTML here
     const fileMdTree = unified().use(parse).parse(fileContents);
-    console.log(fileMdTree);
-    console.log(fileMdTree.children[0].children);
-    console.log(fileMdTree.children[1].children);
-    console.log(fileMdTree.children[2].children);
-    console.log(fileMdTree.children[3].children);
 
     return {
       title: fileMdTree.children[0].children[0].value,
@@ -133,8 +125,6 @@ export async function getStaticProps() {
       component: fileMdTree.children[3].value,
     };
   });
-
-  console.log(filenames);
 
   return { props: { recipes } };
 }
