@@ -9,13 +9,13 @@ import Everything from "./Everything";
 import NavHeader from "./NavHeader";
 
 export default [
-  NavHeader,
-  Forms,
-  Textareas,
-  DropdownSelect,
+  // NavHeader,
+  // Forms,
+  // Textareas,
+  // DropdownSelect,
   Alerts,
-  Sliders,
-  PrivacyPolicy,
-  InputsButtons,
-  Everything,
+  // Sliders,
+  // PrivacyPolicy,
+  // InputsButtons,
+  // Everything,
 ];

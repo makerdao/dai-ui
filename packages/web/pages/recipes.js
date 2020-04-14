@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { default as NextLink } from "next/link";
 import {
   jsx,
@@ -13,8 +13,11 @@ import {
   Container,
 } from "theme-ui";
 import * as themeUI from "theme-ui";
-import recipes from "../components/RecipesTemplates";
 import { LiveProvider, LiveEditor, LivePreview, LiveError } from "react-live";
+import fs from "fs";
+import path from "path";
+import unified from "unified";
+import parse from "remark-parse";
 
 const scope = {
   ...themeUI,
@@ -31,7 +34,7 @@ const transformCode = (src) => `/** @jsx jsx */\n<>${src}</>`;
 
 const liveTheme = { styles: [] };
 
-const Components = () => (
+const Recipes = ({ recipes }) => (
   <Container>
     <Box m="2"></Box>
     <Heading variant="h2" pb={4}>
@@ -103,4 +106,37 @@ const Components = () => (
   </Container>
 );
 
-export default Components;
+export async function getStaticProps() {
+  const recipesDirectory = path.join(
+    process.cwd(),
+    "./components/RecipesTemplatesMD"
+  );
+  const filenames = fs.readdirSync(recipesDirectory);
+
+  const recipes = filenames.map((filename) => {
+    const filePath = path.join(recipesDirectory, filename);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+
+    // Generally you would parse/transform the contents
+    // For example you can transform markdown to HTML here
+    const fileMdTree = unified().use(parse).parse(fileContents);
+    console.log(fileMdTree);
+    console.log(fileMdTree.children[0].children);
+    console.log(fileMdTree.children[1].children);
+    console.log(fileMdTree.children[2].children);
+    console.log(fileMdTree.children[3].children);
+
+    return {
+      title: fileMdTree.children[0].children[0].value,
+      description: fileMdTree.children[1].children[0].value,
+      playroomHash: fileMdTree.children[2].children[0].value,
+      component: fileMdTree.children[3].value,
+    };
+  });
+
+  console.log(filenames);
+
+  return { props: { recipes } };
+}
+
+export default Recipes;
