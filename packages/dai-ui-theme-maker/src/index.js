@@ -128,6 +128,7 @@ const theme = {
 
   buttons: {
     primary: {
+      borderRadius: "xs",
       maxWidth: ["100%", "224px"],
       outline: "none",
       fontFamily: "body",
@@ -152,7 +153,8 @@ const theme = {
     },
     outline: {
       variant: "buttons.primary",
-      bg: "transparent",
+      borderRadius: "xs",
+      bg: "white",
       color: "graphite",
       border: "1px solid",
       cursor: "pointer",
@@ -165,6 +167,13 @@ const theme = {
       "&:active": {
         borderColor: "text",
         color: "text",
+      },
+      "&:disabled": {
+        bg: "background",
+        pointerEvents: "none",
+        cursor: "not-allowed",
+        borderColor: "muted",
+        opacity: 0.5,
       },
     },
 
@@ -251,6 +260,7 @@ const theme = {
     label: {
       fontSize: 3,
       fontWeight: "semiBold",
+      p: 2,
     },
     input: {
       outline: "none",
@@ -377,6 +387,16 @@ const theme = {
     avatar: {},
   },
   styles: {
+    spinner: {
+      color: "primary",
+      strokeWidth: 3,
+      size: 4,
+    },
+    donut: {
+      color: "primary",
+      strokeWidth: 3,
+      size: 6,
+    },
     time: {
       display: "inline",
       major: {
