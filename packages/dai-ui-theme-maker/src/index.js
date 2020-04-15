@@ -222,9 +222,13 @@ const theme = {
       bg: "transparent",
       p: 1,
     },
-    close: {},
+    close: {
+      color: "black",
+    },
+    menu: {
+      color: "black",
+    },
     icon: {},
-    menu: {},
     textual: {
       background: "transparent",
       color: "purple",
@@ -295,8 +299,25 @@ const theme = {
       color: "primary",
       bg: "primary",
     },
-    radio: {},
-    checkbox: {},
+    radio: {
+      color: "border",
+      "input:checked ~ &": {
+        color: "primary",
+      },
+      "input:focus ~ &": {
+        bg: "highlight",
+      },
+    },
+    checkbox: {
+      color: "border",
+      "input:checked ~ &": {
+        color: "primary",
+      },
+      "input:focus ~ &": {
+        color: "primary",
+        bg: "highlight",
+      },
+    },
   },
   cards: {
     primary: {
@@ -307,7 +328,7 @@ const theme = {
       bg: "white",
     },
   },
-  messages: {},
+  messages: {}, // Defaults to "primary" & "highlight"
   text: {
     heading: {
       fontFamily: "heading",
