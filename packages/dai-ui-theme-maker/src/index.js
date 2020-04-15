@@ -243,7 +243,7 @@ const theme = {
     },
     inputDanger: {
       variant: "flex.input",
-      borderColor: "red",
+      borderColor: "red1",
     },
     header: {
       alignItems: "center",
@@ -255,7 +255,7 @@ const theme = {
     label: {
       fontSize: 3,
       fontWeight: "semiBold",
-      p: 2,
+      py: 2,
     },
     input: {
       outline: "none",
@@ -270,10 +270,10 @@ const theme = {
     },
     inputDanger: {
       variant: "forms.input",
-      borderColor: "red",
+      borderColor: "red1",
       color: "text",
       "&:focus": {
-        borderColor: "red",
+        borderColor: "red1",
         color: "text",
       },
     },
@@ -364,8 +364,8 @@ const theme = {
       fontWeight: "normal",
     },
     smallDanger: {
-      fontSize: 1,
-      color: "red",
+      fontSize: 2,
+      color: "red1",
     },
     muted: {
       color: "muted",
