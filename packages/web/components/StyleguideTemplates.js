@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   jsx,
   Styled,
@@ -11,19 +11,19 @@ import {
   Flex,
   Grid,
   Link,
-} from 'theme-ui';
+} from "theme-ui";
 
 const WrappedButton = ({ variant }) => {
   return (
     <Flex
       sx={{
-        flexDirection: 'column',
-        height: '100%',
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <Flex
         sx={{
-          mb: 'auto',
+          mb: "auto",
         }}
       >
         <Button variant={variant}>Click Me! </Button>
@@ -40,13 +40,13 @@ const WrappedBadge = ({ variant }) => {
   return (
     <Flex
       sx={{
-        flexDirection: 'column',
-        height: '100%',
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <Flex
         sx={{
-          mb: 'auto',
+          mb: "auto",
         }}
       >
         <Badge variant={variant}> Winning Proposal </Badge>
@@ -63,13 +63,13 @@ const WrappedAlert = ({ variant }) => {
   return (
     <Flex
       sx={{
-        flexDirection: 'column',
-        height: '100%',
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <Flex
         sx={{
-          mb: 'auto',
+          mb: "auto",
         }}
       >
         <Alert variant={variant}> This is an alert message </Alert>
@@ -86,8 +86,8 @@ const WrappedText = ({ variant }) => {
   return (
     <Flex
       sx={{
-        flexDirection: 'column',
-        height: '100%',
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <Text variant={variant} mb="auto">
@@ -106,8 +106,8 @@ const WrappedLinks = ({ variant }) => {
   return (
     <Flex
       sx={{
-        flexDirection: 'column',
-        height: '100%',
+        flexDirection: "column",
+        height: "100%",
       }}
     >
       <Link variant={variant}>Anchors are a page's best friend</Link>
@@ -131,7 +131,9 @@ const WrappedColor = ({ variant, variants }) => {
         }}
       ></Box>
       <Box>
-        <Text variant="boldBody">{variant}</Text>
+        <Text sx={{ textTransform: "capitalize" }} variant="boldBody">
+          {variant}
+        </Text>
         <Text variant="boldBody">{variants[variant]}</Text>
       </Box>
     </Grid>
@@ -147,7 +149,7 @@ const WrappedSizes = ({ variant, variants }) => {
           height: 4,
           width: variant,
           height: 3,
-          bg: 'primary',
+          bg: "primary",
         }}
       ></Box>
       <Box>
@@ -166,7 +168,7 @@ const WrappedRadii = ({ variant, variants }) => {
           width: 5,
           height: 4,
           borderRadius: variant,
-          bg: 'primary',
+          bg: "primary",
         }}
       ></Box>
       <Box>
@@ -185,7 +187,7 @@ const WrappedShadows = ({ variant, variants }) => {
           width: 5,
           height: 4,
           boxShadow: variant,
-          bg: 'primary',
+          bg: "primary",
         }}
       ></Box>
       <Box>
@@ -233,7 +235,7 @@ const WrappedFonts = ({ variant, variants }) => {
   );
 };
 
-export const themeVariants = ['buttons', 'text', 'links'];
+export const themeVariants = ["buttons", "text", "links"];
 
 export const themeTemplateMapping = {
   buttons: (variant) => <WrappedButton variant={variant} />,
