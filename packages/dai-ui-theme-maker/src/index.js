@@ -129,6 +129,7 @@ const theme = {
   buttons: {
     primary: {
       borderRadius: "xs",
+      cursor: "pointer",
       maxWidth: ["100%", "224px"],
       outline: "none",
       fontFamily: "body",
@@ -153,11 +154,9 @@ const theme = {
     },
     outline: {
       variant: "buttons.primary",
-      borderRadius: "xs",
       bg: "white",
       color: "graphite",
       border: "1px solid",
-      cursor: "pointer",
       borderColor: "border",
       "&:hover": {
         bg: "transparent",
@@ -178,9 +177,12 @@ const theme = {
     },
 
     pill: {
+      variant: "buttons.primary",
+      textTransform: "uppercase",
       outline: "none",
-      variant: "text.caps",
       letterSpacing: "0.05em",
+      fontSize: 0,
+      fontWeight: "bold",
       cursor: "pointer",
       py: 1,
       px: 3,
