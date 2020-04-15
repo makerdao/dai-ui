@@ -26,9 +26,30 @@ const component = `
           Submit
         </Button>
       </Flex>
+      <Flex sx={{ flexDirection: "column" }}>
+        <Label>Small</Label>
+        <Button variant="pill">Click Me</Button>
+      </Flex>
+      <Flex sx={{ flexDirection: "column" }}>
+        <Label>Disabled</Label>
+        <Button variant="pill" disabled>
+          Click Me
+        </Button>
+      </Flex>
+      <Flex sx={{ flexDirection: "column" }}>
+        <Label>Small Outline</Label>
+        <Button variant="pillInactive">Click Me</Button>
+      </Flex>
+      <Flex sx={{ flexDirection: "column" }}>
+        <Label>Disabled</Label>
+        <Button variant="pillInactive" disabled>
+          Click Me
+        </Button>
+      </Flex>
     </Grid>
   </Card>
-  </Container>
+</Container>
+
 `;
 
 export default {
