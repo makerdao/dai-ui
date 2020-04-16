@@ -5,7 +5,7 @@ const playroomHash =
 
 const component = `
 <Container>
-  <Flex variant="flex.header">
+  <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
     <Heading>Dai UI</Heading>
     <Flex as="nav">
       <NavLink href="#">Home</NavLink>

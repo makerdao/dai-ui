@@ -229,28 +229,6 @@ const theme = {
     },
   },
 
-  flex: {
-    input: {
-      maxWidth: ["100%", "224px"],
-      borderWidth: "1px",
-      borderStyle: "solid",
-      borderColor: "muted",
-      bg: "white",
-      borderRadius: "small",
-      fontSize: 4,
-      py: 1,
-      px: 3,
-    },
-    inputDanger: {
-      variant: "flex.input",
-      borderColor: "red1",
-    },
-    header: {
-      alignItems: "center",
-      justifyContent: "space-between",
-    },
-  },
-
   forms: {
     label: {
       fontSize: 3,
