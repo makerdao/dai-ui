@@ -123,8 +123,7 @@ const theme = {
       outline: "none",
       fontFamily: "body",
       fontSize: 2,
-      px: 4,
-      py: 2,
+      p: 3,
       color: "white",
       fontWeight: "semiBold",
       letterSpacing: "0.03em",
@@ -165,7 +164,7 @@ const theme = {
       },
     },
 
-    pill: {
+    small: {
       variant: "buttons.primary",
       textTransform: "uppercase",
       outline: "none",
@@ -173,8 +172,7 @@ const theme = {
       fontSize: 0,
       fontWeight: "bold",
       cursor: "pointer",
-      py: 1,
-      px: 3,
+      p: 2,
       color: "white",
       bg: "primary",
       border: "1px solid",
@@ -192,8 +190,8 @@ const theme = {
         cursor: "not-allowed",
       },
     },
-    pillInactive: {
-      variant: "buttons.pill",
+    smallOutline: {
+      variant: "buttons.small",
       bg: "transparent",
       color: "lightText",
       border: "1px solid",
