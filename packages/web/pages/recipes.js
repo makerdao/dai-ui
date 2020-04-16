@@ -1,7 +1,6 @@
 import React from "react";
 import { default as NextLink } from "next/link";
 import {
-  jsx,
   Box,
   Card,
   Grid,
@@ -14,7 +13,7 @@ import {
 } from "theme-ui";
 import * as themeUI from "theme-ui";
 import recipes from "../components/RecipesTemplates";
-import { LiveProvider, LiveEditor, LivePreview, LiveError } from "react-live";
+import { LiveProvider, LivePreview } from "react-live";
 
 const scope = {
   ...themeUI,
@@ -67,24 +66,14 @@ const Components = () => (
             >
               {component}
             </Box> */}
-          <Flex
-            sx={{
-              alignItems: "flex-start",
-              flexWrap: "wrap",
-            }}
-          >
-            <Box mr="4">
+          <Flex sx={{ alignItems: "center" }}>
+            <Box mr="4" sx={{ flexShrink: "1" }}>
               <Text variant="boldBody">{title}</Text>
               <Text variant="small" pb="2">
                 {description}
               </Text>
             </Box>
-            <Box
-              ml="auto"
-              sx={{
-                flexShrink: 0,
-              }}
-            >
+            <Box ml="auto">
               <NextLink href={`/playroom/${playroomHash}`} passHref>
                 <Link
                   target="_blank"
