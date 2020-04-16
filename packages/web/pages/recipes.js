@@ -72,6 +72,7 @@ const Components = () => (
           <Flex
             sx={{
               alignItems: "flex-start",
+              flexWrap: "wrap",
             }}
           >
             <Box mr="4">

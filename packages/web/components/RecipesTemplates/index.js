@@ -7,8 +7,14 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import InputsButtons from "./InputsButtons";
 import Everything from "./Everything";
 import NavHeader from "./NavHeader";
+import Buttons from "./Buttons";
+import CheckboxRadio from "./CheckboxRadio";
+import Loaders from "./Loaders";
 
 export default [
+  Buttons,
+  CheckboxRadio,
+  Loaders,
   NavHeader,
   Forms,
   Textareas,

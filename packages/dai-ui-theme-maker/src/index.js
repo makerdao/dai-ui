@@ -5,38 +5,27 @@ const theme = {
   breakpoints: ["40em", "52em", "64em"],
 
   colors: {
-    text: "#231536",
-    background: "#F6F8F9",
-    muted: "#d4d9e1",
     primary: "#1AAB9B",
-    accent: "#447afb",
-    highlight: "#e7fcfa",
-    primaryHover: "#139D8D",
-    primaryActive: "#098C7D",
-    lightGreen: "#B6EDE7",
-    lightCyan: "#E7FCFA",
-    darkCyan: "#2DC1B1",
-    graphite: "#48495F",
-    lightGraphite: "#7E7E88",
-    purple: "#447AFB",
-    blackThree: "#333",
-    border: "#D4D9E1",
+    secondary: "#F4B731",
+    text: "#231536",
+    muted: "#D4D9E1",
+    grey2: "#E2E9EC",
+    background: "#F6F8F9",
     white: "#fff",
-    grayishBlue: "#9FAFB9",
-    darkGrayishBlue: "#708390",
-    yellow: "#FFF1CF",
-    orange: "#E67002",
-    lightOrange: "#FFF9ED",
-    borderOrange: "#FBCC5F",
-    red1: "#cd532d",
-    lightRed1: "#FFF2EE",
-    orange1: "#e47f09",
-
-    // text: '#000',
-    // background: '#fff',
-    // primary: '#07c',
-    // secondary: '#30c',
-    // muted: '#f6f6f6',
+    sidebar: "#1E2C37",
+    subText: "#48495F",
+    lightText: "#708390",
+    accent: "#447AFB",
+    green1: "#098C7D",
+    green2: "#139D8D",
+    green3: "#B6EDE7",
+    highlight: "#E7FCFA",
+    yellow1: "#E47F09",
+    yellow2: "#FBCC5F",
+    yellow3: "#FFF9ED",
+    red1: "#CB532D",
+    red2: "#FA7249",
+    red3: "#FFF2EE",
   },
 
   fonts: {
@@ -86,21 +75,21 @@ const theme = {
     primary: {
       borderRadius: "xs",
       border: "1px solid",
-      borderColor: "primaryActive",
+      borderColor: "green1",
       bg: "highlight",
-      color: "primaryActive",
+      color: "green1",
     },
     danger: {
       variant: "alerts.primary",
       borderColor: "red1",
-      bg: "lightRed1",
+      bg: "red3",
       color: "red1",
     },
     warning: {
       variant: "alerts.primary",
-      borderColor: "orange1",
-      bg: "lightOrange",
-      color: "orange1",
+      borderColor: "yellow1",
+      bg: "yellow3",
+      color: "yellow1",
     },
   },
   badges: {
@@ -116,8 +105,8 @@ const theme = {
     },
     warning: {
       variant: "badges.primary",
-      borderColor: "orange1",
-      color: "orange1",
+      borderColor: "yellow1",
+      color: "yellow1",
     },
     danger: {
       variant: "badges.primary",
@@ -128,6 +117,8 @@ const theme = {
 
   buttons: {
     primary: {
+      borderRadius: "xs",
+      cursor: "pointer",
       maxWidth: ["100%", "224px"],
       outline: "none",
       fontFamily: "body",
@@ -139,39 +130,48 @@ const theme = {
       letterSpacing: "0.03em",
       bg: "primary",
       "&:hover": {
-        bg: "primaryHover",
+        bg: "green2",
       },
       "&:active": {
-        bg: "primaryActive",
+        bg: "green1",
       },
       "&:disabled": {
-        bg: "lightGreen",
+        bg: "green3",
         pointerEvents: "none",
         cursor: "not-allowed",
       },
     },
     outline: {
       variant: "buttons.primary",
-      bg: "transparent",
-      color: "graphite",
+      bg: "white",
+      color: "subText",
       border: "1px solid",
-      cursor: "pointer",
-      borderColor: "border",
+      borderColor: "muted",
       "&:hover": {
         bg: "transparent",
-        color: "lightGraphite",
-        borderColor: "lightGraphite",
+        color: "lightText",
+        borderColor: "lightText",
       },
       "&:active": {
         borderColor: "text",
         color: "text",
       },
+      "&:disabled": {
+        bg: "background",
+        pointerEvents: "none",
+        cursor: "not-allowed",
+        borderColor: "muted",
+        opacity: 0.5,
+      },
     },
 
     pill: {
+      variant: "buttons.primary",
+      textTransform: "uppercase",
       outline: "none",
-      variant: "text.caps",
       letterSpacing: "0.05em",
+      fontSize: 0,
+      fontWeight: "bold",
       cursor: "pointer",
       py: 1,
       px: 3,
@@ -180,10 +180,10 @@ const theme = {
       border: "1px solid",
       borderColor: "primary",
       "&:hover": {
-        bg: "primaryHover",
+        bg: "green2",
       },
       "&:active": {
-        bg: "primaryActive",
+        bg: "green1",
       },
       "&:disabled": {
         opacity: 0.5,
@@ -195,13 +195,13 @@ const theme = {
     pillInactive: {
       variant: "buttons.pill",
       bg: "transparent",
-      color: "lightGraphite",
+      color: "lightText",
       border: "1px solid",
-      borderColor: "border",
+      borderColor: "muted",
       "&:hover": {
         bg: "transparent",
-        color: "graphite",
-        borderColor: "lightGraphite",
+        color: "subText",
+        borderColor: "lightText",
       },
       "&:active": {
         bg: "transparent",
@@ -213,12 +213,16 @@ const theme = {
       bg: "transparent",
       p: 1,
     },
-    close: {},
+    close: {
+      color: "black",
+    },
+    menu: {
+      color: "black",
+    },
     icon: {},
-    menu: {},
     textual: {
       background: "transparent",
-      color: "purple",
+      color: "accent",
       outline: "none",
       cursor: "pointer",
       fontSize: 1,
@@ -230,7 +234,7 @@ const theme = {
       maxWidth: ["100%", "224px"],
       borderWidth: "1px",
       borderStyle: "solid",
-      borderColor: "border",
+      borderColor: "muted",
       bg: "white",
       borderRadius: "small",
       fontSize: 4,
@@ -239,7 +243,7 @@ const theme = {
     },
     inputDanger: {
       variant: "flex.input",
-      borderColor: "red",
+      borderColor: "red1",
     },
     header: {
       alignItems: "center",
@@ -251,24 +255,25 @@ const theme = {
     label: {
       fontSize: 3,
       fontWeight: "semiBold",
+      py: 2,
     },
     input: {
       outline: "none",
       borderRadius: "small",
       borderColor: "muted",
-      color: "darkGrayishBlue",
+      color: "lightText",
       p: 2,
       "&:focus": {
-        borderColor: "graphite",
+        borderColor: "subText",
         color: "text",
       },
     },
     inputDanger: {
       variant: "forms.input",
-      borderColor: "red",
+      borderColor: "red1",
       color: "text",
       "&:focus": {
-        borderColor: "red",
+        borderColor: "red1",
         color: "text",
       },
     },
@@ -278,26 +283,43 @@ const theme = {
     slider: {
       height: "2px",
       borderRadius: "small",
-      color: "blackThree",
+      color: "text",
     },
     sliderActive: {
       variant: "forms.slider",
       color: "primary",
       bg: "primary",
     },
-    radio: {},
-    checkbox: {},
+    radio: {
+      color: "muted",
+      "input:checked ~ &": {
+        color: "primary",
+      },
+      "input:focus ~ &": {
+        bg: "highlight",
+      },
+    },
+    checkbox: {
+      color: "muted",
+      "input:checked ~ &": {
+        color: "primary",
+      },
+      "input:focus ~ &": {
+        color: "primary",
+        bg: "highlight",
+      },
+    },
   },
   cards: {
     primary: {
       border: "1px solid",
-      borderColor: "border",
+      borderColor: "muted",
       p: 3,
       borderRadius: "medium",
       bg: "white",
     },
   },
-  messages: {},
+  messages: {}, // Defaults to "primary" & "highlight"
   text: {
     heading: {
       fontFamily: "heading",
@@ -308,7 +330,7 @@ const theme = {
     caps: {
       textTransform: "uppercase",
       letterSpacing: "0.05em",
-      color: "graphite",
+      color: "subText",
       fontSize: 0,
       fontWeight: "bold",
     },
@@ -342,11 +364,11 @@ const theme = {
       fontWeight: "normal",
     },
     smallDanger: {
-      fontSize: 1,
-      color: "red",
+      fontSize: 2,
+      color: "red1",
     },
     muted: {
-      color: "grayishBlue",
+      color: "muted",
       fontSize: 4,
       lineHeight: "body",
     },
@@ -357,7 +379,7 @@ const theme = {
       fontSize: 5,
       fontWeight: "body",
       letterSpacing: "0.4px",
-      color: "blackThree",
+      color: "text",
       cursor: "pointer",
       "&:hover": {
         color: "primary",
@@ -369,7 +391,7 @@ const theme = {
       fontSize: 4,
       fontWeight: "semiBold",
       letterSpacing: "0.4px",
-      color: "blackThree",
+      color: "text",
       cursor: "pointer",
     },
   },
@@ -377,6 +399,16 @@ const theme = {
     avatar: {},
   },
   styles: {
+    spinner: {
+      color: "primary",
+      strokeWidth: 3,
+      size: 4,
+    },
+    donut: {
+      color: "primary",
+      strokeWidth: 3,
+      size: 6,
+    },
     time: {
       display: "inline",
       major: {
@@ -386,7 +418,7 @@ const theme = {
       minor: {
         fontSize: 1,
         fontWeight: "body",
-        color: "darkGrayishBlue",
+        color: "lightText",
       },
     },
     root: {
@@ -411,15 +443,15 @@ const theme = {
       },
       warning: {
         variant: "styles.statusBox.layout",
-        bg: "lightOrange",
-        borderColor: "orangeBorder",
-        color: "orange",
+        bg: "yellow3",
+        borderColor: "yello1",
+        color: "yellow1",
       },
       success: {
         variant: "styles.statusBox.layout",
-        bg: "lightCyan",
-        borderColor: "darkCyan",
-        color: "primaryActive",
+        bg: "highlight",
+        borderColor: "green1",
+        color: "green1",
       },
     },
     h1: {
@@ -447,7 +479,7 @@ const theme = {
       fontSize: 3,
     },
     a: {
-      color: "purple",
+      color: "accent",
       textDecoration: "none",
     },
     hr: {},
