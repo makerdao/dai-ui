@@ -1,10 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-import { useColorMode, Container, Flex, Heading, NavLink } from "theme-ui";
+import { Container, Flex, Heading, NavLink, Select } from "theme-ui";
 
-export default function Header() {
-  const [colorMode, setColorMode] = useColorMode();
+import useSystemStore, { themes } from "../stores/system";
+
+const Header = () => {
+  const { setCurrentTheme, currentTheme } = useSystemStore((state) => state);
+
   return (
     <Container mb={5} mt={4}>
       <Flex
@@ -13,7 +16,6 @@ export default function Header() {
         }}
       >
         <Heading variant="h2">Dai UI</Heading>
-
         <Flex
           as="nav"
           sx={{
@@ -21,6 +23,16 @@ export default function Header() {
             mr: [null, 6],
           }}
         >
+          <Select
+            defaultValue={currentTheme}
+            onChange={(e) => setCurrentTheme(e.target.value)}
+          >
+            {Object.keys(themes).map((theme) => (
+              <option key={theme} value={theme}>
+                {theme}
+              </option>
+            ))}
+          </Select>
           <Link href="/">
             <NavLink
               href="/"
@@ -58,4 +70,6 @@ export default function Header() {
       </Flex>
     </Container>
   );
-}
+};
+
+export default Header;

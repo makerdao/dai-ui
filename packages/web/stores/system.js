@@ -1,19 +1,17 @@
 import create from "zustand";
-import themeMaker from "../../dai-ui-theme-maker/src";
+import MakerDefault, { OasisDex } from "../../dai-ui-theme-maker/src";
 
 const themes = {
-  maker: themeMaker,
+  MakerDefault: MakerDefault,
+  OasisDex: OasisDex,
 };
 
 const selectors = {
-  currentTheme: (state) => {
-    const { currentTheme } = state;
-    return themes[currentTheme];
-  },
+  getCurrentTheme: ({ currentTheme }) => themes[currentTheme],
 };
 
 const [useSystemStore, sysAPI] = create((set, get) => ({
-  currentTheme: "maker",
+  currentTheme: "MakerDefault",
   featureFlags: [],
 
   setCurrentTheme: (val) => {
@@ -21,5 +19,5 @@ const [useSystemStore, sysAPI] = create((set, get) => ({
   },
 }));
 
+export { selectors, sysAPI, themes };
 export default useSystemStore;
-export { selectors, sysAPI };
