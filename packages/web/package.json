@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "next-theme-ui-example",
-  "version": "0.4.0-alpha.0",
+  "name": "dai-ui-web",
+  "version": "0.0.1",
   "main": "index.js",
-  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "author": "Adrian le Bas <adrianleb@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "next",
