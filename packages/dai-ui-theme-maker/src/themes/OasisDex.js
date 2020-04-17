@@ -5,7 +5,7 @@ const theme = {
   breakpoints: ["40em", "52em", "64em"],
 
   colors: {
-    primary: "#1AAB9B",
+    primary: "red",
     secondary: "#F4B731",
     text: "#231536",
     muted: "#D4D9E1",
@@ -401,6 +401,9 @@ const theme = {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
+      "*, *:before, *:after": {
+        flexShrink: "0",
+      },
     },
     statusBox: {
       layout: {
@@ -495,5 +498,3 @@ const theme = {
 theme.sizes.container = 1140;
 
 export default theme;
-export { default as OasisDex } from "./themes/OasisDex";
-

@@ -1,36 +1,18 @@
-import App from "next/app";
 import { ThemeProvider } from "theme-ui";
 
 import Header from "../components/Header";
-import { selectors, sysAPI } from "../stores/system";
+import useSystemStore, { selectors } from "../stores/system";
 
-class MyApp extends App {
-  // Only uncomment this method if you have blocking data requirements for
-  // every single page in your application. This disables the ability to
-  // perform automatic static optimization, causing every page in your app to
-  // be server-side rendered.
-  //
-  // static async getInitialProps(appContext) {
-  //   // calls page's `getInitialProps` and fills `appProps.pageProps`
-  //   const appProps = await App.getInitialProps(appContext);
-  //
-  //   return { ...appProps }
-  // }
+const MyApp = ({ Component, pageProps }) => {
+  const { currentTheme } = useSystemStore((state) => state);
+  const theme = selectors.getCurrentTheme({ currentTheme });
 
-  render() {
-    const { Component, pageProps } = this.props;
-
-    // TODO this is not really needed for now?
-    const currentTheme = selectors.currentTheme({
-      currentTheme: sysAPI.getState().currentTheme,
-    });
-    return (
-      <ThemeProvider theme={currentTheme}>
-        <Header />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    );
-  }
-}
+  return (
+    <ThemeProvider {...{ theme }}>
+      <Header />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
 
 export default MyApp;

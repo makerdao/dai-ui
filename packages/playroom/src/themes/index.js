@@ -1,5 +1,5 @@
 import { base, system, funk, future, roboto } from "@theme-ui/presets";
 
-import MakerDefault from "../../../dai-ui-theme-maker/src/index";
+import MakerDefault, { OasisDex } from "../../../dai-ui-theme-maker/src/index";
 
-export { MakerDefault, base, system, funk, future, roboto };
+export { MakerDefault, OasisDex, base, system, funk, future, roboto };
