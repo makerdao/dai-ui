@@ -23,16 +23,6 @@ const Header = () => {
             mr: [null, 6],
           }}
         >
-          <Select
-            defaultValue={currentTheme}
-            onChange={(e) => setCurrentTheme(e.target.value)}
-          >
-            {Object.keys(themes).map((theme) => (
-              <option key={theme} value={theme}>
-                {theme}
-              </option>
-            ))}
-          </Select>
           <Link href="/">
             <NavLink
               href="/"

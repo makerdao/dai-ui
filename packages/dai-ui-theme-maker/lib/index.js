@@ -495,5 +495,4 @@ const theme = {
 theme.sizes.container = 1140;
 
 export default theme;
-export { default as OasisDex } from "./themes/OasisDex";
 

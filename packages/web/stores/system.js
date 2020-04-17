@@ -1,9 +1,17 @@
 import create from "zustand";
-import MakerDefault, { OasisDex } from "../../dai-ui-theme-maker/src";
+
+import maker from "../../dai-ui-theme-maker"
+import fountain from "../../dai-ui-theme-fountain";
+import oasis from "../../dai-ui-theme-oasis";
+
+
+// console.log(maker, 'hehrhere')
+console.log(maker, fountain, oasis);
 
 const themes = {
-  MakerDefault: MakerDefault,
-  OasisDex: OasisDex,
+  MakerDefault: maker,
+  OasisDex: oasis,
+  Fountain: fountain,
 };
 
 const selectors = {

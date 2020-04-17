@@ -1,6 +1,7 @@
 import { ThemeProvider } from "theme-ui";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import useSystemStore, { selectors } from "../stores/system";
 
 const MyApp = ({ Component, pageProps }) => {
@@ -11,6 +12,7 @@ const MyApp = ({ Component, pageProps }) => {
     <ThemeProvider {...{ theme }}>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   );
 };
