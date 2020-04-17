@@ -401,9 +401,6 @@ const theme = {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
-      "*, *:before, *:after": {
-        flexShrink: "0",
-      },
     },
     statusBox: {
       layout: {
