@@ -1,28 +1,25 @@
-import create from 'zustand';
-import themeMaker from '../../dai-ui-theme-maker/src'
+import create from "zustand";
+import themeMaker from "../../dai-ui-theme-maker/src";
 
-
-const themes =  {
-  'maker': themeMaker
+const themes = {
+  maker: themeMaker,
 };
-
 
 const selectors = {
   currentTheme: (state) => {
     const { currentTheme } = state;
     return themes[currentTheme];
-  }
-}
+  },
+};
 
 const [useSystemStore, sysAPI] = create((set, get) => ({
-  currentTheme: 'maker',
+  currentTheme: "maker",
   featureFlags: [],
 
- 
   setCurrentTheme: (val) => {
     set({ currentTheme: val });
   },
 }));
 
 export default useSystemStore;
-export {selectors, sysAPI};
+export { selectors, sysAPI };

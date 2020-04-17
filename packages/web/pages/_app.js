@@ -1,5 +1,5 @@
 import App from "next/app";
-import { ThemeProvider, Styled } from "theme-ui";
+import { ThemeProvider } from "theme-ui";
 
 import Header from "../components/Header";
 import { selectors, sysAPI } from "../stores/system";

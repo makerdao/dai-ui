@@ -1,19 +1,8 @@
-/** @jsx jsx */
+import React from "react";
+import { useThemeUI, Grid, Card, Box, Heading, Container } from "theme-ui";
 
-import React from 'react';
-import {
-  jsx,
-  Styled,
-  useThemeUI,
-  Grid,
-  Card,
-  Box,
-  Heading,
-  Container,
-} from 'theme-ui';
-
-import { parseTheme } from '../utils';
-import { themeTemplateMapping } from '../components/StyleguideTemplates';
+import { parseTheme } from "../utils";
+import { themeTemplateMapping } from "../components/StyleguideTemplates";
 
 export default () => {
   const t = useThemeUI();
@@ -26,20 +15,20 @@ export default () => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
         const isStyleguide = [
-          'colors',
-          'space',
-          'fontSizes',
-          'sizes',
-          'radii',
-          'shadows',
-          'badges',
-          'alerts',
-          'fonts',
+          "colors",
+          "space",
+          "fontSizes",
+          "sizes",
+          "radii",
+          "shadows",
+          "badges",
+          "alerts",
+          "fonts",
         ].includes(k);
-        const isTextVariants = k === 'text';
-        const isFontSizesVariants = k === 'fontSizes';
-        const isSizesVariants = k === 'sizes';
-        const isFonts = k === 'fonts';
+        const isTextVariants = k === "text";
+        const isFontSizesVariants = k === "fontSizes";
+        const isSizesVariants = k === "sizes";
+        const isFonts = k === "fonts";
 
         return (
           <Box pb={6} key={key}>
@@ -47,7 +36,7 @@ export default () => {
               variant="h2"
               pb={4}
               sx={{
-                textTransform: 'capitalize',
+                textTransform: "capitalize",
               }}
             >
               {k}
@@ -58,15 +47,15 @@ export default () => {
                 isTextVariants
                   ? 2
                   : isFontSizesVariants
-                  ? 'repeat(12,auto)'
+                  ? "repeat(12,auto)"
                   : isSizesVariants
-                  ? 'repeat(9,auto)'
+                  ? "repeat(9,auto)"
                   : isFonts
                   ? 1
                   : 4
               }
               sx={{
-                overflow: 'hidden',
+                overflow: "hidden",
               }}
             >
               {parsedTheme[k].map((el, key) => {

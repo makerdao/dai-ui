@@ -1,7 +1,7 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import { useColorMode, Container, Flex, Heading, NavLink } from 'theme-ui';
+import { useColorMode, Container, Flex, Heading, NavLink } from "theme-ui";
 
 export default function Header() {
   const [colorMode, setColorMode] = useColorMode();
@@ -9,7 +9,7 @@ export default function Header() {
     <Container mb={5} mt={4}>
       <Flex
         sx={{
-          alignItems: 'center',
+          alignItems: "center",
         }}
       >
         <Heading variant="h2">Dai UI</Heading>
@@ -17,7 +17,7 @@ export default function Header() {
         <Flex
           as="nav"
           sx={{
-            ml: [0, 'auto'],
+            ml: [0, "auto"],
             mr: [null, 6],
           }}
         >
@@ -25,7 +25,7 @@ export default function Header() {
             <NavLink
               href="/"
               sx={{
-                cursor: 'default',
+                cursor: "default",
                 // px: [4, 6]
               }}
             >
@@ -36,7 +36,7 @@ export default function Header() {
             <NavLink
               href="/recipes"
               sx={{
-                cursor: 'default',
+                cursor: "default",
               }}
             >
               Recipes
@@ -47,7 +47,7 @@ export default function Header() {
               target="_blank"
               href="/playroom"
               sx={{
-                cursor: 'default',
+                cursor: "default",
                 // px: [4, 6]
               }}
             >
