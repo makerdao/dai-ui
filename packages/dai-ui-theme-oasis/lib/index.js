@@ -10,7 +10,7 @@ const theme = {
       text: "#231536",
       muted: "#D4D9E1",
       grey2: "#E2E9EC",
-      background: "#F6F8F9",
+      background: "#fff",
       white: "#fff",
       sidebar: "#1E2C37",
       subText: "#48495F",

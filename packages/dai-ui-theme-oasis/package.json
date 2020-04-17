@@ -1,7 +1,7 @@
 {
-  "name": "dai-ui-theme-oasis",
+  "name": "@makerdao/dai-ui-theme-oasis",
   "version": "0.0.2",
-  "description": "> TODO: description",
+  "description": "Dai UI Oasis Theme",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
   "license": "Apache-2.0",
