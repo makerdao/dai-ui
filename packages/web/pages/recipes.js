@@ -67,13 +67,13 @@ const Components = () => (
               {component}
             </Box> */}
           <Flex sx={{ alignItems: "center" }}>
-            <Box mr="4" sx={{ flexShrink: "1" }}>
+            <Box mr="4">
               <Text variant="boldBody">{title}</Text>
               <Text variant="small" pb="2">
                 {description}
               </Text>
             </Box>
-            <Box ml="auto">
+            <Box ml="auto" sx={{ flexShrink: "0" }}>
               <NextLink href={`/playroom/${playroomHash}`} passHref>
                 <Link
                   target="_blank"
