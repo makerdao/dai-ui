@@ -1,5 +1,6 @@
 import App from "next/app";
 import { ThemeProvider, Styled } from "theme-ui";
+import "prismjs/themes/prism.css";
 
 import Header from "../components/Header";
 import { selectors, sysAPI } from "../stores/system";
