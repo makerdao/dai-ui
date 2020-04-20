@@ -493,7 +493,7 @@ const theme = {
   };
   
   theme.sizes.container = 1140;
-  
-  export default theme;
+
+  module.exports = theme;
   
   
