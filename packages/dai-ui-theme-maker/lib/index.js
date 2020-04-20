@@ -123,8 +123,7 @@ const theme = {
       outline: "none",
       fontFamily: "body",
       fontSize: 2,
-      px: 4,
-      py: 2,
+      p: 3,
       color: "white",
       fontWeight: "semiBold",
       letterSpacing: "0.03em",
@@ -165,7 +164,7 @@ const theme = {
       },
     },
 
-    pill: {
+    small: {
       variant: "buttons.primary",
       textTransform: "uppercase",
       outline: "none",
@@ -173,8 +172,7 @@ const theme = {
       fontSize: 0,
       fontWeight: "bold",
       cursor: "pointer",
-      py: 1,
-      px: 3,
+      p: 2,
       color: "white",
       bg: "primary",
       border: "1px solid",
@@ -192,8 +190,8 @@ const theme = {
         cursor: "not-allowed",
       },
     },
-    pillInactive: {
-      variant: "buttons.pill",
+    smallOutline: {
+      variant: "buttons.small",
       bg: "transparent",
       color: "lightText",
       border: "1px solid",
@@ -226,28 +224,6 @@ const theme = {
       outline: "none",
       cursor: "pointer",
       fontSize: 1,
-    },
-  },
-
-  flex: {
-    input: {
-      maxWidth: ["100%", "224px"],
-      borderWidth: "1px",
-      borderStyle: "solid",
-      borderColor: "muted",
-      bg: "white",
-      borderRadius: "small",
-      fontSize: 4,
-      py: 1,
-      px: 3,
-    },
-    inputDanger: {
-      variant: "flex.input",
-      borderColor: "red1",
-    },
-    header: {
-      alignItems: "center",
-      justifyContent: "space-between",
     },
   },
 
@@ -425,9 +401,6 @@ const theme = {
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body",
-      "*, *:before, *:after": {
-        flexShrink: "0",
-      },
     },
     statusBox: {
       layout: {
@@ -522,3 +495,4 @@ const theme = {
 theme.sizes.container = 1140;
 
 export default theme;
+

@@ -1,8 +1,9 @@
 {
-  "name": "themeui-playroom",
-  "version": "1.0.0",
+  "name": "dai-ui-playroom",
+  "version": "0.0.5",
   "main": "index.js",
-  "license": "MIT",
+  "license": "Apache-2.0",
+  "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@mdx-js/react": "^1.5.3",

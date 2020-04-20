@@ -4,3 +4,5 @@ node_modules
 dist/
 .now
 .vscode
+lerna-debug.log
+npm-debug.log

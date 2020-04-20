@@ -2,54 +2,53 @@ const title = "Buttons";
 const description =
   "Primary and outline buttons with active and disabled styles.";
 const playroomHash =
-  "#?code=N4Igxg9gJgpiBcIA8BhCA7ALgQwJbpgCcACAZwA8BeYYYgW03mICZiBfNgPgB11jjU2QlB59+AgOKFcUYgHNsAB2rM2xSABsArnXSlqAbWYAaYtxABGAGYlrhcwF0uvceKQAxDTHJkqNYlZe5AAiuIQwYJi4GEzmmjro5uzOYq78SAAy2ABGMBqcAArSdEIAnkgA9Fm5+S5p6QBCWpiYGJwAylrZdLiYlU0tbXWulZ7eovUeQb7UtIHeoeGR0eix4BDaukkcE-UC1XmcoaQ5XlCVB7WpaUgDrXxQuCfZZx1dPX0Vd0PX6RVj5F2IwBM388xCYQiURiZnWm0SIGSQJul04AHlmhp8DALjlDsMbt8+AA3IS4bBYSjmCCY7HmN7dXr9Zr3ZF-AFsgQgiizAJBRZQlZreJbRE7AkjVHHU4wc5VPFXPYCInEUnSCmYKkgGmYLEEJKPZ6vCVpTqMzAmv5EzmjILIypSGS7SooIQiXgujA4bGEUQgYwgTAACxgdBgpAQBhAAFlsABrIjBGBWbBaDSYEAOAMAdxkwYj8AMAGZmAAGYwAdgAbAAOJxAA";
+  "#?code=N4Igxg9gJgpiBcIA8BhCA7ALgQwJbpgCcACAZwA8BeYYYgW03mICZiBfNgPgB11jjU2QlB59+AgOKFcUYgHNsAB2rM2xSABsArnXSkVXXuPFIAQhHKjjxpABlsAIxgbOABWl0hATyQB6e04uRtb8ZlqYmBicKBq4YADWxACyMH6m4ZHoVtZpFtk25pbBIXaOzpwAIrikjhowUH4B5cU56REYxFDVtfXRsQnJqb5tmfkmw3ktoYVjNk0uAPLhsQSNZUFiJSMdAG5CuNhYlNwgEMv4MCd9cYkpaRlRUwITRZsmM0+h85XdDnUN-nWs3eDz4e2kh0wx1O5wIJ06v3+wOMMRug0+z22WSeuVeW0mbzmQIAyp4NBo1oFkQIscRwQcjidSGSNFdUQM7sNQcDcTyPoSTN8qjU-vVKc0BdNQXT9pDoczsOT4V0RUiMfx2bdLpLMdycS8+QSQl8SSziEtMCsht8MWF2mDZYyQAryRarWz+lr7vaeQacfzjQIhYixYCqbbafS5UyWW6LsqQyJ1cRNeidd7RvqA+MpDJsn4UEIk+gCxgcBdCKIQAAaECYAAWMDoMFICAA2iAkth4kQKjAAGbYLQaTAgAC6tYA7jIG634G2AMzMAAM1YA7AA2AAcY7YQA";
 
 const component = `
 <Container sx={{ mt: 2 }}>
   <Card>
-    <Grid gap={2} columns={[2, "1fr 1fr"]}>
-      <Flex sx={{ flexDirection: "column" }}>
+    <Grid gap={2} columns={2}>
+      <Box>
         <Label>Primary</Label>
-        <Button>Submit</Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+        <Button>Click Me</Button>
+      </Box>
+      <Box>
         <Label>Disabled</Label>
-        <Button disabled>Submit</Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+        <Button disabled>Click Me</Button>
+      </Box>
+      <Box>
         <Label>Outline</Label>
-        <Button variant="outline">Submit</Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+        <Button variant="outline">Click Me</Button>
+      </Box>
+      <Box>
         <Label>Disabled</Label>
         <Button variant="outline" disabled>
-          Submit
+          Click Me
         </Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+      </Box>
+      <Box>
         <Label>Small</Label>
-        <Button variant="pill">Click Me</Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+        <Button variant="small">Click Me</Button>
+      </Box>
+      <Box>
         <Label>Disabled</Label>
-        <Button variant="pill" disabled>
+        <Button variant="small" disabled>
           Click Me
         </Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+      </Box>
+      <Box>
         <Label>Small Outline</Label>
-        <Button variant="pillInactive">Click Me</Button>
-      </Flex>
-      <Flex sx={{ flexDirection: "column" }}>
+        <Button variant="smallOutline">Click Me</Button>
+      </Box>
+      <Box>
         <Label>Disabled</Label>
-        <Button variant="pillInactive" disabled>
+        <Button variant="smallOutline" disabled>
           Click Me
         </Button>
-      </Flex>
+      </Box>
     </Grid>
   </Card>
 </Container>
-
 `;
 
 export default {

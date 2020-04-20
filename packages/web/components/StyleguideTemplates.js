@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  jsx,
-  Styled,
-  useThemeUI,
-  Button,
-  Badge,
-  Alert,
-  Text,
-  Box,
-  Flex,
-  Grid,
-  Link,
-} from "theme-ui";
+import { Button, Badge, Alert, Text, Box, Flex, Grid, Link } from "theme-ui";
 
 const WrappedButton = ({ variant }) => {
   return (

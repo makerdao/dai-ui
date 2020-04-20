@@ -10,8 +10,10 @@ import NavHeader from "./NavHeader";
 import Buttons from "./Buttons";
 import CheckboxRadio from "./CheckboxRadio";
 import Loaders from "./Loaders";
+import ScrollableTable from "./ScrollableTable";
 
 export default [
+  ScrollableTable,
   Buttons,
   CheckboxRadio,
   Loaders,

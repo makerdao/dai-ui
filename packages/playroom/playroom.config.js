@@ -1,15 +1,15 @@
 module.exports = {
-  components: '@theme-ui/components',
-  outputPath: './dist',
+  components: "@theme-ui/components",
+  outputPath: "./dist",
 
   // Optional:
-  title: 'Maker Style Playground',
-  themes: './src/themes',
-  frameComponent: './src/FrameComponent.jsx',
+  title: "Maker Style Playground",
+  themes: "./src/themes",
+  frameComponent: "./src/FrameComponent.jsx",
   widths: [320, 375, 768, 1024],
   port: 9000,
   openBrowser: true,
-  baseUrl: '/packages/playroom/',
+  baseUrl: "/packages/playroom/",
   exampleCode: `
     <Heading>
       Hello World!

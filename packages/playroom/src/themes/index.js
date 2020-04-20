@@ -1,18 +1,7 @@
-import {
-  base,
-  system,
-  funk,
-  future,
-  roboto,
-  dark,
-  deep,
-  swiss,
-  tosh,
-  bootstrap,
-  bulma,
-  tailwind
-} from "@theme-ui/presets";
+import { base } from "@theme-ui/presets";
 
-import MakerDefault from '../../../dai-ui-theme-maker/src/index';
+import MakerDefault from "../../../dai-ui-theme-maker";
+import fountain from "../../../dai-ui-theme-fountain";
+import oasis from "../../../dai-ui-theme-oasis";
 
-export {MakerDefault, base, system, funk, future, roboto};
+export { MakerDefault, fountain, oasis, base };
