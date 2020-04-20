@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "dai-ui-web",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "license": "MIT",
