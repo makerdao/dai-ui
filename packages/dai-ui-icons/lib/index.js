@@ -1,7 +1,1 @@
-"use strict";
-
-module.exports = dsIcons;
-
-function dsIcons() {
-  // TODO
-}
+export { default as Icon } from "./components/Icon";
