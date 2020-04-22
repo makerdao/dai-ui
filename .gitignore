@@ -6,3 +6,4 @@ dist/
 .vscode
 lerna-debug.log
 npm-debug.log
+.yalc

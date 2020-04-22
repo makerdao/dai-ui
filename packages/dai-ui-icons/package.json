@@ -7,6 +7,7 @@
   "license": "Apache-2.0",
   "main": "dist/index.js",
   "source": "lib/index.js",
+  "module": "dist/index.m.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,7 +21,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "microbundle build --jsx React.createElement"
+    "build": "microbundle build --globals react=React,react-dom=ReactDOM --jsx React.createElement",
+    "build:watch": "microbundle watch -globals react=React,react-dom=ReactDOM --jsx  --jsx React.createElement"
   },
   "bugs": {
     "url": "https://github.com/makerdao/design-system/issues"
@@ -28,10 +30,14 @@
   "devDependencies": {
     "microbundle": "^0.12.0-next.8",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "theme-ui": "^0.4.0-alpha.0",
+    "sane": "^4.1.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  }
+    "react-dom": "^16.13.1",
+    "theme-ui": "^0.4.0-alpha.0"
+  },
+  "dependencies": {}
 }
