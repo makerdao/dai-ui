@@ -7,3 +7,4 @@ dist/
 lerna-debug.log
 npm-debug.log
 .yalc
+yalc.lock
