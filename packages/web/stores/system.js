@@ -4,11 +4,12 @@ import maker from "../../dai-ui-theme-maker";
 import fountain from "../../dai-ui-theme-fountain";
 import oasis from "../../dai-ui-theme-oasis";
 
+import icons from "dai-ui-icons";
 // console.log(maker, 'hehrhere')
 // console.log(maker, fountain, oasis);
 
 const themes = {
-  MakerDefault: maker,
+  MakerDefault: { ...maker, ...icons },
   OasisDex: oasis,
   Fountain: fountain,
 };

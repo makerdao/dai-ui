@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, useThemeUI } from "theme-ui";
 
-const defaultIcons = {
+export default {
   copy: {
     path: (
       <path
@@ -30,7 +30,7 @@ const defaultIcons = {
   },
 };
 
-const Icon = ({
+export const Icon = ({
   name,
   size,
   color = "currentColor",
@@ -39,10 +39,11 @@ const Icon = ({
   ...rest
 }) => {
   const { theme } = useThemeUI();
-  const icons = { ...defaultIcons, ...theme.icons };
+  const icons = { ...theme.icons };
 
-  // TODO find a suitable fallback icon
-  const icon = icons[name] ? icons[name] : defaultIcons.search;
+  // TODO find a suitable fallback icon OR
+  // return null if name doesn't exist
+  const icon = icons[name] ? icons[name] : icons.search;
 
   return (
     <Box
@@ -60,5 +61,3 @@ const Icon = ({
     </Box>
   );
 };
-
-export default Icon;

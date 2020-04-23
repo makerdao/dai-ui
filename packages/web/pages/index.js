@@ -13,7 +13,7 @@ export default () => {
   return (
     <Container>
       {/* TODO: remove when no longer needed for debugging: */}
-      <Icon name="copy"></Icon>
+      <Icon name="copy" color="primary"></Icon>
       {Object.keys(parsedTheme).map((k, key) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
