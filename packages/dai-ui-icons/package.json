@@ -31,8 +31,8 @@
     "microbundle": "^0.12.0-next.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "theme-ui": "^0.4.0-alpha.0",
-    "sane": "^4.1.0"
+    "sane": "^4.1.0",
+    "theme-ui": "^0.4.0-alpha.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",
