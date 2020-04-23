@@ -1,6 +1,5 @@
 import React from "react";
 import { useThemeUI, Grid, Card, Box, Heading, Container } from "theme-ui";
-import { Icon } from "dai-ui-icons";
 
 import { parseTheme } from "../utils";
 import { themeTemplateMapping } from "../components/StyleguideTemplates";
@@ -12,8 +11,6 @@ export default () => {
 
   return (
     <Container>
-      {/* TODO: remove when no longer needed for debugging: */}
-      <Icon name="copy" color="primary"></Icon>
       {Object.keys(parsedTheme).map((k, key) => {
         if (!Object.keys(themeTemplateMapping).includes(k)) return null;
         // if (k !== 'buttons') return null;
@@ -27,6 +24,7 @@ export default () => {
           "badges",
           "alerts",
           "fonts",
+          "icons",
         ].includes(k);
         const isTextVariants = k === "text";
         const isFontSizesVariants = k === "fontSizes";
