@@ -511,6 +511,7 @@ export const Icon = ({
   color = "currentColor",
   role = "presentation",
   focusable = "false",
+  sx,
   ...rest
 }) => {
   const { theme } = useThemeUI();
@@ -524,7 +525,7 @@ export const Icon = ({
   return (
     <Box
       as="svg"
-      sx={{ size: size }}
+      sx={{ ...sx, size: size }}
       viewBox={icons[name].viewBox || "0 0 24 24"}
       color={color}
       display="inline-block"
