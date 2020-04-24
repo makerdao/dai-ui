@@ -6,7 +6,7 @@
 
 1.  Install the icons package.
 
-`yarn add dai-ui-icons`
+`yarn add @makerdao/dai-ui-icons`
 
 2. Import the icons in the same file where you import your theme, and merge the icons with your theme.
 
@@ -14,7 +14,7 @@
 // app.js
 import { ThemeProvider } from "theme-ui";
 import theme from "./theme";
-import icons from "dai-ui-icons";
+import icons from "@makerdao/dai-ui-icons";
 
 const mergedTheme = { ...theme, ...icons };
 
@@ -27,7 +27,7 @@ export default (props) => (
 
 ```js
 // index.js
-import { Icon } from "dai-ui-icons";
+import { Icon } from "@makerdao/dai-ui-icons";
 
 <Icon name="dai_round_color" />;
 ```

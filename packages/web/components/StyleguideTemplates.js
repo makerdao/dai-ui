@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Badge, Alert, Text, Box, Flex, Grid, Link } from "theme-ui";
-import { Icon } from "dai-ui-icons";
+import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variant }) => {
   return (
