@@ -9,7 +9,7 @@ import oasis from "../../dai-ui-theme-oasis";
 // console.log(maker, fountain, oasis);
 
 const themes = {
-  MakerDefault: { ...maker, icons: icons.default }, // temp hack to get the build working
+  MakerDefault: { ...maker, icons: icons.default }, // FIXME: temp hack to get the build working
   OasisDex: oasis,
   Fountain: fountain,
 };
