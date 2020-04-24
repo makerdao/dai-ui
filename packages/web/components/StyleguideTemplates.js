@@ -227,8 +227,9 @@ const WrappedFonts = ({ variant, variants }) => {
 const WrappedIcon = ({ name }) => {
   return (
     <Grid gap={2} columns={1} p={2}>
-      <Icon name={name} color="primary" />
+      <Icon name={name} color="text" size={4} />
       <Text variant="boldBody">{name}</Text>
+      <Text variant="small">{`<Icon name="${name}" color="text" />`}</Text>
     </Grid>
   );
 };

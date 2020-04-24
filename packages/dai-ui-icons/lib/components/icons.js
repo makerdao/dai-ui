@@ -507,32 +507,33 @@ export default {
 
 export const Icon = ({
   name,
-  size,
+  size = 3,
   color = "currentColor",
-  width = "24",
-  height = "24",
+  role = "presentation",
+  focusable = "false",
   ...rest
 }) => {
   const { theme } = useThemeUI();
   const icons = { ...theme.icons };
 
-  // TODO find a suitable fallback icon OR
-  // return null if name doesn't exist
-  const icon = icons[name] ? icons[name] : icons.search;
+  if (!icons[name]) {
+    console.error(`No icon found with name ${name}`);
+    return null;
+  }
 
   return (
     <Box
-      width={width}
-      height={height}
       as="svg"
-      size={size}
-      viewBox={icon.viewBox || "0 0 24 24"}
+      sx={{ size: size }}
+      viewBox={icons[name].viewBox || "0 0 24 24"}
       color={color}
       display="inline-block"
       verticalAlign="middle"
+      focusable={focusable}
+      role={role}
       {...rest}
     >
-      {icon.path}
+      {icons[name].path}
     </Box>
   );
 };
