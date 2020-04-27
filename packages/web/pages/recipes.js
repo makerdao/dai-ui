@@ -35,7 +35,7 @@ const liveTheme = { styles: [] };
 const Components = () => (
   <Container>
     <CollapsableCard
-      title={"How to Contribute?"}
+      title={"How to contribute?"}
       text={<ContributeMDX />}
       isCollapsed={true}
     />

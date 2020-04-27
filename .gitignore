@@ -6,3 +6,6 @@ dist/
 .vscode
 lerna-debug.log
 npm-debug.log
+.yalc
+yalc.lock
+yarn-error.log

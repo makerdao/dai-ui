@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Badge, Alert, Text, Box, Flex, Grid, Link } from "theme-ui";
+import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variant }) => {
   return (
@@ -223,6 +224,16 @@ const WrappedFonts = ({ variant, variants }) => {
   );
 };
 
+const WrappedIcon = ({ name }) => {
+  return (
+    <Grid gap={2} columns={1} p={2}>
+      <Icon name={name} color="text" size={4} />
+      <Text variant="boldBody">{name}</Text>
+      <Text variant="small">{`<Icon name="${name}" color="text" />`}</Text>
+    </Grid>
+  );
+};
+
 export const themeVariants = ["buttons", "text", "links"];
 
 export const themeTemplateMapping = {
@@ -249,4 +260,5 @@ export const themeTemplateMapping = {
   sizes: (variant, variants) => (
     <WrappedSizes variant={variant} variants={variants} />
   ),
+  icons: (name) => <WrappedIcon name={name} />,
 };
