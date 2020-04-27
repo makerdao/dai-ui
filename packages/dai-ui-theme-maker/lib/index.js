@@ -72,6 +72,8 @@ const theme = {
   shadows: {
     floater: "0 0 8px rgba(0, 0, 0, 0.125)",
     deep: "2px 2px 8px rgba(0, 0, 0, 0.925)",
+    lightPrimary: (theme) =>
+      `0 0 1px 5px ${transparentize("primary", 0.8)(theme)}`,
   },
   alerts: {
     primary: {
@@ -266,8 +268,7 @@ const theme = {
         color: "primary",
         bg: "primary",
         "&::-webkit-slider-thumb": {
-          boxShadow: (theme) =>
-            `0 0 1px 5px ${transparentize("primary", 0.8)(theme)}`,
+          boxShadow: (theme) => theme.shadows.lightPrimary,
         },
       },
     },
