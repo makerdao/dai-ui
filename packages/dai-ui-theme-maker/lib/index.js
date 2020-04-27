@@ -1,3 +1,5 @@
+import { transparentize } from "@theme-ui/color";
+
 const theme = {
   useBorderBox: true,
   useBodyStyles: true,
@@ -70,7 +72,6 @@ const theme = {
   shadows: {
     floater: "0 0 8px rgba(0, 0, 0, 0.125)",
     deep: "2px 2px 8px rgba(0, 0, 0, 0.925)",
-    lightPrimary: "0 0 1px 5px rgba(26, 171, 155, 0.2)",
   },
   alerts: {
     primary: {
@@ -265,7 +266,8 @@ const theme = {
         color: "primary",
         bg: "primary",
         "&::-webkit-slider-thumb": {
-          boxShadow: "lightPrimary",
+          boxShadow: (theme) =>
+            `0 0 1px 5px ${transparentize("primary", 0.8)(theme)}`,
         },
       },
     },
