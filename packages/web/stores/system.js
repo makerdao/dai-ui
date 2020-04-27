@@ -1,5 +1,5 @@
 import create from "zustand";
-import icons from "@makerdao/dai-ui-icons";
+import { icons } from "@makerdao/dai-ui-icons";
 
 import maker from "../../dai-ui-theme-maker";
 import fountain from "../../dai-ui-theme-fountain";
@@ -9,7 +9,7 @@ import oasis from "../../dai-ui-theme-oasis";
 // console.log(maker, fountain, oasis);
 
 const themes = {
-  MakerDefault: { ...maker, icons: icons.default }, // FIXME: temp hack to get the build working
+  MakerDefault: { ...maker, icons },
   OasisDex: oasis,
   Fountain: fountain,
 };

@@ -14,9 +14,9 @@
 // app.js
 import { ThemeProvider } from "theme-ui";
 import theme from "./theme";
-import icons from "@makerdao/dai-ui-icons";
+import { icons } from "@makerdao/dai-ui-icons";
 
-const mergedTheme = { ...theme, ...icons };
+const mergedTheme = { ...theme, icons };
 
 export default (props) => (
   <ThemeProvider theme={mergedTheme}>{props.children}</ThemeProvider>
@@ -32,7 +32,7 @@ import { Icon } from "@makerdao/dai-ui-icons";
 <Icon name="dai_round_color" />;
 ```
 
-4. Icons also accept `color` and `size` props that are integrated with your theme, as well as theme-ui `sx` properties.
+4. Icons can also accept `color` and `size` props pulled from your theme, as well as theme-ui `sx` properties.
 
 ```js
 <Icon name="maker" color="primary" size={3} sx={{ bg: "secondary" }} />
@@ -43,16 +43,17 @@ import { Icon } from "@makerdao/dai-ui-icons";
 
 ## Creating an Icons Package
 
-1. Your icons package must export an object with a `name` key with `path` and `viewBox` keys nested inside.
-2. The `path` must return a valid svg path as JSX, since it will be wrapped in an `<svg>` element by the `Icon` component.
+1. Your package must export an `icons` object where each icon is keyed by its name, with `path` and `viewBox` keys nested inside.
+
+2. The `path` must return a valid svg `<path>` element as JSX, since it will be wrapped in an `<svg>` element by the `Icon` component.
 
 3. Change the `fill` attribute to `"currentColor"` so you can set the color with the `color` prop on the `Icon` component.
 
 ```js
-// in your package
-export default {
+// example icons package
+export const icons {
   my_icon: {
-    path: <path fill="currentColor" />,
+    path: (<path fill="currentColor" />),
     viewBox: "0 0 24 24",
   },
 };

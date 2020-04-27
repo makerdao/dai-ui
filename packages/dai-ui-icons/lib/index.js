@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, useThemeUI } from "theme-ui";
 
-export default {
+export const icons = {
   search: {
     path: (
       <g>
