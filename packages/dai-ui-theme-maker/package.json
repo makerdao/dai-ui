@@ -26,7 +26,8 @@
   "bugs": {
     "url": "https://github.com/makerdao/design-system/issues"
   },
-  "dependencies": {
+  "dependencies": {},
+  "peerDependencies": {
     "@theme-ui/color": "^0.3.1"
   }
 }
