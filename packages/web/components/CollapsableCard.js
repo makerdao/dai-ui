@@ -15,7 +15,7 @@ const CollapsableCard = ({ title, text, isCollapsed = false }) => {
           alignItems: "center",
         }}
       >
-        <Heading variant="h2">{title}</Heading>
+        <Heading variant="h3">{title}</Heading>
         <Box sx={{ ml: "auto" }}>
           <IconButton
             onClick={() => setCollapsed(!collapsed)}

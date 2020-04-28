@@ -324,6 +324,13 @@ const theme = {
       letterSpacing: "0.4px",
     },
 
+    h3: {
+      fontSize: 5,
+      lineHeight: "loose",
+      fontWeight: "semiBold",
+      letterSpacing: "0.4px",
+    },
+
     bigText: {
       fontSize: 8,
     },
@@ -495,4 +502,3 @@ const theme = {
 theme.sizes.container = 1140;
 
 export default theme;
-
