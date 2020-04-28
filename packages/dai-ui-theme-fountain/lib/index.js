@@ -21,9 +21,9 @@ const theme = {
   
     fonts: {
       body:
-        '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
+        '"Inter", "Helvetica Neue", sans-serif',
       heading:
-        '-apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu',
+        '"Inter", "Helvetica Neue", sans-serif',
       monospace: "monospace",
     },
   
