@@ -4,28 +4,57 @@ const theme = {
 
   breakpoints: ["40em", "52em", "64em"],
 
+  /**
+   * background
+   * muted
+   *
+   * primary
+   * primaryMuted
+   * primaryText
+   *
+   * warning (muted, text)
+   * danger (muted, text)
+   * success (muted, text)
+   */
+
   colors: {
     primary: "#1AAB9B",
-    secondary: "#F4B731",
-    text: "#231536",
+    primaryMuted: "#88D1CA", // used in disabled...
+    primaryHover: "#2DC1B1", //from figma
+    primaryActive: "#169C8D", //from figma, could be "selected" ?
+    text: "#231536", //some text like headers are black
+    primaryText: "#fff",
+    // secondary: "#F4B731",
+    greyText: "#6F8390", //used in card title/headers
+    link: "#447AFB", // blue link text
     muted: "#D4D9E1",
-    grey2: "#E2E9EC",
+    // grey2: "#E2E9EC",
     background: "#F6F8F9",
-    white: "#fff",
-    sidebar: "#1E2C37",
-    subText: "#48495F",
-    lightText: "#708390",
-    accent: "#447AFB",
-    green1: "#098C7D",
-    green2: "#139D8D",
-    green3: "#B6EDE7",
-    highlight: "#E7FCFA",
-    yellow1: "#E47F09",
-    yellow2: "#FBCC5F",
-    yellow3: "#FFF9ED",
-    red1: "#CB532D",
-    red2: "#FA7249",
-    red3: "#FFF2EE",
+    foreground: "#fff",
+    // white: "#fff",
+    // sidebar: "#1E2C37",
+    // subText: "#48495F",
+    // lightText: "#708390",
+    // accent: "#447AFB",
+    // green1: "#098C7D",
+    // green2: "#139D8D",
+    // green3: "#B6EDE7",
+    // highlight: "#E7FCFA",
+    successMuted: "#E7FCFA",
+    success: "#2DC1B1",
+    successText: "#098C7D",
+    warningMuted: "#FFF9ED",
+    warning: "#FCDC93",
+    warningText: "#E67003",
+    dangerMuted: "#FDEDE8",
+    danger: "#F77249",
+    dangerText: "#7E2205",
+    // yellow1: "#E47F09",
+    // yellow2: "#FBCC5F",
+    // yellow3: "#FFF9ED",
+    // red1: "#CB532D",
+    // red2: "#FA7249",
+    // red3: "#FA7249",
   },
 
   fonts: {
