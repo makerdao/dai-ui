@@ -4,7 +4,7 @@ const theme = {
 
   breakpoints: ["40em", "52em", "64em"],
 
-  /**
+  /** Notes
    * background
    * muted
    *
@@ -22,15 +22,15 @@ const theme = {
     primaryMuted: "#88D1CA", // used in disabled...
     primaryHover: "#2DC1B1", //from figma
     primaryActive: "#169C8D", //from figma, could be "selected" ?
+    primaryText: "#FFF", // text for primary buttons
     text: "#231536", //some text like headers are black
-    primaryText: "#fff",
+    textAlt: "#6F8390", //used in card title/headers
     // secondary: "#F4B731",
-    greyText: "#6F8390", //used in card title/headers
     link: "#447AFB", // blue link text
     muted: "#D4D9E1",
     // grey2: "#E2E9EC",
     background: "#F6F8F9",
-    foreground: "#fff",
+    foreground: "#FFF", //background element of foreground objects
     // white: "#fff",
     // sidebar: "#1E2C37",
     // subText: "#48495F",
@@ -40,15 +40,15 @@ const theme = {
     // green2: "#139D8D",
     // green3: "#B6EDE7",
     // highlight: "#E7FCFA",
-    successMuted: "#E7FCFA",
-    success: "#2DC1B1",
-    successText: "#098C7D",
-    warningMuted: "#FFF9ED",
-    warning: "#FCDC93",
-    warningText: "#E67003",
-    dangerMuted: "#FDEDE8",
-    danger: "#F77249",
-    dangerText: "#7E2205",
+    success: "#E7FCFA",
+    // successText: "#098C7D",
+    successEmphasis: "#2DC1B1",
+    warning: "#FFF9ED",
+    // warningText: "#E67003",
+    warningEmphasis: "#FCDC93",
+    danger: "#FDEDE8",
+    // dangerText: "#7E2205",
+    dangerEmphasis: "#F77249",
     // yellow1: "#E47F09",
     // yellow2: "#FBCC5F",
     // yellow3: "#FFF9ED",
