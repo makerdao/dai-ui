@@ -1,4 +1,5 @@
 import { ThemeProvider } from "theme-ui";
+import "prismjs/themes/prism.css";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";

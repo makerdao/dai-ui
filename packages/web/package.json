@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
+    "@mapbox/rehype-prism": "^0.4.0",
     "@makerdao/dai-ui-icons": "^0.0.10",
     "@mdx-js/loader": "^1.0.19",
     "@next/mdx": "^9.0.3",
