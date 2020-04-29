@@ -1063,6 +1063,11 @@
   resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.10.tgz#7afe1581eafc7ad67c5247507bef3b0bb8be8379"
   integrity sha512-K0VYBNqbQYEPlcxjwtSby/PUDTN9BqTUitW92waR1B/yCyQen5a3t+atWIfc8DxbTnBiem4FYl62bWHRBh7CjQ==
 
+"@makerdao/dai-ui-theme-maker@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.6.tgz#6256b03b725b506276be1085dfe7a46c126403fa"
+  integrity sha512-1mkdC7v3/9GvmtWXDPl7ZB5kiwsMu1aONrwmaC2xzAN2UeUUHx4Tow/BybgJ3GjB6MU4c4B7NCwHC3sYSlBqSA==
+
 "@mapbox/rehype-prism@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@mapbox/rehype-prism/-/rehype-prism-0.4.0.tgz#58714b345ec01256aa74c24762a341f6a771494e"

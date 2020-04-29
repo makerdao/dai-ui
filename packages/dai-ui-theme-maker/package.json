@@ -1,6 +1,6 @@
 {
   "name": "@makerdao/dai-ui-theme-maker",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Dai UI Maker Theme",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
@@ -29,12 +29,12 @@
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
   },
-  "dependencies": {},
   "peerDependencies": {
     "@theme-ui/color": "^0.3.1"
   },
   "devDependencies": {
     "@theme-ui/color": "^0.3.1",
-    "microbundle": "^0.11.0"
-  }
+    "microbundle": "^0.12.0-next.8"
+  },
+  "dependencies": {}
 }

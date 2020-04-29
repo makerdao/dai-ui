@@ -1013,6 +1013,11 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
 
+"@makerdao/dai-ui-theme-maker@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.6.tgz#6256b03b725b506276be1085dfe7a46c126403fa"
+  integrity sha512-1mkdC7v3/9GvmtWXDPl7ZB5kiwsMu1aONrwmaC2xzAN2UeUUHx4Tow/BybgJ3GjB6MU4c4B7NCwHC3sYSlBqSA==
+
 "@mdx-js/react@^1.0.0":
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.5.8.tgz#fc38fe0eb278ae24666b2df3c751e726e33f5fac"
