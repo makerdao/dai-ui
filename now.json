@@ -8,6 +8,7 @@
       "use": "@now/static-build",
       "config": { "distDir": "dist" }
     },
+    { "src": "packages/dai-ui-theme-maker/package.json", "use": "@now/next" },
     { "src": "packages/web/package.json", "use": "@now/next" }
   ],
   "routes": [
