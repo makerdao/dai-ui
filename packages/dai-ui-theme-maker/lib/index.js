@@ -335,6 +335,13 @@ const theme = {
       letterSpacing: "0.4px",
     },
 
+    h3: {
+      fontSize: 5,
+      lineHeight: "loose",
+      fontWeight: "semiBold",
+      letterSpacing: "0.4px",
+    },
+
     bigText: {
       fontSize: 8,
     },

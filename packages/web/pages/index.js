@@ -24,6 +24,7 @@ export default () => {
           "badges",
           "alerts",
           "fonts",
+          "icons",
         ].includes(k);
         const isTextVariants = k === "text";
         const isFontSizesVariants = k === "fontSizes";

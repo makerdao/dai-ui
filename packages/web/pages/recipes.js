@@ -14,6 +14,8 @@ import {
 import * as themeUI from "theme-ui";
 import recipes from "../components/RecipesTemplates";
 import { LiveProvider, LivePreview } from "react-live";
+import CollapsableCard from "../components/CollapsableCard";
+import ContributeMDX from "./contribute.mdx";
 
 const scope = {
   ...themeUI,
@@ -32,8 +34,12 @@ const liveTheme = { styles: [] };
 
 const Components = () => (
   <Container>
-    <Box m="2"></Box>
-    <Heading variant="h2" pb={4}>
+    <CollapsableCard
+      title={"How to contribute?"}
+      text={<ContributeMDX />}
+      isCollapsed={true}
+    />
+    <Heading variant="h2" py={4}>
       Recipes
     </Heading>
     <Grid columns={2}>
