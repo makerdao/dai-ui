@@ -8,7 +8,4 @@ lerna-debug.log
 npm-debug.log
 .yalc
 yalc.lock
-<<<<<<< HEAD
-=======
 yarn-error.log
->>>>>>> master
