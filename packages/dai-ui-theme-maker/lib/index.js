@@ -90,20 +90,20 @@ const theme = {
       borderRadius: "xs",
       border: "1px solid",
       borderColor: "success",
-      bg: "successMuted",
-      color: "successEmphasis",
+      bg: "successAlt",
+      color: "success",
+    },
+    notice: {
+      variant: "alerts.primary",
+      borderColor: "notice",
+      bg: "noticeAlt",
+      color: "notice",
     },
     warning: {
       variant: "alerts.primary",
       borderColor: "warning",
-      bg: "warningMuted",
-      color: "warningEmphasis",
-    },
-    danger: {
-      variant: "alerts.primary",
-      borderColor: "danger",
-      bg: "dangerMuted",
-      color: "dangerEmphasis",
+      bg: "warningAlt",
+      color: "warning",
     },
   },
 
@@ -113,20 +113,20 @@ const theme = {
       px: 4,
       borderRadius: "roundish",
       variant: "text.caps",
-      color: "primary",
+      color: "success",
       bg: "foreground",
       border: "1px solid",
-      borderColor: "primary",
+      borderColor: "success",
+    },
+    notice: {
+      variant: "badges.primary",
+      borderColor: "notice",
+      color: "notice",
     },
     warning: {
       variant: "badges.primary",
       borderColor: "warning",
-      color: "warningEmphasis",
-    },
-    danger: {
-      variant: "badges.primary",
-      borderColor: "danger",
-      color: "dangerEmphasis",
+      color: "warning",
     },
   },
 
@@ -134,7 +134,6 @@ const theme = {
     primary: {
       borderRadius: "xs",
       cursor: "pointer",
-      maxWidth: ["100%", "224px"],
       outline: "none",
       fontFamily: "body",
       fontSize: 2,
@@ -360,7 +359,7 @@ const theme = {
     },
 
     bigText: {
-      fontSize: 8,
+      fontSize: 7,
     },
     boldBody: {
       fontSize: 3,
@@ -473,10 +472,7 @@ const theme = {
     },
     h3: {
       variant: "text.heading",
-      fontSize: 4,
-      py: 4,
-      pb: 3,
-      fontWeight: 500,
+      fontSize: 5,
     },
     h4: {
       variant: "text.heading",
@@ -485,6 +481,8 @@ const theme = {
     h5: {
       variant: "text.heading",
       fontSize: 3,
+      py: 2,
+      fontWeight: 500,
     },
     a: {
       color: "accentBlue",

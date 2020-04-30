@@ -24,7 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "microbundle --globals @theme-ui/color=color"
+    "build": "microbundle --globals @theme-ui/color=color",
+    "build:watch": "microbundle watch --globals @theme-ui/color=color"
   },
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
