@@ -8,7 +8,7 @@
 
 2.  Install our [default theme][]
 
-`yarn add dai-ui-theme-maker`
+`yarn add @makerdao/dai-ui-theme-maker`
 
 3.  Or create your own
 

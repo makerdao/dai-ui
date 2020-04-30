@@ -898,7 +898,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.2.tgz#d90df0583a3a252f09aaa619665367bae518db06"
   integrity sha512-NE2DtOdufG7R5vnfQUTehdTfNycfUANEtCa9PssN9O/xmTzP4E08UI797ixaei6hBEVL9BI/PsdJS5x7mWoB9Q==
@@ -1062,6 +1062,11 @@
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.10.tgz#7afe1581eafc7ad67c5247507bef3b0bb8be8379"
   integrity sha512-K0VYBNqbQYEPlcxjwtSby/PUDTN9BqTUitW92waR1B/yCyQen5a3t+atWIfc8DxbTnBiem4FYl62bWHRBh7CjQ==
+
+"@makerdao/dai-ui-theme-maker@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.6.tgz#6256b03b725b506276be1085dfe7a46c126403fa"
+  integrity sha512-1mkdC7v3/9GvmtWXDPl7ZB5kiwsMu1aONrwmaC2xzAN2UeUUHx4Tow/BybgJ3GjB6MU4c4B7NCwHC3sYSlBqSA==
 
 "@mapbox/rehype-prism@^0.4.0":
   version "0.4.0"
@@ -1230,6 +1235,14 @@
     "@theme-ui/css" "^0.4.0-alpha.0"
     deepmerge "^4.2.2"
 
+"@theme-ui/color@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/color/-/color-0.3.1.tgz#fceffc0be305ad6ca6be9755ac9cafc955b1e6f5"
+  integrity sha512-Bgew6etspp087AdrKuMpcWjIQDQ8UTp28wtHCXgi1Ip5ClFn9i91DvaKgqXk9UwQJFL/IwydX8Bks/+u9tf0WA==
+  dependencies:
+    "@theme-ui/css" "^0.3.1"
+    polished "^3.4.1"
+
 "@theme-ui/components@^0.4.0-alpha.0":
   version "0.4.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@theme-ui/components/-/components-0.4.0-alpha.0.tgz#52084b889e56ea715d28eb8d9eddb6b908b9e683"
@@ -1250,6 +1263,11 @@
     "@emotion/core" "^10.0.0"
     "@theme-ui/css" "^0.4.0-alpha.0"
     deepmerge "^4.2.2"
+
+"@theme-ui/css@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.3.1.tgz#b85c7e8fae948dc0de65aa30b853368993e25cb3"
+  integrity sha512-QB2/fZBpo4inaLHL3OrB8NOBgNfwnj8GtHzXWHb9iQSRjmtNX8zPXBe32jLT7qQP0+y8JxPT4YChZIkm5ZyIdg==
 
 "@theme-ui/css@^0.4.0-alpha.0":
   version "0.4.0-alpha.0"
@@ -4637,6 +4655,13 @@ pnp-webpack-plugin@1.5.0:
   integrity sha512-jd9olUr9D7do+RN8Wspzhpxhgp1n6Vd0NtQ4SFkmIACZoEL1nkyAdW9Ygrinjec0vgDcWjscFQQ1gDW8rsfKTg==
   dependencies:
     ts-pnp "^1.1.2"
+
+polished@^3.4.1:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-3.5.2.tgz#ca132b8cd68f7ffa95ae9d423f03e7a14fda1062"
+  integrity sha512-vWoRDg3gY5RQBtUfcj9MRN10VCIf4EkdUikGxyXItg2Hnwk+eIVtdBiLajN0ldFeT3Vq4r/QNbjrQdhqBKrTug==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
 
 posix-character-classes@^0.1.0:
   version "0.1.1"

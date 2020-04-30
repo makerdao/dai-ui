@@ -1,7 +1,8 @@
 import create from "zustand";
 import { icons } from "@makerdao/dai-ui-icons";
 
-import maker from "../../dai-ui-theme-maker";
+// import maker from "../../dai-ui-theme-maker";
+import maker from "@makerdao/dai-ui-theme-maker";
 import fountain from "../../dai-ui-theme-fountain";
 import oasis from "../../dai-ui-theme-oasis";
 

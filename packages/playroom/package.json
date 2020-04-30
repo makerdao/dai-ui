@@ -1,12 +1,14 @@
 {
-  "name": "dai-ui-playroom",
+  "name": "@makerdao/dai-ui-playroom",
   "version": "0.0.5",
   "main": "index.js",
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.27",
+    "@makerdao/dai-ui-theme-maker": "^0.0.6",
     "@mdx-js/react": "^1.5.3",
+    "@theme-ui/color": "^0.3.1",
     "@theme-ui/components": "^0.3.1",
     "@theme-ui/presets": "^0.3.0",
     "react": "^16.13.1",
