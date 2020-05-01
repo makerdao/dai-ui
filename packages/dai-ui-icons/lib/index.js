@@ -514,6 +514,7 @@ export const Icon = ({
   sx,
   ...rest
 }) => {
+  // TODO: testing build
   const { theme } = useThemeUI();
   const icons = { ...theme.icons };
 

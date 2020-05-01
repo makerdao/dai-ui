@@ -88,6 +88,12 @@ const theme = {
     primary: {
       borderRadius: "xs",
       border: "1px solid",
+      borderColor: "primary",
+      bg: "primary",
+      color: "textAlt",
+    },
+    success: {
+      variant: "alerts.primary",
       borderColor: "success",
       bg: "successAlt",
       color: "success",
@@ -112,10 +118,15 @@ const theme = {
       px: 4,
       borderRadius: "roundish",
       variant: "text.caps",
-      color: "success",
+      color: "primary",
       bg: "foreground",
       border: "1px solid",
+      borderColor: "primary",
+    },
+    success: {
+      variant: "badges.primary",
       borderColor: "success",
+      color: "success",
     },
     notice: {
       variant: "badges.primary",
@@ -265,10 +276,10 @@ const theme = {
     },
     inputDanger: {
       variant: "forms.input",
-      borderColor: "danger",
+      borderColor: "warning",
       color: "text",
       "&:focus": {
-        borderColor: "danger",
+        borderColor: "warning",
         color: "text",
       },
     },
@@ -374,7 +385,7 @@ const theme = {
     },
     smallDanger: {
       fontSize: 2,
-      color: "danger",
+      color: "warning",
     },
     muted: {
       color: "textMuted",
