@@ -1013,10 +1013,17 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
 
-"@makerdao/dai-ui-theme-maker@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.6.tgz#6256b03b725b506276be1085dfe7a46c126403fa"
-  integrity sha512-1mkdC7v3/9GvmtWXDPl7ZB5kiwsMu1aONrwmaC2xzAN2UeUUHx4Tow/BybgJ3GjB6MU4c4B7NCwHC3sYSlBqSA==
+"@makerdao/dai-ui-icons@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.13.tgz#631d7b2429ce37bded6eca3c880f2ad188837a08"
+  integrity sha512-nLalgRg6uDU5BvU3FUisJFMGW3GW67Bs6zdoABOcOdXaUU403yqtRu+C6OLqpbkOE95Ci1f+LM0Hy7upwKV47g==
+
+"@makerdao/dai-ui-theme-maker@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.13.tgz#6756a656215caced535fdaeb656a661391471d7b"
+  integrity sha512-d42XJWSY00v+7SR8vlp9RNdXTwlCwuDQbsfbzkDh7QNPYZzrRHkOvZGAoSvUmpln+QcYGTctci/JoIIaL8QxHQ==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
 
 "@mdx-js/react@^1.0.0":
   version "1.5.8"

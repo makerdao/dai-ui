@@ -1,6 +1,6 @@
 {
   "name": "@makerdao/dai-ui-icons",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "description": "> TODO: description",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
@@ -22,7 +22,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle build --globals react=React,react-dom=ReactDOM --jsx React.createElement",
-    "build:watch": "microbundle watch -globals react=React,react-dom=ReactDOM --jsx  --jsx React.createElement"
+    "build:watch": "microbundle watch --globals react=React,react-dom=ReactDOM --jsx  --jsx React.createElement"
   },
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
