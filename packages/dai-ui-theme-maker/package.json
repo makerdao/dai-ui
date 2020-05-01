@@ -26,7 +26,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle --globals @theme-ui/color=color",
     "build:watch": "microbundle watch --globals @theme-ui/color=color",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn && yarn build"
   },
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
@@ -34,7 +34,7 @@
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"
   },
-  "gitHead": "26cad84ae6b698abc4141a2dfa682d4abde49cfe",
+  "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb",
   "dependencies": {
     "@theme-ui/color": "^0.3.1"
   }
