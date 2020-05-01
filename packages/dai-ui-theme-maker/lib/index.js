@@ -89,8 +89,8 @@ const theme = {
       borderRadius: "xs",
       border: "1px solid",
       borderColor: "primary",
-      bg: "primaryAlt",
-      color: "primary",
+      bg: "primary",
+      color: "textAlt",
     },
     success: {
       variant: "alerts.primary",
@@ -276,10 +276,10 @@ const theme = {
     },
     inputDanger: {
       variant: "forms.input",
-      borderColor: "danger",
+      borderColor: "warning",
       color: "text",
       "&:focus": {
-        borderColor: "danger",
+        borderColor: "warning",
         color: "text",
       },
     },
@@ -385,7 +385,7 @@ const theme = {
     },
     smallDanger: {
       fontSize: 2,
-      color: "danger",
+      color: "warning",
     },
     muted: {
       color: "textMuted",

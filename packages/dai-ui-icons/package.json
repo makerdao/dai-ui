@@ -22,7 +22,8 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "microbundle build --globals react=React,react-dom=ReactDOM --jsx React.createElement",
-    "build:watch": "microbundle watch --globals react=React,react-dom=ReactDOM --jsx  --jsx React.createElement"
+    "build:watch": "microbundle watch --globals react=React,react-dom=ReactDOM --jsx  --jsx React.createElement",
+    "prepublishOnly": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
