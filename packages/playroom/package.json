@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@makerdao/dai-ui-icons": "^0.0.19",
+    "@makerdao/dai-ui-icons": "^0.0.10",
     "@makerdao/dai-ui-theme-maker": "^0.0.19",
     "@mdx-js/react": "^1.5.3",
     "@theme-ui/color": "^0.3.1",
