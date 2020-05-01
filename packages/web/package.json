@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@makerdao/dai-ui-web",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "main": "index.js",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "license": "MIT",
@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.15",
-    "@makerdao/dai-ui-icons": "^0.0.18",
-    "@makerdao/dai-ui-theme-maker": "^0.0.18",
+    "@makerdao/dai-ui-icons": "^0.0.19",
+    "@makerdao/dai-ui-theme-maker": "^0.0.19",
     "@mapbox/rehype-prism": "^0.4.0",
     "@mdx-js/loader": "^1.0.19",
     "@next/mdx": "^9.0.3",
