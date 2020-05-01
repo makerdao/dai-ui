@@ -88,6 +88,12 @@ const theme = {
     primary: {
       borderRadius: "xs",
       border: "1px solid",
+      borderColor: "primary",
+      bg: "primaryAlt",
+      color: "primary",
+    },
+    success: {
+      variant: "alerts.primary",
       borderColor: "success",
       bg: "successAlt",
       color: "success",
@@ -112,10 +118,15 @@ const theme = {
       px: 4,
       borderRadius: "roundish",
       variant: "text.caps",
-      color: "success",
+      color: "primary",
       bg: "foreground",
       border: "1px solid",
+      borderColor: "primary",
+    },
+    success: {
+      variant: "badges.primary",
       borderColor: "success",
+      color: "success",
     },
     notice: {
       variant: "badges.primary",
