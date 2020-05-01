@@ -1,4 +1,3 @@
-
 const theme = {
   useBorderBox: true,
   useBodyStyles: true,
@@ -10,7 +9,7 @@ const theme = {
     primaryEmphasis: '#2C52AB',
     // primaryAlt: '#098C7D',
     primaryMuted: '#F9FAFC',
-    "": "",
+    '': '',
     secondary: '#D4D9E1',
     secondaryEmphasis: '#DFE0E2',
     secondaryAlt: '#636A74',
@@ -19,32 +18,31 @@ const theme = {
     text: '#273444',
     textMuted: '#636A74',
     textAlt: '#FFF',
-    "  ": "",
+    '  ': '',
 
     background: '#FAFBFD',
     foreground: '#FFF',
     muted: '#DFE0E2',
-    "   ": "",
+    '   ': '',
 
     // notice: '#7B5B18',
     // noticeAlt: '#87A3E6',
     warning: '#751D2C',
     warningAlt: '#F59DAC',
     warningMuted: '#F1768B',
-    "    ": "",
+    '    ': '',
 
     notice: '#7B5B18',
-    noticeAlt:' #FBDB98',
+    noticeAlt: ' #FBDB98',
     noticeMuted: '#FAD383',
 
-    "       ": "",
+    '       ': '',
 
     success: '#0F5F35',
     successAlt: '#8FDFB5',
     successMuted: '#79D8A6',
     // accentBlue: '#447AFB',
-    "     ": "",
-
+    '     ': '',
 
     bull: '#79D8A5',
     bullAlt: '#E8F5F0',
@@ -95,30 +93,31 @@ const theme = {
 
   alerts: {
     primary: {
-      borderRadius: "xs",
-      border: "1px solid",
-      borderColor: "primaryMuted", // todo opacity trick?
+      border: '1px solid',
+      fontSize: 1,
+      fontWeight: 'bold',
+      borderColor: 'primaryMuted', // todo opacity trick?
       borderRadius: 'roundish',
-      bg: "primary",
-      color: "textAlt",
+      bg: 'primary',
+      color: 'textAlt',
     },
     success: {
-      variant: "alerts.primary",
-      borderColor: "successMuted",
-      bg: "successAlt",
-      color: "success",
+      variant: 'alerts.primary',
+      borderColor: 'successMuted',
+      bg: 'successAlt',
+      color: 'success',
     },
     notice: {
-      variant: "alerts.primary",
-      borderColor: "noticeMuted",
-      bg: "noticeAlt",
-      color: "notice",
+      variant: 'alerts.primary',
+      borderColor: 'noticeMuted',
+      bg: 'noticeAlt',
+      color: 'notice',
     },
     warning: {
-      variant: "alerts.primary",
-      borderColor: "warningMuted",
-      bg: "warningAlt",
-      color: "warning",
+      variant: 'alerts.primary',
+      borderColor: 'warningMuted',
+      bg: 'warningAlt',
+      color: 'warning',
     },
   },
 
@@ -126,144 +125,144 @@ const theme = {
     primary: {
       py: 1,
       px: 4,
-      borderRadius: "roundish",
-      variant: "text.caps",
-      color: "primary",
-      bg: "foreground",
-      border: "1px solid",
-      borderColor: "primary",
+      borderRadius: 'roundish',
+      variant: 'text.caps',
+      color: 'primary',
+      bg: 'foreground',
+      border: '1px solid',
+      borderColor: 'primary',
     },
     success: {
-      variant: "badges.primary",
-      borderColor: "success",
-      color: "success",
+      variant: 'badges.primary',
+      borderColor: 'success',
+      color: 'success',
     },
     notice: {
-      variant: "badges.primary",
-      borderColor: "notice",
-      color: "notice",
+      variant: 'badges.primary',
+      borderColor: 'notice',
+      color: 'notice',
     },
     warning: {
-      variant: "badges.primary",
-      borderColor: "warning",
-      color: "warning",
+      variant: 'badges.primary',
+      borderColor: 'warning',
+      color: 'warning',
     },
   },
 
   buttons: {
     primary: {
-      borderRadius: "xs",
-      cursor: "pointer",
-      outline: "none",
-      fontFamily: "body",
+      borderRadius: 'small',
+      cursor: 'pointer',
+      outline: 'none',
+      fontFamily: 'body',
       fontSize: 2,
       p: 3,
       py: 2,
-      color: "textAlt",
-      fontWeight: "semiBold",
-      bg: "primary",
-      "&:hover": {
-        bg: "primaryEmphasis",
+      color: 'textAlt',
+      fontWeight: 'semiBold',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'primaryEmphasis',
       },
-      "&:active": {
-        bg: "primaryAlt",
+      '&:active': {
+        bg: 'primaryAlt',
       },
-      "&:disabled": {
-        bg: "primaryMuted",
-        pointerEvents: "none",
-        cursor: "not-allowed",
+      '&:disabled': {
+        bg: 'primaryMuted',
+        pointerEvents: 'none',
+        cursor: 'not-allowed',
       },
     },
     round: {
-      variant: "buttons.primary",
-      borderRadius: 'round'
+      variant: 'buttons.primary',
+      borderRadius: 'round',
     },
     outline: {
-      variant: "buttons.primary",
-      bg: "foreground",
-      color: "textMuted",
-      border: "1px solid",
-      borderColor: "secondary",
-      "&:hover": {
-        bg: "secondaryMuted",
+      variant: 'buttons.primary',
+      bg: 'foreground',
+      color: 'textMuted',
+      border: '1px solid',
+      borderColor: 'secondary',
+      '&:hover': {
+        bg: 'secondaryMuted',
         // color: "secondaryEmphasis",
         // borderColor: "secondaryEmphasis",
       },
-      "&:active": {
-        borderColor: "secondaryEmphasis",
+      '&:active': {
+        borderColor: 'secondaryEmphasis',
       },
-      "&:disabled": {
-        bg: "background",
-        pointerEvents: "none",
-        cursor: "not-allowed",
-        borderColor: "secondaryMuted",
+      '&:disabled': {
+        bg: 'background',
+        pointerEvents: 'none',
+        cursor: 'not-allowed',
+        borderColor: 'secondaryMuted',
         opacity: 0.5,
       },
     },
 
     small: {
-      variant: "buttons.primary",
-      textTransform: "uppercase",
-      outline: "none",
-      fontSize: 0,
-      fontWeight: "bold",
-      cursor: "pointer",
+      variant: 'buttons.primary',
+      textTransform: 'uppercase',
+      outline: 'none',
+      fontSize: 1,
+      fontWeight: 'bold',
+      cursor: 'pointer',
+      borderRadius: 'xs',
       p: 2,
-      color: "textAlt",
-      bg: "primary",
-      "&:hover": {
-        bg: "primaryEmphasis",
+      py: 1,
+      color: 'textAlt',
+      bg: 'primary',
+      '&:hover': {
+        bg: 'primaryEmphasis',
       },
-      "&:active": {
-        bg: "primaryAlt",
+      '&:active': {
+        bg: 'primaryAlt',
       },
-      "&:disabled": {
+      '&:disabled': {
         // opacity: 0.5,
-        bg: "primaryMuted",
-        pointerEvents: "none",
-        cursor: "not-allowed",
+        bg: 'primaryMuted',
+        pointerEvents: 'none',
+        cursor: 'not-allowed',
       },
     },
     smallOutline: {
-      variant: "buttons.small",
-      bg: "foreground",
-      color: "secondary",
-      border: "1px solid",
-      borderColor: "secondary",
-      "&:hover": {
-        bg: "foreground",
-        color: "secondaryEmphasis",
-        borderColor: "secondaryEmphasis",
+      variant: 'buttons.small',
+      bg: 'foreground',
+      color: 'textMuted',
+      border: '1px solid',
+      borderColor: 'secondary',
+      '&:hover': {
+        bg: 'secondaryMuted',
+        // color: "secondaryEmphasis",
+        // borderColor: "secondaryEmphasis",
       },
-      "&:active": {
-        bg: "foreground",
-        borderColor: "secondaryAlt",
-        color: "secondaryAlt",
+      '&:active': {
+        borderColor: 'secondaryEmphasis',
       },
-      "&:disabled": {
-        bg: "foreground",
-        pointerEvents: "none",
-        cursor: "not-allowed",
-        borderColor: "secondaryMuted",
+      '&:disabled': {
+        bg: 'foreground',
+        pointerEvents: 'none',
+        cursor: 'not-allowed',
+        borderColor: 'secondaryMuted',
         opacity: 0.5,
       },
     },
     clear: {
-      bg: "transparent",
+      bg: 'transparent',
       p: 1,
     },
     close: {
-      color: "text",
+      color: 'text',
     },
     menu: {
-      color: "text",
+      color: 'text',
     },
     icon: {},
     textual: {
-      background: "transparent",
-      color: "accentBlue",
-      outline: "none",
-      cursor: "pointer",
+      background: 'transparent',
+      color: 'accentBlue',
+      outline: 'none',
+      cursor: 'pointer',
       fontSize: 1,
     },
   },
@@ -271,108 +270,108 @@ const theme = {
   forms: {
     label: {
       fontSize: 3,
-      fontWeight: "semiBold",
+      fontWeight: 'semiBold',
       py: 2,
     },
     input: {
-      outline: "none",
-      borderRadius: "small",
-      borderColor: "secondary",
-      color: "text",
+      outline: 'none',
+      borderRadius: 'small',
+      borderColor: 'secondary',
+      color: 'text',
       p: 2,
-      "&:focus": {
-        borderColor: "secondaryEmphasis",
-        color: "text",
+      '&:focus': {
+        borderColor: 'secondaryEmphasis',
+        color: 'text',
       },
     },
     inputDanger: {
-      variant: "forms.input",
-      borderColor: "warning",
-      color: "text",
-      "&:focus": {
-        borderColor: "warning",
-        color: "text",
+      variant: 'forms.input',
+      borderColor: 'warning',
+      color: 'text',
+      '&:focus': {
+        borderColor: 'warning',
+        color: 'text',
       },
     },
-    textarea: { variant: "forms.input" },
-    textareaDanger: { variant: "forms.inputDanger" },
-    select: { variant: "forms.input" },
+    textarea: { variant: 'forms.input' },
+    textareaDanger: { variant: 'forms.inputDanger' },
+    select: { variant: 'forms.input' },
     slider: {
-      height: "2px",
-      borderRadius: "small",
-      color: "text",
-      "&:active, &:hover, &:focus": {
-        color: "primary",
-        bg: "primary",
-        "&::-webkit-slider-thumb": {
+      height: '2px',
+      borderRadius: 'small',
+      color: 'text',
+      '&:active, &:hover, &:focus': {
+        color: 'primary',
+        bg: 'primary',
+        '&::-webkit-slider-thumb': {
           boxShadow: (theme) => theme.shadows.lightPrimary,
         },
       },
     },
     sliderActive: {
-      variant: "forms.slider",
-      color: "primary",
-      bg: "primary",
+      variant: 'forms.slider',
+      color: 'primary',
+      bg: 'primary',
     },
     radio: {
-      color: "muted",
-      "input:checked ~ &": {
-        color: "primary",
+      color: 'muted',
+      'input:checked ~ &': {
+        color: 'primary',
       },
-      "input:focus ~ &": {
-        bg: "successMuted",
+      'input:focus ~ &': {
+        bg: 'successMuted',
       },
     },
     checkbox: {
-      color: "muted",
-      "input:checked ~ &": {
-        color: "primary",
+      color: 'muted',
+      'input:checked ~ &': {
+        color: 'primary',
       },
-      "input:focus ~ &": {
-        color: "primary",
-        bg: "successMuted",
+      'input:focus ~ &': {
+        color: 'primary',
+        bg: 'successMuted',
       },
     },
   },
   cards: {
     primary: {
-      border: "1px solid",
-      borderColor: "muted",
+      border: '1px solid',
+      borderColor: 'muted',
       p: 3,
-      borderRadius: "medium",
-      bg: "foreground",
+      borderRadius: 'medium',
+      bg: 'foreground',
     },
   },
   messages: {}, // Defaults to "primary" & "highlight"
   text: {
     heading: {
-      fontFamily: "heading",
-      lineHeight: "heading",
-      fontWeight: "heading",
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
     },
 
     caps: {
-      textTransform: "uppercase",
-      color: "textMuted",
+      textTransform: 'uppercase',
+      color: 'textMuted',
       fontSize: 0,
-      fontWeight: "bold",
+      fontWeight: 'bold',
     },
 
     h1: {
       fontSize: 8,
-      fontWeight: "semiBold",
+      fontWeight: 'semiBold',
     },
 
     h2: {
       fontSize: 6,
-      lineHeight: "loose",
-      fontWeight: "semiBold",
+      lineHeight: 'loose',
+      fontWeight: 'semiBold',
     },
 
     h3: {
       fontSize: 5,
-      lineHeight: "loose",
-      fontWeight: "semiBold",
+      lineHeight: 'loose',
+      fontWeight: 'semiBold',
     },
 
     bigText: {
@@ -380,43 +379,43 @@ const theme = {
     },
     boldBody: {
       fontSize: 3,
-      fontWeight: "semiBold",
+      fontWeight: 'semiBold',
     },
     small: {
       fontSize: 1,
     },
     inputText: {
       fontSize: 3,
-      fontWeight: "normal",
+      fontWeight: 'normal',
     },
     smallDanger: {
       fontSize: 2,
-      color: "warning",
+      color: 'warning',
     },
     muted: {
-      color: "textMuted",
+      color: 'textMuted',
       fontSize: 4,
-      lineHeight: "body",
+      lineHeight: 'body',
     },
   },
   links: {
     nav: {
       p: 2,
       fontSize: 5,
-      fontWeight: "body",
-      color: "text",
-      cursor: "pointer",
-      "&:hover": {
-        color: "primary",
-        cursor: "pointer",
+      fontWeight: 'body',
+      color: 'text',
+      cursor: 'pointer',
+      '&:hover': {
+        color: 'primary',
+        cursor: 'pointer',
       },
     },
 
     footer: {
       fontSize: 4,
-      fontWeight: "semiBold",
-      color: "text",
-      cursor: "pointer",
+      fontWeight: 'semiBold',
+      color: 'text',
+      cursor: 'pointer',
     },
   },
   images: {
@@ -424,83 +423,83 @@ const theme = {
   },
   styles: {
     spinner: {
-      color: "primary",
+      color: 'primary',
       strokeWidth: 3,
       size: 4,
     },
     donut: {
-      color: "primary",
+      color: 'primary',
       strokeWidth: 3,
       size: 6,
     },
     time: {
-      display: "inline",
+      display: 'inline',
       major: {
         fontSize: 4,
-        fontWeight: "semiBold",
+        fontWeight: 'semiBold',
       },
       minor: {
         fontSize: 1,
-        fontWeight: "body",
-        color: "textMuted",
+        fontWeight: 'body',
+        color: 'textMuted',
       },
     },
     root: {
-      fontFamily: "body",
-      lineHeight: "body",
-      fontWeight: "body",
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
     },
     statusBox: {
       layout: {
-        border: "1px solid",
-        borderRadius: "medium",
+        border: '1px solid',
+        borderRadius: 'medium',
         fontSize: 2,
-        fontWeight: "bold",
+        fontWeight: 'bold',
         py: 3,
         px: 4,
         mt: 7,
-        lineHeight: "body",
-        width: "100%",
+        lineHeight: 'body',
+        width: '100%',
       },
       warning: {
-        variant: "styles.statusBox.layout",
-        bg: "warningMuted",
-        borderColor: "warning",
-        color: "warningEmphasis",
+        variant: 'styles.statusBox.layout',
+        bg: 'warningMuted',
+        borderColor: 'warning',
+        color: 'warningEmphasis',
       },
       success: {
-        variant: "styles.statusBox.layout",
-        bg: "primaryMuted",
-        borderColor: "primaryEmphasis",
-        color: "primaryAlt",
+        variant: 'styles.statusBox.layout',
+        bg: 'primaryMuted',
+        borderColor: 'primaryEmphasis',
+        color: 'primaryAlt',
       },
     },
     h1: {
-      variant: "text.heading",
+      variant: 'text.heading',
       fontSize: 7,
     },
     h2: {
-      variant: "text.heading",
+      variant: 'text.heading',
       fontSize: 6,
-      fontWeight: "body",
+      fontWeight: 'body',
     },
     h3: {
-      variant: "text.heading",
+      variant: 'text.heading',
       fontSize: 5,
     },
     h4: {
-      variant: "text.heading",
+      variant: 'text.heading',
       fontSize: 4,
     },
     h5: {
-      variant: "text.heading",
+      variant: 'text.heading',
       fontSize: 3,
       py: 2,
       fontWeight: 500,
     },
     a: {
-      color: "accentBlue",
-      textDecoration: "none",
+      color: 'accentBlue',
+      textDecoration: 'none',
     },
     hr: {},
   },
