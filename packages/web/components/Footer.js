@@ -39,6 +39,7 @@ const Header = () => {
           >
             <Select
               defaultValue={currentTheme}
+              value={currentTheme}
               onChange={(e) => setCurrentTheme(e.target.value)}
             >
               {Object.keys(themes).map((theme) => (
