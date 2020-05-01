@@ -6,9 +6,6 @@ import maker from "@makerdao/dai-ui-theme-maker";
 import fountain from "../../dai-ui-theme-fountain";
 import oasis from "../../dai-ui-theme-oasis";
 
-// console.log(maker, 'hehrhere')
-// console.log(maker, fountain, oasis);
-
 const themes = {
   MakerDefault: { ...maker, icons },
   OasisDex: oasis,
