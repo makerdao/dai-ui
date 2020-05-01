@@ -142,7 +142,6 @@ const theme = {
       py: 2,
       color: 'textAlt',
       fontWeight: 'semiBold',
-      letterSpacing: '0.03em',
       bg: 'primary',
       '&:hover': {
         bg: 'primaryEmphasis',
@@ -184,7 +183,6 @@ const theme = {
       variant: 'buttons.primary',
       textTransform: 'uppercase',
       outline: 'none',
-      letterSpacing: '0.05em',
       fontSize: 0,
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -333,7 +331,6 @@ const theme = {
 
     caps: {
       textTransform: 'uppercase',
-      letterSpacing: '0.05em',
       color: 'textMuted',
       fontSize: 0,
       fontWeight: 'bold',
@@ -341,7 +338,6 @@ const theme = {
 
     h1: {
       fontSize: 8,
-      letterSpacing: '0.3px',
       fontWeight: 'semiBold',
     },
 
@@ -349,14 +345,12 @@ const theme = {
       fontSize: 6,
       lineHeight: 'loose',
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
     },
 
     h3: {
       fontSize: 5,
       lineHeight: 'loose',
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
     },
 
     bigText: {
@@ -365,7 +359,6 @@ const theme = {
     boldBody: {
       fontSize: 3,
       fontWeight: 'semiBold',
-      letterSpacing: '0.3px',
     },
     small: {
       fontSize: 1,
@@ -389,7 +382,6 @@ const theme = {
       p: 2,
       fontSize: 5,
       fontWeight: 'body',
-      letterSpacing: '0.4px',
       color: 'text',
       cursor: 'pointer',
       '&:hover': {
@@ -401,7 +393,6 @@ const theme = {
     footer: {
       fontSize: 4,
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
       color: 'text',
       cursor: 'pointer',
     },

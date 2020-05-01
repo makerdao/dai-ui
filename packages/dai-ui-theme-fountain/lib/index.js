@@ -7,38 +7,39 @@ const theme = {
 
   colors: {
     primary: '#4C76DA',
-    primaryEmphasis: '#139D8D',
-    primaryAlt: '#098C7D',
-    primaryMuted: '#B6EDE7',
+    primaryEmphasis: '#2C52AB',
+    // primaryAlt: '#098C7D',
+    primaryMuted: '#F9FAFC',
+    "": "",
     secondary: '#D4D9E1',
     secondaryEmphasis: '#7E7E88',
-    secondaryAlt: '#231536',
+    // secondaryAlt: '#231536',
     secondaryMuted: '#D4D9E1',
+    " ": "",
+
     text: '#273444',
     textMuted: '#636A74',
     textAlt: '#FFF',
-    '': '',
+    "  ": "",
+
     background: '#FAFBFD',
     foreground: '#FFF',
     muted: '#DFE0E2',
-    ' ': '',
-    warning: '#9BB3EA',
-    warningAlt: '#87A3E6',
-    '  ': '',
-    '   ': '',
-    notice: '#FCDC93',
-    noticeAlt: '#FFF9ED',
-    '    ': '',
-    '     ': '',
-    success: '#2DC1B1',
-    successAlt: '#E7FCFA',
-    '      ': '',
-    '       ': '',
-    accentBlue: '#447AFB',
-    accentPurple: '#9055AF',
+    "   ": "",
+
+    notice: '#9BB3EA',
+    noticeAlt: '#87A3E6',
+    // notice: '#FCDC93',
+    // noticeAlt: '#FFF9ED',
+    // success: '#2DC1B1',
+    // successAlt: '#E7FCFA',
+    // accentBlue: '#447AFB',
+    "    ": "",
+    "     ": "",
+
+
     bull: '#79D8A5',
     bullAlt: '#E8F5F0',
-    // bullEmphasis
     bear: '#EB3B5A',
     bearAlt: '#F8E7EC',
   },
@@ -141,7 +142,6 @@ const theme = {
       py: 2,
       color: 'textAlt',
       fontWeight: 'semiBold',
-      letterSpacing: '0.03em',
       bg: 'primary',
       '&:hover': {
         bg: 'primaryEmphasis',
@@ -183,7 +183,6 @@ const theme = {
       variant: 'buttons.primary',
       textTransform: 'uppercase',
       outline: 'none',
-      letterSpacing: '0.05em',
       fontSize: 0,
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -340,7 +339,6 @@ const theme = {
 
     h1: {
       fontSize: 8,
-      letterSpacing: '0.3px',
       fontWeight: 'semiBold',
     },
 
@@ -348,14 +346,12 @@ const theme = {
       fontSize: 6,
       lineHeight: 'loose',
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
     },
 
     h3: {
       fontSize: 5,
       lineHeight: 'loose',
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
     },
 
     bigText: {
@@ -364,7 +360,6 @@ const theme = {
     boldBody: {
       fontSize: 3,
       fontWeight: 'semiBold',
-      letterSpacing: '0.3px',
     },
     small: {
       fontSize: 1,
@@ -388,7 +383,6 @@ const theme = {
       p: 2,
       fontSize: 5,
       fontWeight: 'body',
-      letterSpacing: '0.4px',
       color: 'text',
       cursor: 'pointer',
       '&:hover': {
@@ -400,7 +394,6 @@ const theme = {
     footer: {
       fontSize: 4,
       fontWeight: 'semiBold',
-      letterSpacing: '0.4px',
       color: 'text',
       cursor: 'pointer',
     },
