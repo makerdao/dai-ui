@@ -30,12 +30,12 @@
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
   },
-  "peerDependencies": {
-    "@theme-ui/color": "^0.3.1"
-  },
+  "peerDependencies": {},
   "devDependencies": {
-    "@theme-ui/color": "^0.3.1",
     "microbundle": "^0.12.0-next.8"
   },
-  "gitHead": "e4114871256a39a1c4b23e11b9da964c8f6bd0ad"
+  "gitHead": "e4114871256a39a1c4b23e11b9da964c8f6bd0ad",
+  "dependencies": {
+    "@theme-ui/color": "^0.3.1"
+  }
 }
