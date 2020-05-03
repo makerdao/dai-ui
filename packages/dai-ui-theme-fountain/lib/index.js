@@ -8,46 +8,35 @@ const theme = {
     primary: '#4C76DA',
     primaryEmphasis: '#2C52AB',
     // primaryAlt: '#098C7D',
-    primaryMuted: '#F9FAFC',
-    '': '',
-    secondary: '#D4D9E1',
-    secondaryEmphasis: '#DFE0E2',
-    secondaryAlt: '#636A74',
-    secondaryMuted: '#F8F9FC',
-
-    text: '#273444',
-    textMuted: '#636A74',
-    textAlt: '#FFF',
-    '  ': '',
-
+    noticePrimary: '#87A3E6',
+    noticePrimaryAlt: '#9BB3EA',
     background: '#FAFBFD',
-    foreground: '#FFF',
+    surface: '#FFF',
     muted: '#DFE0E2',
-    '   ': '',
+    mutedAlt: '#F8F9FC',
+    error: '#BC2F48',
 
-    // notice: '#7B5B18',
-    // noticeAlt: '#87A3E6',
-    warning: '#751D2C',
+    warning: '#F1768B',
     warningAlt: '#F59DAC',
-    warningMuted: '#F1768B',
-    '    ': '',
 
-    notice: '#7B5B18',
+    notice: '#FAD383',
     noticeAlt: ' #FBDB98',
-    noticeMuted: '#FAD383',
 
-    '       ': '',
-
-    success: '#0F5F35',
+    success: '#79D8A6',
     successAlt: '#8FDFB5',
-    successMuted: '#79D8A6',
-    // accentBlue: '#447AFB',
-    '     ': '',
 
     bull: '#79D8A5',
     bullAlt: '#E8F5F0',
     bear: '#EB3B5A',
     bearAlt: '#F8E7EC',
+
+    text: '#273444',
+    onMuted: '#636A74',
+    onPrimary: '#F9FAFC',
+    onNoticePrimary: '#1B336A',
+    onSuccess: '#0F5F35',
+    onNotice: '#7B5B18',
+    onWarning: '#751D2C',
   },
 
   fonts: {
@@ -94,30 +83,32 @@ const theme = {
   alerts: {
     primary: {
       border: '1px solid',
+      width: '100%',
+      textAlign: 'center',
       fontSize: 1,
       fontWeight: 'bold',
-      borderColor: 'primaryMuted', // todo opacity trick?
-      borderRadius: 'roundish',
-      bg: 'primary',
-      color: 'textAlt',
+      borderColor: 'noticePrimary',
+      borderRadius: 'small',
+      bg: 'noticePrimaryAlt',
+      color: 'onNoticePrimary',
     },
     success: {
       variant: 'alerts.primary',
-      borderColor: 'successMuted',
+      borderColor: 'success',
       bg: 'successAlt',
-      color: 'success',
+      color: 'onSuccess',
     },
     notice: {
       variant: 'alerts.primary',
-      borderColor: 'noticeMuted',
+      borderColor: 'notice',
       bg: 'noticeAlt',
-      color: 'notice',
+      color: 'onNotice',
     },
     warning: {
       variant: 'alerts.primary',
-      borderColor: 'warningMuted',
+      borderColor: 'warning',
       bg: 'warningAlt',
-      color: 'warning',
+      color: 'onWarning',
     },
   },
 
@@ -128,7 +119,7 @@ const theme = {
       borderRadius: 'roundish',
       variant: 'text.caps',
       color: 'primary',
-      bg: 'foreground',
+      bg: 'surface',
       border: '1px solid',
       borderColor: 'primary',
     },
@@ -140,7 +131,7 @@ const theme = {
     notice: {
       variant: 'badges.primary',
       borderColor: 'notice',
-      color: 'notice',
+      color: 'onNotice',
     },
     warning: {
       variant: 'badges.primary',
@@ -158,7 +149,7 @@ const theme = {
       fontSize: 2,
       p: 3,
       py: 2,
-      color: 'textAlt',
+      color: 'onPrimary',
       fontWeight: 'semiBold',
       bg: 'primary',
       '&:hover': {
@@ -168,7 +159,8 @@ const theme = {
         bg: 'primaryAlt',
       },
       '&:disabled': {
-        bg: 'primaryMuted',
+        opacity: 0.8,
+        // bg: 'primaryMuted',
         pointerEvents: 'none',
         cursor: 'not-allowed',
       },
@@ -179,23 +171,20 @@ const theme = {
     },
     outline: {
       variant: 'buttons.primary',
-      bg: 'foreground',
-      color: 'textMuted',
+      bg: 'surface',
+      color: 'onMuted',
       border: '1px solid',
-      borderColor: 'secondary',
+      borderColor: 'muted',
       '&:hover': {
-        bg: 'secondaryMuted',
-        // color: "secondaryEmphasis",
-        // borderColor: "secondaryEmphasis",
+        bg: 'mutedAlt',
       },
       '&:active': {
-        borderColor: 'secondaryEmphasis',
+        borderColor: 'muted',
       },
       '&:disabled': {
         bg: 'background',
         pointerEvents: 'none',
         cursor: 'not-allowed',
-        borderColor: 'secondaryMuted',
         opacity: 0.5,
       },
     },
@@ -210,7 +199,7 @@ const theme = {
       borderRadius: 'xs',
       p: 2,
       py: 1,
-      color: 'textAlt',
+      color: 'onPrimary',
       bg: 'primary',
       '&:hover': {
         bg: 'primaryEmphasis',
@@ -219,48 +208,33 @@ const theme = {
         bg: 'primaryAlt',
       },
       '&:disabled': {
-        // opacity: 0.5,
-        bg: 'primaryMuted',
+        opacity: 0.8,
+        // bg: 'primaryMuted',
         pointerEvents: 'none',
         cursor: 'not-allowed',
       },
     },
     smallOutline: {
       variant: 'buttons.small',
-      bg: 'foreground',
-      color: 'textMuted',
+      bg: 'surface',
+      color: 'onMuted',
       border: '1px solid',
-      borderColor: 'secondary',
+      borderColor: 'muted',
       '&:hover': {
-        bg: 'secondaryMuted',
-        // color: "secondaryEmphasis",
-        // borderColor: "secondaryEmphasis",
+        bg: 'mutedAlt',
       },
       '&:active': {
-        borderColor: 'secondaryEmphasis',
+        borderColor: 'muted',
       },
       '&:disabled': {
-        bg: 'foreground',
         pointerEvents: 'none',
         cursor: 'not-allowed',
-        borderColor: 'secondaryMuted',
         opacity: 0.5,
       },
     },
-    clear: {
-      bg: 'transparent',
-      p: 1,
-    },
-    close: {
-      color: 'text',
-    },
-    menu: {
-      color: 'text',
-    },
-    icon: {},
     textual: {
       background: 'transparent',
-      color: 'accentBlue',
+      color: 'primary',
       outline: 'none',
       cursor: 'pointer',
       fontSize: 1,
@@ -269,18 +243,18 @@ const theme = {
 
   forms: {
     label: {
-      fontSize: 3,
-      fontWeight: 'semiBold',
+      fontSize: 2,
+      fontWeight: 'body',
       py: 2,
     },
     input: {
       outline: 'none',
       borderRadius: 'small',
-      borderColor: 'secondary',
+      background: 'surface',
+      borderColor: 'muted',
       color: 'text',
       p: 2,
       '&:focus': {
-        borderColor: 'secondaryEmphasis',
         color: 'text',
       },
     },
@@ -319,7 +293,7 @@ const theme = {
         color: 'primary',
       },
       'input:focus ~ &': {
-        bg: 'successMuted',
+        bg: 'success',
       },
     },
     checkbox: {
@@ -329,7 +303,7 @@ const theme = {
       },
       'input:focus ~ &': {
         color: 'primary',
-        bg: 'successMuted',
+        bg: 'success',
       },
     },
   },
@@ -339,7 +313,7 @@ const theme = {
       borderColor: 'muted',
       p: 3,
       borderRadius: 'medium',
-      bg: 'foreground',
+      bg: 'surface',
     },
   },
   messages: {}, // Defaults to "primary" & "highlight"
@@ -352,7 +326,7 @@ const theme = {
 
     caps: {
       textTransform: 'uppercase',
-      color: 'textMuted',
+      color: 'onMuted',
       fontSize: 0,
       fontWeight: 'bold',
     },
@@ -390,10 +364,10 @@ const theme = {
     },
     smallDanger: {
       fontSize: 2,
-      color: 'warning',
+      color: 'error',
     },
     muted: {
-      color: 'textMuted',
+      color: 'onMuted',
       fontSize: 4,
       lineHeight: 'body',
     },
@@ -441,7 +415,7 @@ const theme = {
       minor: {
         fontSize: 1,
         fontWeight: 'body',
-        color: 'textMuted',
+        color: 'onMuted',
       },
     },
     root: {
@@ -463,15 +437,15 @@ const theme = {
       },
       warning: {
         variant: 'styles.statusBox.layout',
-        bg: 'warningMuted',
+        bg: 'warningAlt',
         borderColor: 'warning',
-        color: 'warningEmphasis',
+        color: 'onWarning',
       },
       success: {
         variant: 'styles.statusBox.layout',
-        bg: 'primaryMuted',
-        borderColor: 'primaryEmphasis',
-        color: 'primaryAlt',
+        bg: 'successAlt',
+        borderColor: 'success',
+        color: 'onSuccess',
       },
     },
     h1: {

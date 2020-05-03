@@ -1,73 +1,100 @@
-import React from "react";
-import { useThemeUI, Grid, Card, Box, Heading, Container } from "theme-ui";
+import React from 'react';
+import { useThemeUI, Box, Container, Text } from 'theme-ui';
 
-import { parseTheme } from "../utils";
-import { themeTemplateMapping } from "../components/StyleguideTemplates";
+import { parseTheme } from '../utils';
+import { themeTemplateMapping } from '../components/StyleguideTemplates';
 
 export default () => {
   const t = useThemeUI();
 
   const parsedTheme = parseTheme(t.theme, themeTemplateMapping);
+  const {
+    colors,
+    space,
+    fontSizes,
+    sizes,
+    radii,
+    shadows,
+    badges,
+    text,
+    alerts,
+    buttons,
+    fonts,
+    links,
+    icons,
+    forms,
+  } = parsedTheme;
+  const structure = [
+    [
+      'Theme Styleguide',
+      [
+        ['Colors', colors],
+        ['Spacing', [space, sizes]],
+        ['Typography', [fonts, fontSizes]],
+        ['Shadows & Radii', [shadows, radii]],
+      ],
+    ],
+    [
+      'Component Variants',
+      [
+        ['Buttons', buttons],
+        ['Icons', icons],
+        ['Text And Links', [text, links]],
+        ['Badges and Alerts', [badges, alerts]],
+        ['Forms', forms],
+      ],
+    ],
+  ];
+
+  function walk(path, index) {
+    const [, children] = path;
+
+    if (!children) return null;
+
+    return (
+      <Box
+        sx={{
+          mb: 4,
+        }}
+      >
+        {path.map((item) => {
+          const isTitle = typeof item === 'string';
+          return Array.isArray(item) ? (
+            walk(item, index + 1)
+          ) : isTitle ? (
+            <Text
+              variant="h1"
+              sx={{
+                fontSize: Math.max(10 - index, 7),
+                mb: 3,
+                mt: 0 + index,
+              }}
+            >
+              {item}
+            </Text>
+          ) : (
+            <Box
+              sx={{
+                mb: 5,
+              }}
+            >
+              {item}
+            </Box>
+          );
+        })}
+      </Box>
+    );
+  }
 
   return (
     <Container>
-      {Object.keys(parsedTheme).map((k, key) => {
-        if (!Object.keys(themeTemplateMapping).includes(k)) return null;
-        // if (k !== 'buttons') return null;
-        const isStyleguide = [
-          "colors",
-          "space",
-          "fontSizes",
-          "sizes",
-          "radii",
-          "shadows",
-          "badges",
-          "alerts",
-          "fonts",
-          "icons",
-        ].includes(k);
-        const isTextVariants = k === "text";
-        const isFontSizesVariants = k === "fontSizes";
-        const isSizesVariants = k === "sizes";
-        const isFonts = k === "fonts";
-
-        return (
-          <Box pb={6} key={key}>
-            <Heading
-              variant="h2"
-              pb={4}
-              sx={{
-                textTransform: "capitalize",
-              }}
-            >
-              {k}
-            </Heading>
-            <Grid
-              gap={2}
-              columns={
-                isTextVariants
-                  ? 2
-                  : isFontSizesVariants
-                  ? "repeat(12,auto)"
-                  : isSizesVariants
-                  ? "repeat(9,auto)"
-                  : isFonts
-                  ? 1
-                  : 4
-              }
-              sx={{
-                overflow: "hidden",
-              }}
-            >
-              {parsedTheme[k].map((el, key) => {
-                const Wrapper = isStyleguide ? Box : Card;
-
-                return <Wrapper key={key}>{el}</Wrapper>;
-              })}
-            </Grid>
-          </Box>
-        );
-      })}
+      <Box
+        sx={{
+          px: 0,
+        }}
+      >
+        {walk(structure, 1)}
+      </Box>
     </Container>
   );
 };
