@@ -482,6 +482,9 @@ const theme = {
       px: 2,
     },
   },
+  metadata: {
+    fontLinkHref: 'https://rsms.me/inter/inter.css',
+  }
 };
 
 theme.sizes.container = 1140;

@@ -1,11 +1,12 @@
-import { ThemeProvider } from 'theme-ui';
-import 'prismjs/themes/prism.css';
+import Head from "next/head";
+import { ThemeProvider } from "theme-ui";
+import "prismjs/themes/prism.css";
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import useSystemStore, { selectors } from '../stores/system';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import useSystemStore, { selectors } from "../stores/system";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 const { getCurrentTheme, getAvailableThemes } = selectors;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -20,8 +21,14 @@ const MyApp = ({ Component, pageProps }) => {
       setCurrentTheme(urlTheme);
     }
   }, [urlTheme, currentTheme]);
+
   return (
     <ThemeProvider {...{ theme }}>
+      {theme.metadata && theme.metadata.fontLinkHref ? (
+        <Head>
+          <link href={theme.metadata.fontLinkHref} rel="stylesheet" />
+        </Head>
+      ) : null}
       <Header />
       <Component {...pageProps} />
       <Footer />
