@@ -1013,15 +1013,20 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
 
-"@makerdao/dai-ui-icons@^0.0.23":
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.23.tgz#275086ed7f417c73b78e6d44d8609a662ab703b5"
-  integrity sha512-+AIo0B3I3vr1L0wr4rKU4U35TLfzJO8naAyzUZRUn/8YeZI3o/fnh1iOf7yA3B7j9UAcsbgXnZ9p/n1e6zZprQ==
+"@makerdao/dai-ui-icons@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.24.tgz#f216f76d8bf0eca724ba989c8a9e8e88b8b54787"
+  integrity sha512-nc2YO40BQeutgyqaufkWglsN9VXXo1Fyf4iD5C4qjDW5oV3FAK2PGeOhQwuLtxU25sDvsO50dSWrRM5VCiQX/A==
 
-"@makerdao/dai-ui-theme-maker@^0.0.23":
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.23.tgz#7c1dccce2a7cf56f8dee352cd08b59657aec9dfe"
-  integrity sha512-587m0CrAv1BWWLPes4mUflwzgOtLWQ7Yy77q3vl8H7y/IiVmd7zW9WGwtDbo/Eh8inwKSZBnsx5H4RgxA81z7A==
+"@makerdao/dai-ui-theme-fountain@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-fountain/-/dai-ui-theme-fountain-0.0.24.tgz#5bbe68dce670ca6e7b3e1d32f8628af1c4abea4a"
+  integrity sha512-U1TGhsoWZBzubycRBrZKOzf04I0ZuDi1nfAAChVl11Us5ax0z+YLgV4OaSRMHwBbtD6h8OJadq8oHAPKx7tHQA==
+
+"@makerdao/dai-ui-theme-maker@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.24.tgz#971ade24389e396bf9d7e6923ed7392f379eac1c"
+  integrity sha512-W1GQKjMq72V4A4o1DcpccZ/4f1XukonfNdHBdAYvC/MqMAsEfa99nGGZuPRn/LtlJnB7oqG65VvjcJtvgZH6zQ==
   dependencies:
     "@theme-ui/color" "^0.3.1"
 

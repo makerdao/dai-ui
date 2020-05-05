@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-const daiUiThemeFountain = require('dai-ui-theme-fountain');
+const daiUiThemeFountain = require('@makerdao/dai-ui-theme-fountain');
 
 // TODO: DEMONSTRATE API
 ```
