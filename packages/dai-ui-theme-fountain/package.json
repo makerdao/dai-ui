@@ -5,7 +5,9 @@
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
   "license": "Apache-2.0",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "source": "lib/index.js",
+  "module": "dist/index.m.js",
   "publishConfig": {
     "access": "public"
   },
@@ -18,13 +20,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/makerdao/design-system.git"
+    "url": "git+https://github.com/makerdao/dai-ui.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle",
+    "build:watch": "microbundle watch",
+    "prepublishOnly": "yarn && yarn build"
   },
   "bugs": {
-    "url": "https://github.com/makerdao/design-system/issues"
+    "url": "https://github.com/makerdao/dai-ui/issues"
   },
-  "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb"
+  "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb",
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.9"
+  }
 }
