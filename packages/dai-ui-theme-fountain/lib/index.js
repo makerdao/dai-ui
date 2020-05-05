@@ -258,7 +258,7 @@ const theme = {
         color: 'text',
       },
     },
-    inputDanger: {
+    inputError: {
       variant: 'forms.input',
       borderColor: 'warning',
       color: 'text',
@@ -268,7 +268,7 @@ const theme = {
       },
     },
     textarea: { variant: 'forms.input' },
-    textareaDanger: { variant: 'forms.inputDanger' },
+    textareaError: { variant: 'forms.inputError' },
     select: { variant: 'forms.input' },
     slider: {
       height: '2px',
@@ -362,7 +362,7 @@ const theme = {
       fontSize: 3,
       fontWeight: 'normal',
     },
-    smallDanger: {
+    smallError: {
       fontSize: 2,
       color: 'error',
     },

@@ -7,34 +7,44 @@ const theme = {
   breakpoints: ["40em", "52em", "64em"],
 
   colors: {
+    text: "#231536",
+    textMuted: "#7E7E88",
+
     primary: "#1AAB9B",
     primaryEmphasis: "#139D8D",
     primaryAlt: "#098C7D",
     primaryMuted: "#B6EDE7",
+    onPrimary: "#FFF",
+
     secondary: "#D4D9E1",
     secondaryEmphasis: "#7E7E88",
     secondaryAlt: "#231536",
     secondaryMuted: "#D4D9E1",
-    text: "#231536",
-    textMuted: "#7E7E88",
-    textAlt: "#FFF",
-    "": "",
+    onSecondary: "#7E7E88",
+
     background: "#F6F8F9",
-    foreground: "#FFF",
+    surface: "#FFF",
     muted: "#D4D9E1",
-    " ": "",
-    warning: "#F77249",
-    warningAlt: "#FDEDE8",
-    "  ": "",
-    "   ": "",
-    notice: "#FCDC93",
-    noticeAlt: "#FFF9ED",
-    "    ": "",
-    "     ": "",
+    mutedAlt: "#7E7E88",
+    error: "#BC2F48",
+
     success: "#2DC1B1",
     successAlt: "#E7FCFA",
-    "      ": "",
-    "       ": "",
+    onSuccess: "#2DC1B1",
+
+    notice: "#FCDC93",
+    noticeAlt: "#FFF9ED",
+    onNotice: "#FCDC93", // TODO: make this a little darker
+
+    warning: "#F77249",
+    warningAlt: "#FDEDE8",
+    onWarning: "#F77249",
+
+    bull: "#79D8A5",
+    bullAlt: "#E8F5F0",
+    bear: "#EB3B5A",
+    bearAlt: "#F8E7EC",
+
     accentBlue: "#447AFB",
     accentPurple: "#9055AF",
   },
@@ -96,19 +106,19 @@ const theme = {
       variant: "alerts.primary",
       borderColor: "success",
       bg: "successAlt",
-      color: "success",
+      color: "onSuccess",
     },
     notice: {
       variant: "alerts.primary",
       borderColor: "notice",
       bg: "noticeAlt",
-      color: "notice",
+      color: "onNotice",
     },
     warning: {
       variant: "alerts.primary",
       borderColor: "warning",
       bg: "warningAlt",
-      color: "warning",
+      color: "onWarning",
     },
   },
 
@@ -119,7 +129,7 @@ const theme = {
       borderRadius: "roundish",
       variant: "text.caps",
       color: "primary",
-      bg: "foreground",
+      bg: "surface",
       border: "1px solid",
       borderColor: "primary",
     },
@@ -149,7 +159,7 @@ const theme = {
       fontSize: 2,
       p: 3,
       py: 2,
-      color: "textAlt",
+      color: "onPrimary",
       fontWeight: "semiBold",
       letterSpacing: "0.03em",
       bg: "primary",
@@ -167,12 +177,12 @@ const theme = {
     },
     outline: {
       variant: "buttons.primary",
-      bg: "foreground",
-      color: "secondary",
+      bg: "surface",
+      color: "onSecondary",
       border: "1px solid",
       borderColor: "secondary",
       "&:hover": {
-        bg: "foreground",
+        bg: "surface",
         color: "secondaryEmphasis",
         borderColor: "secondaryEmphasis",
       },
@@ -215,28 +225,29 @@ const theme = {
     },
     smallOutline: {
       variant: "buttons.small",
-      bg: "foreground",
-      color: "secondary",
+      bg: "surface",
+      color: "onSecondary",
       border: "1px solid",
       borderColor: "secondary",
       "&:hover": {
-        bg: "foreground",
+        bg: "surface",
         color: "secondaryEmphasis",
         borderColor: "secondaryEmphasis",
       },
       "&:active": {
-        bg: "foreground",
+        bg: "surface",
         borderColor: "secondaryAlt",
         color: "secondaryAlt",
       },
       "&:disabled": {
-        bg: "foreground",
+        bg: "surface",
         pointerEvents: "none",
         cursor: "not-allowed",
         borderColor: "secondaryMuted",
         opacity: 0.5,
       },
     },
+    //TODO audit the buttons below:
     clear: {
       bg: "transparent",
       p: 1,
@@ -266,25 +277,25 @@ const theme = {
     input: {
       outline: "none",
       borderRadius: "small",
-      borderColor: "secondary",
+      borderColor: "muted",
       color: "text",
       p: 2,
       "&:focus": {
-        borderColor: "secondaryEmphasis",
+        borderColor: "mutedAlt",
         color: "text",
       },
     },
-    inputDanger: {
+    inputError: {
       variant: "forms.input",
-      borderColor: "warning",
+      borderColor: "error",
       color: "text",
       "&:focus": {
-        borderColor: "warning",
+        borderColor: "error",
         color: "text",
       },
     },
     textarea: { variant: "forms.input" },
-    textareaDanger: { variant: "forms.inputDanger" },
+    textareaError: { variant: "forms.inputError" },
     select: { variant: "forms.input" },
     slider: {
       height: "2px",
@@ -329,7 +340,7 @@ const theme = {
       borderColor: "muted",
       p: 3,
       borderRadius: "medium",
-      bg: "foreground",
+      bg: "surface",
     },
   },
   messages: {}, // Defaults to "primary" & "highlight"
@@ -383,9 +394,9 @@ const theme = {
       fontSize: 3,
       fontWeight: "normal",
     },
-    smallDanger: {
+    smallError: {
       fontSize: 2,
-      color: "warning",
+      color: "error",
     },
     muted: {
       color: "textMuted",
