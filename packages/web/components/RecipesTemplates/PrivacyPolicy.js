@@ -1,8 +1,8 @@
 const title = "Privacy Policy Thing";
 const description =
-  "Usually uses position:fixed, \n Remember to integrate the Link component properly, \n The X should be an icon (TODO).";
+  "Usually uses position:fixed, \n Remember to integrate the Link component properly.";
 const playroomHash =
-  "#?code=N4Igxg9gJgpiBcIAEKkB4BiAbGAPAOgHaqoDOuAvMMESSQA4SkCWALsxIfEgOQCGAI1IQsAV1YweAGlp0UAiK1YQAttwAMM4nKQB3ZlFYALbjwCM69QFJpsuQCtRpdgDMAngGFOEwq1NgYXxgAJ1ttOUYWdk5TF2ZcGCgwnSR6bgBmO1QAX2ysgD4slEwcAnC6cioacrkANz5g5j5fU2c3HFIAOmCIUUJYKA8GpK0UlHo3DNGxvixmAHNCAEkJFVJ-QIlQ6ZSFXABlIz4oCF1TdSQzelwkACZrpGD5gT4ACgBOTSRPqW+v9U66gAbABKZJjBTBWDBABKx2YTm4twALEUcnkakhCpjigAVPCsNEkSrUIl0FTBJE7Mb1RrNPy8CS4VidZiEejifHMnhklC5MnYsZIABCbiQTjZ8yQxmYpD0MCEbBgSDcvSQfHmwRgyuUSF6wWAPF4GN5qDQABk2QBrU3EyiknE0hpNFq8NodTp8cFCkhQWX0LB8Sa8NlzQiSak+pBgUTBYSU3iMNlbHmOuT8tOoQVR1KNepgMWMOYF23oAD0lsIVuxZLQZa5rHyZRSteF4mUhFNJOA0dj8dMSaCoSQGaFtJdrAo+HAOAa06JAtNJTwpe7pZQjmczHcXiCrp4ASH3p9swWy1W614h5TpdHY2zQqXZeweAfOlrZbbSk4b+Kz9Kb51i+uD5CAUggMYMAqDApAIAA2iAACyfBWiEAAiMAuHwohYKwIAALrgfohhGLB8BwektyaAA7ECAAc+HZEAA";
+  "#?code=N4Igxg9gJgpiBcIA8AxANjAHgHQHYAJ8BnTAXmGD0MIAcIiBLAFwYl3n2xAEMAjIiGgCuTGFwA0VarwhMmEALYcADJILUA7gyhMAFhy4BGZcoCkEqYQBWQoiwBmATwDCbUbiYHwMDzABOFuq09Mys7JwgfjBo3CwAbmIgatT4NBwAzFIAvll4AHxSSM7cflCWxGQU5YQymADKutxQEBpeyviGNJj4AExd+H4A5rzcABQAnKr4k+LTU8oAdMoAbACUgSk1EKX+AEpNDLZefhBCuGUg5TlSBUH4qBjdJOTA+NxoDIO4AJKiCkReMA+UQBED4HK3Tb3AAqWCY1WozyqdyhCj8HB6ySh1DiJQY3A8XlEmCYCwYuBoIlhJK4CMI1xR+Eh2IAQo58LZyYN8HoGER8BoYPxmDB8I5Tm9BlFRfJ8Kc-JQwVxcozCEgADLkgDWdMRlUoqs2uL8+MJETsjgwRAW3A22JSUD5NBiji85I+uESWPthDAQj8AnRETo5JBtMN9JV9uZ9poJtxYHZdA+id1SAA9JrcFqY9QM9SmLm1d9ILgWSJ5Lgi3mS2x8LhuAoYKQuGA0PREvhIO2-C2QGw6jBS1ASo4uHkM7WqwjJ6Xy3I2LmM+gsMyM8VSrdl49bkkQHoYE2iAgANogACy3C1-gAIjB7NwhGgmCAALriEBaHS6Y-wE8AdmWAAOV8siAA";
 
 const component = `
   <Flex
@@ -39,15 +39,9 @@ const component = `
             privacy policy
           </Link>
         </Text>
-        x
-        <Button sx={{ cursor: "pointer" }} variant="clear">
-          <Flex
-            sx={{
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          ></Flex>
-        </Button>
+        <IconButton>
+          <Icon name="close" color="onSecondary"></Icon>
+        </IconButton>
       </Flex>
     </Card>
   </Flex>

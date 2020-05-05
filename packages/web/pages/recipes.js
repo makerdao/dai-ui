@@ -11,6 +11,7 @@ import {
   Heading,
   Container,
 } from "theme-ui";
+import { Icon } from "@makerdao/dai-ui-icons";
 import * as themeUI from "theme-ui";
 import recipes from "../components/RecipesTemplates";
 import { LiveProvider, LivePreview } from "react-live";
@@ -24,8 +25,7 @@ const scope = {
       return <span className={props.activeClassName} {...props} />;
     return <span {...props} sx={{ cursor: "pointer" }} />;
   },
-  // posts,
-  // images,
+  Icon,
 };
 
 const transformCode = (src) => `/** @jsx jsx */\n<>${src}</>`;
@@ -63,15 +63,6 @@ const Components = () => (
               <LivePreview />
             </LiveProvider>
           </Box>
-          {/* <Box
-              sx={{
-                height: 7,
-                width: 7,
-                overflow: 'hidden',
-              }}
-            >
-              {component}
-            </Box> */}
           <Flex sx={{ alignItems: "center" }}>
             <Box mr="4">
               <Text variant="boldBody">{title}</Text>

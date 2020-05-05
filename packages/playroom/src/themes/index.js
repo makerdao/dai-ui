@@ -1,8 +1,13 @@
-import { base } from "@theme-ui/presets";
-
-// import MakerDefault from "../../../dai-ui-theme-maker";
-import MakerDefault from "@makerdao/dai-ui-theme-maker";
+import maker from "@makerdao/dai-ui-theme-maker";
 import fountain from "@makerdao/dai-ui-theme-fountain";
 import oasis from "../../../dai-ui-theme-oasis";
 
-export { MakerDefault, fountain, oasis, base };
+import { icons } from "@makerdao/dai-ui-icons";
+
+const themes = {
+  MakerDefault: { ...maker, icons },
+  OasisDex: { ...oasis, icons },
+  Fountain: { ...fountain, icons },
+};
+
+export const { MakerDefault, Fountain, OasisDex } = themes;

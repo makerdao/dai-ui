@@ -1,13 +1,9 @@
 import React from "react";
 import Link from "next/link";
 
-import { Container, Flex, Heading, NavLink, Select } from "theme-ui";
-
-import useSystemStore, { themes } from "../stores/system";
+import { Container, Flex, Heading, NavLink } from "theme-ui";
 
 const Header = () => {
-  const { setCurrentTheme, currentTheme } = useSystemStore((state) => state);
-
   return (
     <Container mb={5} mt={4}>
       <Flex
@@ -28,7 +24,6 @@ const Header = () => {
               href="/"
               sx={{
                 cursor: "default",
-                // px: [4, 6]
               }}
             >
               Styleguide
@@ -50,7 +45,6 @@ const Header = () => {
               href="/playroom"
               sx={{
                 cursor: "default",
-                // px: [4, 6]
               }}
             >
               Playroom

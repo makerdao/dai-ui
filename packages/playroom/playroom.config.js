@@ -1,5 +1,5 @@
 module.exports = {
-  components: "@theme-ui/components",
+  components: "./src/components",
   outputPath: "./dist",
 
   // Optional:
