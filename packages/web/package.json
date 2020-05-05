@@ -13,6 +13,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.15",
     "@makerdao/dai-ui-icons": "^0.0.24",
+    "@makerdao/dai-ui-theme-fountain": "^0.0.24",
     "@makerdao/dai-ui-theme-maker": "^0.0.24",
     "@mapbox/rehype-prism": "^0.4.0",
     "@mdx-js/loader": "^1.0.19",
