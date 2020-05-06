@@ -82,7 +82,7 @@ const theme = {
 
   alerts: {
     primary: {
-      border: "1px solid",
+      border: "light",
       width: "100%",
       fontSize: 1,
       fontWeight: "bold",
@@ -122,7 +122,7 @@ const theme = {
       variant: "text.caps",
       color: "primary",
       bg: "surface",
-      border: "1px solid",
+      border: "light",
       borderColor: "primary",
     },
     success: {
@@ -178,7 +178,7 @@ const theme = {
       variant: "buttons.primary",
       color: "text",
       bg: "surface",
-      border: "1px solid",
+      border: "light",
       borderColor: "muted",
       "&:hover": {
         bg: "mutedAlt",
@@ -223,7 +223,7 @@ const theme = {
     smallOutline: {
       variant: "buttons.small",
       bg: "surface",
-      border: "1px solid",
+      border: "light",
       borderColor: "muted",
       color: "text",
       "&:hover": {
@@ -312,7 +312,7 @@ const theme = {
   },
   cards: {
     primary: {
-      border: "1px solid",
+      border: "light",
       borderColor: "muted",
       p: 3,
       bg: "surface",
