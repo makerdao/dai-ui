@@ -1,11 +1,12 @@
-import { ThemeProvider } from 'theme-ui';
-import 'prismjs/themes/prism.css';
+import { ThemeProvider } from "theme-ui";
+import "prismjs/themes/prism.css";
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import useSystemStore, { selectors } from '../stores/system';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import InjectCustomFont from "../components/InjectCustomFont";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import useSystemStore, { selectors } from "../stores/system";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 const { getCurrentTheme, getAvailableThemes } = selectors;
 
 const MyApp = ({ Component, pageProps }) => {
@@ -20,8 +21,10 @@ const MyApp = ({ Component, pageProps }) => {
       setCurrentTheme(urlTheme);
     }
   }, [urlTheme, currentTheme]);
+
   return (
     <ThemeProvider {...{ theme }}>
+      <InjectCustomFont {...{ theme }} />
       <Header />
       <Component {...pageProps} />
       <Footer />
