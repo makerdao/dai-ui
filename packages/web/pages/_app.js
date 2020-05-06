@@ -1,7 +1,7 @@
-import Head from "next/head";
 import { ThemeProvider } from "theme-ui";
 import "prismjs/themes/prism.css";
 
+import InjectCustomFont from "../components/InjectCustomFont";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import useSystemStore, { selectors } from "../stores/system";
@@ -24,11 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider {...{ theme }}>
-      {theme.metadata && theme.metadata.fontLinkHref ? (
-        <Head>
-          <link href={theme.metadata.fontLinkHref} rel="stylesheet" />
-        </Head>
-      ) : null}
+      <InjectCustomFont {...{ theme }} />
       <Header />
       <Component {...pageProps} />
       <Footer />
