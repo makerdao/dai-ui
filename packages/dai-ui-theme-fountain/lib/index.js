@@ -260,9 +260,6 @@ const theme = {
       borderColor: "muted",
       color: "textAlt",
       p: 3,
-      // "&:focus": {
-      //   color: "text",
-      // },
       "&:disabled": {
         bg: "onPrimary",
       },
@@ -272,12 +269,6 @@ const theme = {
     },
     inputError: {
       variant: "forms.input",
-      // borderColor: "warning",
-      // color: "text",
-      // "&:focus": {
-      //   borderColor: "warning",
-      //   color: "text",
-      // },
     },
     textarea: { variant: "forms.input" },
     textareaError: { variant: "forms.inputError" },

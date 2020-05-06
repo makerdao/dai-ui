@@ -51,7 +51,6 @@ const WrappedButton = ({ variants }) => {
 };
 
 const WrappedForms = ({ variants }) => {
-  console.log(Textarea, "lala");
   const varToComp = (v) => {
     const c = (s, vv) => s.indexOf(vv) === 0;
     if (c(v, "input")) {
