@@ -2,67 +2,67 @@ const theme = {
   useBorderBox: true,
   useBodyStyles: true,
 
-  breakpoints: ['40em', '52em', '64em'],
+  breakpoints: ["40em", "52em", "64em"],
 
   colors: {
-    primary: '#4C76DA',
-    primaryEmphasis: '#2C52AB',
-    // primaryAlt: '#098C7D',
-    noticePrimary: '#87A3E6',
-    noticePrimaryAlt: '#9BB3EA',
-    background: '#FAFBFD',
-    surface: '#FFF',
-    muted: '#DFE0E2',
-    mutedAlt: '#F8F9FC',
-    error: '#BC2F48',
+    primary: "#4C76DA",
+    primaryEmphasis: "#2C52AB",
+    noticePrimary: "#87A3E6",
+    noticePrimaryAlt: "#9BB3EA",
+    background: "#FAFBFD",
+    surface: "#FFF",
+    muted: "#DFE0E2",
+    mutedAlt: "#F8F9FC",
+    error: "#BC2F48",
 
-    warning: '#F1768B',
-    warningAlt: '#F59DAC',
+    warning: "#F1768B",
+    warningAlt: "#F59DAC",
 
-    notice: '#FAD383',
-    noticeAlt: ' #FBDB98',
+    notice: "#FAD383",
+    noticeAlt: " #FBDB98",
 
-    success: '#79D8A6',
-    successAlt: '#8FDFB5',
+    success: "#79D8A6",
+    successAlt: "#8FDFB5",
 
-    bull: '#79D8A5',
-    bullAlt: '#E8F5F0',
-    bear: '#EB3B5A',
-    bearAlt: '#F8E7EC',
+    bull: "#79D8A5",
+    bullAlt: "#E8F5F0",
+    bear: "#EB3B5A",
+    bearAlt: "#F8E7EC",
 
-    text: '#273444',
-    onMuted: '#636A74',
-    onPrimary: '#F9FAFC',
-    onNoticePrimary: '#1B336A',
-    onSuccess: '#0F5F35',
-    onNotice: '#7B5B18',
-    onWarning: '#751D2C',
+    text: "#636A74",
+    textAlt: "#273444",
+    onPrimary: "#F9FAFC",
+    onNoticePrimary: "#1B336A",
+    onSuccess: "#0F5F35",
+    onNotice: "#7B5B18",
+    onWarning: "#751D2C",
+    icons: "#2D3436",
+    iconsAlt: "#6E7898",
   },
 
   fonts: {
     body: '"Inter", "Helvetica Neue", sans-serif',
     heading: '"Inter", "Helvetica Neue", sans-serif',
-    monospace: 'monospace',
+    monospace: "monospace",
   },
 
   fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64, 96],
 
   fontWeights: {
     body: 400,
-    heading: 700,
+    semiBold: 600,
     bold: 700,
-    semiBold: 500,
   },
 
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.375,
     tight: 1.05,
     loose: 1.2,
   },
 
   borders: {
-    light: '1px solid',
+    light: "1px solid",
   },
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -73,42 +73,44 @@ const theme = {
     small: 4,
     medium: 6,
     roundish: 12,
-    round: 24,
+    round: 20,
   },
 
   shadows: {
-    floater: '0 0 8px rgba(0, 0, 0, 0.125)',
+    floater: "0 0 8px rgba(0, 0, 0, 0.125)",
   },
 
   alerts: {
     primary: {
-      border: '1px solid',
-      width: '100%',
-      textAlign: 'center',
+      border: "1px solid",
+      width: "100%",
       fontSize: 1,
-      fontWeight: 'bold',
-      borderColor: 'noticePrimary',
-      borderRadius: 'small',
-      bg: 'noticePrimaryAlt',
-      color: 'onNoticePrimary',
+      fontWeight: "bold",
+      borderColor: "noticePrimary",
+      borderRadius: "small",
+      bg: "noticePrimaryAlt",
+      color: "onNoticePrimary",
+      textTransform: "uppercase",
+      justifyContent: ["flex-start", "center"],
+      py: 2,
     },
     success: {
-      variant: 'alerts.primary',
-      borderColor: 'success',
-      bg: 'successAlt',
-      color: 'onSuccess',
+      variant: "alerts.primary",
+      borderColor: "success",
+      bg: "successAlt",
+      color: "onSuccess",
     },
     notice: {
-      variant: 'alerts.primary',
-      borderColor: 'notice',
-      bg: 'noticeAlt',
-      color: 'onNotice',
+      variant: "alerts.primary",
+      borderColor: "notice",
+      bg: "noticeAlt",
+      color: "onNotice",
     },
     warning: {
-      variant: 'alerts.primary',
-      borderColor: 'warning',
-      bg: 'warningAlt',
-      color: 'onWarning',
+      variant: "alerts.primary",
+      borderColor: "warning",
+      bg: "warningAlt",
+      color: "onWarning",
     },
   },
 
@@ -116,127 +118,131 @@ const theme = {
     primary: {
       py: 1,
       px: 4,
-      borderRadius: 'roundish',
-      variant: 'text.caps',
-      color: 'primary',
-      bg: 'surface',
-      border: '1px solid',
-      borderColor: 'primary',
+      borderRadius: "roundish",
+      variant: "text.caps",
+      color: "primary",
+      bg: "surface",
+      border: "1px solid",
+      borderColor: "primary",
     },
     success: {
-      variant: 'badges.primary',
-      borderColor: 'success',
-      color: 'success',
+      variant: "badges.primary",
+      borderColor: "success",
+      color: "success",
     },
     notice: {
-      variant: 'badges.primary',
-      borderColor: 'notice',
-      color: 'onNotice',
+      variant: "badges.primary",
+      borderColor: "notice",
+      color: "onNotice",
     },
     warning: {
-      variant: 'badges.primary',
-      borderColor: 'warning',
-      color: 'warning',
+      variant: "badges.primary",
+      borderColor: "warning",
+      color: "warning",
     },
   },
 
   buttons: {
     primary: {
-      borderRadius: 'small',
-      cursor: 'pointer',
-      outline: 'none',
-      fontFamily: 'body',
+      borderRadius: "small",
+      cursor: "pointer",
+      outline: "none",
+      fontFamily: "body",
       fontSize: 2,
-      p: 3,
+      px: 3,
       py: 2,
-      color: 'onPrimary',
-      fontWeight: 'semiBold',
-      bg: 'primary',
-      '&:hover': {
-        bg: 'primaryEmphasis',
+      color: "onPrimary",
+      fontWeight: "body",
+      bg: "primary",
+      "&:hover": {
+        bg: "primaryEmphasis",
       },
-      '&:active': {
-        bg: 'primaryAlt',
+      "&:active": {
+        bg: "primaryAlt",
       },
-      '&:disabled': {
+      "&:disabled": {
         opacity: 0.8,
-        // bg: 'primaryMuted',
-        pointerEvents: 'none',
-        cursor: 'not-allowed',
+        pointerEvents: "none",
+        cursor: "not-allowed",
       },
+    },
+    primaryBig: {
+      variant: "buttons.primary",
+      fontSize: 3,
     },
     round: {
-      variant: 'buttons.primary',
-      borderRadius: 'round',
+      variant: "buttons.primary",
+      borderRadius: "round",
     },
     outline: {
-      variant: 'buttons.primary',
-      bg: 'surface',
-      color: 'onMuted',
-      border: '1px solid',
-      borderColor: 'muted',
-      '&:hover': {
-        bg: 'mutedAlt',
+      variant: "buttons.primary",
+      color: "text",
+      bg: "surface",
+      border: "1px solid",
+      borderColor: "muted",
+      "&:hover": {
+        bg: "mutedAlt",
       },
-      '&:active': {
-        borderColor: 'muted',
+      "&:active": {
+        borderColor: "muted",
       },
-      '&:disabled': {
-        bg: 'background',
-        pointerEvents: 'none',
-        cursor: 'not-allowed',
+      "&:disabled": {
+        bg: "background",
+        pointerEvents: "none",
+        cursor: "not-allowed",
         opacity: 0.5,
       },
     },
+    outlineBig: {
+      variant: "buttons.outline",
+      fontSize: 3,
+    },
 
     small: {
-      variant: 'buttons.primary',
-      textTransform: 'uppercase',
-      outline: 'none',
+      variant: "buttons.primary",
+      textTransform: "uppercase",
+      outline: "none",
       fontSize: 1,
-      fontWeight: 'bold',
-      cursor: 'pointer',
-      borderRadius: 'xs',
+      fontWeight: "semiBold",
+      borderRadius: "xs",
       p: 2,
       py: 1,
-      color: 'onPrimary',
-      bg: 'primary',
-      '&:hover': {
-        bg: 'primaryEmphasis',
+      bg: "primary",
+      "&:hover": {
+        bg: "primaryEmphasis",
       },
-      '&:active': {
-        bg: 'primaryAlt',
+      "&:active": {
+        bg: "primaryAlt",
       },
-      '&:disabled': {
+      "&:disabled": {
         opacity: 0.8,
-        // bg: 'primaryMuted',
-        pointerEvents: 'none',
-        cursor: 'not-allowed',
+        pointerEvents: "none",
+        cursor: "not-allowed",
       },
     },
     smallOutline: {
-      variant: 'buttons.small',
-      bg: 'surface',
-      color: 'onMuted',
-      border: '1px solid',
-      borderColor: 'muted',
-      '&:hover': {
-        bg: 'mutedAlt',
+      variant: "buttons.small",
+      bg: "surface",
+      border: "1px solid",
+      borderColor: "muted",
+      color: "text",
+      "&:hover": {
+        bg: "mutedAlt",
       },
-      '&:active': {
-        borderColor: 'muted',
+      "&:active": {
+        borderColor: "muted",
       },
-      '&:disabled': {
-        pointerEvents: 'none',
-        cursor: 'not-allowed',
+      "&:disabled": {
+        pointerEvents: "none",
+        cursor: "not-allowed",
         opacity: 0.5,
       },
     },
     textual: {
-      background: 'transparent',
-      color: 'primary',
-      outline: 'none',
-      cursor: 'pointer',
+      background: "transparent",
+      color: "primary",
+      outline: "none",
+      cursor: "pointer",
       fontSize: 1,
     },
   },
@@ -244,152 +250,153 @@ const theme = {
   forms: {
     label: {
       fontSize: 2,
-      fontWeight: 'body',
-      py: 2,
+      fontWeight: "body",
+      py: 1,
     },
     input: {
-      outline: 'none',
-      borderRadius: 'small',
-      background: 'surface',
-      borderColor: 'muted',
-      color: 'text',
-      p: 2,
-      '&:focus': {
-        color: 'text',
+      outline: "none",
+      borderRadius: "small",
+      background: "surface",
+      borderColor: "muted",
+      color: "textAlt",
+      p: 3,
+      // "&:focus": {
+      //   color: "text",
+      // },
+      "&:disabled": {
+        bg: "onPrimary",
+      },
+      "&::placeholder": {
+        color: "inherit",
       },
     },
     inputError: {
-      variant: 'forms.input',
-      borderColor: 'warning',
-      color: 'text',
-      '&:focus': {
-        borderColor: 'warning',
-        color: 'text',
-      },
+      variant: "forms.input",
+      // borderColor: "warning",
+      // color: "text",
+      // "&:focus": {
+      //   borderColor: "warning",
+      //   color: "text",
+      // },
     },
-    textarea: { variant: 'forms.input' },
-    textareaError: { variant: 'forms.inputError' },
-    select: { variant: 'forms.input' },
+    textarea: { variant: "forms.input" },
+    textareaError: { variant: "forms.inputError" },
+    select: { variant: "forms.input" },
     slider: {
-      height: '2px',
-      borderRadius: 'small',
-      color: 'text',
-      '&:active, &:hover, &:focus': {
-        color: 'primary',
-        bg: 'primary',
-        '&::-webkit-slider-thumb': {
+      height: "2px",
+      borderRadius: "small",
+      color: "text",
+      "&:active, &:hover, &:focus": {
+        color: "primary",
+        bg: "primary",
+        "&::-webkit-slider-thumb": {
           boxShadow: (theme) => theme.shadows.lightPrimary,
         },
       },
     },
     sliderActive: {
-      variant: 'forms.slider',
-      color: 'primary',
-      bg: 'primary',
+      variant: "forms.slider",
+      color: "primary",
+      bg: "primary",
     },
     radio: {
-      color: 'muted',
-      'input:checked ~ &': {
-        color: 'primary',
+      color: "muted",
+      "input:checked ~ &": {
+        color: "primary",
       },
-      'input:focus ~ &': {
-        bg: 'success',
+      "input:focus ~ &": {
+        bg: "success",
       },
     },
     checkbox: {
-      color: 'muted',
-      'input:checked ~ &': {
-        color: 'primary',
+      color: "muted",
+      "input:checked ~ &": {
+        color: "primary",
       },
-      'input:focus ~ &': {
-        color: 'primary',
-        bg: 'success',
+      "input:focus ~ &": {
+        color: "primary",
+        bg: "success",
       },
     },
   },
   cards: {
     primary: {
-      border: '1px solid',
-      borderColor: 'muted',
+      border: "1px solid",
+      borderColor: "muted",
       p: 3,
-      borderRadius: 'medium',
-      bg: 'surface',
+      bg: "surface",
+      borderRadius: "small",
+    },
+    secondary: {
+      variant: "cards.primary",
+      bg: "onPrimary",
     },
   },
   messages: {}, // Defaults to "primary" & "highlight"
   text: {
     heading: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
+      fontFamily: "heading",
+      lineHeight: "heading",
+      fontWeight: "semiBold",
+      color: "textAlt",
     },
-
-    caps: {
-      textTransform: 'uppercase',
-      color: 'onMuted',
-      fontSize: 0,
-      fontWeight: 'bold',
-    },
-
     h1: {
+      variant: "text.heading",
       fontSize: 8,
-      fontWeight: 'semiBold',
     },
-
     h2: {
-      fontSize: 6,
-      lineHeight: 'loose',
-      fontWeight: 'semiBold',
-    },
-
-    h3: {
-      fontSize: 5,
-      lineHeight: 'loose',
-      fontWeight: 'semiBold',
-    },
-
-    bigText: {
+      variant: "text.heading",
       fontSize: 7,
     },
+    h3: {
+      variant: "text.heading",
+      fontSize: 6,
+    },
     boldBody: {
-      fontSize: 3,
-      fontWeight: 'semiBold',
+      color: "textAlt",
+      fontWeight: "semiBold",
     },
     small: {
+      fontSize: 2,
+    },
+    tiny: {
       fontSize: 1,
     },
-    inputText: {
-      fontSize: 3,
-      fontWeight: 'normal',
+    processing: {
+      variant: "text.small",
+      color: "primary",
     },
-    smallError: {
-      fontSize: 2,
-      color: 'error',
+    confirmed: {
+      variant: "text.small",
+      color: "onSuccess",
+    },
+    error: {
+      variant: "text.small",
+      color: "error",
     },
     muted: {
-      color: 'onMuted',
       fontSize: 4,
-      lineHeight: 'body',
+      lineHeight: "body",
     },
   },
   links: {
     nav: {
       p: 2,
       fontSize: 5,
-      fontWeight: 'body',
-      color: 'text',
-      cursor: 'pointer',
-      '&:hover': {
-        color: 'primary',
-        cursor: 'pointer',
+      fontWeight: "body",
+      color: "text",
+      cursor: "pointer",
+      "&:hover": {
+        color: "primary",
+        cursor: "pointer",
       },
     },
 
     footer: {
       fontSize: 4,
-      fontWeight: 'semiBold',
-      color: 'text',
-      cursor: 'pointer',
+      fontWeight: "semiBold",
+      color: "text",
+      cursor: "pointer",
     },
   },
   images: {
@@ -397,83 +404,54 @@ const theme = {
   },
   styles: {
     spinner: {
-      color: 'primary',
+      color: "primary",
       strokeWidth: 3,
       size: 4,
     },
     donut: {
-      color: 'primary',
+      color: "primary",
       strokeWidth: 3,
       size: 6,
     },
     time: {
-      display: 'inline',
+      display: "inline",
       major: {
         fontSize: 4,
-        fontWeight: 'semiBold',
+        fontWeight: "semiBold",
       },
       minor: {
         fontSize: 1,
-        fontWeight: 'body',
-        color: 'onMuted',
+        fontWeight: "body",
       },
     },
     root: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-    },
-    statusBox: {
-      layout: {
-        border: '1px solid',
-        borderRadius: 'medium',
-        fontSize: 2,
-        fontWeight: 'bold',
-        py: 3,
-        px: 4,
-        mt: 7,
-        lineHeight: 'body',
-        width: '100%',
-      },
-      warning: {
-        variant: 'styles.statusBox.layout',
-        bg: 'warningAlt',
-        borderColor: 'warning',
-        color: 'onWarning',
-      },
-      success: {
-        variant: 'styles.statusBox.layout',
-        bg: 'successAlt',
-        borderColor: 'success',
-        color: 'onSuccess',
-      },
+      fontFamily: "body",
+      lineHeight: "body",
+      fontWeight: "body",
     },
     h1: {
-      variant: 'text.heading',
-      fontSize: 7,
+      variant: "text.heading",
+      fontSize: 8,
     },
     h2: {
-      variant: 'text.heading',
-      fontSize: 6,
-      fontWeight: 'body',
+      variant: "text.heading",
+      fontSize: 7,
     },
     h3: {
-      variant: 'text.heading',
-      fontSize: 5,
+      variant: "text.heading",
+      fontSize: 6,
     },
     h4: {
-      variant: 'text.heading',
-      fontSize: 4,
+      variant: "text.heading",
+      fontSize: 5,
     },
     h5: {
-      variant: 'text.heading',
-      fontSize: 3,
-      py: 2,
-      fontWeight: 500,
+      variant: "text.heading",
+      fontSize: 4,
     },
     a: {
-      color: 'accentBlue',
-      textDecoration: 'none',
+      color: "primary",
+      textDecoration: "none",
     },
     hr: {},
   },
@@ -483,8 +461,8 @@ const theme = {
     },
   },
   metadata: {
-    fontLinkHref: 'https://rsms.me/inter/inter.css',
-  }
+    fontLinkHref: "https://rsms.me/inter/inter.css",
+  },
 };
 
 theme.sizes.container = 1140;

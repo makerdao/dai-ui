@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Button,
   Badge,
@@ -16,8 +16,8 @@ import {
   Slider,
   Checkbox,
   Radio,
-} from 'theme-ui';
-import { Icon } from '@makerdao/dai-ui-icons';
+} from "theme-ui";
+import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variants }) => {
   return (
@@ -27,14 +27,14 @@ const WrappedButton = ({ variants }) => {
           <Card
             key={variant}
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              height: '100%',
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
             }}
           >
             <Flex
               sx={{
-                mb: 'auto',
+                mb: "auto",
               }}
             >
               <Button variant={variant}>Click Me! </Button>
@@ -51,22 +51,22 @@ const WrappedButton = ({ variants }) => {
 };
 
 const WrappedForms = ({ variants }) => {
-  console.log(Textarea, 'lala');
+  console.log(Textarea, "lala");
   const varToComp = (v) => {
     const c = (s, vv) => s.indexOf(vv) === 0;
-    if (c(v, 'input')) {
+    if (c(v, "input")) {
       return [<Input variant={v}></Input>, `<Input variant={${v}}></Input>`];
-    } else if (c(v, 'label')) {
+    } else if (c(v, "label")) {
       return [
         <Label variant={v}>I'm a label</Label>,
         `<Label variant={${v}}>I'm a label</Label>`,
       ];
-    } else if (c(v, 'textarea')) {
+    } else if (c(v, "textarea")) {
       return [
         <Textarea variant={v}>Hello</Textarea>,
         `<Textarea variant={${v}}>Hello</Textarea>`,
       ];
-    } else if (c(v, 'select')) {
+    } else if (c(v, "select")) {
       return [
         <Select defaultValue="Hello" variant={v} sx={{ width: 6 }}>
           <option>Hello</option>
@@ -78,28 +78,28 @@ const WrappedForms = ({ variants }) => {
       <option>Hello</option>
     </Select>`,
       ];
-    } else if (c(v, 'checkbox')) {
+    } else if (c(v, "checkbox")) {
       return [
         <Flex>
-          {' '}
+          {" "}
           <Checkbox></Checkbox>
           <Checkbox defaultChecked={true} variant={v}></Checkbox>
         </Flex>,
         ` <Checkbox defaultChecked={true} variant={${v}}></Checkbox>`,
       ];
-    } else if (c(v, 'radio')) {
+    } else if (c(v, "radio")) {
       return [
         <Flex>
-          {' '}
+          {" "}
           <Radio></Radio>
           <Radio defaultChecked={true} variant={v}></Radio>
         </Flex>,
         ` <Checkbox defaultChecked={true} variant={${v}}></Checkbox>`,
       ];
-    } else if (c(v, 'slider')) {
+    } else if (c(v, "slider")) {
       return [
         <Flex>
-          {' '}
+          {" "}
           <Slider variant={v}></Slider>
         </Flex>,
         ` <Slider variant={${v}}></Slider>`,
@@ -117,14 +117,14 @@ const WrappedForms = ({ variants }) => {
           <Card
             key={variant}
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              height: '100%',
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
             }}
           >
             <Flex
               sx={{
-                mb: 'auto',
+                mb: "auto",
               }}
             >
               {res[0]}
@@ -148,13 +148,13 @@ const WrappedBadge = ({ variants }) => {
           <Flex
             key={variant}
             sx={{
-              flexDirection: 'column',
-              height: '100%',
+              flexDirection: "column",
+              height: "100%",
             }}
           >
             <Flex
               sx={{
-                mb: 'auto',
+                mb: "auto",
               }}
             >
               <Badge variant={variant}> Winning Proposal </Badge>
@@ -174,7 +174,7 @@ const WrappedAlert = ({ variants }) => {
   return (
     <Box
       sx={{
-        width: '100%',
+        width: "100%",
       }}
     >
       {Object.keys(variants).map((variant) => {
@@ -182,17 +182,17 @@ const WrappedAlert = ({ variants }) => {
           <Box
             key={variant}
             sx={{
-              flexDirection: 'column',
-              height: '100%',
-              width: '100%',
+              flexDirection: "column",
+              height: "100%",
+              width: "100%",
               // mb: 2,
               p: 3,
             }}
           >
             <Flex
               sx={{
-                mb: 'auto',
-                width: '100%',
+                mb: "auto",
+                width: "100%",
               }}
             >
               <Alert variant={variant}> This is an alert message </Alert>
@@ -237,8 +237,8 @@ const WrappedLinks = ({ variants }) => {
           <Flex
             key={variant}
             sx={{
-              flexDirection: 'column',
-              height: '100%',
+              flexDirection: "column",
+              height: "100%",
             }}
           >
             <Link variant={variant}>Anchors are a page's best friend</Link>
@@ -258,17 +258,17 @@ const WrappedColors = ({ variants }) => {
   let keys = Object.keys(variants);
 
   const mainWhitelist = [
-    'primary',
-    'secondary',
-    'background',
-    'surface',
-    'muted',
-    'error',
+    "primary",
+    "secondary",
+    "background",
+    "surface",
+    "muted",
+    "error",
   ];
 
   const filtered = keys.reduce(
     (p, n) => {
-      if (n.indexOf('on') === 0 || n === 'text') {
+      if (n.indexOf("on") === 0 || n.includes("text")) {
         p.typography.push(n);
       } else if (mainWhitelist.find((base) => n.indexOf(base) === 0)) {
         p.main.push(n);
@@ -290,7 +290,7 @@ const WrappedColors = ({ variants }) => {
                 mt: 4,
                 mb: 3,
                 ml: 1,
-                textTransform: 'capitalize',
+                textTransform: "capitalize",
               }}
             >
               {k}
@@ -308,7 +308,7 @@ const WrappedColors = ({ variants }) => {
                   ></Box>
                   <Box>
                     <Text
-                      sx={{ textTransform: 'capitalize' }}
+                      sx={{ textTransform: "capitalize" }}
                       variant="boldBody"
                     >
                       {kk}
@@ -328,9 +328,9 @@ const WrappedColors = ({ variants }) => {
 const WrappedSizes = ({ variants }) => {
   return (
     <Grid
-      columns={'repeat(9,auto)'}
+      columns={"repeat(9,auto)"}
       sx={{
-        overflow: 'hidden',
+        overflow: "hidden",
       }}
     >
       {Object.keys(variants).map((variant) => {
@@ -340,7 +340,7 @@ const WrappedSizes = ({ variants }) => {
               sx={{
                 width: variant,
                 height: 3,
-                bg: 'primary',
+                bg: "primary",
               }}
             ></Box>
             <Box>
@@ -365,7 +365,7 @@ const WrappedRadii = ({ variant, variants }) => {
                 width: 5,
                 height: 4,
                 borderRadius: variant,
-                bg: 'primary',
+                bg: "primary",
               }}
             ></Box>
             <Box>
@@ -390,7 +390,7 @@ const WrappedShadows = ({ variant, variants }) => {
                 width: 5,
                 height: 4,
                 boxShadow: variant,
-                bg: 'primary',
+                bg: "primary",
               }}
             ></Box>
             <Box>
@@ -406,7 +406,7 @@ const WrappedShadows = ({ variant, variants }) => {
 
 const WrappedFontSizes = ({ variant, variants }) => {
   return (
-    <Grid columns={'repeat(12, auto)'}>
+    <Grid columns={"repeat(12, auto)"}>
       {Object.keys(variants).map((variant) => {
         return (
           <Grid gap={2} columns={1} p={2} key={variant}>
