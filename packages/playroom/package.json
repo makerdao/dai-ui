@@ -1,14 +1,14 @@
 {
   "name": "@makerdao/dai-ui-playroom",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "main": "index.js",
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.27",
-    "@makerdao/dai-ui-icons": "^0.0.25",
-    "@makerdao/dai-ui-theme-fountain": "^0.0.25",
-    "@makerdao/dai-ui-theme-maker": "^0.0.25",
+    "@makerdao/dai-ui-icons": "^0.0.26",
+    "@makerdao/dai-ui-theme-fountain": "^0.0.26",
+    "@makerdao/dai-ui-theme-maker": "^0.0.26",
     "@mdx-js/react": "^1.5.3",
     "@theme-ui/color": "^0.3.1",
     "@theme-ui/components": "^0.3.1",
