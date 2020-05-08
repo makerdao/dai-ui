@@ -1058,20 +1058,20 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@makerdao/dai-ui-icons@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.24.tgz#f216f76d8bf0eca724ba989c8a9e8e88b8b54787"
-  integrity sha512-nc2YO40BQeutgyqaufkWglsN9VXXo1Fyf4iD5C4qjDW5oV3FAK2PGeOhQwuLtxU25sDvsO50dSWrRM5VCiQX/A==
+"@makerdao/dai-ui-icons@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.26.tgz#9bd51d921b5adf3760cdf5c7cd33ff4233fac9ae"
+  integrity sha512-lfKNqYTWWrhaBU40pNQkuI1lxrCtjc9CT82g89lw6jImCaBFyXlm28tKN4kQ3l4VgVeVAqi/K8QnW/ZDJYoJmw==
 
-"@makerdao/dai-ui-theme-fountain@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-fountain/-/dai-ui-theme-fountain-0.0.24.tgz#5bbe68dce670ca6e7b3e1d32f8628af1c4abea4a"
-  integrity sha512-U1TGhsoWZBzubycRBrZKOzf04I0ZuDi1nfAAChVl11Us5ax0z+YLgV4OaSRMHwBbtD6h8OJadq8oHAPKx7tHQA==
+"@makerdao/dai-ui-theme-fountain@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-fountain/-/dai-ui-theme-fountain-0.0.26.tgz#ff14126f5602781f9d146ab2125c281c1c71e17a"
+  integrity sha512-M6Fi9doszDz0cOTDMVOok2WLGafDC9GfjZuRk9G3gNr5Ispmxytn8gOUubgfz9bZLckhuqoJMg6r9TtO1c0+3Q==
 
-"@makerdao/dai-ui-theme-maker@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.24.tgz#971ade24389e396bf9d7e6923ed7392f379eac1c"
-  integrity sha512-W1GQKjMq72V4A4o1DcpccZ/4f1XukonfNdHBdAYvC/MqMAsEfa99nGGZuPRn/LtlJnB7oqG65VvjcJtvgZH6zQ==
+"@makerdao/dai-ui-theme-maker@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.26.tgz#1ed76917b1b310207ca372c63296824802c4c206"
+  integrity sha512-XAfTaZadbAyappu5a45wl/NPMtR+MTAqJELd0510GHRJD5R/AmAKZ4h+ubzxYVqwyCeYkRwIF71XWQ2NPoQMEA==
   dependencies:
     "@theme-ui/color" "^0.3.1"
 

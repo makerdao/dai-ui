@@ -267,8 +267,16 @@ const WrappedColors = ({ variants }) => {
 
   const filtered = keys.reduce(
     (p, n) => {
-      if (n.indexOf("on") === 0 || n.includes("text")) {
+      if (n.slice(-3) === "Alt") {
+        p.alt.push(n);
+      } else if (n.slice(-8) === "Emphasis") {
+        p.emphasis.push(n);
+      } else if (n.slice(-5) === "Muted") {
+        p.muted.push(n);
+      } else if (n.indexOf("on") === 0 || n.includes("text")) {
         p.typography.push(n);
+      } else if (n.indexOf("accent") === 0) {
+        p.accent.push(n);
       } else if (mainWhitelist.find((base) => n.indexOf(base) === 0)) {
         p.main.push(n);
       } else {
@@ -276,7 +284,15 @@ const WrappedColors = ({ variants }) => {
       }
       return p;
     },
-    { main: [], typography: [], other: [] }
+    {
+      main: [],
+      alt: [],
+      emphasis: [],
+      muted: [],
+      typography: [],
+      other: [],
+      accent: [],
+    }
   );
   return (
     <Box>
