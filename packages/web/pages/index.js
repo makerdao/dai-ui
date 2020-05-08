@@ -1,8 +1,8 @@
-import React from 'react';
-import { useThemeUI, Box, Container, Text } from 'theme-ui';
+import React from "react";
+import { useThemeUI, Box, Container, Text } from "theme-ui";
 
-import { parseTheme } from '../utils';
-import { themeTemplateMapping } from '../components/StyleguideTemplates';
+import { parseTheme } from "../utils";
+import { themeTemplateMapping } from "../components/StyleguideTemplates";
 
 export default () => {
   const t = useThemeUI();
@@ -26,22 +26,22 @@ export default () => {
   } = parsedTheme;
   const structure = [
     [
-      'Theme Styleguide',
+      "Theme Styleguide",
       [
-        ['Colors', colors],
-        ['Spacing', [space, sizes]],
-        ['Typography', [fonts, fontSizes]],
-        ['Shadows & Radii', [shadows, radii]],
+        ["Colors", colors],
+        ["Spacing", [space, sizes]],
+        ["Typography", [fonts, fontSizes]],
+        ["Shadows & Radii", [shadows, radii]],
       ],
     ],
     [
-      'Component Variants',
+      "Component Variants",
       [
-        ['Buttons', buttons],
-        ['Icons', icons],
-        ['Text And Links', [text, links]],
-        ['Badges and Alerts', [badges, alerts]],
-        ['Forms', forms],
+        ["Buttons", buttons],
+        ["Icons", icons],
+        ["Text And Links", [text, links]],
+        ["Badges and Alerts", [badges, alerts]],
+        ["Forms", forms],
       ],
     ],
   ];
@@ -58,7 +58,7 @@ export default () => {
         }}
       >
         {path.map((item) => {
-          const isTitle = typeof item === 'string';
+          const isTitle = typeof item === "string";
           return Array.isArray(item) ? (
             walk(item, index + 1)
           ) : isTitle ? (
