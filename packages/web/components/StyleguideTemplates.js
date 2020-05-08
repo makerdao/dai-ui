@@ -16,6 +16,7 @@ import {
   Slider,
   Checkbox,
   Radio,
+  useThemeUI,
 } from "theme-ui";
 import { Icon } from "@makerdao/dai-ui-icons";
 
@@ -62,7 +63,7 @@ const WrappedForms = ({ variants }) => {
       ];
     } else if (c(v, "textarea")) {
       return [
-        <Textarea variant={v}>Hello</Textarea>,
+        <Textarea variant={v} defaultValue="Hello"></Textarea>,
         `<Textarea variant={${v}}>Hello</Textarea>`,
       ];
     } else if (c(v, "select")) {
@@ -394,7 +395,9 @@ const WrappedRadii = ({ variant, variants }) => {
   );
 };
 
-const WrappedShadows = ({ variant, variants }) => {
+const WrappedShadows = ({ variants }) => {
+  const { theme } = useThemeUI();
+  const parse = (val) => (typeof val === "function" ? val(theme) : val);
   return (
     <Grid columns={4}>
       {Object.keys(variants).map((variant) => {
@@ -404,13 +407,13 @@ const WrappedShadows = ({ variant, variants }) => {
               sx={{
                 width: 5,
                 height: 4,
-                boxShadow: variant,
+                boxShadow: theme.shadows[variant],
                 bg: "primary",
               }}
             ></Box>
             <Box>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="boldBody">{variants[variant]}</Text>
+              <Text variant="boldBody">{parse(variants[variant])}</Text>
             </Box>
           </Grid>
         );
