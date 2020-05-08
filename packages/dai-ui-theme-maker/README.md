@@ -1,5 +1,11 @@
 # Dai-UI Maker Theme
 
+## Table of Contents
+
+1. [Getting Started](#getting-started)
+2. [Tokens Glossary](#tokens-glossary)
+3. [Setting Up a Local Dev Environment](#setting-up-a-local-dev-environment)
+
 ## Getting Started
 
 1. Install [theme-ui][]
@@ -55,6 +61,45 @@ export default (props) => (
 [recipes page]: https://design-system.mkr-js-prod.now.sh/recipes
 [theme-ui]: https://github.com/system-ui/theme-ui
 [default theme]: https://github.com/makerdao/dai-ui/blob/initial-documentation/packages/dai-ui-theme-maker/lib/index.js
+
+## Tokens Glossary
+
+### Modifiers
+
+| Name      | Description                                                                                                                                                          | Example Use                                                                                                             |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| -Alt      | Generic alternative color shade from the referenced color.                                                                                                           | Hover state                                                                                                             |
+| -Emphasis | Used in combination with the referenced color with a high contrast differential to convey emphasis, "make it pop".                                                   | Active or "clicked" state                                                                                               |
+| -Muted    | A Lower contrast color variation, closer to the background color diff                                                                                                | Disabled state                                                                                                          |
+| On-       | A high contrast color to be applied "on" the referenced token.                                                                                                       | Button text                                                                                                             |
+| Accent-   | One-off colors which don't have a first-class purpose and are used sparingly. This is the only place where it can be acceptable to have a color called by it's name. | User configurable color selection UIs such as label systems, or when assigning colors to days of the week in a calendar |
+
+### Principal Tokens
+
+| Name      | Description                                                                                     | Example Use       |
+| :-------- | :---------------------------------------------------------------------------------------------- | :---------------- |
+| Primary   | The primary brand color. Used in high user focus areas of the application                       | Primary buttons   |
+| Secondary | A secondary color                                                                               | Secondary buttons |
+| Muted     | The primary muted color for the app, closer to the background color but a bit more contrasting. | Borders           |
+
+### Specific Tokens
+
+| Name       | Description                              | Example Use                      |
+| :--------- | :--------------------------------------- | :------------------------------- |
+| Text       | Primary text color                       |                                  |
+| Background | The app background color                 |                                  |
+| Surface    | Background color of foreground elements. | Cards, inputs                    |
+| Error      | git status                               | Error text, invalid input border |
+
+### Descriptive Tokens
+
+| Name    | Description                                                                       | Example Use                                                                                    |
+| :------ | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| Notice  | The color used to represent a neutral action or outcome                           | Generic notice banners, medium risk numbers, form states, icons.                               |
+| Success | The color used to represent a successful action or outcome                        | Success banners, no risk numbers, input success / good validation states, icons.               |
+| Warning | The color used to represent a negative action or outcome                          | Alert banners, high risk numbers, input error states, danger action buttons, icons.            |
+| Bull    | The color representing profits, "buying", etc. General positive financial meaning | Profit percentage, price chart candles and volume, order book, long/short order profit amount. |
+| Bear    | The color representing losses, "selling", etc. General negative financial meaning | Loss percentage, price chart candles and volume, order book long/short order loss amount.      |
 
 ## Setting Up a Local Dev Environment
 
