@@ -272,6 +272,9 @@ const WrappedColors = ({ variants }) => {
     "surface",
     "muted",
     "error",
+    "notice",
+    "success",
+    "warning",
   ];
 
   const filtered = keys.reduce(
