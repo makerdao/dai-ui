@@ -22,50 +22,37 @@ import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variants }) => {
   const disabledBlacklist = ["textual"];
-
-  const DisplayCard = ({ variant, disabled = false }) => (
-    <Card
-      key={variant + disabled.toString()}
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100%",
-      }}
-    >
-      <Flex
-        sx={{
-          mb: "auto",
-        }}
-      >
-        <Button disabled={disabled} variant={variant}>
-          Click Me!
-        </Button>
-      </Flex>
-      <Box mt={3}>
-        <Text variant="boldBody">{`${variant}${
-          disabled ? " disabled" : ""
-        }`}</Text>
-        <Text variant="small">{`<Button variant="${variant}"${
-          disabled ? " disabled" : ""
-        } />`}</Text>
-      </Box>
-    </Card>
-  );
-
   return (
     <Grid columns={4}>
       {Object.keys(variants).map((variant) => {
         return (
-          <Fragment key={variant}>
-            <DisplayCard key={variant} variant={variant} />
-            {!disabledBlacklist.includes(variant) && (
-              <DisplayCard
-                key={variant + "disabled"}
-                disabled={true}
-                variant={variant}
-              />
-            )}
-          </Fragment>
+          <Card
+            key={variant}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
+            }}
+          >
+            <Grid
+              columns={2}
+              sx={{
+                mb: "auto",
+                flexDirection: "row",
+              }}
+            >
+              <Button variant={variant}>Click Me!</Button>
+              {!disabledBlacklist.includes(variant) && (
+                <Button disabled variant={variant}>
+                  Click Me!
+                </Button>
+              )}
+            </Grid>
+            <Box mt={3}>
+              <Text variant="boldBody">{variant}</Text>
+              <Text variant="small">{`<Button variant="${variant}" />`}</Text>
+            </Box>
+          </Card>
         );
       })}
     </Grid>
