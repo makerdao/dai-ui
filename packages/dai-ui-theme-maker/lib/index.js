@@ -217,7 +217,6 @@ const theme = {
         bg: "primaryAlt",
       },
       "&:disabled": {
-        // opacity: 0.5,
         bg: "primaryMuted",
         pointerEvents: "none",
         cursor: "not-allowed",
@@ -240,25 +239,13 @@ const theme = {
         color: "secondaryAlt",
       },
       "&:disabled": {
-        bg: "surface",
+        bg: "background",
         pointerEvents: "none",
         cursor: "not-allowed",
         borderColor: "secondaryMuted",
         opacity: 0.5,
       },
     },
-    //TODO audit the buttons below:
-    clear: {
-      bg: "transparent",
-      p: 1,
-    },
-    close: {
-      color: "text",
-    },
-    menu: {
-      color: "text",
-    },
-    icon: {},
     textual: {
       background: "transparent",
       color: "accentBlue",

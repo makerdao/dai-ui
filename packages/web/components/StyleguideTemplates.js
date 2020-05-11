@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Button,
   Badge,
@@ -21,30 +21,51 @@ import {
 import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variants }) => {
+  const disabledBlacklist = ["textual"];
+
+  const DisplayCard = ({ variant, disabled = false }) => (
+    <Card
+      key={variant + disabled.toString()}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100%",
+      }}
+    >
+      <Flex
+        sx={{
+          mb: "auto",
+        }}
+      >
+        <Button disabled={disabled} variant={variant}>
+          Click Me!
+        </Button>
+      </Flex>
+      <Box mt={3}>
+        <Text variant="boldBody">{`${variant}${
+          disabled ? " disabled" : ""
+        }`}</Text>
+        <Text variant="small">{`<Button variant="${variant}"${
+          disabled ? " disabled" : ""
+        } />`}</Text>
+      </Box>
+    </Card>
+  );
+
   return (
     <Grid columns={4}>
       {Object.keys(variants).map((variant) => {
         return (
-          <Card
-            key={variant}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              height: "100%",
-            }}
-          >
-            <Flex
-              sx={{
-                mb: "auto",
-              }}
-            >
-              <Button variant={variant}>Click Me! </Button>
-            </Flex>
-            <Box mt={3}>
-              <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Button variant="${variant}" />`}</Text>
-            </Box>
-          </Card>
+          <Fragment key={variant}>
+            <DisplayCard key={variant} variant={variant} />
+            {!disabledBlacklist.includes(variant) && (
+              <DisplayCard
+                key={variant + "disabled"}
+                disabled={true}
+                variant={variant}
+              />
+            )}
+          </Fragment>
         );
       })}
     </Grid>
@@ -241,7 +262,7 @@ const WrappedLinks = ({ variants }) => {
               height: "100%",
             }}
           >
-            <Link variant={variant}>Anchors are a page's best friend</Link>
+            <Link variant={variant}>Anchors are a page&apos;s best friend</Link>
 
             <Box>
               <Text variant="boldBody">{variant}</Text>
@@ -370,7 +391,7 @@ const WrappedSizes = ({ variants }) => {
   );
 };
 
-const WrappedRadii = ({ variant, variants }) => {
+const WrappedRadii = ({ variants }) => {
   return (
     <Grid columns={6}>
       {Object.keys(variants).map((variant) => {
@@ -422,7 +443,7 @@ const WrappedShadows = ({ variants }) => {
   );
 };
 
-const WrappedFontSizes = ({ variant, variants }) => {
+const WrappedFontSizes = ({ variants }) => {
   return (
     <Grid columns={"repeat(12, auto)"}>
       {Object.keys(variants).map((variant) => {
