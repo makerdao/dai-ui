@@ -1,5 +1,5 @@
 import React from 'react';
-import { useThemeUI, Box, Container, Text } from 'theme-ui';
+import { useThemeUI, Box, Container, Text, Heading } from 'theme-ui';
 
 import { parseTheme } from '../utils';
 import { themeTemplateMapping } from '../components/StyleguideTemplates';
@@ -62,7 +62,7 @@ export default () => {
           return Array.isArray(item) ? (
             walk(item, index + 1)
           ) : isTitle ? (
-            <Text
+            <Heading
               variant="h1"
               sx={{
                 fontSize: Math.max(10 - index, 7),
@@ -71,7 +71,7 @@ export default () => {
               }}
             >
               {item}
-            </Text>
+            </Heading>
           ) : (
             <Box
               sx={{

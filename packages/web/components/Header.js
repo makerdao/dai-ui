@@ -16,7 +16,6 @@ const Header = () => {
           as="nav"
           sx={{
             ml: [0, "auto"],
-            mr: [null, 6],
           }}
         >
           <Link href="/">

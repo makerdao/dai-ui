@@ -16,6 +16,7 @@ import {
   Slider,
   Checkbox,
   Radio,
+  Heading,
   useThemeUI,
 } from "theme-ui";
 import { Icon } from "@makerdao/dai-ui-icons";
@@ -295,7 +296,7 @@ const WrappedColors = ({ variants }) => {
       {Object.keys(filtered).map((k) => {
         return (
           <Box key={k}>
-            <Text
+            <Heading
               variant="h2"
               sx={{
                 mt: 4,
@@ -305,7 +306,7 @@ const WrappedColors = ({ variants }) => {
               }}
             >
               {k}
-            </Text>
+            </Heading>
 
             <Grid columns={4}>
               {filtered[k].map((kk) => (
