@@ -1,6 +1,6 @@
 {
   "name": "@makerdao/dai-ui-theme-oasis",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "Dai UI Oasis Theme",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
@@ -33,7 +33,7 @@
   },
   "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb",
   "dependencies": {
-    "@makerdao/dai-ui-theme-maker": "^0.0.27"
+    "@makerdao/dai-ui-theme-maker": "^0.0.28"
   },
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"
