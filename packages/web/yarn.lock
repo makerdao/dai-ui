@@ -1075,6 +1075,11 @@
   dependencies:
     "@theme-ui/color" "^0.3.1"
 
+"@makerdao/dai-ui-theme-oasis@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.27.tgz#e68356c2e8c785af694f6acd43e3ac80f8fe57cc"
+  integrity sha512-6CDUfXo70yIyVVIzXSzrA5rUimZB0MUFciwOxGJjKiIQeIu3eBYjqZw6xyi46BfVryzuCkQf6CjPuZzV0RGvYA==
+
 "@mapbox/rehype-prism@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@mapbox/rehype-prism/-/rehype-prism-0.4.0.tgz#58714b345ec01256aa74c24762a341f6a771494e"
