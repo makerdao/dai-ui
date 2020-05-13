@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Button,
   Badge,
@@ -16,10 +16,13 @@ import {
   Slider,
   Checkbox,
   Radio,
+  Heading,
+  useThemeUI,
 } from "theme-ui";
 import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variants }) => {
+  const disabledBlacklist = ["textual"];
   return (
     <Grid columns={4}>
       {Object.keys(variants).map((variant) => {
@@ -32,13 +35,20 @@ const WrappedButton = ({ variants }) => {
               height: "100%",
             }}
           >
-            <Flex
+            <Grid
+              columns={2}
               sx={{
                 mb: "auto",
+                flexDirection: "row",
               }}
             >
-              <Button variant={variant}>Click Me! </Button>
-            </Flex>
+              <Button variant={variant}>Click Me!</Button>
+              {!disabledBlacklist.includes(variant) && (
+                <Button disabled variant={variant}>
+                  Click Me!
+                </Button>
+              )}
+            </Grid>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
               <Text variant="small">{`<Button variant="${variant}" />`}</Text>
@@ -62,7 +72,7 @@ const WrappedForms = ({ variants }) => {
       ];
     } else if (c(v, "textarea")) {
       return [
-        <Textarea variant={v}>Hello</Textarea>,
+        <Textarea variant={v} defaultValue="Hello"></Textarea>,
         `<Textarea variant={${v}}>Hello</Textarea>`,
       ];
     } else if (c(v, "select")) {
@@ -240,7 +250,7 @@ const WrappedLinks = ({ variants }) => {
               height: "100%",
             }}
           >
-            <Link variant={variant}>Anchors are a page's best friend</Link>
+            <Link variant={variant}>Anchors are a page&apos;s best friend</Link>
 
             <Box>
               <Text variant="boldBody">{variant}</Text>
@@ -263,6 +273,9 @@ const WrappedColors = ({ variants }) => {
     "surface",
     "muted",
     "error",
+    "notice",
+    "success",
+    "warning",
   ];
 
   const filtered = keys.reduce(
@@ -283,7 +296,7 @@ const WrappedColors = ({ variants }) => {
       {Object.keys(filtered).map((k) => {
         return (
           <Box key={k}>
-            <Text
+            <Heading
               variant="h2"
               sx={{
                 mt: 4,
@@ -293,7 +306,7 @@ const WrappedColors = ({ variants }) => {
               }}
             >
               {k}
-            </Text>
+            </Heading>
 
             <Grid columns={4}>
               {filtered[k].map((kk) => (
@@ -353,7 +366,7 @@ const WrappedSizes = ({ variants }) => {
   );
 };
 
-const WrappedRadii = ({ variant, variants }) => {
+const WrappedRadii = ({ variants }) => {
   return (
     <Grid columns={6}>
       {Object.keys(variants).map((variant) => {
@@ -378,7 +391,9 @@ const WrappedRadii = ({ variant, variants }) => {
   );
 };
 
-const WrappedShadows = ({ variant, variants }) => {
+const WrappedShadows = ({ variants }) => {
+  const { theme } = useThemeUI();
+  const parse = (val) => (typeof val === "function" ? val(theme) : val);
   return (
     <Grid columns={4}>
       {Object.keys(variants).map((variant) => {
@@ -388,13 +403,13 @@ const WrappedShadows = ({ variant, variants }) => {
               sx={{
                 width: 5,
                 height: 4,
-                boxShadow: variant,
+                boxShadow: theme.shadows[variant],
                 bg: "primary",
               }}
             ></Box>
             <Box>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="boldBody">{variants[variant]}</Text>
+              <Text variant="boldBody">{parse(variants[variant])}</Text>
             </Box>
           </Grid>
         );
@@ -403,7 +418,7 @@ const WrappedShadows = ({ variant, variants }) => {
   );
 };
 
-const WrappedFontSizes = ({ variant, variants }) => {
+const WrappedFontSizes = ({ variants }) => {
   return (
     <Grid columns={"repeat(12, auto)"}>
       {Object.keys(variants).map((variant) => {

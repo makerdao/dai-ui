@@ -1,6 +1,6 @@
 import maker from "@makerdao/dai-ui-theme-maker";
 import fountain from "@makerdao/dai-ui-theme-fountain";
-import oasis from "../../../dai-ui-theme-oasis";
+import oasis from "@makerdao/dai-ui-theme-oasis";
 
 import { icons } from "@makerdao/dai-ui-icons";
 

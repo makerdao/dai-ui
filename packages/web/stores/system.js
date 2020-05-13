@@ -4,7 +4,7 @@ import { icons } from "@makerdao/dai-ui-icons";
 // import maker from "../../dai-ui-theme-maker";
 import maker from "@makerdao/dai-ui-theme-maker";
 import fountain from "@makerdao/dai-ui-theme-fountain";
-import oasis from "../../dai-ui-theme-oasis";
+import oasis from "@makerdao/dai-ui-theme-oasis";
 
 const themes = {
   MakerDefault: { ...maker, icons },

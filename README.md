@@ -85,3 +85,11 @@ export default {
 
 [sandbox]: https://design-system.mkr-js-prod.now.sh/playroom
 [github repo]: https://github.com/makerdao/dai-ui/new/master/packages/web/components/RecipesTemplates
+
+## Publishing a package
+
+In the root directory run:
+
+`yarn lerna publish`
+
+This will bump the package versions and publish all packages together.
