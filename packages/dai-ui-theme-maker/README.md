@@ -66,6 +66,8 @@ export default (props) => (
 
 ### Modifiers
 
+These terms can be used to extend the main tokens. Modifiers should remain agnostic from color information or UI specificity, allowing for color mode variations and re-use.
+
 | Name      | Description                                                                                                                                                          | Example Use                                                                                                             |
 | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
 | -Alt      | Generic alternative color shade from the referenced color.                                                                                                           | Hover state                                                                                                             |
@@ -74,32 +76,31 @@ export default (props) => (
 | On-       | A high contrast color to be applied "on" the referenced token.                                                                                                       | Button text                                                                                                             |
 | Accent-   | One-off colors which don't have a first-class purpose and are used sparingly. This is the only place where it can be acceptable to have a color called by it's name. | User configurable color selection UIs such as label systems, or when assigning colors to days of the week in a calendar |
 
-### Principal Tokens
+### Main Tokens
 
-| Name      | Description                                                                                     | Example Use       |
-| :-------- | :---------------------------------------------------------------------------------------------- | :---------------- |
-| Primary   | The primary brand color. Used in high user focus areas of the application                       | Primary buttons   |
-| Secondary | A secondary color                                                                               | Secondary buttons |
-| Muted     | The primary muted color for the app, closer to the background color but a bit more contrasting. | Borders           |
+The core colors for the app, these tokens should be included in every theme.
 
-### Specific Tokens
+| Name       | Description                                                                                     | Example Use                                                                         |
+| :--------- | :---------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Primary    | The primary brand color. Used in high user focus areas of the application.                      | Primary buttons                                                                     |
+| Secondary  | A secondary color.                                                                              | Secondary buttons                                                                   |
+| Text       | Primary text color.                                                                             | Main color for typography                                                           |
+| Muted      | The primary muted color for the app, closer to the background color but a bit more contrasting. | Borders                                                                             |
+| Background | The app background color.                                                                       | Main background for the app                                                         |
+| Surface    | Background color of foreground elements.                                                        | Cards, inputs                                                                       |
+| Error      | A color for indicating error states.                                                            | Error text, invalid input border                                                    |
+| Notice     | The color used to represent a neutral action or outcome.                                        | Generic notice banners, medium risk numbers, form states, icons.                    |
+| Success    | The color used to represent a successful action or outcome.                                     | Success banners, no risk numbers, input success / good validation states, icons.    |
+| Warning    | The color used to represent a negative action or outcome.                                       | Alert banners, high risk numbers, input error states, danger action buttons, icons. |
 
-| Name       | Description                              | Example Use                      |
-| :--------- | :--------------------------------------- | :------------------------------- |
-| Text       | Primary text color                       |                                  |
-| Background | The app background color                 |                                  |
-| Surface    | Background color of foreground elements. | Cards, inputs                    |
-| Error      | git status                               | Error text, invalid input border |
+### Other Tokens
 
-### Descriptive Tokens
+Unique tokens that are context-specific, but with high a probability for reuse within the application.
 
-| Name    | Description                                                                       | Example Use                                                                                    |
-| :------ | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
-| Notice  | The color used to represent a neutral action or outcome                           | Generic notice banners, medium risk numbers, form states, icons.                               |
-| Success | The color used to represent a successful action or outcome                        | Success banners, no risk numbers, input success / good validation states, icons.               |
-| Warning | The color used to represent a negative action or outcome                          | Alert banners, high risk numbers, input error states, danger action buttons, icons.            |
-| Bull    | The color representing profits, "buying", etc. General positive financial meaning | Profit percentage, price chart candles and volume, order book, long/short order profit amount. |
-| Bear    | The color representing losses, "selling", etc. General negative financial meaning | Loss percentage, price chart candles and volume, order book long/short order loss amount.      |
+| Name | Description                                                                       | Example Use                                                                                    |
+| :--- | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| Bull | The color representing profits, "buying", etc. General positive financial meaning | Profit percentage, price chart candles and volume, order book, long/short order profit amount. |
+| Bear | The color representing losses, "selling", etc. General negative financial meaning | Loss percentage, price chart candles and volume, order book long/short order loss amount.      |
 
 ## Setting Up a Local Dev Environment
 
