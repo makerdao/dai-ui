@@ -396,7 +396,7 @@ const theme = {
   links: {
     nav: {
       p: 2,
-      fontSize: 5,
+      fontSize: 3,
       fontWeight: "body",
       letterSpacing: "0.4px",
       color: "text",
