@@ -1063,11 +1063,6 @@
   resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.28.tgz#3ad034a39f7a032b3c3a1e52f518ba58d30dace4"
   integrity sha512-MCySrvq5hjN/Mv+OTCMl5xNW7iJSqFgzU06XxGMJe800FmMHJQLApwvFL0g50WbOcGAuvUWsopm5eiasjJaJDw==
 
-"@makerdao/dai-ui-theme-fountain@^0.0.28":
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-fountain/-/dai-ui-theme-fountain-0.0.28.tgz#bdb1a9913eeea4dfc0c3a73c45d39586f94fc604"
-  integrity sha512-gpHPLvnSk23SAqA925y7IQxnbT9NEOs9RbcZ4XE9kkvzugNLMLYOCCGKzh1mBPBngqszjwKAgygqeByC7XcFoQ==
-
 "@makerdao/dai-ui-theme-maker@^0.0.28":
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.28.tgz#669345c9886ed47befe665eddf5051b185505447"
@@ -1081,6 +1076,11 @@
   integrity sha512-Pn0RwR/3JJeRffympsUdxmtue0PyCMV9GaMAcQqDEgLajkkBEIbsgV8b/lmBX06qp2DyUUdjIc9IGF0iuCLhMA==
   dependencies:
     "@makerdao/dai-ui-theme-maker" "^0.0.28"
+
+"@makerdao/dai-ui-theme-pen@^0.0.28":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.29.tgz#c79e141809b668c39c742fb25dc38687754896e1"
+  integrity sha512-Ka5TWarS6j6fsJJy/hFe/rlXBGxMA3DwNs2TXHwcvwnqHxbNpAfDBlb8XItLv6BDoQq6Ul8H7m6jze2jJFZxaQ==
 
 "@mapbox/rehype-prism@^0.4.0":
   version "0.4.0"

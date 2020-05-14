@@ -820,10 +820,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@makerdao/dai-ui-theme-maker@^0.0.28":
-  version "0.0.27"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.27.tgz#91df61921bf3f7cb29bcdb4d39d35ca08a01b418"
-  integrity sha512-gApcQCJU4RBFipu3697XjSC8f/SS9DdvLdJp1H2+lMeoxOeCcr2G/VYRXa0NOqmnAPNn/2iZos44qdakP58o1g==
+"@makerdao/dai-ui-theme-maker@^0.0.29":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.28.tgz#669345c9886ed47befe665eddf5051b185505447"
+  integrity sha512-13HqK8R7fiVBQ9FYXToMe4rDGUn0s0Xx7qCVmgwn7b5RNRuI3uz2EaoYp0dIuujROY5MgzuxJcFTzZSke/6qcg==
   dependencies:
     "@theme-ui/color" "^0.3.1"
 
