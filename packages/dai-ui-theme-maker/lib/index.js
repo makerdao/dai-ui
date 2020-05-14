@@ -100,7 +100,9 @@ const theme = {
       border: "1px solid",
       borderColor: "primary",
       bg: "primary",
-      color: "textAlt",
+      color: "onPrimary",
+      width: "100%",
+      justifyContent: ["flex-start", "center"],
     },
     success: {
       variant: "alerts.primary",
@@ -394,7 +396,7 @@ const theme = {
   links: {
     nav: {
       p: 2,
-      fontSize: 5,
+      fontSize: 3,
       fontWeight: "body",
       letterSpacing: "0.4px",
       color: "text",
