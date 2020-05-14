@@ -1,4 +1,4 @@
-# Dai-UI Fountain Theme
+# Dai-UI Pen Theme
 
 ## Setting Up a Local Dev Environment
 
@@ -12,10 +12,10 @@ While developing a new theme, you can link it to your frontend project with `yar
 
 `yarn link`
 
-3. Navigate to your frontend project and complete the link. In this example we'll use the fountain theme.
+3. Navigate to your frontend project and complete the link. In this example we'll use the pen theme.
 
-`yarn link "@makerdao/dai-ui-theme-fountain"`
+`yarn link "@makerdao/dai-ui-theme-pen"`
 
 You should now see updates to your theme file take effect immediately in your frontend project as you develop your theme.
 
-To break the link run `yarn unlink "@makerdao/dai-ui-theme-fountain"` in your frontend project, and reinstall the package from npm.
+To break the link run `yarn unlink "@makerdao/dai-ui-theme-pen"` in your frontend project, and reinstall the package from npm.

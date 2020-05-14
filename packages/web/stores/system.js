@@ -3,13 +3,13 @@ import { icons } from "@makerdao/dai-ui-icons";
 
 // import maker from "../../dai-ui-theme-maker";
 import maker from "@makerdao/dai-ui-theme-maker";
-import fountain from "@makerdao/dai-ui-theme-fountain";
+import pen from "@makerdao/dai-ui-theme-pen";
 import oasis from "@makerdao/dai-ui-theme-oasis";
 
 const themes = {
   MakerDefault: { ...maker, icons },
   OasisDex: oasis,
-  Fountain: fountain,
+  Pen: pen,
 };
 
 const selectors = {
