@@ -106,11 +106,11 @@ Unique tokens that are context-specific, but with high a probability for reuse w
 
 While developing a new theme, you can link it to your frontend project with `yarn link`.
 
-1. In the theme directory, build the package with the "watch" option.
+1. In the theme directory, build the package with the "watch" option. This will watch your source files and rebuild on any change.
 
 `yarn build:watch`
 
-2. In a new terminal window navigate to the `dist` folder and set up the link.
+2. In a new terminal window navigate to the `dist` folder created by microbundle and set up the link.
 
 `yarn link`
 
