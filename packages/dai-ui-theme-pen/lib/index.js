@@ -250,7 +250,7 @@ const theme = {
       color: "primary",
       outline: "none",
       cursor: "pointer",
-      fontSize: 1,
+      fontSize: 3,
     },
   },
 
