@@ -335,7 +335,7 @@ const theme = {
     heading: {
       fontFamily: "heading",
       lineHeight: "heading",
-      fontWeight: "semiBold",
+      fontWeight: "heading",
       color: "onBackground",
     },
     h1: {
