@@ -66,6 +66,7 @@ const theme = {
 
   borders: {
     light: "1px solid",
+    normal: "2px solid",
   },
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -410,8 +411,7 @@ const theme = {
       alignItems: "center",
       textTransform: "uppercase",
       border: "none",
-      borderBottomWidth: "2px",
-      borderBottomStyle: "solid",
+      borderBottom: "normal",
       borderBottomColor: "transparent",
       textDecoration: "none",
       color: "text",
@@ -444,12 +444,10 @@ const theme = {
         py: 2,
         fontSize: 2,
         color: "onMuted",
-        borderWidth: "1px",
-        borderStyle: "solid",
+        border: "light",
         borderColor: "muted",
         borderTopLeftRadius: "small",
         borderTopRightRadius: "small",
-        variant: "grids.table.layout",
       },
       data: {
         px: 3,
