@@ -253,6 +253,20 @@ const theme = {
       cursor: "pointer",
       fontSize: 3,
     },
+    tabNavItem: {
+      variant: "buttons.outline",
+      fontWeight: "semiBold",
+      borderRadius: "round",
+      border: "none",
+      textTransform: "uppercase",
+    },
+    tabNavItemActive: {
+      variant: "buttons.primary",
+      fontWeight: "semiBold",
+      borderRadius: "round",
+      border: "none",
+      textTransform: "uppercase",
+    },
   },
 
   forms: {
@@ -365,10 +379,15 @@ const theme = {
     },
     small: {
       fontSize: 2,
+      color: "text",
     },
     smallOnSurface: {
       variant: "text.small",
       color: "onSurface",
+    },
+    smallOnMuted: {
+      variant: "text.small",
+      color: "onMuted",
     },
     tiny: {
       fontSize: 1,
@@ -430,59 +449,7 @@ const theme = {
       cursor: "pointer",
     },
   },
-  images: {
-    avatar: {
-      width: 32,
-      height: 32,
-      borderRadius: 99999,
-    },
-  },
-  grids: {
-    table: {
-      header: {
-        px: 3,
-        py: 2,
-        fontSize: 2,
-        color: "onMuted",
-        border: "light",
-        borderColor: "muted",
-        borderTopLeftRadius: "small",
-        borderTopRightRadius: "small",
-      },
-      data: {
-        px: 3,
-        py: 3,
-        fontSize: 3,
-        color: "text",
-        alignItems: "center",
-      },
-    },
-    tabsRound: {
-      nav: {
-        width: "100%",
-        bg: "surface",
-        borderRadius: "round",
-        border: "light",
-        borderColor: "muted",
-        mb: 3,
-        gap: 0,
-      },
-      navItem: {
-        variant: "buttons.outline",
-        fontWeight: "semiBold",
-        borderRadius: "round",
-        border: "none",
-        textTransform: "uppercase",
-      },
-      navItemActive: {
-        variant: "buttons.primary",
-        fontWeight: "semiBold",
-        borderRadius: "round",
-        border: "none",
-        textTransform: "uppercase",
-      },
-    },
-  },
+  images: {},
   styles: {
     spinner: {
       default: {
