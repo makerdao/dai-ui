@@ -1,6 +1,6 @@
 {
   "name": "@makerdao/dai-ui-icons",
-  "version": "0.0.31",
+  "version": "0.0.29",
   "description": "> TODO: description",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
@@ -40,5 +40,5 @@
     "react-dom": "^16.13.1",
     "theme-ui": "^0.4.0-alpha.0"
   },
-  "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb"
+  "gitHead": "513a57f44e433562be39908f115437900388fa96"
 }
