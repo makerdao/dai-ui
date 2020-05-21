@@ -428,6 +428,7 @@ const theme = {
       fontSize: 2,
       display: "flex",
       alignItems: "center",
+      justifyContent: "center",
       textTransform: "uppercase",
       border: "none",
       borderBottom: "normal",
@@ -437,9 +438,12 @@ const theme = {
       cursor: "pointer",
       "&:hover": {
         color: "primary",
-        cursor: "pointer",
         borderBottomColor: "primary",
       },
+    },
+    navActive: {
+      variant: "links.nav",
+      borderBottomColor: "primary",
     },
 
     footer: {
