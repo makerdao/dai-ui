@@ -30,7 +30,9 @@ const theme = {
     bearAlt: "#F8E7EC",
 
     text: "#636A74",
-    textAlt: "#273444",
+    onBackground: "#273444",
+    onSurface: "#273444",
+    onMuted: "#273444",
     onPrimary: "#F9FAFC",
     onNoticePrimary: "#1B336A",
     onSuccess: "#0F5F35",
@@ -51,6 +53,7 @@ const theme = {
   fontWeights: {
     body: 400,
     semiBold: 600,
+    heading: 600,
     bold: 700,
   },
 
@@ -63,6 +66,7 @@ const theme = {
 
   borders: {
     light: "1px solid",
+    normal: "2px solid",
   },
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -154,11 +158,15 @@ const theme = {
       color: "onPrimary",
       fontWeight: "body",
       bg: "primary",
+      border: "light",
+      borderColor: "primary",
       "&:hover": {
         bg: "primaryEmphasis",
+        borderColor: "primaryEmphasis",
       },
       "&:active": {
         bg: "primaryAlt",
+        borderColor: "primaryAlt",
       },
       "&:disabled": {
         opacity: 0.8,
@@ -243,7 +251,21 @@ const theme = {
       color: "primary",
       outline: "none",
       cursor: "pointer",
-      fontSize: 1,
+      fontSize: 3,
+    },
+    tabNavItem: {
+      variant: "buttons.outline",
+      fontWeight: "semiBold",
+      borderRadius: "round",
+      border: "none",
+      textTransform: "uppercase",
+    },
+    tabNavItemActive: {
+      variant: "buttons.primary",
+      fontWeight: "semiBold",
+      borderRadius: "round",
+      border: "none",
+      textTransform: "uppercase",
     },
   },
 
@@ -258,7 +280,7 @@ const theme = {
       borderRadius: "small",
       background: "surface",
       borderColor: "muted",
-      color: "textAlt",
+      color: "onSurface",
       p: 3,
       "&:disabled": {
         bg: "onPrimary",
@@ -328,97 +350,8 @@ const theme = {
     heading: {
       fontFamily: "heading",
       lineHeight: "heading",
-      fontWeight: "semiBold",
-      color: "textAlt",
-    },
-    h1: {
-      variant: "text.heading",
-      fontSize: 8,
-    },
-    h2: {
-      variant: "text.heading",
-      fontSize: 7,
-    },
-    h3: {
-      variant: "text.heading",
-      fontSize: 6,
-    },
-    boldBody: {
-      color: "textAlt",
-      fontWeight: "semiBold",
-    },
-    small: {
-      fontSize: 2,
-    },
-    tiny: {
-      fontSize: 1,
-    },
-    processing: {
-      variant: "text.small",
-      color: "primary",
-    },
-    confirmed: {
-      variant: "text.small",
-      color: "onSuccess",
-    },
-    error: {
-      variant: "text.small",
-      color: "error",
-    },
-    muted: {
-      fontSize: 4,
-      lineHeight: "body",
-    },
-  },
-  links: {
-    nav: {
-      p: 2,
-      fontSize: 5,
-      fontWeight: "body",
-      color: "text",
-      cursor: "pointer",
-      "&:hover": {
-        color: "primary",
-        cursor: "pointer",
-      },
-    },
-
-    footer: {
-      fontSize: 4,
-      fontWeight: "semiBold",
-      color: "text",
-      cursor: "pointer",
-    },
-  },
-  images: {
-    avatar: {},
-  },
-  styles: {
-    spinner: {
-      color: "primary",
-      strokeWidth: 3,
-      size: 4,
-    },
-    donut: {
-      color: "primary",
-      strokeWidth: 3,
-      size: 6,
-    },
-    time: {
-      display: "inline",
-      major: {
-        fontSize: 4,
-        fontWeight: "semiBold",
-      },
-      minor: {
-        fontSize: 1,
-        fontWeight: "body",
-      },
-    },
-    root: {
-      fontFamily: "body",
-      lineHeight: "body",
-      fontWeight: "body",
+      fontWeight: "heading",
+      color: "onBackground",
     },
     h1: {
       variant: "text.heading",
@@ -436,15 +369,162 @@ const theme = {
       variant: "text.heading",
       fontSize: 5,
     },
-    h5: {
+    h6: {
       variant: "text.heading",
       fontSize: 4,
+    },
+    boldBody: {
+      color: "onBackground",
+      fontWeight: "semiBold",
+    },
+    small: {
+      fontSize: 2,
+      color: "text",
+    },
+    smallOnSurface: {
+      variant: "text.small",
+      color: "onSurface",
+    },
+    smallOnMuted: {
+      variant: "text.small",
+      color: "onMuted",
+    },
+    tiny: {
+      fontSize: 1,
+      color: "text",
+    },
+    processing: {
+      variant: "text.small",
+      color: "primary",
+    },
+    confirmed: {
+      variant: "text.small",
+      color: "onSuccess",
+    },
+    error: {
+      variant: "text.small",
+      color: "error",
+    },
+    muted: {
+      fontSize: 4,
+      lineHeight: "body",
+    },
+    ellipsis: {
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+    },
+    bull: {
+      color: "bull",
+    },
+    bear: {
+      color: "bear",
+    },
+  },
+  links: {
+    nav: {
+      px: 4,
+      py: 3,
+      fontWeight: "semiBold",
+      fontSize: 2,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      textTransform: "uppercase",
+      border: "none",
+      borderBottom: "normal",
+      borderBottomColor: "transparent",
+      textDecoration: "none",
+      color: "text",
+      cursor: "pointer",
+      "&:hover": {
+        color: "primary",
+        borderBottomColor: "primary",
+      },
+    },
+    navActive: {
+      variant: "links.nav",
+      borderBottomColor: "primary",
+    },
+
+    footer: {
+      fontSize: 4,
+      fontWeight: "semiBold",
+      color: "text",
+      cursor: "pointer",
+    },
+  },
+  images: {},
+  styles: {
+    spinner: {
+      default: {
+        color: "muted",
+        strokeWidth: 3,
+        size: 16,
+      },
+      small: {
+        variant: "styles.spinner.default",
+        size: 12,
+      },
+      large: {
+        variant: "styles.spinner.default",
+        size: 26,
+      },
+    },
+    donut: {
+      color: "primary",
+      strokeWidth: 3,
+      size: 6,
+    },
+    root: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontWeight: "body",
+      fontSize: 3,
+    },
+    h1: {
+      variant: "text.h1",
+    },
+    h2: {
+      variant: "text.h2",
+    },
+    h3: {
+      variant: "text.h3",
+    },
+    h4: {
+      variant: "text.h4",
+    },
+    h5: {
+      variant: "text.h5",
     },
     a: {
       color: "primary",
       textDecoration: "none",
+      cursor: "pointer",
     },
     hr: {},
+    row: {
+      clickable: {
+        cursor: "pointer",
+        "&:hover": {
+          backgroundColor: "muted",
+        },
+      },
+    },
+    withScrollbar: {
+      overflow: "auto",
+      "&::-webkit-scrollbar": {
+        width: 1,
+        minWidth: 1,
+      },
+      "&::-webkit-scrollbar-track": {
+        backgroundColor: "transparent",
+        borderRadius: "small",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "muted",
+        borderRadius: "small",
+      },
+    },
   },
   layout: {
     container: {
