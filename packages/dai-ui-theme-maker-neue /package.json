@@ -1,0 +1,41 @@
+{
+  "name": "@makerdao/dai-ui-theme-maker-neue",
+  "version": "0.0.29",
+  "description": "Dai UI Maker Neue Theme",
+  "author": "Adrian le Bas <adrianleb@gmail.com>",
+  "homepage": "https://github.com/makerdao/design-system#readme",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "source": "lib/index.js",
+  "module": "dist/index.m.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makerdao/dai-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle --globals @theme-ui/color=color",
+    "build:watch": "microbundle watch --globals @theme-ui/color=color",
+    "prepublishOnly": "yarn && yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/makerdao/dai-ui/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.8"
+  },
+  "gitHead": "43a409ce6e11ac331c74770daa11f3124fb1e4bb",
+  "dependencies": {
+    "@theme-ui/color": "^0.3.1"
+  }
+}
