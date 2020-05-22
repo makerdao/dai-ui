@@ -93,8 +93,51 @@ const theme = {
       `0 0 1px 5px ${transparentize('primary', 0.8)(theme)}`,
   },
 
+  text: {
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 6,
+      color: 'onBackgroundAlt',
+    },
+    text: {
+      fontSize: 3,
+      color: 'text',
+    },
+
+    largeHeading: {
+      variant: 'text.heading',
+      fontSize: 8,
+    },
+    medHeading: {
+      variant: 'text.heading',
+      fontSize: 7,
+    },
+    smallHeading: {
+      variant: 'text.heading',
+      fontSize: 6,
+    },
+    microHeading: {
+      variant: 'text.heading',
+      fontSize: 5,
+    },
+    smallText: {
+      fontSize: 2,
+      color: 'text',
+    },
+    caps: {
+      textTransform: 'uppercase',
+      letterSpacing: '1px',
+      color: 'onBackgroundAlt',
+      fontSize: 0,
+      fontWeight: 'bold',
+    },
+  },
+
   alerts: {
     primary: {
+      fontSize: 2,
       borderRadius: 'small',
       border: '1px solid',
       borderColor: 'primary',
@@ -128,7 +171,7 @@ const theme = {
       py: 1,
       px: 4,
       borderRadius: 'roundish',
-      variant: 'text.caps',
+      variant: 'text.smallText',
       color: 'primary',
       bg: 'surface',
       border: '1px solid',
@@ -332,51 +375,7 @@ const theme = {
     },
   },
   messages: {}, // Defaults to "primary" & "highlight"
-  text: {
-    heading: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading',
-      fontSize: 6,
-      color: 'onBackgroundAlt',
-    },
-    text: {
-      fontSize: 3,
-      color: 'text',
-    },
 
-    largeHeading: {
-      variant: 'text.heading',
-      fontSize: 8,
-    },
-    medHeading: {
-      variant: 'text.heading',
-      fontSize: 7,
-    },
-    smallHeading: {
-      variant: 'text.heading',
-      fontSize: 6,
-    },
-    microHeading: {
-      variant: 'text.heading',
-      fontSize: 5,
-    },
-    text: {
-      fontSize: 3,
-      color: 'text',
-    },
-    smallText: {
-      fontSize: 2,
-      color: 'text',
-    },
-    caps: {
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
-      color: 'onBackgroundAlt',
-      fontSize: 0,
-      fontWeight: 'bold',
-    },
-  },
   links: {
     nav: {
       p: 2,
