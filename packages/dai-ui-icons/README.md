@@ -41,6 +41,26 @@ import { Icon } from "@makerdao/dai-ui-icons";
 [theme-ui]: https://github.com/system-ui/theme-ui
 [dai-ui design system]: https://github.com/makerdao/dai-ui
 
+## Setting Up a Local Dev Environment
+
+While developing a new icons package, you can link it to your frontend project with `yarn link`.
+
+1. In the icons package directory, build the package with the "watch" option. This will watch your source files and rebuild on any change.
+
+`yarn build:watch`
+
+2. In a new terminal window, navigate to the `dist` folder created by microbundle and set up the link.
+
+`yarn link`
+
+3. Navigate to your frontend project and complete the link.
+
+`yarn link "@makerdao/dai-ui-icons"`
+
+You should now see updates to your icons package take effect immediately in your frontend project.
+
+To break the link run `yarn unlink "@makerdao/dai-ui-icons"` in your frontend project, and reinstall the package from npm.
+
 ## Creating an Icons Package
 
 1. Your package must export an `icons` object where each icon is keyed by its name, with `path` and `viewBox` keys nested inside.

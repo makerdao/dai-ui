@@ -1,5 +1,11 @@
 # Dai-UI Maker Theme
 
+## Table of Contents
+
+1. [Getting Started](#getting-started)
+2. [Tokens Glossary](#tokens-glossary)
+3. [Setting Up a Local Dev Environment](#setting-up-a-local-dev-environment)
+
 ## Getting Started
 
 1. Install [theme-ui][]
@@ -56,15 +62,55 @@ export default (props) => (
 [theme-ui]: https://github.com/system-ui/theme-ui
 [default theme]: https://github.com/makerdao/dai-ui/blob/initial-documentation/packages/dai-ui-theme-maker/lib/index.js
 
+## Tokens Glossary
+
+### Modifiers
+
+These terms can be used to extend the main tokens. Modifiers should remain agnostic from color information or UI specificity, allowing for color mode variations and re-use.
+
+| Name      | Description                                                                                                                                                          | Example Use                                                                                                             |
+| :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------- |
+| -Alt      | Generic alternative color shade from the referenced color.                                                                                                           | Hover state                                                                                                             |
+| -Emphasis | Used in combination with the referenced color with a high contrast differential to convey emphasis, "make it pop".                                                   | Active or "clicked" state                                                                                               |
+| -Muted    | A Lower contrast color variation, closer to the background color diff                                                                                                | Disabled state                                                                                                          |
+| On-       | A high contrast color to be applied "on" the referenced token.                                                                                                       | Button text                                                                                                             |
+| Accent-   | One-off colors which don't have a first-class purpose and are used sparingly. This is the only place where it can be acceptable to have a color called by it's name. | User configurable color selection UIs such as label systems, or when assigning colors to days of the week in a calendar |
+
+### Main Tokens
+
+The core colors for the app, these tokens should be included in every theme.
+
+| Name       | Description                                                                                     | Example Use                                                                         |
+| :--------- | :---------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
+| Primary    | The primary brand color. Used in high user focus areas of the application.                      | Primary buttons                                                                     |
+| Secondary  | A secondary color.                                                                              | Secondary buttons                                                                   |
+| Text       | Primary text color.                                                                             | Main color for typography                                                           |
+| Muted      | The primary muted color for the app, closer to the background color but a bit more contrasting. | Borders                                                                             |
+| Background | The app background color.                                                                       | Main background for the app                                                         |
+| Surface    | Background color of foreground elements.                                                        | Cards, inputs                                                                       |
+| Error      | A color for indicating error states.                                                            | Error text, invalid input border                                                    |
+| Notice     | The color used to represent a neutral action or outcome.                                        | Generic notice banners, medium risk numbers, form states, icons.                    |
+| Success    | The color used to represent a successful action or outcome.                                     | Success banners, no risk numbers, input success / good validation states, icons.    |
+| Warning    | The color used to represent a negative action or outcome.                                       | Alert banners, high risk numbers, input error states, danger action buttons, icons. |
+
+### Other Tokens
+
+Unique tokens that are context-specific, but with high a probability for reuse within the application.
+
+| Name | Description                                                                       | Example Use                                                                                    |
+| :--- | :-------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------- |
+| Bull | The color representing profits, "buying", etc. General positive financial meaning | Profit percentage, price chart candles and volume, order book, long/short order profit amount. |
+| Bear | The color representing losses, "selling", etc. General negative financial meaning | Loss percentage, price chart candles and volume, order book long/short order loss amount.      |
+
 ## Setting Up a Local Dev Environment
 
 While developing a new theme, you can link it to your frontend project with `yarn link`.
 
-1. In the theme directory, build the package with the "watch" option.
+1. In the theme directory, build the package with the "watch" option. This will watch your source files and rebuild on any change.
 
 `yarn build:watch`
 
-2. In a new terminal window navigate to the `dist` folder and set up the link.
+2. In a new terminal window navigate to the `dist` folder created by microbundle and set up the link.
 
 `yarn link`
 
