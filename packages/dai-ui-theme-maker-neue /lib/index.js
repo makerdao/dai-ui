@@ -7,7 +7,6 @@ const theme = {
   breakpoints: ['40em', '52em', '64em'],
 
   colors: {
-    text: '#231536',
     // textMuted: "#7E7E88",
 
     primary: '#1AAB9B',
@@ -16,29 +15,34 @@ const theme = {
     primaryMuted: '#EEFFFD',
     onPrimary: '#FFF',
 
-    secondary: '#008E7B',
+    secondary: '#D5D9E0',
     secondaryEmphasis: '#7E7E87',
     secondaryAlt: '#231536',
     secondaryMuted: '#D4D9E1',
     onSecondary: '#7E7E88',
 
-    background: '#F6F8F9',
+    background: '#F7F8F9',
     surface: '#FFF',
-    muted: '#D4D9E1',
-    mutedAlt: '#7E7E88',
+    text: '#434358',
+    onBackground: '#434358',
+    onBackgroundAlt: '#231536',
+    onSurface: '#708390',
+
+    muted: '#D5D9E0',
+    mutedAlt: '#7E7E87',
     error: '#AE3C4B',
 
-    success: '#2DC1B1',
+    success: '#087C6D',
     successAlt: '#E7FCFA',
-    onSuccess: '#2DC1B1',
+    onSuccess: '#087C6D',
 
-    notice: '#FCDC93',
-    noticeAlt: '#FFF9ED',
-    onNotice: '#FCDC93', // TODO: make this a little darker
+    notice: '#EB7720',
+    noticeAlt: '#FFFBEF',
+    onNotice: '#EB7720', // TODO: make this a little darker
 
-    warning: '#F77249',
-    warningAlt: '#FDEDE8',
-    onWarning: '#F77249',
+    warning: '#CB532D',
+    warningAlt: '#FFF6F3',
+    onWarning: '#CB532D',
 
     accentBlue: '#447AFB',
     accentPurple: '#9055AF',
@@ -91,7 +95,7 @@ const theme = {
 
   alerts: {
     primary: {
-      borderRadius: 'xs',
+      borderRadius: 'small',
       border: '1px solid',
       borderColor: 'primary',
       bg: 'primary',
