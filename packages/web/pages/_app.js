@@ -1,5 +1,5 @@
 import { ThemeProvider } from "theme-ui";
-import "prismjs/themes/prism.css";
+import Prism from "@theme-ui/prism";
 
 import InjectCustomFont from "../components/InjectCustomFont";
 import Header from "../components/Header";
@@ -8,6 +8,11 @@ import useSystemStore, { selectors } from "../stores/system";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 const { getCurrentTheme, getAvailableThemes } = selectors;
+
+const components = {
+  pre: ({ children }) => <>{children}</>,
+  code: Prism,
+};
 
 const MyApp = ({ Component, pageProps }) => {
   const { query } = useRouter();
@@ -23,7 +28,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, [urlTheme, currentTheme]);
 
   return (
-    <ThemeProvider {...{ theme }}>
+    <ThemeProvider theme={theme} components={components}>
       <InjectCustomFont {...{ theme }} />
       <Header />
       <Component {...pageProps} />
