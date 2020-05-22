@@ -14,6 +14,7 @@
     "@emotion/core": "^10.0.15",
     "@makerdao/dai-ui-icons": "^0.0.34",
     "@makerdao/dai-ui-theme-maker": "^0.0.34",
+    "@makerdao/dai-ui-theme-maker-neue": "^0.0.34",
     "@makerdao/dai-ui-theme-oasis": "^0.0.34",
     "@makerdao/dai-ui-theme-pen": "^0.0.34",
     "@mdx-js/loader": "^1.0.19",
