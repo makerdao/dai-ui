@@ -278,12 +278,17 @@ const WrappedColors = ({ variants }) => {
     "warning",
   ];
 
+  // disable handling modes, TO DO as for now it is breaking the app
+  const mainBlacklist = ["modes"];
+
   const filtered = keys.reduce(
     (p, n) => {
       if (n.indexOf("on") === 0 || n.includes("text")) {
         p.typography.push(n);
       } else if (mainWhitelist.find((base) => n.indexOf(base) === 0)) {
         p.main.push(n);
+      } else if (mainBlacklist.find((base) => n.indexOf(base) === 0)) {
+        return p;
       } else {
         p.other.push(n);
       }
