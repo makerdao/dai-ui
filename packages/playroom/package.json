@@ -27,6 +27,6 @@
     "build": "playroom build"
   },
   "resolutions": {
-    "webpack": "^4.43.0"
+    "acorn": "^7.1.1"
   }
 }
