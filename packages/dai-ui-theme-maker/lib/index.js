@@ -512,8 +512,8 @@ const theme = {
       ".comment": {
         fontStyle: "italic",
       },
-      // functions and numbers
-      ".property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable": {
+      // class names, functions and numbers
+      ".property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .maybe-class-name, .regex, .important, .variable": {
         color: "onBackground",
       },
 
