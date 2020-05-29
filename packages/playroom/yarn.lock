@@ -1013,6 +1013,30 @@
   version "0.2.5"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
 
+"@makerdao/dai-ui-icons@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.37.tgz#2028c77717f021660293dd9aacfabe8cd9647f10"
+  integrity sha512-xqsHxUOiPD5Q8v08JAdDJqeAYoLPEEywNnohBjdvoLCudus7dDF8EPuEczdX4RKR7dV2t1e2k6XnGllU1vNc0w==
+
+"@makerdao/dai-ui-theme-maker@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.37.tgz#269d547673d799918f5def06b9d37e6404f58801"
+  integrity sha512-CaXbuYAruQ0V6iAufIgh+gDYM8j/XqWo8MAHBgik9IqlO3G7YnyHszFZkp4PHJBrhNw02yc8apAtTpxHyU4o6w==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-oasis@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.37.tgz#af522bc43ff5d0c6395c048c979f4f08d6ceeb3c"
+  integrity sha512-wHAwZ4FT4CtGAe47Y4fy/dls6Z4hah+9T4UUV9ON3KayaMrc38/ikvSE6dxxsOy9BvLX/SJskdGWpAGe+Dz/zA==
+  dependencies:
+    "@makerdao/dai-ui-theme-maker" "^0.0.37"
+
+"@makerdao/dai-ui-theme-pen@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.37.tgz#b1b356ac4eee8878ddd2c98eaf83b9c6acc941fc"
+  integrity sha512-iA3miLJx37P17httYtI1p3Igc0k6/pNKA+Q/TBgI26V1JQbHVTNCEZCuZTOxE/PHx0slFpNctA54vhrybzLeUg==
+
 "@mdx-js/react@^1.0.0":
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.5.8.tgz#fc38fe0eb278ae24666b2df3c751e726e33f5fac"
@@ -1557,6 +1581,11 @@ acorn@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
   integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
+
+acorn@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.2.0.tgz#17ea7e40d7c8640ff54a694c889c26f31704effe"
+  integrity sha512-apwXVmYVpQ34m/i71vrApRrRKCWQnZZF1+npOD0WV5xZFfwWOmKGQ2RWlfdy9vWITsenisM8M0Qeq8agcFHNiQ==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -4128,6 +4157,11 @@ kind-of@^5.0.0:
 kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
+
+kind-of@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
+  integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
 lcid@^2.0.0:
   version "2.0.0"
