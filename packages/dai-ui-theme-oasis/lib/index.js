@@ -13,16 +13,23 @@ const theme = {
     onBackgroundAlt: "#6C8088",
     onSurface: "#FFF",
     onSurfaceAlt: "#6D7477",
+    onBackgroundEmphasis: "#31434A",
+    onSurfaceEmphasis: "#364C56",
+    syntaxEmphasis: "#DB1B60",
+    syntaxAlt: "#D7F714",
+    syntaxMuted: "#6D7477",
     modes: {
       light: {
         background: "#E5E5E5",
         text: "#1E404A",
-        // surface: "#0B171D",
         primary: "#DB1B60",
         onBackground: "#122229",
-        // onBackgroundAlt: "#6C8088",
-        // onSurface: "#FFF",
-        // onSurfaceAlt: "#6D7477",
+        surface: "#D8D8D8",
+        syntaxEmphasis: "#000",
+        syntaxAlt: "#DB1B60",
+        syntaxMuted: "#6C8088",
+        onSurface: "#122229",
+        onSurfaceAlt: "#1E404A",
       },
     },
   },
@@ -45,6 +52,10 @@ const theme = {
     body: 1.7,
     heading: 1.45,
     loose: 1.8,
+  },
+
+  borders: {
+    light: "1px solid",
   },
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -83,18 +94,22 @@ const theme = {
       fontFamily: "heading",
       fontWeight: "body",
       color: "onBackground",
-      fontSize: 8,
-    },
-    h1: {
-      variant: "text.heading",
-    },
-    h2: {
-      variant: "text.heading",
+      letterSpacing: "-0.04em",
+      // fontSize: [6, 7],
       fontSize: 7,
     },
-    h3: {
+    largeHeading: {
       variant: "text.heading",
-      fontSize: 6,
+      fontSize: [7, 8],
+    },
+    mediumHeading: {
+      variant: "text.heading",
+      // fontSize: [6, 7],
+      fontSize: 7,
+    },
+    smallHeading: {
+      variant: "text.heading",
+      fontSize: [5, 6],
     },
     body: {
       fontFamily: "body",
@@ -126,13 +141,13 @@ const theme = {
   icons: {},
   styles: {
     h1: {
-      variant: "text.heading",
+      variant: "text.largeHeading",
     },
     h2: {
-      variant: "text.h2",
+      variant: "text.mediumHeading",
     },
     h3: {
-      variant: "text.h3",
+      variant: "text.smallHeading",
     },
     a: {
       color: "primary",
@@ -143,23 +158,35 @@ const theme = {
       variant: "text.body",
     },
     code: {
+      overflow: "auto",
       p: 3,
       fontSize: 3,
       bg: "surface",
-      ".comment,.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url": {
-        color: "onBackground", // comments and characters like <, =>, (), etc
+
+      // punctuation, characters like <, =>, (), etc
+      ".prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url": {
+        color: "onSurface",
       },
+
+      // comments
       ".comment": {
         fontStyle: "italic",
+        color: "syntaxMuted",
       },
+
+      // class names, functions and numbers
       ".property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .maybe-class-name, .regex, .important, .variable": {
-        color: "primaryMuted", // class names, functions and numbers
+        color: "primary",
       },
+
+      // keywords like const, return
       ".atrule, .attr-value, .keyword": {
-        color: "primary", // keywords like const, return
+        color: "syntaxEmphasis",
       },
+
+      // strings, types
       ".selector, .attr-name, .string, .char, .builtin, .inserted": {
-        color: "primaryAlt", // strings
+        color: "syntaxAlt",
       },
     },
   },
