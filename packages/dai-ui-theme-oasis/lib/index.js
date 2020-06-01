@@ -95,8 +95,7 @@ const theme = {
       fontWeight: "body",
       color: "onBackground",
       letterSpacing: "-0.04em",
-      // fontSize: [6, 7],
-      fontSize: 7,
+      fontSize: [6, 7],
     },
     largeHeading: {
       variant: "text.heading",
@@ -104,12 +103,27 @@ const theme = {
     },
     mediumHeading: {
       variant: "text.heading",
-      // fontSize: [6, 7],
-      fontSize: 7,
+      fontSize: [6, 7],
     },
     smallHeading: {
       variant: "text.heading",
       fontSize: [5, 6],
+    },
+    microHeading: {
+      variant: "text.heading",
+      fontSize: [4, 5],
+    },
+    caps: {
+      textTransform: "uppercase",
+      color: "onBackgroundAlt",
+      letterSpacing: "1px",
+      fontSize: [2, 3],
+      fontWeight: "bold",
+    },
+    sectionTitle: {
+      variant: "text.caps",
+      fontSize: 3,
+      letterSpacing: "0.2em",
     },
     body: {
       fontFamily: "body",
@@ -124,7 +138,7 @@ const theme = {
     },
     bodyLarge: {
       variant: "text.body",
-      fontSize: 5,
+      fontSize: [4, 5],
     },
   },
   cards: {
