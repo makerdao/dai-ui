@@ -478,7 +478,7 @@ const WrappedIcon = ({ variants }) => {
       {Object.keys(variants).map((name) => {
         return (
           <Grid gap={2} columns={1} p={2} key={name}>
-            <Icon name={name} color="text" size={4} />
+            <Icon name={name} color="onBackground" size={5} />
             <Text variant="boldBody">{name}</Text>
             <Text variant="small">{`<Icon name="${name}" color="text" />`}</Text>
           </Grid>
