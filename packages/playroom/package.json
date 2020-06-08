@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@makerdao/dai-ui-icons": "^0.0.39",
+    "@makerdao/dai-ui-icons-branding": "^0.0.39",
     "@makerdao/dai-ui-theme-maker": "^0.0.39",
     "@makerdao/dai-ui-theme-oasis": "^0.0.39",
     "@makerdao/dai-ui-theme-pen": "^0.0.39",
