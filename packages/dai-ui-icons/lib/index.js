@@ -442,11 +442,11 @@ export const icons = {
       <g>
         <path
           d="M6 2C4.34315 2 3 3.34315 3 5V17H10V15H5V5C5 4.44772 5.44772 4 6 4H13C13.5523 4 14 4.44772 14 5V11H16V5C16 3.34315 14.6569 2 13 2H6Z"
-          fill="black"
+          fill="currentColor"
         />
-        <path d="M7 12H9V11H7V12Z" fill="black" />
-        <path d="M11 10V9H7V10H11Z" fill="black" />
-        <path d="M12 8H7V7H12V8Z" fill="black" />
+        <path d="M7 12H9V11H7V12Z" fill="currentColor" />
+        <path d="M11 10V9H7V10H11Z" fill="currentColor" />
+        <path d="M12 8H7V7H12V8Z" fill="currentColor" />
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -536,7 +536,7 @@ export const icons = {
     path: (
       <path
         d="M15.5192 9.13619C16.1807 9.52207 16.1807 10.4779 15.5192 10.8638L6.50387 16.1227C5.83721 16.5116 5 16.0307 5 15.2589L5 4.74101C5 3.96922 5.83722 3.48835 6.50387 3.87723L15.5192 9.13619Z"
-        fill="black"
+        fill="currentColor"
       />
     ),
     viewBox: "0 0 20 20",
@@ -548,7 +548,7 @@ export const icons = {
           fillRule="evenodd"
           clipRule="evenodd"
           d="M16.0041 11.4458L7.13582 16.495C5.9798 17.1532 4.50551 16.7559 3.8429 15.6076C3.63357 15.2448 3.52344 14.8339 3.52344 14.4158L3.52344 6.39654C3.52344 5.07297 4.6036 4 5.93606 4C6.357 4 6.77062 4.1094 7.13582 4.31733L16.0041 9.36657C16.5821 9.69566 16.7821 10.4279 16.4508 11.0021C16.3442 11.1867 16.19 11.3399 16.0041 11.4458Z"
-          fill="white"
+          fillOpacity="0"
         />
         <path
           fillRule="evenodd"
