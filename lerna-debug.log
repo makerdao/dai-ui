@@ -1,9 +1,6 @@
-0 silly argv { _: [ 'ls' ], lernaVersion: '3.20.2', '$0': 'lerna' }
-1 notice cli v3.20.2
-2 verbose rootPath /Users/ad/dev/makerdao/design-system
-3 error Error: Invalid package name "Dai UI Playroom": name can only contain URL-friendly characters
-3 error     at invalidPackageName (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:86:15)
-3 error     at Result.setName (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:121:11)
-3 error     at new Result (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:111:23)
-3 error     at Function.resolve (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/npm-package-arg/npa.js:58:15)
-3 error     at new Package (/Users/ad/.nvm/versions/node/v12.0.0/lib/node_modules/lerna/node_modules/@lerna/package/index.js:36:26)
+80 error Error: Command failed: git tag v0.0.42 -m v0.0.42
+80 error fatal: tag 'v0.0.42' already exists
+80 error
+80 error     at makeError (/Users/stormlight/Documents/code/web/dai-ui/node_modules/execa/index.js:174:9)
+80 error     at /Users/stormlight/Documents/code/web/dai-ui/node_modules/execa/index.js:278:16
+80 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
