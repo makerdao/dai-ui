@@ -34,7 +34,7 @@
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"
   },
-  "gitHead": "513a57f44e433562be39908f115437900388fa96",
+  "gitHead": "f3318a188b486573a2f76bd78db2e92c5ce886e1",
   "dependencies": {
     "@theme-ui/color": "^0.3.1"
   }

@@ -1023,35 +1023,6 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@makerdao/dai-ui-icons-branding@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons-branding/-/dai-ui-icons-branding-0.0.41.tgz#2b1ac7e4ad54d5964e9dc9b4c84a7a0a6685d058"
-  integrity sha512-LH4aaF0qE5KMv3OscIYPkqIL8wsVEvv3o1wzjlKmAGYkJB8kq8tWQvnT4i21Q5koaT901VJKLQimnEuSswa/vw==
-
-"@makerdao/dai-ui-icons@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.41.tgz#e91f65cdf5fbbe7cdd3cf74d42e18452875f2d6a"
-  integrity sha512-TkANb3UEUc5JvERMW3uKPymMxNee50SaR7C28sC+ux0cdIhFHZi4e/9aa4Cc1QkKJz9chQP/qKYWMyy7s/ytew==
-
-"@makerdao/dai-ui-theme-maker@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.41.tgz#0b4e80a1b4d5d9f1d3c401bf483ce3f8c0f8ccb0"
-  integrity sha512-yU+iR1oQjqv+Eev3WeFNuBhsD4Dr89mVP5JYcBRj1n6YhPRlpwbNNSoyOQuuVeTpYlb55uit2zs1xxNgyX2frA==
-  dependencies:
-    "@theme-ui/color" "^0.3.1"
-
-"@makerdao/dai-ui-theme-oasis@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.41.tgz#34466346eacd1c2ece07aba96880d521d57780c2"
-  integrity sha512-KZqSyFYtMM8j5moqatB+sHu9HvKwy8Ubyb0/R9vPpzhYMQixplizisFyMHS9JW98DMjU9IIfbwmJfftfpacMPQ==
-  dependencies:
-    "@makerdao/dai-ui-theme-maker" "^0.0.41"
-
-"@makerdao/dai-ui-theme-pen@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.41.tgz#10b97fea1683acf56c34ef5993d3175a3928d7e1"
-  integrity sha512-tuD/RqfTJ1yWfW75bPsaKGUSvUppHAQ38skdwsnEM4hbz4W3RhTAy21/blV3aJniWcb9rah8OEbt9/XX9aEhnQ==
-
 "@mdx-js/react@^1.0.0", "@mdx-js/react@^1.5.3":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.5.tgz#70380f25209b62ef69349b7eef09fad7e1103824"
