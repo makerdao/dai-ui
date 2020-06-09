@@ -32,9 +32,7 @@
     "url": "https://github.com/makerdao/design-system/issues"
   },
   "gitHead": "513a57f44e433562be39908f115437900388fa96",
-  "dependencies": {
-    "@makerdao/dai-ui-theme-maker": "^0.0.44"
-  },
+  "dependencies": {},
   "devDependencies": {
     "microbundle": "^0.12.0-next.8"
   }
