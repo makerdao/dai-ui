@@ -28,6 +28,16 @@ const Header = () => {
               Styleguide
             </NavLink>
           </Link>
+          <Link href="/icons">
+            <NavLink
+              href="/icons"
+              sx={{
+                cursor: "default",
+              }}
+            >
+              Icons
+            </NavLink>
+          </Link>
           <Link href="/recipes">
             <NavLink
               href="/recipes"

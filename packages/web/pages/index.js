@@ -1,5 +1,5 @@
 import React from 'react';
-import { useThemeUI, Box, Container, Text, Heading } from 'theme-ui';
+import { useThemeUI, Box, Container, Heading } from 'theme-ui';
 
 import { parseTheme } from '../utils';
 import { themeTemplateMapping } from '../components/StyleguideTemplates';
@@ -21,7 +21,6 @@ export default () => {
     buttons,
     fonts,
     links,
-    icons,
     forms,
   } = parsedTheme;
   const structure = [
@@ -38,7 +37,6 @@ export default () => {
       'Component Variants',
       [
         ['Buttons', buttons],
-        ['Icons', icons],
         ['Text And Links', [text, links]],
         ['Badges and Alerts', [badges, alerts]],
         ['Forms', forms],

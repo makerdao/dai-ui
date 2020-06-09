@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import {
   Button,
   Badge,
@@ -19,7 +19,6 @@ import {
   Heading,
   useThemeUI,
 } from "theme-ui";
-import { Icon } from "@makerdao/dai-ui-icons";
 
 const WrappedButton = ({ variants }) => {
   const disabledBlacklist = ["textual"];
@@ -472,22 +471,6 @@ const WrappedFonts = ({ variants }) => {
   );
 };
 
-const WrappedIcon = ({ variants }) => {
-  return (
-    <Grid columns={5}>
-      {Object.keys(variants).map((name) => {
-        return (
-          <Grid gap={2} columns={1} p={2} key={name}>
-            <Icon name={name} color="onBackground" size={5} />
-            <Text variant="boldBody">{name}</Text>
-            <Text variant="small">{`<Icon name="${name}" color="text" />`}</Text>
-          </Grid>
-        );
-      })}
-    </Grid>
-  );
-};
-
 export const themeTemplateMapping = {
   buttons: (variant, variants) => (
     <WrappedButton variant={variant} variants={variants} />
@@ -525,6 +508,4 @@ export const themeTemplateMapping = {
   sizes: (variant, variants) => (
     <WrappedSizes variant={variant} variants={variants} />
   ),
-  icons: (variant, variants) =>
-    !variants ? null : <WrappedIcon variants={variants} />,
 };
