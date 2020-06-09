@@ -1164,7 +1164,7 @@ export const icons = {
     ),
     viewBox: "0 0 24 24",
   },
-  usdt_circle: {
+  usdc_circle: {
     path: (
       <g>
         <path
@@ -1623,7 +1623,7 @@ export const icons = {
     ),
     viewBox: "0 0 24 24",
   },
-  usdt_circle_color: {
+  usdc_circle_color: {
     path: (
       <g>
         <path

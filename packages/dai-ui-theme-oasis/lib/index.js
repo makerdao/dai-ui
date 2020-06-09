@@ -163,6 +163,9 @@ const theme = {
     h3: {
       variant: "text.smallHeading",
     },
+    h4: {
+      variant: "text.microHeading",
+    },
     a: {
       color: "primary",
       textDecoration: "none",
