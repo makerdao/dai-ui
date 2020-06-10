@@ -35,19 +35,25 @@ const wallets = [
 
 const WrappedIcon = ({ name }) => {
   return (
-    <Grid gap={2} columns={1} p={2} key={name}>
-      <Icon name={name} color="onBackground" size={4} />
-      <Text variant="boldBody">{name}</Text>
-      <Text variant="small">{`<Icon name="${name}" color="onBackground" />`}</Text>
+    <Grid gap={2} columns={1} key={name} sx={{ border: "1px solid", py: 3 }}>
+      <Icon name={name} color="onBackground" size={4} sx={{ margin: "auto" }} />
+      <Text variant="boldBody" sx={{ margin: "auto" }}>
+        {name}
+      </Text>
     </Grid>
   );
 };
 
 const LogoDisplay = ({ name }) => {
   return (
-    <Grid columns={4} gap={0}>
-      <Icon name={`${name}_color`} color="onBackground" size={4} />
-      <Icon name={name} color="onBackground" size={4} />
+    <Grid columns={3} gap={0} sx={{ border: "1px solid", py: 3 }}>
+      <Icon
+        name={`${name}_color`}
+        color="onBackground"
+        size={4}
+        sx={{ margin: "auto" }}
+      />
+      <Icon name={name} color="onBackground" size={4} sx={{ margin: "auto" }} />
       <Flex
         sx={{
           alignItems: "center",
@@ -55,6 +61,7 @@ const LogoDisplay = ({ name }) => {
           bg: "black",
           size: 4,
           borderRadius: 9999,
+          margin: "auto",
         }}
       >
         <Icon name={name} color="white" size={3} />
@@ -93,7 +100,7 @@ const Icons = () => {
     <Container>
       <Grid columns={1}>
         <Grid columns={["1fr 2fr"]}>
-          <LogoDisplay name="dai" />
+          <Heading variant="largeHeading">Icons</Heading>
           <Card>
             <IconsGuide />
           </Card>
@@ -103,39 +110,39 @@ const Icons = () => {
           placeholder="Find icon by name..."
           onChange={(e) => setQuery(e.target.value)}
         />
-        <Card sx={{ bg: "surface" }}>
-          <Heading variant="medHeading">Brand Icons</Heading>
+        <Card>
+          <Heading variant="medHeading">Standard Icons</Heading>
+          <Heading pb={3} variant="smallHeading">
+            Colors and size can be customized
+          </Heading>
+          <Grid columns={6}>
+            {[...allStandardIcons, ...social]
+              .filter(queryFilter)
+              .map((name) => {
+                return <WrappedIcon key={name} name={name} />;
+              })}
+          </Grid>
+        </Card>
+        <Card>
+          <Heading variant="medHeading">Brand Tokens</Heading>
           <Heading pb={3} variant="smallHeading">
             Comes in three flavors!
           </Heading>
-          <Grid columns={4} gap={5}>
+          <Grid columns={4}>
             {withColorVariants.map((name) => (
               <LogoDisplay key={name} name={name} />
             ))}
           </Grid>
         </Card>
         <Card>
-          <Heading variant="medHeading">Part II</Heading>
+          <Heading variant="medHeading">Color Icons</Heading>
           <Heading pb={3} variant="smallHeading">
-            Somethind
+            Some color icons for you
           </Heading>
-          <Grid columns={4}>
+          <Grid columns={6}>
             {[...wallets, ...withCircleColor].map((name) => {
               return <WrappedIcon key={name} name={name} />;
             })}
-          </Grid>
-        </Card>
-        <Card>
-          <Heading variant="medHeading">Standard Icons</Heading>
-          <Heading pb={3} variant="smallHeading">
-            Colors and size can be customized
-          </Heading>
-          <Grid columns={4}>
-            {[...allStandardIcons, ...social]
-              .filter(queryFilter)
-              .map((name) => {
-                return <WrappedIcon key={name} name={name} />;
-              })}
           </Grid>
         </Card>
       </Grid>
