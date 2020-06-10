@@ -59,6 +59,15 @@ const Header = () => {
               Playroom
             </NavLink>
           </Link>
+          <NavLink
+            href="https://github.com/makerdao/dai-ui"
+            target="_blank"
+            sx={{
+              pr: 0,
+            }}
+          >
+            GitHub
+          </NavLink>
         </Flex>
       </Flex>
     </Container>
