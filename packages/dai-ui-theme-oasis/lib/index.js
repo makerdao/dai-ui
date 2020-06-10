@@ -92,6 +92,7 @@ const theme = {
   text: {
     heading: {
       fontFamily: "heading",
+      lineHeight: "heading",
       fontWeight: "body",
       color: "onBackground",
       letterSpacing: "-0.04em",

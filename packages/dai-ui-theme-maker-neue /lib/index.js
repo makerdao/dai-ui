@@ -38,7 +38,7 @@ const theme = {
 
     notice: "#EB7720",
     noticeAlt: "#FFFBEF",
-    onNotice: "#EB7720", // TODO: make this a little darker
+    onNotice: "#EB7720",
 
     warning: "#CB532D",
     warningAlt: "#FFF6F3",
@@ -98,7 +98,7 @@ const theme = {
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading",
-      fontSize: 6,
+      fontSize: [5, 6],
       color: "onBackgroundAlt",
     },
     text: {
@@ -108,19 +108,19 @@ const theme = {
 
     largeHeading: {
       variant: "text.heading",
-      fontSize: 8,
+      fontSize: [7, 8],
     },
-    medHeading: {
+    mediumHeading: {
       variant: "text.heading",
-      fontSize: 7,
+      fontSize: [6, 7],
     },
     smallHeading: {
       variant: "text.heading",
-      fontSize: 6,
+      fontSize: [5, 6],
     },
     microHeading: {
       variant: "text.heading",
-      fontSize: 5,
+      fontSize: [4, 5],
     },
     smallText: {
       fontSize: 2,
@@ -172,10 +172,10 @@ const theme = {
       px: 4,
       borderRadius: "roundish",
       variant: "text.smallText",
-      color: "primary",
+      color: "secondaryAlt",
       bg: "surface",
       border: "1px solid",
-      borderColor: "primary",
+      borderColor: "secondaryAlt",
     },
     success: {
       variant: "badges.primary",
@@ -252,7 +252,7 @@ const theme = {
       fontWeight: "bold",
       cursor: "pointer",
       p: 2,
-      color: "textAlt",
+      color: "onSurface",
       bg: "primary",
       "&:hover": {
         bg: "primaryEmphasis",
@@ -309,7 +309,7 @@ const theme = {
       outline: "none",
       borderRadius: "small",
       borderColor: "muted",
-      color: "text",
+      color: "onSurface",
       p: 2,
       "&:focus": {
         borderColor: "mutedAlt",
@@ -319,14 +319,14 @@ const theme = {
     inputError: {
       variant: "forms.input",
       borderColor: "error",
-      color: "text",
+      color: "onSurface",
       "&:focus": {
         borderColor: "error",
         color: "text",
       },
     },
-    textarea: { variant: "forms.input" },
-    textareaError: { variant: "forms.inputError" },
+    textarea: { variant: "forms.input", fontFamily: "body" },
+    textareaError: { variant: "forms.inputError", fontFamily: "body" },
     select: { variant: "forms.input" },
     slider: {
       height: "2px",
@@ -410,21 +410,16 @@ const theme = {
       fontWeight: "body",
     },
     h1: {
-      variant: "text.heading",
-      fontSize: 7,
+      variant: "text.largeHeading",
     },
     h2: {
-      variant: "text.heading",
-      fontSize: 6,
-      fontWeight: "body",
+      variant: "text.mediumHeading",
     },
     h3: {
-      variant: "text.heading",
-      fontSize: 5,
+      variant: "text.smallHeading",
     },
     h4: {
-      variant: "text.heading",
-      fontSize: 4,
+      variant: "text.microHeading",
     },
     h5: {
       variant: "text.heading",

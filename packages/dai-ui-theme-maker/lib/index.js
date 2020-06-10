@@ -24,6 +24,7 @@ const theme = {
 
     background: "#F6F8F9",
     surface: "#FFF",
+    onSurface: "#708390",
     muted: "#D4D9E1",
     mutedAlt: "#7E7E88",
     error: "#BC2F48",
@@ -339,7 +340,30 @@ const theme = {
       lineHeight: "heading",
       fontWeight: "heading",
     },
-
+    largeHeading: {
+      variant: "text.heading",
+      fontSize: [7, 8],
+    },
+    mediumHeading: {
+      variant: "text.heading",
+      fontSize: [6, 7],
+    },
+    smallHeading: {
+      variant: "text.heading",
+      fontSize: [5, 6],
+    },
+    microHeading: {
+      variant: "text.heading",
+      fontSize: [4, 5],
+    },
+    text: {
+      fontSize: 3,
+      color: "text",
+    },
+    smallText: {
+      fontSize: 2,
+      color: "text",
+    },
     caps: {
       textTransform: "uppercase",
       letterSpacing: "0.05em",
@@ -472,21 +496,16 @@ const theme = {
       },
     },
     h1: {
-      variant: "text.heading",
-      fontSize: 7,
+      variant: "text.largeHeading",
     },
     h2: {
-      variant: "text.heading",
-      fontSize: 6,
-      fontWeight: "body",
+      variant: "text.mediumHeading",
     },
     h3: {
-      variant: "text.heading",
-      fontSize: 5,
+      variant: "text.smallHeading",
     },
     h4: {
-      variant: "text.heading",
-      fontSize: 4,
+      variant: "text.microHeading",
     },
     h5: {
       variant: "text.heading",
