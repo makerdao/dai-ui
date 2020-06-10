@@ -24,6 +24,7 @@ const theme = {
 
     background: "#F6F8F9",
     surface: "#FFF",
+    onSurface: "#231536",
     muted: "#D4D9E1",
     mutedAlt: "#7E7E88",
     error: "#BC2F48",

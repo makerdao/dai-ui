@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  useThemeUI,
   Container,
   Heading,
   Grid,
@@ -13,6 +12,7 @@ import {
 import { Icon, icons as standardIcons } from "@makerdao/dai-ui-icons";
 import { icons as brandingIcons } from "@makerdao/dai-ui-icons-branding";
 import IconsGuide from "../text/iconsGuide.mdx";
+import CollapsableCard from "../components/CollapsableCard";
 
 const social = [
   "facebook",
@@ -33,9 +33,19 @@ const wallets = [
   "coinbase_color",
 ];
 
-const WrappedIcon = ({ name }) => {
+const WrappedIcon = ({ name, onClick }) => {
   return (
-    <Grid gap={2} columns={1} key={name} sx={{ border: "1px solid", py: 3 }}>
+    <Grid
+      onClick={() => onClick(name)}
+      gap={2}
+      columns={1}
+      key={name}
+      sx={{
+        py: 3,
+        bg: "background",
+        borderRadius: "roundish",
+      }}
+    >
       <Icon name={name} color="onBackground" size={4} sx={{ margin: "auto" }} />
       <Text variant="boldBody" sx={{ margin: "auto" }}>
         {name}
@@ -44,34 +54,69 @@ const WrappedIcon = ({ name }) => {
   );
 };
 
-const LogoDisplay = ({ name }) => {
+const CircularIcon = ({
+  name,
+  onClick,
+  size = 4,
+  height = "20px",
+  width = "20px",
+}) => {
   return (
-    <Grid columns={3} gap={0} sx={{ border: "1px solid", py: 3 }}>
+    <Flex
+      sx={{
+        alignItems: "center",
+        justifyContent: "center",
+        bg: "black",
+        size,
+        borderRadius: 9999,
+        margin: "auto",
+      }}
+      onClick={() => onClick([name])}
+    >
+      <Icon
+        name={name}
+        color="white"
+        size="auto"
+        height={height}
+        width={width}
+      />
+    </Flex>
+  );
+};
+
+const LogoDisplay = ({ name, onClick }) => {
+  return (
+    <Grid
+      columns={3}
+      gap={0}
+      sx={{
+        py: 3,
+        bg: "background",
+        borderRadius: "roundish",
+      }}
+    >
       <Icon
         name={`${name}_color`}
         color="onBackground"
         size={4}
         sx={{ margin: "auto" }}
+        onClick={() => onClick(`${name}_color`)}
       />
-      <Icon name={name} color="onBackground" size={4} sx={{ margin: "auto" }} />
-      <Flex
-        sx={{
-          alignItems: "center",
-          justifyContent: "center",
-          bg: "black",
-          size: 4,
-          borderRadius: 9999,
-          margin: "auto",
-        }}
-      >
-        <Icon name={name} color="white" size={3} />
-      </Flex>
+      <Icon
+        name={name}
+        color="onBackground"
+        size={4}
+        sx={{ margin: "auto" }}
+        onClick={() => onClick(name)}
+      />
+      <CircularIcon name={name} onClick={() => onClick([name])} />
     </Grid>
   );
 };
 
 const Icons = () => {
   const [query, setQuery] = useState();
+  const [activeIcon, setActiveIcon] = useState(null);
 
   const allBrandingIcons = Object.keys(brandingIcons);
   const allStandardIcons = Object.keys(standardIcons);
@@ -96,13 +141,72 @@ const Icons = () => {
     .filter(queryFilter)
     .filter((name) => name.includes("_circle_color"));
 
+  const codeGen = (activeIcon) => {
+    if (Array.isArray(activeIcon)) {
+      const str = `
+<Flex sx={{ alignItems: "center", justifyContent: "center", bg: "onSurface", size: 4, borderRadius: "round", margin: "auto" }}>
+  <Icon name="${activeIcon}" color="surface" size="3" />
+</Flex>
+      `;
+      return str;
+    } else {
+      return `<Icon name="${activeIcon ?? "my_icon"}" size={5} />`;
+    }
+  };
+
+  const data = [
+    [
+      "Standard Icons",
+      "This set contains the collection of standard UI Icons.",
+      <Grid key="firstSet" columns={6} p={3}>
+        {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
+          return <WrappedIcon key={name} name={name} onClick={setActiveIcon} />;
+        })}
+      </Grid>,
+    ],
+    [
+      "Brand Tokens",
+      "Commonly used brand token whose color and size can be customized.",
+      <Grid key="secondSet" columns={4} p={3}>
+        {withColorVariants.map((name) => (
+          <LogoDisplay key={name} name={name} onClick={setActiveIcon} />
+        ))}
+      </Grid>,
+    ],
+    [
+      "Color Icons",
+      "Brand icons with coloring or features that shouldn't be changed.",
+      <Grid key="thirdSet" columns={6} p={3}>
+        {[...wallets, ...withCircleColor].map((name) => {
+          return <WrappedIcon key={name} name={name} onClick={setActiveIcon} />;
+        })}
+      </Grid>,
+    ],
+  ];
+
   return (
     <Container>
       <Grid columns={1}>
         <Grid columns={["1fr 2fr"]}>
-          <Heading variant="largeHeading">Icons</Heading>
-          <Card>
-            <IconsGuide />
+          <Flex sx={{ flexDirection: "column" }}>
+            <Heading variant="largeHeading">Icons</Heading>
+            <Box sx={{ margin: "auto" }}>
+              {activeIcon ? (
+                Array.isArray(activeIcon) ? (
+                  <CircularIcon
+                    name={activeIcon[0]}
+                    size={6}
+                    height="100px"
+                    width="100px"
+                  />
+                ) : (
+                  <Icon name={activeIcon} size={6} />
+                )
+              ) : null}
+            </Box>
+          </Flex>
+          <Card py={0}>
+            <IconsGuide activeIcon={codeGen(activeIcon)} />
           </Card>
         </Grid>
         <Input
@@ -110,41 +214,14 @@ const Icons = () => {
           placeholder="Find icon by name..."
           onChange={(e) => setQuery(e.target.value)}
         />
-        <Card>
-          <Heading variant="medHeading">Standard Icons</Heading>
-          <Heading pb={3} variant="smallHeading">
-            Colors and size can be customized
-          </Heading>
-          <Grid columns={6}>
-            {[...allStandardIcons, ...social]
-              .filter(queryFilter)
-              .map((name) => {
-                return <WrappedIcon key={name} name={name} />;
-              })}
-          </Grid>
-        </Card>
-        <Card>
-          <Heading variant="medHeading">Brand Tokens</Heading>
-          <Heading pb={3} variant="smallHeading">
-            Comes in three flavors!
-          </Heading>
-          <Grid columns={4}>
-            {withColorVariants.map((name) => (
-              <LogoDisplay key={name} name={name} />
-            ))}
-          </Grid>
-        </Card>
-        <Card>
-          <Heading variant="medHeading">Color Icons</Heading>
-          <Heading pb={3} variant="smallHeading">
-            Some color icons for you
-          </Heading>
-          <Grid columns={6}>
-            {[...wallets, ...withCircleColor].map((name) => {
-              return <WrappedIcon key={name} name={name} />;
-            })}
-          </Grid>
-        </Card>
+        {data.map(([title, subtitle, body]) => (
+          <CollapsableCard
+            key={title}
+            title={title}
+            subtitle={subtitle}
+            body={body}
+          />
+        ))}
       </Grid>
     </Container>
   );
