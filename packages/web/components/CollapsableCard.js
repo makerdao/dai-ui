@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { Box, Card, Flex, Heading, IconButton } from "theme-ui";
+import { Box, Card, Flex, Heading, IconButton, Text } from "theme-ui";
 import { Icon } from "@makerdao/dai-ui-icons";
 
-const CollapsableCard = ({ title, body, isCollapsed = false, sx }) => {
+const CollapsableCard = ({
+  title,
+  subtitle,
+  body,
+  isCollapsed = false,
+  sx,
+}) => {
   const [collapsed, setCollapsed] = useState(isCollapsed);
   const iconName = collapsed ? "chevron_down" : "chevron_up";
   return (
@@ -16,7 +22,13 @@ const CollapsableCard = ({ title, body, isCollapsed = false, sx }) => {
           ...sx,
         }}
       >
-        <Heading variant="smallHeading">{title}</Heading>
+        <Heading
+          sx={{ flexBasis: "33.33%", flexShrink: 0 }}
+          variant="smallHeading"
+        >
+          {title}
+        </Heading>
+        {subtitle && <Text sx={{ color: "onSurface" }}>{subtitle}</Text>}
         <Box sx={{ ml: "auto" }}>
           <IconButton
             onClick={() => setCollapsed(!collapsed)}

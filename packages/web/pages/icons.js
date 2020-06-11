@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, Fragment } from "react";
 import {
   Container,
   Heading,
@@ -173,30 +173,49 @@ const Icons = () => {
   const data = [
     [
       "Standard Icons",
-      "This set contains the collection of standard UI Icons.",
-      <Grid key="firstSet" columns={6} p={3}>
-        {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
-          return <WrappedIcon key={name} name={name} onClick={setActiveIcon} />;
-        })}
-      </Grid>,
+      "@makerdao/dai-ui-icons",
+      <Fragment key="firstSet">
+        <Text sx={{ p: 3, pb: 0 }}>
+          This set contains the collection of standard UI Icons.
+        </Text>
+        <Grid columns={6} p={3}>
+          {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
+            return (
+              <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
+            );
+          })}
+        </Grid>
+      </Fragment>,
     ],
     [
       "Brand Tokens",
-      "Commonly used brand token whose color and size can be customized.",
-      <Grid key="secondSet" columns={4} p={3}>
-        {withColorVariants.map((name) => (
-          <LogoDisplay key={name} name={name} onClick={setActiveIcon} />
-        ))}
-      </Grid>,
+      "@makerdao/dai-ui-icons-branding",
+      <Fragment key="secondSet">
+        <Text sx={{ p: 3, pb: 0 }}>
+          Commonly used brand token whose color and size can be customized.
+        </Text>
+        <Grid key="secondSet" columns={4} p={3}>
+          {withColorVariants.map((name) => (
+            <LogoDisplay key={name} name={name} onClick={setActiveIcon} />
+          ))}
+        </Grid>
+      </Fragment>,
     ],
     [
       "Color Icons",
-      "Brand icons with coloring or features that shouldn't be changed.",
-      <Grid key="thirdSet" columns={6} p={3}>
-        {[...wallets, ...withCircleColor].map((name) => {
-          return <WrappedIcon key={name} name={name} onClick={setActiveIcon} />;
-        })}
-      </Grid>,
+      "@makerdao/dai-ui-icons-branding",
+      <Fragment key="secondSet">
+        <Text sx={{ p: 3, pb: 0 }}>
+          Brand icons with coloring or features that will not need to be edited.
+        </Text>
+        <Grid key="thirdSet" columns={6} p={3}>
+          {[...wallets, ...withCircleColor].map((name) => {
+            return (
+              <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
+            );
+          })}
+        </Grid>
+      </Fragment>,
     ],
   ];
 
