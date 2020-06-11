@@ -1,14 +1,5 @@
 import { useState, Fragment } from "react";
-import {
-  Container,
-  Heading,
-  Grid,
-  Text,
-  Card,
-  Box,
-  Input,
-  Flex,
-} from "theme-ui";
+import { Container, Heading, Grid, Text, Card, Input, Flex } from "theme-ui";
 import { Icon, icons as standardIcons } from "@makerdao/dai-ui-icons";
 import { icons as brandingIcons } from "@makerdao/dai-ui-icons-branding";
 import copy from "copy-to-clipboard";
@@ -64,6 +55,7 @@ const CircularIcon = ({
   size = 4,
   height = "20px",
   width = "20px",
+  sx,
 }) => {
   return (
     <Flex
@@ -73,7 +65,7 @@ const CircularIcon = ({
         bg: "onSurface",
         size,
         borderRadius: 9999,
-        margin: "auto",
+        ...sx,
       }}
       onClick={onClick}
     >
@@ -123,6 +115,7 @@ const LogoDisplay = ({ name, onClick }) => {
         />
         <CircularIcon
           name={name}
+          sx={{ margin: "auto" }}
           onClick={() => {
             onClick([name]);
             copy(name);
@@ -225,26 +218,65 @@ const Icons = () => {
     ],
   ];
 
+  const sizeMe = [
+    ["96px", 6],
+    ["48px", 5],
+    ["16px", 4],
+  ];
+
   return (
     <Container>
       <Grid columns={1}>
         <Grid columns={["1fr 2fr"]}>
           <Flex sx={{ flexDirection: "column" }}>
             <Heading variant="largeHeading">Icons</Heading>
-            <Box sx={{ margin: "auto" }}>
-              {activeIcon ? (
-                Array.isArray(activeIcon) ? (
-                  <CircularIcon
-                    name={activeIcon[0]}
-                    size={6}
-                    height="100px"
-                    width="100px"
-                  />
-                ) : (
-                  <Icon name={activeIcon} size={6} />
-                )
-              ) : null}
-            </Box>
+            <Heading sx={{ py: 3 }} variant="smallHeading">
+              {activeIcon}
+            </Heading>
+            <Grid columns={["3fr 2fr 1fr"]} sx={{ margin: "auto" }}>
+              {activeIcon
+                ? Array.isArray(activeIcon)
+                  ? sizeMe.map(([dimension, size]) => {
+                      return (
+                        <Flex
+                          key={dimension}
+                          sx={{
+                            flexDirection: "column",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <CircularIcon
+                            key={dimension}
+                            name={activeIcon[0]}
+                            size={size}
+                            height={dimension}
+                            width={dimension}
+                          />
+                          <Text>{dimension}</Text>
+                        </Flex>
+                      );
+                    })
+                  : sizeMe.map(([dimension]) => {
+                      return (
+                        <Flex
+                          key={dimension}
+                          sx={{
+                            flexDirection: "column",
+                            justifyContent: "flex-end",
+                          }}
+                        >
+                          <Icon
+                            name={activeIcon}
+                            height={dimension}
+                            width={dimension}
+                            size="auto"
+                          />
+                          <Text>{dimension}</Text>
+                        </Flex>
+                      );
+                    })
+                : null}
+            </Grid>
           </Flex>
           <Card py={0}>
             <IconsGuide activeIcon={codeGen(activeIcon)} />
