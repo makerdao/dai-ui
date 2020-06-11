@@ -36,7 +36,11 @@ const Components = () => (
   <Container>
     <CollapsableCard
       title={"How to contribute?"}
-      text={<ContributeMDX />}
+      body={
+        <Box>
+          <ContributeMDX />
+        </Box>
+      }
       isCollapsed={true}
     />
     <Heading variant="h2" py={4}>
