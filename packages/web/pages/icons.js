@@ -91,41 +91,47 @@ const CircularIcon = ({
 const LogoDisplay = ({ name, onClick }) => {
   return (
     <Grid
-      columns={3}
-      gap={0}
+      gap={2}
+      columns={1}
+      key={name}
       sx={{
         py: 3,
         bg: "background",
         borderRadius: "roundish",
       }}
     >
-      <Icon
-        name={`${name}_color`}
-        color="onBackground"
-        size={4}
-        sx={{ margin: "auto" }}
-        onClick={() => {
-          onClick(`${name}_color`);
-          copy(`${name}_color`);
-        }}
-      />
-      <Icon
-        name={name}
-        color="onBackground"
-        size={4}
-        sx={{ margin: "auto" }}
-        onClick={() => {
-          onClick(name);
-          copy(name);
-        }}
-      />
-      <CircularIcon
-        name={name}
-        onClick={() => {
-          onClick([name]);
-          copy(name);
-        }}
-      />
+      <Grid columns={3} gap={0}>
+        <Icon
+          name={`${name}_color`}
+          color="onBackground"
+          size={4}
+          sx={{ margin: "auto" }}
+          onClick={() => {
+            onClick(`${name}_color`);
+            copy(`${name}_color`);
+          }}
+        />
+        <Icon
+          name={name}
+          color="onBackground"
+          size={4}
+          sx={{ margin: "auto" }}
+          onClick={() => {
+            onClick(name);
+            copy(name);
+          }}
+        />
+        <CircularIcon
+          name={name}
+          onClick={() => {
+            onClick([name]);
+            copy(name);
+          }}
+        />
+      </Grid>
+      <Text variant="boldBody" sx={{ margin: "auto" }}>
+        {name}
+      </Text>
     </Grid>
   );
 };
