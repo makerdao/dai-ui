@@ -11,6 +11,7 @@ import {
 } from "theme-ui";
 import { Icon, icons as standardIcons } from "@makerdao/dai-ui-icons";
 import { icons as brandingIcons } from "@makerdao/dai-ui-icons-branding";
+import copy from "copy-to-clipboard";
 import IconsGuide from "../text/iconsGuide.mdx";
 import CollapsableCard from "../components/CollapsableCard";
 
@@ -36,7 +37,10 @@ const wallets = [
 const WrappedIcon = ({ name, onClick }) => {
   return (
     <Grid
-      onClick={() => onClick(name)}
+      onClick={() => {
+        onClick(name);
+        copy(name);
+      }}
       gap={2}
       columns={1}
       key={name}
@@ -66,16 +70,16 @@ const CircularIcon = ({
       sx={{
         alignItems: "center",
         justifyContent: "center",
-        bg: "black",
+        bg: "onSurface",
         size,
         borderRadius: 9999,
         margin: "auto",
       }}
-      onClick={() => onClick([name])}
+      onClick={onClick}
     >
       <Icon
         name={name}
-        color="white"
+        color="surface"
         size="auto"
         height={height}
         width={width}
@@ -100,16 +104,28 @@ const LogoDisplay = ({ name, onClick }) => {
         color="onBackground"
         size={4}
         sx={{ margin: "auto" }}
-        onClick={() => onClick(`${name}_color`)}
+        onClick={() => {
+          onClick(`${name}_color`);
+          copy(`${name}_color`);
+        }}
       />
       <Icon
         name={name}
         color="onBackground"
         size={4}
         sx={{ margin: "auto" }}
-        onClick={() => onClick(name)}
+        onClick={() => {
+          onClick(name);
+          copy(name);
+        }}
       />
-      <CircularIcon name={name} onClick={() => onClick([name])} />
+      <CircularIcon
+        name={name}
+        onClick={() => {
+          onClick([name]);
+          copy(name);
+        }}
+      />
     </Grid>
   );
 };

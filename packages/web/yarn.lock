@@ -1153,10 +1153,10 @@
   dependencies:
     "@theme-ui/color" "^0.3.1"
 
-"@makerdao/dai-ui-theme-maker@^0.0.46":
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.46.tgz#55e681cb49628fe98eb8db181ebc615a140413df"
-  integrity sha512-fHssXwysVgZ77I2hl3PNoIsgwLKlWWCsqSaNP6rtwNcq8y+lSQfTLRglZ1gZHg8ZopLI8BapBsE9imzdpHD3EA==
+"@makerdao/dai-ui-theme-maker@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.47.tgz#9885c3157491d84040a9d9e3a8967bbf1e411126"
+  integrity sha512-vuDhk06kG1P2rqC8CTzPGT9n4pfgAl3qTFIijLT1r7wmQLriMy7e2JVbgKwNfq2lmp/1FvTAs6K/zWXNCWN5mg==
   dependencies:
     "@theme-ui/color" "^0.3.1"
 
@@ -2526,6 +2526,13 @@ copy-descriptor@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
+
+copy-to-clipboard@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/copy-to-clipboard/-/copy-to-clipboard-3.3.1.tgz#115aa1a9998ffab6196f93076ad6da3b913662ae"
+  integrity sha512-i13qo6kIHTTpCm8/Wup+0b1mVWETvu2kIMzKoK8FpkLkFxlt0znUAHcMzox+T8sPlqtZXq3CulEjQHsYiGFJUw==
+  dependencies:
+    toggle-selection "^1.0.6"
 
 core-js-compat@^3.6.2:
   version "3.6.5"
@@ -6372,6 +6379,11 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+toggle-selection@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/toggle-selection/-/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
+  integrity sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
 
 tr46@^1.0.1:
   version "1.0.1"
