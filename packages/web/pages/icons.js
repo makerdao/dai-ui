@@ -122,9 +122,12 @@ const LogoDisplay = ({ name, onClick }) => {
           }}
         />
       </Grid>
-      <Text variant="boldBody" sx={{ margin: "auto" }}>
-        {name}
-      </Text>
+      <Flex sx={{ justifyContent: "space-around", mx: 2 }}>
+        <Text variant="boldBody" sx={{}}>
+          {name}_color
+        </Text>
+        <Text variant="boldBody">{name}</Text>
+      </Flex>
     </Grid>
   );
 };
