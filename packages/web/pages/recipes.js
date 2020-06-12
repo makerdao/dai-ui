@@ -42,7 +42,7 @@ const Components = () => (
     >
       Recipes
     </Heading>
-    <Box py={'4'}>
+    <Box py="3" pb="4">
       <CollapsableCard
         title={'How to contribute?'}
         body={
