@@ -432,6 +432,34 @@ const theme = {
       textDecoration: "none",
     },
     hr: {},
+    code: {
+      overflow: "auto",
+      p: 3,
+      bg: "background",
+      fontSize: 3,
+
+      // comments and characters like <, =>, (), etc
+      ".comment,.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url": {
+        color: "secondaryEmphasis",
+      },
+      ".comment": {
+        fontStyle: "italic",
+      },
+      // class names, functions and numbers
+      ".property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .maybe-class-name, .regex, .important, .variable": {
+        color: "onBackground",
+      },
+
+      // keywords like const, return
+      ".atrule, .attr-value, .keyword": {
+        color: "primaryEmphasis",
+      },
+
+      // strings
+      ".selector, .attr-name, .string, .char, .builtin, .inserted": {
+        color: "primary",
+      },
+    },
   },
   layout: {
     container: {

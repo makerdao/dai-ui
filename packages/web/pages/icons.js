@@ -51,7 +51,7 @@ const WrappedIcon = ({ name, onClick }) => {
       }}
     >
       <Icon name={name} color="onBackground" size={4} sx={{ margin: 'auto' }} />
-      <Text variant="boldBody" sx={{ margin: 'auto' }}>
+      <Text variant="small" sx={{ margin: 'auto' }}>
         {name}
       </Text>
     </Grid>
@@ -131,9 +131,12 @@ const LogoDisplay = ({ name, onClick }) => {
           }}
         />
       </Grid>
-      <Text variant="boldBody" sx={{ margin: 'auto' }}>
-        {name}
-      </Text>
+      <Flex sx={{ justifyContent: 'space-around', mx: 2 }}>
+        <Text variant="small" sx={{}}>
+          {name}_color
+        </Text>
+        <Text variant="small">{name}</Text>
+      </Flex>
     </Grid>
   );
 };
@@ -235,65 +238,75 @@ const Icons = () => {
 
   return (
     <Container>
-      <Heading variant="h1">Icons</Heading>
+      <Heading
+        variant="h1"
+        sx={{
+          fontSize: 8,
+        }}
+      >
+        Icons
+      </Heading>
+
       <Box py="3" pb="4">
         <CollapsableCard
           title={'How to use the icons package?'}
           body={
-            <Grid columns={['1fr 2fr']}>
-              <Flex sx={{ flexDirection: 'column' }}>
-                <Heading sx={{ py: 3 }} variant="smallHeading">
-                  {activeIcon}
-                </Heading>
-                <Grid columns={['3fr 2fr 1fr']} sx={{ margin: 'auto' }}>
-                  {activeIcon
-                    ? Array.isArray(activeIcon)
-                      ? sizeMe.map(([dimension, size]) => {
-                          return (
-                            <Flex
-                              key={dimension}
-                              sx={{
-                                flexDirection: 'column',
-                                justifyContent: 'flex-end',
-                              }}
-                            >
-                              <CircularIcon
+            <Box px="3">
+              <Grid columns={['1fr 2fr']}>
+                <Flex sx={{ flexDirection: 'column' }}>
+                  <Heading sx={{ py: 3 }} variant="smallHeading">
+                    {activeIcon}
+                  </Heading>
+                  <Grid columns={['3fr 2fr 1fr']} sx={{ margin: 'auto' }}>
+                    {activeIcon
+                      ? Array.isArray(activeIcon)
+                        ? sizeMe.map(([dimension, size]) => {
+                            return (
+                              <Flex
                                 key={dimension}
-                                name={activeIcon[0]}
-                                size={size}
-                                height={dimension}
-                                width={dimension}
-                              />
-                              <Text>{dimension}</Text>
-                            </Flex>
-                          );
-                        })
-                      : sizeMe.map(([dimension]) => {
-                          return (
-                            <Flex
-                              key={dimension}
-                              sx={{
-                                flexDirection: 'column',
-                                justifyContent: 'flex-end',
-                              }}
-                            >
-                              <Icon
-                                name={activeIcon}
-                                height={dimension}
-                                width={dimension}
-                                size="auto"
-                              />
-                              <Text>{dimension}</Text>
-                            </Flex>
-                          );
-                        })
-                    : null}
-                </Grid>
-              </Flex>
-              <Box py={0}>
-                <IconsGuide activeIcon={codeGen(activeIcon)} />
-              </Box>
-            </Grid>
+                                sx={{
+                                  flexDirection: 'column',
+                                  justifyContent: 'flex-end',
+                                }}
+                              >
+                                <CircularIcon
+                                  key={dimension}
+                                  name={activeIcon[0]}
+                                  size={size}
+                                  height={dimension}
+                                  width={dimension}
+                                />
+                                <Text>{dimension}</Text>
+                              </Flex>
+                            );
+                          })
+                        : sizeMe.map(([dimension]) => {
+                            return (
+                              <Flex
+                                key={dimension}
+                                sx={{
+                                  flexDirection: 'column',
+                                  justifyContent: 'flex-end',
+                                }}
+                              >
+                                <Icon
+                                  name={activeIcon}
+                                  height={dimension}
+                                  width={dimension}
+                                  size="auto"
+                                />
+                                <Text>{dimension}</Text>
+                              </Flex>
+                            );
+                          })
+                      : null}
+                  </Grid>
+                </Flex>
+                <Box py={0}>
+                  <IconsGuide activeIcon={codeGen(activeIcon)} />
+                </Box>
+              </Grid>
+            </Box>
           }
           isCollapsed={true}
         />
