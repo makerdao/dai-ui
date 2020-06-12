@@ -1,14 +1,5 @@
 import { useState, Fragment } from 'react';
-import {
-  Container,
-  Heading,
-  Grid,
-  Text,
-  Card,
-  Box,
-  Input,
-  Flex,
-} from 'theme-ui';
+import { Container, Heading, Grid, Text, Box, Input, Flex } from 'theme-ui';
 import { Icon, icons as standardIcons } from '@makerdao/dai-ui-icons';
 import { icons as brandingIcons } from '@makerdao/dai-ui-icons-branding';
 import copy from 'copy-to-clipboard';
@@ -104,12 +95,19 @@ const LogoDisplay = ({ name, onClick }) => {
       <Grid columns={3} gap={0}>
         <Icon
           name={`${name}_color`}
-          color="onBackground"
           size={4}
           sx={{ margin: 'auto' }}
           onClick={() => {
             onClick(`${name}_color`);
             copy(`${name}_color`);
+          }}
+        />
+        <CircularIcon
+          name={name}
+          sx={{ margin: 'auto' }}
+          onClick={() => {
+            onClick([name]);
+            copy(name);
           }}
         />
         <Icon
@@ -122,28 +120,23 @@ const LogoDisplay = ({ name, onClick }) => {
             copy(name);
           }}
         />
-        <CircularIcon
-          name={name}
-          sx={{ margin: 'auto' }}
-          onClick={() => {
-            onClick([name]);
-            copy(name);
-          }}
-        />
-      </Grid>
-      <Flex sx={{ justifyContent: 'space-around', mx: 2 }}>
-        <Text variant="small" sx={{}}>
+        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
           {name}_color
         </Text>
-        <Text variant="small">{name}</Text>
-      </Flex>
+        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
+          {name}
+        </Text>
+        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
+          {name}
+        </Text>
+      </Grid>
     </Grid>
   );
 };
 
 const Icons = () => {
   const [query, setQuery] = useState();
-  const [activeIcon, setActiveIcon] = useState(null);
+  const [activeIcon, setActiveIcon] = useState('dai_circle_color');
 
   const allBrandingIcons = Object.keys(brandingIcons);
   const allStandardIcons = Object.keys(standardIcons);
@@ -189,7 +182,7 @@ const Icons = () => {
         <Text sx={{ p: 3, pb: 0 }}>
           This set contains the collection of standard UI Icons.
         </Text>
-        <Grid columns={6} p={3}>
+        <Grid columns={[2, 4, 6]} p={3}>
           {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
             return (
               <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
@@ -205,7 +198,7 @@ const Icons = () => {
         <Text sx={{ p: 3, pb: 0 }}>
           Commonly used brand token whose color and size can be customized.
         </Text>
-        <Grid key="secondSet" columns={4} p={3}>
+        <Grid columns={[1, 2, 4]} p={3}>
           {withColorVariants.map((name) => (
             <LogoDisplay key={name} name={name} onClick={setActiveIcon} />
           ))}
@@ -215,11 +208,11 @@ const Icons = () => {
     [
       'Color Icons',
       '@makerdao/dai-ui-icons-branding',
-      <Fragment key="secondSet">
+      <Fragment key="thirdSet">
         <Text sx={{ p: 3, pb: 0 }}>
           Brand icons with coloring or features that will not need to be edited.
         </Text>
-        <Grid key="thirdSet" columns={6} p={3}>
+        <Grid columns={[2, 4, 6]} p={3}>
           {[...wallets, ...withCircleColor].map((name) => {
             return (
               <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
@@ -313,7 +306,7 @@ const Icons = () => {
       </Box>
       <Box>
         <Input
-          sx={{ bg: 'surface', p: 3, fontSize: 4 }}
+          sx={{ bg: 'surface', p: 3, fontSize: 4, mb: 2 }}
           placeholder="Find icon by name..."
           onChange={(e) => setQuery(e.target.value)}
         />
