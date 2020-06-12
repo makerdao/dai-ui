@@ -19,24 +19,26 @@ const CollapsableCard = ({
           borderBottom: collapsed ? null : "1px solid",
           borderColor: "muted",
           alignItems: "center",
+          justifyContent: "space-between",
           ...sx,
         }}
       >
-        <Heading
-          sx={{ flexBasis: "33.33%", flexShrink: 0 }}
-          variant="smallHeading"
-        >
+        <Heading sx={{}} variant="smallHeading">
           {title}
         </Heading>
-        {subtitle && <Text sx={{ color: "onSurface" }}>{subtitle}</Text>}
-        <Box sx={{ ml: "auto" }}>
-          <IconButton
-            onClick={() => setCollapsed(!collapsed)}
-            active={!collapsed}
-          >
-            <Icon name={iconName} />
-          </IconButton>
-        </Box>
+        <Flex sx={{ alignItems: "center" }}>
+          {subtitle && (
+            <Text sx={{ px: 3, color: "onSurface" }}>{subtitle}</Text>
+          )}
+          <Box sx={{ ml: "auto" }}>
+            <IconButton
+              onClick={() => setCollapsed(!collapsed)}
+              active={!collapsed}
+            >
+              <Icon name={iconName} />
+            </IconButton>
+          </Box>
+        </Flex>
       </Flex>
       {collapsed ? null : body}
     </Card>
