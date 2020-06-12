@@ -25,7 +25,7 @@ const wallets = [
   'coinbase_color',
 ];
 
-const WrappedIcon = ({ name, onClick }) => {
+const WrappedIcon = ({ name, selected, onClick }) => {
   return (
     <Grid
       onClick={() => {
@@ -37,8 +37,15 @@ const WrappedIcon = ({ name, onClick }) => {
       key={name}
       sx={{
         py: 3,
-        bg: 'background',
+        bg: selected ? 'muted' : 'background',
         borderRadius: 'roundish',
+        '&:hover': {
+          bg: 'muted',
+          cursor: 'pointer',
+        },
+        '&:active': {
+          bg: 'mutedAlt',
+        },
       }}
     >
       <Icon name={name} color="onBackground" size={4} sx={{ margin: 'auto' }} />
@@ -185,7 +192,12 @@ const Icons = () => {
         <Grid columns={[2, 4, 6]} p={3}>
           {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
             return (
-              <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
+              <WrappedIcon
+                key={name}
+                name={name}
+                selected={activeIcon === name}
+                onClick={setActiveIcon}
+              />
             );
           })}
         </Grid>
@@ -200,7 +212,12 @@ const Icons = () => {
         </Text>
         <Grid columns={[1, 2, 4]} p={3}>
           {withColorVariants.map((name) => (
-            <LogoDisplay key={name} name={name} onClick={setActiveIcon} />
+            <LogoDisplay
+              key={name}
+              name={name}
+              selected={activeIcon === name}
+              onClick={setActiveIcon}
+            />
           ))}
         </Grid>
       </Fragment>,
@@ -215,7 +232,12 @@ const Icons = () => {
         <Grid columns={[2, 4, 6]} p={3}>
           {[...wallets, ...withCircleColor].map((name) => {
             return (
-              <WrappedIcon key={name} name={name} onClick={setActiveIcon} />
+              <WrappedIcon
+                key={name}
+                name={name}
+                selected={activeIcon === name}
+                onClick={setActiveIcon}
+              />
             );
           })}
         </Grid>
