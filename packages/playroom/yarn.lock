@@ -1023,6 +1023,33 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@makerdao/dai-ui-icons-branding@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons-branding/-/dai-ui-icons-branding-0.0.47.tgz#b3d2d6f2bae4999dfafabb2374a3bbe56d84b515"
+  integrity sha512-poKpgbBIIeCqrYkU2g9rRIbFKIzR/ZUpms37VtOwEFMl8Avie45+/QeewPIvfbBQfUZriSoRtndgS71aPkNmjg==
+
+"@makerdao/dai-ui-icons@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.47.tgz#0e1163a0975ff627423a4401d74d5488a51df1d2"
+  integrity sha512-iz/qrIV7Txz9K+/tiw6ZQFHk8g/gMlpwq/21IR7qfM95vDmHYZHD6qhWJCZyBeMUDMpFsABA1EVwekm6IsiQ6g==
+
+"@makerdao/dai-ui-theme-maker@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.47.tgz#9885c3157491d84040a9d9e3a8967bbf1e411126"
+  integrity sha512-vuDhk06kG1P2rqC8CTzPGT9n4pfgAl3qTFIijLT1r7wmQLriMy7e2JVbgKwNfq2lmp/1FvTAs6K/zWXNCWN5mg==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-oasis@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.47.tgz#c734ad5ae7a9090664228146676b901f0dfd6d21"
+  integrity sha512-YkSUCdG54FX8yiVMqLrrwe9ZGU2RD3Zm/TxNcCVcwcHIrMAv5emHA12UHUjHSvWXk4ncLMGEfjVAIXKxCRn71w==
+
+"@makerdao/dai-ui-theme-pen@^0.0.47":
+  version "0.0.47"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.47.tgz#95f882df8a109ed14ac74bfe5f57cabcddc335c1"
+  integrity sha512-WLYXB1wzc4jwnvUr8qqN8nr/iunF6MPgEkae1D4gNOVqoV7ae+pSWiI+wufUGV1/3HuhJoauIRvEX+n1718zng==
+
 "@mdx-js/react@^1.0.0", "@mdx-js/react@^1.5.3":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.5.tgz#70380f25209b62ef69349b7eef09fad7e1103824"

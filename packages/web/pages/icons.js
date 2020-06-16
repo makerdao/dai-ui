@@ -1,28 +1,28 @@
-import { useState, Fragment } from 'react';
-import { Container, Heading, Grid, Text, Box, Input, Flex } from 'theme-ui';
-import { Icon, icons as standardIcons } from '@makerdao/dai-ui-icons';
-import { icons as brandingIcons } from '@makerdao/dai-ui-icons-branding';
-import copy from 'copy-to-clipboard';
-import IconsGuide from '../text/iconsGuide.mdx';
-import CollapsableCard from '../components/CollapsableCard';
+import { useState, Fragment } from "react";
+import { Container, Heading, Grid, Text, Box, Input, Flex } from "theme-ui";
+import { Icon, icons as standardIcons } from "@makerdao/dai-ui-icons";
+import { icons as brandingIcons } from "@makerdao/dai-ui-icons-branding";
+import copy from "copy-to-clipboard";
+import IconsGuide from "../text/iconsGuide.mdx";
+import CollapsableCard from "../components/CollapsableCard";
 
 const social = [
-  'facebook',
-  'medium',
-  'rocketchat',
-  'reddit',
-  'telegram',
-  'twitter',
-  'youtube',
-  'wechat',
+  "facebook",
+  "medium",
+  "rocketchat",
+  "reddit",
+  "telegram",
+  "twitter",
+  "youtube",
+  "wechat",
 ];
 
 const wallets = [
-  'ledger',
-  'trezor',
-  'metamask_color',
-  'wallet_connect_color',
-  'coinbase_color',
+  "ledger",
+  "trezor",
+  "metamask_color",
+  "wallet_connect_color",
+  "coinbase_color",
 ];
 
 const WrappedIcon = ({ name, selected, onClick }) => {
@@ -37,19 +37,19 @@ const WrappedIcon = ({ name, selected, onClick }) => {
       key={name}
       sx={{
         py: 3,
-        bg: selected ? 'muted' : 'background',
-        borderRadius: 'roundish',
-        '&:hover': {
-          bg: 'muted',
-          cursor: 'pointer',
+        bg: selected ? "muted" : "background",
+        borderRadius: "roundish",
+        "&:hover": {
+          bg: "muted",
+          cursor: "pointer",
         },
-        '&:active': {
-          bg: 'mutedAlt',
+        "&:active": {
+          bg: "mutedAlt",
         },
       }}
     >
-      <Icon name={name} color="onBackground" size={4} sx={{ margin: 'auto' }} />
-      <Text variant="small" sx={{ margin: 'auto' }}>
+      <Icon name={name} color="onBackground" size={4} sx={{ margin: "auto" }} />
+      <Text variant="small" sx={{ margin: "auto" }}>
         {name}
       </Text>
     </Grid>
@@ -60,16 +60,16 @@ const CircularIcon = ({
   name,
   onClick,
   size = 4,
-  height = '20px',
-  width = '20px',
+  height = "20px",
+  width = "20px",
   sx,
 }) => {
   return (
     <Flex
       sx={{
-        alignItems: 'center',
-        justifyContent: 'center',
-        bg: 'onSurface',
+        alignItems: "center",
+        justifyContent: "center",
+        bg: "onSurface",
         size,
         borderRadius: 9999,
         ...sx,
@@ -95,15 +95,15 @@ const LogoDisplay = ({ name, onClick }) => {
       key={name}
       sx={{
         py: 3,
-        bg: 'background',
-        borderRadius: 'roundish',
+        bg: "background",
+        borderRadius: "roundish",
       }}
     >
       <Grid columns={3} gap={0}>
         <Icon
           name={`${name}_color`}
           size={4}
-          sx={{ margin: 'auto' }}
+          sx={{ margin: "auto" }}
           onClick={() => {
             onClick(`${name}_color`);
             copy(`${name}_color`);
@@ -111,7 +111,7 @@ const LogoDisplay = ({ name, onClick }) => {
         />
         <CircularIcon
           name={name}
-          sx={{ margin: 'auto' }}
+          sx={{ margin: "auto" }}
           onClick={() => {
             onClick([name]);
             copy(name);
@@ -121,19 +121,19 @@ const LogoDisplay = ({ name, onClick }) => {
           name={name}
           color="onBackground"
           size={4}
-          sx={{ margin: 'auto' }}
+          sx={{ margin: "auto" }}
           onClick={() => {
             onClick(name);
             copy(name);
           }}
         />
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
+        <Text sx={{ margin: "auto", px: 2 }} variant="small">
           {name}_color
         </Text>
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
+        <Text sx={{ margin: "auto", px: 2 }} variant="small">
           {name}
         </Text>
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
+        <Text sx={{ margin: "auto", px: 2 }} variant="small">
           {name}
         </Text>
       </Grid>
@@ -143,13 +143,13 @@ const LogoDisplay = ({ name, onClick }) => {
 
 const Icons = () => {
   const [query, setQuery] = useState();
-  const [activeIcon, setActiveIcon] = useState('dai_circle_color');
+  const [activeIcon, setActiveIcon] = useState("dai_circle_color");
 
   const allBrandingIcons = Object.keys(brandingIcons);
   const allStandardIcons = Object.keys(standardIcons);
 
   const mainLogos = allBrandingIcons.filter(
-    (name) => !name.includes('_') && !social.includes(name)
+    (name) => !name.includes("_") && !social.includes(name)
   );
 
   const queryFilter = (name) =>
@@ -166,7 +166,7 @@ const Icons = () => {
 
   const withCircleColor = allBrandingIcons
     .filter(queryFilter)
-    .filter((name) => name.includes('_circle_color'));
+    .filter((name) => name.includes("_circle_color"));
 
   const codeGen = (activeIcon) => {
     if (Array.isArray(activeIcon)) {
@@ -177,14 +177,14 @@ const Icons = () => {
       `;
       return str;
     } else {
-      return `<Icon name="${activeIcon ?? 'my_icon'}" size={5} />`;
+      return `<Icon name="${activeIcon ?? "my_icon"}" size={5} />`;
     }
   };
 
   const data = [
     [
-      'Standard Icons',
-      '@makerdao/dai-ui-icons',
+      "Standard Icons",
+      "@makerdao/dai-ui-icons",
       <Fragment key="firstSet">
         <Text sx={{ p: 3, pb: 0 }}>
           This set contains the collection of standard UI Icons.
@@ -204,8 +204,8 @@ const Icons = () => {
       </Fragment>,
     ],
     [
-      'Brand Tokens',
-      '@makerdao/dai-ui-icons-branding',
+      "Brand Tokens",
+      "@makerdao/dai-ui-icons-branding",
       <Fragment key="secondSet">
         <Text sx={{ p: 3, pb: 0 }}>
           Commonly used brand token whose color and size can be customized.
@@ -223,8 +223,8 @@ const Icons = () => {
       </Fragment>,
     ],
     [
-      'Color Icons',
-      '@makerdao/dai-ui-icons-branding',
+      "Color Icons",
+      "@makerdao/dai-ui-icons-branding",
       <Fragment key="thirdSet">
         <Text sx={{ p: 3, pb: 0 }}>
           Brand icons with coloring or features that will not need to be edited.
@@ -246,9 +246,9 @@ const Icons = () => {
   ];
 
   const sizeMe = [
-    ['96px', 6],
-    ['48px', 5],
-    ['16px', 4],
+    ["96px", 6],
+    ["48px", 5],
+    ["16px", 4],
   ];
 
   return (
@@ -264,15 +264,15 @@ const Icons = () => {
 
       <Box py="3" pb="4">
         <CollapsableCard
-          title={'How to use the icons package?'}
+          title={"How to use the icons package?"}
           body={
             <Box px="3">
-              <Grid columns={['1fr 2fr']}>
-                <Flex sx={{ flexDirection: 'column' }}>
+              <Grid columns={["1fr 2fr"]}>
+                <Flex sx={{ flexDirection: "column" }}>
                   <Heading sx={{ py: 3 }} variant="smallHeading">
                     {activeIcon}
                   </Heading>
-                  <Grid columns={['3fr 2fr 1fr']} sx={{ margin: 'auto' }}>
+                  <Grid columns={["3fr 2fr 1fr"]} sx={{ margin: "auto" }}>
                     {activeIcon
                       ? Array.isArray(activeIcon)
                         ? sizeMe.map(([dimension, size]) => {
@@ -280,8 +280,8 @@ const Icons = () => {
                               <Flex
                                 key={dimension}
                                 sx={{
-                                  flexDirection: 'column',
-                                  justifyContent: 'flex-end',
+                                  flexDirection: "column",
+                                  justifyContent: "flex-end",
                                 }}
                               >
                                 <CircularIcon
@@ -300,8 +300,8 @@ const Icons = () => {
                               <Flex
                                 key={dimension}
                                 sx={{
-                                  flexDirection: 'column',
-                                  justifyContent: 'flex-end',
+                                  flexDirection: "column",
+                                  justifyContent: "flex-end",
                                 }}
                               >
                                 <Icon
@@ -326,9 +326,20 @@ const Icons = () => {
           isCollapsed={true}
         />
       </Box>
-      <Box>
+      <Box sx={{ position: "relative" }}>
+        <Icon
+          sx={{
+            position: "absolute",
+            top: "50%",
+            transform: "translateY(-50%)",
+            left: 3,
+          }}
+          name="search"
+          size={3}
+          viewBox="0 0 16 16"
+        />
         <Input
-          sx={{ bg: 'surface', p: 3, fontSize: 4, mb: 2 }}
+          sx={{ bg: "surface", p: 3, fontSize: 4, mb: 2, pl: 5 }}
           placeholder="Find icon by name..."
           onChange={(e) => setQuery(e.target.value)}
         />
