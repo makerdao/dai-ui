@@ -12,9 +12,9 @@
 
 ```js
 // app.js
-import { ThemeProvider } from "theme-ui";
-import theme from "./theme";
-import { icons } from "@makerdao/dai-ui-icons";
+import { ThemeProvider } from 'theme-ui';
+import theme from './theme';
+import { icons } from '@makerdao/dai-ui-icons';
 
 const mergedTheme = { ...theme, icons };
 
@@ -27,7 +27,7 @@ export default (props) => (
 
 ```js
 // index.js
-import { Icon } from "@makerdao/dai-ui-icons";
+import { Icon } from '@makerdao/dai-ui-icons';
 
 <Icon name="dai_round_color" />;
 ```
@@ -35,7 +35,7 @@ import { Icon } from "@makerdao/dai-ui-icons";
 4. Icons can also accept `color` and `size` props pulled from your theme, as well as theme-ui `sx` properties.
 
 ```js
-<Icon name="maker" color="primary" size={3} sx={{ bg: "secondary" }} />
+<Icon name="maker" color="primary" size={3} sx={{ bg: 'secondary' }} />
 ```
 
 [theme-ui]: https://github.com/system-ui/theme-ui
@@ -43,23 +43,27 @@ import { Icon } from "@makerdao/dai-ui-icons";
 
 ## Setting Up a Local Dev Environment
 
-While developing a new icons package, you can link it to your frontend project with `yarn link`.
+While developing a new icons package, you can link it to your frontend project using yalc and monitor for changes with sane.
 
-1. In the icons package directory, build the package with the "watch" option. This will watch your source files and rebuild on any change.
+1. In the icons package directory, first build the package.
 
-`yarn build:watch`
+`yarn build`
 
-2. In a new terminal window, navigate to the `dist` folder created by microbundle and set up the link.
+2. Publish the packaging to the yalc registry.
 
-`yarn link`
+`yalc publish`
 
-3. Navigate to your frontend project and complete the link.
+3. Use sane to monitor the files for changes.
 
-`yarn link "@makerdao/dai-ui-icons"`
+`sane "yalc publish --push" . --wait=10`
+
+4. Navigate to your frontend project and add the package with yalc.
+
+`yalc add "@makerdao/dai-ui-icons"`
 
 You should now see updates to your icons package take effect immediately in your frontend project.
 
-To break the link run `yarn unlink "@makerdao/dai-ui-icons"` in your frontend project, and reinstall the package from npm.
+To remove the linked package run `yalc remove "@makerdao/dai-ui-icons"` and reinstall the package from npm.
 
 ## Creating an Icons Package
 

@@ -6,17 +6,6 @@ import copy from 'copy-to-clipboard';
 import IconsGuide from '../text/iconsGuide.mdx';
 import CollapsableCard from '../components/CollapsableCard';
 
-const social = [
-  'facebook',
-  'medium',
-  'rocketchat',
-  'reddit',
-  'telegram',
-  'twitter',
-  'youtube',
-  'wechat',
-];
-
 const wallets = [
   'ledger',
   'trezor',
@@ -148,9 +137,7 @@ const Icons = () => {
   const allBrandingIcons = Object.keys(brandingIcons);
   const allStandardIcons = Object.keys(standardIcons);
 
-  const mainLogos = allBrandingIcons.filter(
-    (name) => !name.includes('_') && !social.includes(name)
-  );
+  const mainLogos = allBrandingIcons.filter((name) => !name.includes('_'));
 
   const queryFilter = (name) =>
     query === undefined ? name : name.includes(query);
@@ -190,7 +177,7 @@ const Icons = () => {
           This set contains the collection of standard UI Icons.
         </Text>
         <Grid columns={[2, 4, 6]} p={3}>
-          {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
+          {allStandardIcons.filter(queryFilter).map((name) => {
             return (
               <WrappedIcon
                 key={name}
