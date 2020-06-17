@@ -117,9 +117,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(`${name}_color`);
             }}
           />
-          <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-            {name}_color
-          </Text>
+          <Text variant="small">{name}_color</Text>
         </LogoContainer>
         <LogoContainer
           selected={Array.isArray(activeIcon) && activeIcon[0] === name}
@@ -132,9 +130,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(name);
             }}
           />
-          <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-            {name}
-          </Text>
+          <Text variant="small">{name}</Text>
         </LogoContainer>
         <LogoContainer selected={activeIcon === name}>
           <Icon
@@ -147,9 +143,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(name);
             }}
           />
-          <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-            {name}
-          </Text>
+          <Text variant="small">{name}</Text>
         </LogoContainer>
       </Grid>
     </Grid>
