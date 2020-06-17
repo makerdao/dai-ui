@@ -31,7 +31,6 @@
   "bugs": {
     "url": "https://github.com/makerdao/dai-ui/issues"
   },
-  "gitHead": "f3318a188b486573a2f76bd78db2e92c5ce886e1",
   "devDependencies": {
     "microbundle": "^0.12.0-next.9"
   }
