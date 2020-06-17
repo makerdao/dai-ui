@@ -1136,6 +1136,40 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@makerdao/dai-ui-icons-branding@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons-branding/-/dai-ui-icons-branding-0.0.49.tgz#c76afe8f1cdd0ae8521dc303ab778691d4147eab"
+  integrity sha512-A8lm+p+on8+bFiC+mbmTOOhZn6udN4sc1m2q4Ll+8tZZE3lMDORN50hcR2VYPqZ1iAmOiImp1nAK0WFCdTeCFg==
+
+"@makerdao/dai-ui-icons@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.49.tgz#077eeba0e1930c3f481c7feb0ee0a73beb7be976"
+  integrity sha512-hxlg6aUPU9E5yt6nlxO7XOaQsQ/PLK+bENAwmdD6UMBUYxEcCJF2R3YTGQ+OCwakKmZNGBwhMhE7W5lyjDXT9Q==
+
+"@makerdao/dai-ui-theme-maker-neue@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker-neue/-/dai-ui-theme-maker-neue-0.0.49.tgz#b90946db364aac78f34fb6546dbe39eac5700088"
+  integrity sha512-rTNtsxnAJYXwkNYqNWR/mF8KqKX+czkx+qPIIye5Kjh1D/NfJg24XqoIi/CPeLvNc39U/I4fipXI+qNHqhVuvg==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-maker@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.49.tgz#d7719c9b490058cde76afc993d771519f798439b"
+  integrity sha512-q+DfOkF67/4gydyA+Uc0bwsBmFQPKaDB1rpaQO8QAVXfKe/vdBFXNSG97laPR00csae+K8ajOrv/UCZfpFBvkw==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-oasis@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.49.tgz#41b806708f8d81205a96015c334dfc583fea73d8"
+  integrity sha512-vHke3UdYQerhbyDBqT3WovvazVWhhC4DNu8sZtJ3WGZAAp/byutfTxEpLKUlSU8q/W7RVjwUGFYPVcrk1T1VQQ==
+
+"@makerdao/dai-ui-theme-pen@^0.0.49":
+  version "0.0.49"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.49.tgz#efe86a24f3fd57a4792069af61f84cb6867c1d7d"
+  integrity sha512-YppG9EYzQK4ElY7UKeqIMfsybHt4n1ACAGUg/UQ2CNI43feHTmCZgUfzcZmO5qcuf/Df7rsHQhJDcLPBH94C3A==
+
 "@mdx-js/loader@^1.0.19":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.5.tgz#f2826c79f18cbc6b502dd5722d7e7101e5658dbb"
