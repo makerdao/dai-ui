@@ -196,13 +196,12 @@ const theme = {
 
   buttons: {
     primary: {
-      borderRadius: "xs",
+      borderRadius: "small",
       cursor: "pointer",
       outline: "none",
       fontFamily: "body",
-      fontSize: 2,
+      fontSize: 3,
       p: 3,
-      py: 2,
       color: "onPrimary",
       fontWeight: "semiBold",
       letterSpacing: "0.03em",
@@ -222,9 +221,9 @@ const theme = {
     outline: {
       variant: "buttons.primary",
       bg: "surface",
-      color: "onSecondary",
+      color: "text",
       border: "1px solid",
-      borderColor: "secondary",
+      borderColor: "onSurface",
       "&:hover": {
         bg: "surface",
         color: "secondaryEmphasis",
@@ -252,7 +251,7 @@ const theme = {
       fontWeight: "bold",
       cursor: "pointer",
       p: 2,
-      color: "onSurface",
+      color: "onPrimary",
       bg: "primary",
       "&:hover": {
         bg: "primaryEmphasis",
@@ -269,9 +268,9 @@ const theme = {
     smallOutline: {
       variant: "buttons.small",
       bg: "surface",
-      color: "onSecondary",
+      color: "text",
       border: "1px solid",
-      borderColor: "secondary",
+      borderColor: "onSurface",
       "&:hover": {
         bg: "surface",
         color: "secondaryEmphasis",
