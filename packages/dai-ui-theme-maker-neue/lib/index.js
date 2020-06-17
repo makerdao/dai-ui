@@ -133,6 +133,9 @@ const theme = {
       fontSize: 0,
       fontWeight: "bold",
     },
+    small: {
+      fontSize: 1,
+    },
   },
 
   alerts: {
