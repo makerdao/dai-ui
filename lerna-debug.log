@@ -1,6 +1,0 @@
-80 error Error: Command failed: git tag v0.0.42 -m v0.0.42
-80 error fatal: tag 'v0.0.42' already exists
-80 error
-80 error     at makeError (/Users/stormlight/Documents/code/web/dai-ui/node_modules/execa/index.js:174:9)
-80 error     at /Users/stormlight/Documents/code/web/dai-ui/node_modules/execa/index.js:278:16
-80 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)
