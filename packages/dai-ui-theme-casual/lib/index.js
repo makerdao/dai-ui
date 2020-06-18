@@ -3,7 +3,6 @@ const theme = {
   useBodyStyles: true,
 
   breakpoints: ["40em", "52em", "64em"],
-
   colors: {
     primary: "#25273D",
     primaryAlt: "#D3D4D8",
@@ -27,9 +26,6 @@ const theme = {
 
     warning: "#FFF1CF",
     onWarning: "#F08B04",
-
-    gradientDai:
-      "linear-gradient(161.42deg, #F8D247 1.31%, #FF8154 99.3%), radial-gradient(93.42% 100% at 6.31% 0%, #F2A19E 0%, #F7E189 100%);",
   },
 
   fonts: {
@@ -52,6 +48,7 @@ const theme = {
     heading: 1.2,
     tight: 1.05,
     loose: 1.35,
+    squareButton: 2.25,
   },
 
   borders: {
@@ -210,8 +207,8 @@ const theme = {
     primarySquare: {
       variant: "buttons.primaryBig",
       borderRadius: "roundish",
-      width: "100%",
       boxShadow: "light",
+      lineHeight: "squareButton",
     },
     primaryAltSquare: {
       variant: "buttons.primarySquare",

@@ -15,8 +15,8 @@ const themes = {
   MakerDefault: { ...maker, icons },
   MakerNeue: { ...makerNeue, icons },
   OasisDex: { ...oasis, icons },
-  Pen: pen,
-  CryptoCasual: casual,
+  Pen: { ...pen, icons },
+  CryptoCasual: { ...casual, icons },
 };
 
 const selectors = {
@@ -24,8 +24,8 @@ const selectors = {
   getAvailableThemes: () => Object.keys(themes),
 };
 
-const [useSystemStore, sysAPI] = create((set, get) => ({
-  currentTheme: "MakerDefault",
+const [useSystemStore, sysAPI] = create((set) => ({
+  currentTheme: "CryptoCasual",
   featureFlags: [],
 
   setCurrentTheme: (val) => {

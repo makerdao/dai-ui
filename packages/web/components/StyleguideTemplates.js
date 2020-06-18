@@ -32,22 +32,25 @@ const WrappedButton = ({ variants }) => {
               display: "flex",
               flexDirection: "column",
               height: "100%",
+              justifyContent: "space-between",
             }}
           >
-            <Grid
-              columns={2}
+            <Flex
               sx={{
                 mb: "auto",
-                flexDirection: "row",
+                alignItems: "flex-start",
+                flexDirection: "column",
               }}
             >
-              <Button variant={variant}>Click Me!</Button>
+              <Button variant={variant} sx={{ mb: 2 }}>
+                Click Me!
+              </Button>
               {!disabledBlacklist.includes(variant) && (
                 <Button disabled variant={variant}>
                   Click Me!
                 </Button>
               )}
-            </Grid>
+            </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
               <Text variant="small">{`<Button variant="${variant}" />`}</Text>
