@@ -25,7 +25,7 @@ const selectors = {
 };
 
 const [useSystemStore, sysAPI] = create((set) => ({
-  currentTheme: "CryptoCasual",
+  currentTheme: "MakerDefault",
   featureFlags: [],
 
   setCurrentTheme: (val) => {
