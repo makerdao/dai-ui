@@ -7,6 +7,7 @@ import maker from "@makerdao/dai-ui-theme-maker";
 import makerNeue from "@makerdao/dai-ui-theme-maker-neue";
 import pen from "@makerdao/dai-ui-theme-pen";
 import oasis from "@makerdao/dai-ui-theme-oasis";
+import casual from "@makerdao/dai-ui-theme-casual";
 
 const icons = { ...standardIcons, ...brandIcons };
 
@@ -15,6 +16,7 @@ const themes = {
   MakerNeue: { ...makerNeue, icons },
   OasisDex: { ...oasis, icons },
   Pen: pen,
+  CryptoCasual: casual,
 };
 
 const selectors = {

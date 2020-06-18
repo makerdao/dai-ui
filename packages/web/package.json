@@ -18,6 +18,7 @@
     "@makerdao/dai-ui-theme-maker-neue": "^0.0.49",
     "@makerdao/dai-ui-theme-oasis": "^0.0.49",
     "@makerdao/dai-ui-theme-pen": "^0.0.49",
+    "@makerdao/dai-ui-theme-casual": "^0.0.49",
     "@mdx-js/loader": "^1.0.19",
     "@next/mdx": "^9.0.3",
     "@theme-ui/color": "^0.3.1",
