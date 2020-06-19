@@ -7,6 +7,7 @@ const theme = {
   breakpoints: ["40em", "52em", "64em"],
 
   colors: {
+    text: "#434358",
     // textMuted: "#7E7E88",
 
     primary: "#1AAB9B",
@@ -22,12 +23,10 @@ const theme = {
     onSecondary: "#7E7E88",
 
     background: "#F7F8F9",
-    surface: "#FFF",
-    text: "#434358",
     onBackground: "#434358",
     onBackgroundAlt: "#231536",
+    surface: "#FFF",
     onSurface: "#708390",
-
     muted: "#D5D9E0",
     mutedAlt: "#7E7E87",
     error: "#AE3C4B",
@@ -105,7 +104,6 @@ const theme = {
       fontSize: 3,
       color: "text",
     },
-
     largeHeading: {
       variant: "text.heading",
       fontSize: [7, 8],
@@ -126,15 +124,16 @@ const theme = {
       fontSize: 2,
       color: "text",
     },
+    microText: {
+      fontSize: 1,
+      color: "text",
+    },
     caps: {
       textTransform: "uppercase",
       letterSpacing: "1px",
       color: "onBackgroundAlt",
       fontSize: 0,
       fontWeight: "bold",
-    },
-    small: {
-      fontSize: 1,
     },
   },
 
