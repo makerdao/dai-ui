@@ -101,9 +101,6 @@ const theme = {
       lineHeight: "heading",
       fontWeight: "heading",
       fontSize: [6, 7],
-    },
-    text: {
-      fontSize: 3,
       color: "text",
     },
     largeHeading: {
@@ -121,6 +118,10 @@ const theme = {
     microHeading: {
       variant: "text.heading",
       fontSize: [4, 5],
+    },
+    text: {
+      fontSize: 3,
+      color: "text",
     },
     smallText: {
       fontSize: 2,

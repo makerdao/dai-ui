@@ -34,14 +34,7 @@ const liveTheme = { styles: [] };
 
 const Components = () => (
   <Container>
-    <Heading
-      variant="h1"
-      sx={{
-        fontSize: 8,
-      }}
-    >
-      Recipes
-    </Heading>
+    <Heading variant="largeHeading">Recipes</Heading>
     <Box py="3" pb="4">
       <CollapsableCard
         title={'How to contribute?'}
@@ -77,7 +70,7 @@ const Components = () => (
           <Flex sx={{ alignItems: 'center' }}>
             <Box mr="4">
               <Text variant="boldBody">{title}</Text>
-              <Text variant="small" pb="2">
+              <Text variant="microText" pb="2">
                 {description}
               </Text>
             </Box>

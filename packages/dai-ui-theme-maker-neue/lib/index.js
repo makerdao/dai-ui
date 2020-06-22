@@ -100,10 +100,6 @@ const theme = {
       fontSize: [5, 6],
       color: "onBackgroundAlt",
     },
-    text: {
-      fontSize: 3,
-      color: "text",
-    },
     largeHeading: {
       variant: "text.heading",
       fontSize: [7, 8],
@@ -119,6 +115,10 @@ const theme = {
     microHeading: {
       variant: "text.heading",
       fontSize: [4, 5],
+    },
+    text: {
+      fontSize: 3,
+      color: "text",
     },
     smallText: {
       fontSize: 2,

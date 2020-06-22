@@ -38,7 +38,7 @@ const WrappedIcon = ({ name, selected, onClick }) => {
       }}
     >
       <Icon name={name} color="onBackground" size={4} sx={{ margin: 'auto' }} />
-      <Text variant="small" sx={{ margin: 'auto' }}>
+      <Text variant="microText" sx={{ margin: 'auto' }}>
         {name}
       </Text>
     </Grid>
@@ -117,7 +117,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(`${name}_color`);
             }}
           />
-          <Text variant="small">{name}_color</Text>
+          <Text variant="microText">{name}_color</Text>
         </LogoContainer>
         <LogoContainer
           selected={Array.isArray(activeIcon) && activeIcon[0] === name}
@@ -130,7 +130,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(name);
             }}
           />
-          <Text variant="small">{name}</Text>
+          <Text variant="microText">{name}</Text>
         </LogoContainer>
         <LogoContainer selected={activeIcon === name}>
           <Icon
@@ -143,7 +143,7 @@ const LogoDisplay = ({ name, activeIcon, onClick }) => {
               copy(name);
             }}
           />
-          <Text variant="small">{name}</Text>
+          <Text variant="microText">{name}</Text>
         </LogoContainer>
       </Grid>
     </Grid>
@@ -260,14 +260,7 @@ const Icons = () => {
 
   return (
     <Container>
-      <Heading
-        variant="h1"
-        sx={{
-          fontSize: 8,
-        }}
-      >
-        Icons
-      </Heading>
+      <Heading variant="largeHeading">Icons</Heading>
 
       <Box py="3" pb="4">
         <CollapsableCard

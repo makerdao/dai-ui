@@ -53,7 +53,7 @@ const WrappedButton = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Button variant="${variant}" />`}</Text>
+              <Text variant="microText">{`<Button variant="${variant}" />`}</Text>
             </Box>
           </Card>
         );
@@ -142,7 +142,7 @@ const WrappedForms = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{res[1]}</Text>
+              <Text variant="microText">{res[1]}</Text>
             </Box>
           </Card>
         );
@@ -172,7 +172,7 @@ const WrappedBadge = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Badge variant="${variant}" />`}</Text>
+              <Text variant="microText">{`<Badge variant="${variant}" />`}</Text>
             </Box>
           </Flex>
         );
@@ -210,7 +210,7 @@ const WrappedAlert = ({ variants }) => {
             </Flex>
             <Box mt={2}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Alert variant="${variant}" />`}</Text>
+              <Text variant="microText">{`<Alert variant="${variant}" />`}</Text>
             </Box>
           </Box>
         );
@@ -230,8 +230,8 @@ const WrappedText = ({ variants }) => {
             </Text>
 
             <Box mt={3}>
-              <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Text variant="${variant}" />`}</Text>
+              <Text sx={{fontWeight: "semiBold"}}>{variant}</Text>
+              <Text variant="microText">{`<Text variant="${variant}" />`}</Text>
             </Box>
           </Card>
         );
@@ -256,7 +256,7 @@ const WrappedLinks = ({ variants }) => {
 
             <Box>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="small">{`<Link variant="${variant}" />`}</Text>
+              <Text variant="microText">{`<Link variant="${variant}" />`}</Text>
             </Box>
           </Flex>
         );
