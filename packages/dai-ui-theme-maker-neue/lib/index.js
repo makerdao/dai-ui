@@ -202,7 +202,7 @@ const theme = {
       cursor: "pointer",
       outline: "none",
       fontFamily: "body",
-      fontSize: 3,
+      fontSize: 2,
       p: 3,
       color: "onPrimary",
       fontWeight: "semiBold",
@@ -228,7 +228,7 @@ const theme = {
       borderColor: "onSurface",
       "&:hover": {
         bg: "surface",
-        color: "secondaryEmphasis",
+        color: "text",
         borderColor: "secondaryEmphasis",
       },
       "&:active": {

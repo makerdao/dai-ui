@@ -11,7 +11,7 @@ const Header = () => {
           alignItems: "center",
         }}
       >
-        <Heading variant="h2">Dai UI</Heading>
+        <Heading variant="mediumHeading">Dai UI</Heading>
         <Flex
           as="nav"
           sx={{

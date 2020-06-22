@@ -61,9 +61,8 @@ export default () => {
             walk(item, index + 1)
           ) : isTitle ? (
             <Heading
-              variant="h1"
+              variant={index === 2 ? 'largeHeading' : 'mediumHeading'}
               sx={{
-                fontSize: Math.max(10 - index, 7),
                 mb: 3,
                 mt: 0 + index,
               }}
