@@ -1023,6 +1023,47 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@makerdao/dai-ui-icons-branding@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons-branding/-/dai-ui-icons-branding-0.0.53.tgz#789a0b0798289309f656d4e082b93e816b649760"
+  integrity sha512-ZkMLqhdtPTquHyNTH6ZidblghHfcnmp7TWBwqtkYElhLiaX8NP1BcMXHuvvgLcI+AztxKXlAUfaQL93/SkfUwg==
+
+"@makerdao/dai-ui-icons@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.53.tgz#c71f09d8a0733ed0c23a951bd431c9a78233d0d0"
+  integrity sha512-Iara+TjkGbvuoPVwAzgZupHVPHJLLcsL4ssiU38iyMqYw6j6Qqbf5wFDnvmgcW3BQSKSdPD8U4dXnFVVWlUv9A==
+
+"@makerdao/dai-ui-theme-casual@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-casual/-/dai-ui-theme-casual-0.0.53.tgz#979a73039d68f33871d731913aa7ad148b95a187"
+  integrity sha512-lkzqeZyrzOYM6QNf2OfAFb5qe7qmp0rm6EtXouZkDEMeHy/oQRCH+J1ZmxFDWOxWDaxU6nNp2vyo3xmsLS1r/A==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-maker-neue@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker-neue/-/dai-ui-theme-maker-neue-0.0.53.tgz#fdad39af5ecb92e2d45254c0f3a788fec816acec"
+  integrity sha512-N4IwSyKJ3Ny1FrVMJYp9sSw8NoUwCFJKjiJAqlZ/V/V8Q7qeFSRJaAI4WrhS0vjiqsXgGKhFP1707dqCjnE+ww==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-maker@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.53.tgz#5badd47e0a4048addbf73926ca8f2b6f4c565c02"
+  integrity sha512-PliYaUvKkcCrxvQOnxVhKNVutxev7oiKar9u+R0FOu+X72MGhCjmePiP+VkBvhRPYqaMPYNYBXkx452oRhmJWw==
+  dependencies:
+    "@theme-ui/color" "^0.3.1"
+
+"@makerdao/dai-ui-theme-oasis@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.53.tgz#e0031a3db7af1190946922593de63a78a3bc0664"
+  integrity sha512-EoYXWn2zKtR0NJbeh4hToM5XxBnpvYCSS57gPEBSIwLHJpBtcfAdjo/nIVkiJRedBl9YC6AAa8hysJiw8yVLpg==
+
+"@makerdao/dai-ui-theme-pen@^0.0.53":
+  version "0.0.53"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-pen/-/dai-ui-theme-pen-0.0.53.tgz#f1f5b1c1a36f33c6eb45e95578b1e76f9b85bab0"
+  integrity sha512-QqSlxY/o278azb2bsYbbApvqwK3kS/00LQ9Bp+FNFn5dYNYfG1EjEsCnwij3Fx5u/mS6iwtBG0GEBn239w5Mwg==
+
 "@mdx-js/react@^1.0.0", "@mdx-js/react@^1.5.3":
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.5.tgz#70380f25209b62ef69349b7eef09fad7e1103824"
