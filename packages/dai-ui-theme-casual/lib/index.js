@@ -17,6 +17,7 @@ const theme = {
     onSecondary: "#575CFE",
 
     muted: "#D8E0E3",
+    mutedAlt: "#B0BCC0",
 
     error: "#FDEDE8",
     onError: "#E67002",
@@ -26,6 +27,8 @@ const theme = {
 
     warning: "#FFF1CF",
     onWarning: "#F08B04",
+
+    iconMaker: "#AD6E06",
   },
 
   fonts: {
@@ -48,7 +51,8 @@ const theme = {
     heading: 1.2,
     tight: 1.05,
     loose: 1.35,
-    squareButton: 2.25,
+    // to properly height all buttons
+    buttons: 2,
   },
 
   borders: {
@@ -69,6 +73,7 @@ const theme = {
     medium: "0 2px 8px rgba(0, 0, 0, 0.17)",
     light: "0 2px 8px rgba(0, 0, 0, 0.13)",
     dai: "inset 0px 1px 2px rgba(0, 0, 0, 0.03)",
+    surface: "0px 2px 2px rgba(199, 199, 199, 0.25)",
   },
 
   gradients: {
@@ -114,6 +119,16 @@ const theme = {
     surfaceHeading: {
       variant: "text.mediumHeading",
       color: "onSurface",
+    },
+    backgroundText: {
+      variant: "text.backgroundHeading",
+      fontSize: 4,
+      fontWeight: "body",
+    },
+    surfaceText: {
+      variant: "text.surfaceHeading",
+      fontSize: 4,
+      fontWeight: "body",
     },
     error: {
       variant: "text.smallHeading",
@@ -179,6 +194,7 @@ const theme = {
       fontFamily: "body",
       fontWeight: "semiBold",
       bg: "primary",
+      lineHeight: "buttons",
       "&:hover": {
         bg: "primaryEmphasis",
       },
@@ -191,6 +207,20 @@ const theme = {
         cursor: "not-allowed",
       },
     },
+    outline: {
+      variant: "buttons.primary",
+      fontSize: 3,
+      borderRadius: "round",
+      fontWeight: "semiBold",
+      border: "light",
+      borderColor: "muted",
+      bg: "surface",
+      color: "primary",
+      "&:hover": {
+        borderColor: "mutedAlt",
+        boxShadow: "surface",
+      },
+    },
     primaryAlt: {
       variant: "buttons.primary",
       bg: "primaryAlt",
@@ -199,6 +229,7 @@ const theme = {
       variant: "buttons.primary",
       fontSize: 5,
       boxShadow: "medium",
+      px: 4,
     },
     primaryAltBig: {
       variant: "buttons.primaryBig",
@@ -208,7 +239,6 @@ const theme = {
       variant: "buttons.primaryBig",
       borderRadius: "roundish",
       boxShadow: "light",
-      lineHeight: "squareButton",
     },
     primaryAltSquare: {
       variant: "buttons.primarySquare",
@@ -221,16 +251,6 @@ const theme = {
       fontWeight: "semiBold",
       bg: "secondary",
       color: "onSecondary",
-    },
-    outline: {
-      variant: "buttons.primary",
-      fontSize: 2,
-      borderRadius: "small",
-      fontWeight: "semiBold",
-      border: "light",
-      borderColor: "onSurface",
-      bg: "surface",
-      color: "onSurface",
     },
     small: {
       variant: "buttons.primary",
@@ -278,6 +298,13 @@ const theme = {
       p: 3,
       borderRadius: "roundish",
       bg: "surface",
+    },
+    primaryWithHover: {
+      variant: "card.primary",
+      "&:hover": {
+        borderColor: "mutedAlt",
+        boxShadow: "surface",
+      },
     },
     secondary: {
       variants: "cards.primary",
@@ -327,7 +354,11 @@ const theme = {
   },
   layout: {
     container: {
-      px: 2,
+      px: 3,
+    },
+    appContainer: {
+      variant: "layout.container",
+      maxWidth: "632px",
     },
   },
   metadata: {
@@ -335,6 +366,6 @@ const theme = {
   },
 };
 
-theme.sizes.container = 1140;
+theme.sizes.container = 1440;
 
 export default theme;
