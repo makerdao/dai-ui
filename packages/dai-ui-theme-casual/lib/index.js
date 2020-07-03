@@ -20,15 +20,16 @@ const theme = {
     mutedAlt: "#B0BCC0",
 
     error: "#FDEDE8",
-    onError: "#E67002",
+    onError: "#F75524",
 
     success: "#E7FCFA",
     onSuccess: "#1AAB9B",
 
     warning: "#FFF1CF",
-    onWarning: "#F08B04",
+    onWarning: "#D8762D",
 
-    iconMaker: "#AD6E06",
+    dsrIcon: "#AD6E06",
+    dsrBadge: "#E06B2A",
   },
 
   fonts: {
@@ -51,8 +52,10 @@ const theme = {
     heading: 1.2,
     tight: 1.05,
     loose: 1.35,
-    // to properly height all buttons
+    // to properly height buttons
     buttons: 2,
+    secondaryButton: 0.8,
+    smallButton: 1.9,
   },
 
   borders: {
@@ -63,7 +66,7 @@ const theme = {
   sizes: [0, 4, 8, 16, 32, 64, 128, 256, 512],
 
   radii: {
-    small: 4,
+    small: 3,
     medium: 12,
     roundish: 20,
     round: 32,
@@ -72,14 +75,18 @@ const theme = {
   shadows: {
     medium: "0 2px 8px rgba(0, 0, 0, 0.17)",
     light: "0 2px 8px rgba(0, 0, 0, 0.13)",
-    dai: "inset 0px 1px 2px rgba(0, 0, 0, 0.03)",
+    dsr: "inset 0px 1px 2px rgba(0, 0, 0, 0.03)",
     surface: "0px 2px 2px rgba(199, 199, 199, 0.25)",
   },
 
   gradients: {
-    dai: {
+    dsr: {
       background:
         "linear-gradient(161.42deg, #F8D247 1.31%, #FF8154 99.3%), radial-gradient(93.42% 100% at 6.31% 0%, #F2A19E 0%, #F7E189 100%);",
+      "&:hover": {
+        background:
+          "linear-gradient(160.17deg, #F8D247 -18.03%, #FF8154 63.39%), radial-gradient(93.42% 100% at 6.31% 0%, #F2A19E 0%, #F7E189 100%)",
+      },
     },
   },
 
@@ -146,7 +153,8 @@ const theme = {
 
   alerts: {
     error: {
-      fontSize: 3,
+      fontSize: 2,
+      fontWeight: "semiBold",
       borderRadius: "round",
       bg: "error",
       color: "onError",
@@ -176,11 +184,11 @@ const theme = {
       fontWeight: "body",
       lineHeight: "heading",
     },
-    dai: {
+    dsr: {
       variant: "badges.primary",
       color: "surface",
-      bg: "#E06B2A",
-      boxShadow: "dai",
+      bg: "dsrBadge",
+      boxShadow: "dsr",
     },
   },
 
@@ -198,13 +206,9 @@ const theme = {
       "&:hover": {
         bg: "primaryEmphasis",
       },
-      "&:active": {
-        bg: "primaryAlt",
-      },
       "&:disabled": {
-        bg: "muted",
+        bg: "primaryAlt",
         pointerEvents: "none",
-        cursor: "not-allowed",
       },
     },
     outline: {
@@ -220,43 +224,49 @@ const theme = {
         borderColor: "mutedAlt",
         boxShadow: "surface",
       },
-    },
-    primaryAlt: {
-      variant: "buttons.primary",
-      bg: "primaryAlt",
+      "&:disabled": {
+        color: "muted",
+        pointerEvents: "none",
+      },
     },
     primaryBig: {
       variant: "buttons.primary",
       fontSize: 5,
       boxShadow: "medium",
+      lineHeight: "body",
+      py: 3,
       px: 4,
-    },
-    primaryAltBig: {
-      variant: "buttons.primaryBig",
-      bg: "primaryAlt",
+      "&:disabled": {
+        bg: "primaryAlt",
+        pointerEvents: "none",
+        boxShadow: "none",
+      },
     },
     primarySquare: {
       variant: "buttons.primaryBig",
       borderRadius: "roundish",
       boxShadow: "light",
     },
-    primaryAltSquare: {
-      variant: "buttons.primarySquare",
-      bg: "primaryAlt",
-    },
     secondary: {
       variant: "buttons.primary",
-      fontSize: 2,
+      fontSize: 5,
       borderRadius: "small",
       fontWeight: "semiBold",
       bg: "secondary",
       color: "onSecondary",
+      border: "light",
+      borderColor: "secondary",
+      lineHeight: "secondaryButton",
+      "&:hover": {
+        borderColor: "onSecondary",
+      },
     },
     small: {
       variant: "buttons.primary",
-      lineHeight: "loose",
       fontSize: 2,
       p: 2,
+      px: 3,
+      lineHeight: "smallButton",
     },
   },
 
@@ -264,7 +274,6 @@ const theme = {
     label: {
       fontSize: 4,
       fontWeight: "semiBold",
-      lineHeight: "loose",
     },
     input: {
       outline: "none",
@@ -272,23 +281,26 @@ const theme = {
       border: "light",
       borderColor: "muted",
       color: "onSurface",
-      fontWeight: "semiBold",
+      fontWeight: "body",
+      fontFamily: "body",
       p: 3,
-      py: 2,
+      lineHeight: "tight",
       fontSize: 5,
       "&:focus": {
-        borderColor: "secondary",
+        borderColor: "primary",
+        color: "primary",
+      },
+      "&:disabled": {
+        bg: "background",
+        pointerEvents: "none",
       },
     },
     inputError: {
       variant: "forms.input",
       borderColor: "onError",
-      "&:focus": {
-        color: "text",
-      },
     },
-    textarea: { variant: "forms.input", fontFamily: "body" },
-    textareaError: { variant: "forms.inputError", fontFamily: "body" },
+    textarea: { variant: "forms.input", lineHeight: "body" },
+    textareaError: { variant: "forms.inputError" },
   },
 
   cards: {
