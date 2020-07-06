@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "eslint": "^7.0.0",
-    "playroom": "^0.18.1"
+    "playroom": "^0.21.2"
   },
   "scripts": {
     "playroom:start": "playroom start",
