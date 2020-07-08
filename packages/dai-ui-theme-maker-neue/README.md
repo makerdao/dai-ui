@@ -61,7 +61,7 @@ export default (props) => (
 
 [recipes page]: https://design-system.mkr-js-prod.now.sh/recipes
 [theme-ui]: https://github.com/system-ui/theme-ui
-[default theme]: https://github.com/makerdao/dai-ui/blob/initial-documentation/packages/dai-ui-theme-maker-neue/lib/index.js
+[default theme]: https://github.com/makerdao/dai-ui/blob/master/packages/dai-ui-theme-maker-neue/lib/index.js
 
 ## Color Tokens Glossary
 
