@@ -6,6 +6,7 @@ const theme = {
   colors: {
     primary: "#25273D",
     primaryAlt: "#D3D4D8",
+    primaryEmphasis: "#626472",
     secondary: "#ECEFF9",
 
     background: "#F6F8F9",
@@ -30,6 +31,9 @@ const theme = {
 
     dsrIcon: "#AD6E06",
     dsrBadge: "#E06B2A",
+
+    spinnerWarning: "#FDC134",
+    txManagerBg: "rgba(216, 224, 227, 0.43)",
   },
 
   fonts: {
@@ -77,6 +81,7 @@ const theme = {
     light: "0 2px 8px rgba(0, 0, 0, 0.13)",
     dsr: "inset 0px 1px 2px rgba(0, 0, 0, 0.03)",
     surface: "0px 2px 2px rgba(199, 199, 199, 0.25)",
+    txManager: "inset 0px 2px 2px #DCE5E9",
   },
 
   gradients: {
@@ -140,6 +145,7 @@ const theme = {
     error: {
       variant: "text.smallHeading",
       color: "onError",
+      fontSize: "body",
     },
     boldBody: {
       fontSize: 3,
@@ -160,6 +166,7 @@ const theme = {
       color: "onError",
       width: "100%",
       justifyContent: ["flex-start", "center"],
+      lineHeight: "smallButton",
     },
     success: {
       variant: "alerts.error",
@@ -261,12 +268,25 @@ const theme = {
         borderColor: "onSecondary",
       },
     },
+    secondarySmall: {
+      variant: "buttons.secondary",
+      fontSize: 2,
+      px: 2,
+    },
     small: {
       variant: "buttons.primary",
       fontSize: 2,
       p: 2,
       px: 3,
       lineHeight: "smallButton",
+    },
+    textual: {
+      color: "onSecondary",
+      fontSize: 4,
+      fontWeight: "semiBold",
+      outline: "none",
+      cursor: "pointer",
+      background: "transparent",
     },
   },
 
@@ -298,6 +318,12 @@ const theme = {
     inputError: {
       variant: "forms.input",
       borderColor: "onError",
+      "&:focus": {
+        borderColor: "onError",
+      },
+    },
+    select: {
+      variant: "forms.input",
     },
     textarea: { variant: "forms.input", lineHeight: "body" },
     textareaError: { variant: "forms.inputError" },
@@ -312,16 +338,21 @@ const theme = {
       bg: "surface",
     },
     primaryWithHover: {
-      variant: "card.primary",
+      variant: "cards.primary",
+      cursor: "pointer",
       "&:hover": {
         borderColor: "mutedAlt",
         boxShadow: "surface",
       },
     },
     secondary: {
-      variants: "cards.primary",
+      variant: "cards.primary",
       border: "none",
       bg: "background",
+    },
+    secondaryRounded: {
+      variant: "cards.secondary",
+      borderRadius: "medium",
     },
   },
 
@@ -347,6 +378,21 @@ const theme = {
       fontWeight: "body",
       fontSize: 3,
     },
+    spinner: {
+      default: {
+        color: "primary",
+        strokeWidth: 3,
+        size: 16,
+      },
+      small: {
+        variant: "styles.spinner.default",
+        size: 12,
+      },
+      large: {
+        variant: "styles.spinner.default",
+        size: 25,
+      },
+    },
     h1: {
       variant: "text.largeHeading",
     },
@@ -369,6 +415,10 @@ const theme = {
       px: 3,
     },
     appContainer: {
+      variant: "layout.container",
+      maxWidth: "416px",
+    },
+    appContainerWide: {
       variant: "layout.container",
       maxWidth: "632px",
     },
