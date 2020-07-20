@@ -552,6 +552,15 @@ const theme = {
         color: "primary",
       },
     },
+
+    // applies to single-backticks
+    inlineCode: {
+      fontFamily: 'monospace',
+      fontSize: 3,
+      bg: 'primaryMuted',
+      color: 'primaryAlt',
+      px: 2,
+    },
   },
   layout: {
     container: {
