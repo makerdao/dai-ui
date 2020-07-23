@@ -5,6 +5,7 @@
 1. [Getting Started](#getting-started)
 1. [Color Tokens Glossary](#color-tokens-glossary)
 1. [Typography Tokens Glossary](#typography-tokens-glossary)
+1. [Code Syntax Highlighting](#code-syntax-highlighting)
 1. [Setting Up a Local Dev Environment](#setting-up-a-local-dev-environment)
 
 ## Getting Started
@@ -179,6 +180,60 @@ The default token variant for Text is `default`. When you use a `<Text />` compo
 - smallText
 - microText
 - caps
+
+## Code Syntax Highlighting
+
+Dai-ui uses the Prism syntax highlighting library which allows you to customize your code examples along with your theme. There are several ways to include code examples.
+
+### Single Backtick (MDX)
+
+Use a single backtick to display a short code snippet:
+
+    `yarn add @makerdao/dai-theme-maker-neue`
+
+results in:
+
+`yarn add @makerdao/dai-theme-maker-neue`
+
+### Triple Backtick (MDX)
+
+Wrap code examples within triple backticks for multi-line usage. Append the language of choice to the opening backticks like so:
+
+    ```js
+    const MyComponent = ({ children }) => {
+      return <Box>{children}</Box>;
+    }
+    ```
+
+results in:
+
+```js
+const MyComponent = ({ children }) => {
+  return <Box>{children}</Box>;
+};
+```
+
+Outside of MDX files, you can display code syntax with the `code` element in two ways.
+
+### With the `Styled` component
+
+Theme-ui provides the `Styled` component to allow you to apply theme styles to the HTML elements in the `styles` block of your theme, including the `code` element. Add the `className` attribute to select the language of choice like below:
+
+    <Styled.code className="language-js">const example = "styled";</Styled.code>
+
+results in
+
+<code className="language-js">const example = "styled";</code>
+
+### With `code` element
+
+Similarly you can use the `code` element with the `sx` prop to apply the styles from your code block, or add style ad hoc:
+
+    <code sx={{ variant: 'styles.code', bg: 'primaryMuted' }} className="language-js">const example = "code";</code>
+
+results in:
+
+<code className="language-js">const example = "code";</code>
 
 ## Setting Up a Local Dev Environment
 
