@@ -467,7 +467,7 @@ const theme = {
         fontSize: 3,
         bg: 'primaryMuted',
         color: 'primaryAlt',
-        px: 2,
+        px: 1,
       },
     },
   },

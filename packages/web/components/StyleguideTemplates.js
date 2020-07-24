@@ -56,7 +56,10 @@ const WrappedButton = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="microText">{`<Button variant="${variant}" />`}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >{`<Button variant="${variant}" />`}</Styled.code>
             </Box>
           </Card>
         );
@@ -145,7 +148,12 @@ const WrappedForms = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="microText">{res[1]}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >
+                {res[1]}
+              </Styled.code>
             </Box>
           </Card>
         );
@@ -175,7 +183,10 @@ const WrappedBadge = ({ variants }) => {
             </Flex>
             <Box mt={3}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="microText">{`<Badge variant="${variant}" />`}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >{`<Badge variant="${variant}" />`}</Styled.code>
             </Box>
           </Flex>
         );
@@ -213,7 +224,10 @@ const WrappedAlert = ({ variants }) => {
             </Flex>
             <Box mt={2}>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="microText">{`<Alert variant="${variant}" />`}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >{`<Alert variant="${variant}" />`}</Styled.code>
             </Box>
           </Box>
         );
@@ -234,7 +248,10 @@ const WrappedText = ({ variants }) => {
 
             <Box mt={3}>
               <Text sx={{ fontWeight: 'semiBold' }}>{variant}</Text>
-              <Text variant="microText">{`<Text variant="${variant}" />`}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >{`<Text variant="${variant}" />`}</Styled.code>
             </Box>
           </Card>
         );
@@ -259,7 +276,10 @@ const WrappedLinks = ({ variants }) => {
 
             <Box>
               <Text variant="boldBody">{variant}</Text>
-              <Text variant="microText">{`<Link variant="${variant}" />`}</Text>
+              <Styled.code
+                className="language-js"
+                sx={{ py: 0, px: 1, fontSize: 1 }}
+              >{`<Link variant="${variant}" />`}</Styled.code>
             </Box>
           </Flex>
         );
