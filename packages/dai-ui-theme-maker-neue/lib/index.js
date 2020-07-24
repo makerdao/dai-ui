@@ -32,7 +32,7 @@ const theme = {
     error: "#AE3C4B",
 
     success: "#087C6D",
-    successAlt: "#E7FCFA",
+    successAlt: "#EEFFFD",
     onSuccess: "#087C6D",
 
     notice: "#EB7720",
