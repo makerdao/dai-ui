@@ -22,6 +22,7 @@ export default () => {
     fonts,
     links,
     forms,
+    gradients,
   } = parsedTheme;
   const structure = [
     [
@@ -31,6 +32,7 @@ export default () => {
         ['Spacing', [space, sizes]],
         ['Typography', [fonts, fontSizes]],
         ['Shadows & Radii', [shadows, radii]],
+        ['Gradients', gradients],
       ],
     ],
     [
