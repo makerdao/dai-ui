@@ -326,9 +326,20 @@ const Icons = () => {
           isCollapsed={true}
         />
       </Box>
-      <Box>
+      <Box sx={{ position: 'relative' }}>
+        <Icon
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            left: 3,
+          }}
+          name="search"
+          size={3}
+          viewBox="0 0 16 16"
+        />
         <Input
-          sx={{ bg: 'surface', p: 3, fontSize: 4, mb: 2 }}
+          sx={{ bg: 'surface', p: 3, fontSize: 4, mb: 2, pl: 5 }}
           placeholder="Find icon by name..."
           onChange={(e) => setQuery(e.target.value)}
         />

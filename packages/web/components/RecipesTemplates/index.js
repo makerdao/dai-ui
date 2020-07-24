@@ -11,8 +11,10 @@ import Buttons from "./Buttons";
 import CheckboxRadio from "./CheckboxRadio";
 import Loaders from "./Loaders";
 import ScrollableTable from "./ScrollableTable";
+import SearchInput from "./SearchInput";
 
 export default [
+  SearchInput,
   ScrollableTable,
   Buttons,
   CheckboxRadio,
