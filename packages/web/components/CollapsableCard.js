@@ -23,7 +23,7 @@ const CollapsableCard = ({
           ...sx,
         }}
       >
-        <Heading sx={{ fontSize: 6 }} variant="h1">
+        <Heading variant="smallHeading">
           {title}
         </Heading>
         <Flex sx={{ alignItems: 'center' }}>

@@ -7,6 +7,7 @@ const theme = {
   breakpoints: ["40em", "52em", "64em"],
 
   colors: {
+    text: "#434358",
     // textMuted: "#7E7E88",
 
     primary: "#1AAB9B",
@@ -22,12 +23,10 @@ const theme = {
     onSecondary: "#7E7E88",
 
     background: "#F7F8F9",
-    surface: "#FFF",
-    text: "#434358",
     onBackground: "#434358",
     onBackgroundAlt: "#231536",
+    surface: "#FFF",
     onSurface: "#708390",
-
     muted: "#D5D9E0",
     mutedAlt: "#7E7E87",
     error: "#AE3C4B",
@@ -101,11 +100,6 @@ const theme = {
       fontSize: [5, 6],
       color: "onBackgroundAlt",
     },
-    text: {
-      fontSize: 3,
-      color: "text",
-    },
-
     largeHeading: {
       variant: "text.heading",
       fontSize: [7, 8],
@@ -122,8 +116,16 @@ const theme = {
       variant: "text.heading",
       fontSize: [4, 5],
     },
+    text: {
+      fontSize: 3,
+      color: "text",
+    },
     smallText: {
       fontSize: 2,
+      color: "text",
+    },
+    microText: {
+      fontSize: 1,
       color: "text",
     },
     caps: {
@@ -196,13 +198,12 @@ const theme = {
 
   buttons: {
     primary: {
-      borderRadius: "xs",
+      borderRadius: "small",
       cursor: "pointer",
       outline: "none",
       fontFamily: "body",
       fontSize: 2,
       p: 3,
-      py: 2,
       color: "onPrimary",
       fontWeight: "semiBold",
       letterSpacing: "0.03em",
@@ -222,12 +223,12 @@ const theme = {
     outline: {
       variant: "buttons.primary",
       bg: "surface",
-      color: "onSecondary",
+      color: "text",
       border: "1px solid",
-      borderColor: "secondary",
+      borderColor: "onSurface",
       "&:hover": {
         bg: "surface",
-        color: "secondaryEmphasis",
+        color: "text",
         borderColor: "secondaryEmphasis",
       },
       "&:active": {
@@ -252,7 +253,7 @@ const theme = {
       fontWeight: "bold",
       cursor: "pointer",
       p: 2,
-      color: "onSurface",
+      color: "onPrimary",
       bg: "primary",
       "&:hover": {
         bg: "primaryEmphasis",
@@ -269,9 +270,9 @@ const theme = {
     smallOutline: {
       variant: "buttons.small",
       bg: "surface",
-      color: "onSecondary",
+      color: "text",
       border: "1px solid",
-      borderColor: "secondary",
+      borderColor: "onSurface",
       "&:hover": {
         bg: "surface",
         color: "secondaryEmphasis",
@@ -458,6 +459,15 @@ const theme = {
       // strings
       ".selector, .attr-name, .string, .char, .builtin, .inserted": {
         color: "primary",
+      },
+
+      // applies to single-backticks
+      inlineCode: {
+        fontFamily: 'monospace',
+        fontSize: 3,
+        bg: 'primaryMuted',
+        color: 'primaryAlt',
+        px: 2,
       },
     },
   },

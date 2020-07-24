@@ -1,10 +1,11 @@
-# Dai-UI Maker Theme
+# Dai-UI Maker Neue Theme
 
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
 1. [Color Tokens Glossary](#color-tokens-glossary)
 1. [Typography Tokens Glossary](#typography-tokens-glossary)
+1. [Code Syntax Highlighting](#code-syntax-highlighting)
 1. [Setting Up a Local Dev Environment](#setting-up-a-local-dev-environment)
 
 ## Getting Started
@@ -15,7 +16,7 @@
 
 2.  Install our [default theme][]
 
-`yarn add @makerdao/dai-ui-theme-maker`
+`yarn add @makerdao/dai-ui-theme-maker-neue`
 
 3.  Or create your own
 
@@ -61,7 +62,7 @@ export default (props) => (
 
 [recipes page]: https://design-system.mkr-js-prod.now.sh/recipes
 [theme-ui]: https://github.com/system-ui/theme-ui
-[default theme]: https://github.com/makerdao/dai-ui/blob/master/packages/dai-ui-theme-maker/lib/index.js
+[default theme]: https://github.com/makerdao/dai-ui/blob/master/packages/dai-ui-theme-maker-neue/lib/index.js
 
 ## Color Tokens Glossary
 
@@ -180,6 +181,60 @@ The default token variant for Text is `default`. When you use a `<Text />` compo
 - microText
 - caps
 
+## Code Syntax Highlighting
+
+Dai-ui uses the Prism syntax highlighting library which allows you to customize your code examples along with your theme. There are several ways to include code examples.
+
+### Single Backtick (MDX)
+
+Use a single backtick to display a short code snippet:
+
+    `yarn add @makerdao/dai-theme-maker-neue`
+
+results in:
+
+`yarn add @makerdao/dai-theme-maker-neue`
+
+### Triple Backtick (MDX)
+
+Wrap code examples within triple backticks for multi-line usage. Append the language of choice to the opening backticks like so:
+
+    ```js
+    const MyComponent = ({ children }) => {
+      return <Box>{children}</Box>;
+    }
+    ```
+
+results in:
+
+```js
+const MyComponent = ({ children }) => {
+  return <Box>{children}</Box>;
+};
+```
+
+Outside of MDX files, you can display code syntax with the `code` element in two ways.
+
+### With the `Styled` component
+
+Theme-ui provides the `Styled` component to allow you to apply theme styles to the HTML elements in the `styles` block of your theme, including the `code` element. Add the `className` attribute to select the language of choice like below:
+
+    <Styled.code className="language-js">const example = "styled";</Styled.code>
+
+results in
+
+<code className="language-js">const example = "styled";</code>
+
+### With `code` element
+
+Similarly you can use the `code` element with the `sx` prop to apply the styles from your code block, or add style ad hoc:
+
+    <code sx={{ variant: 'styles.code', bg: 'primaryMuted' }} className="language-js">const example = "code";</code>
+
+results in:
+
+<code className="language-js">const example = "code";</code>
+
 ## Setting Up a Local Dev Environment
 
 While developing a new theme, you can link it to your frontend project with `yarn link`.
@@ -194,8 +249,8 @@ While developing a new theme, you can link it to your frontend project with `yar
 
 3. Navigate to your frontend project and complete the link. In this example we'll use the maker default theme.
 
-`yarn link "@makerdao/dai-ui-theme-maker"`
+`yarn link "@makerdao/dai-ui-theme-maker-neue"`
 
 You should now see updates to your theme file take effect immediately in your frontend project as you develop your theme.
 
-To break the link run `yarn unlink "@makerdao/dai-ui-theme-maker"` in your frontend project, and reinstall the package from npm.
+To break the link run `yarn unlink "@makerdao/dai-ui-theme-maker-neue"` in your frontend project, and reinstall the package from npm.

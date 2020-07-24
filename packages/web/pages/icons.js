@@ -6,17 +6,6 @@ import copy from 'copy-to-clipboard';
 import IconsGuide from '../text/iconsGuide.mdx';
 import CollapsableCard from '../components/CollapsableCard';
 
-const social = [
-  'facebook',
-  'medium',
-  'rocketchat',
-  'reddit',
-  'telegram',
-  'twitter',
-  'youtube',
-  'wechat',
-];
-
 const wallets = [
   'ledger',
   'trezor',
@@ -49,7 +38,7 @@ const WrappedIcon = ({ name, selected, onClick }) => {
       }}
     >
       <Icon name={name} color="onBackground" size={4} sx={{ margin: 'auto' }} />
-      <Text variant="small" sx={{ margin: 'auto' }}>
+      <Text variant="microText" sx={{ margin: 'auto' }}>
         {name}
       </Text>
     </Grid>
@@ -87,55 +76,75 @@ const CircularIcon = ({
   );
 };
 
-const LogoDisplay = ({ name, onClick }) => {
+const LogoContainer = ({ selected, children }) => {
   return (
-    <Grid
-      gap={2}
-      columns={1}
-      key={name}
+    <Flex
       sx={{
+        p: 2,
         py: 3,
-        bg: 'background',
+        alignItems: 'center',
+        flexDirection: 'column',
+        bg: selected ? 'muted' : 'background',
         borderRadius: 'roundish',
+        '&:hover': {
+          bg: 'muted',
+          cursor: 'pointer',
+        },
+        '&:active': {
+          bg: 'mutedAlt',
+        },
       }}
     >
-      <Grid columns={3} gap={0}>
-        <Icon
-          name={`${name}_color`}
-          size={4}
-          sx={{ margin: 'auto' }}
-          onClick={() => {
-            onClick(`${name}_color`);
-            copy(`${name}_color`);
-          }}
-        />
-        <CircularIcon
-          name={name}
-          sx={{ margin: 'auto' }}
-          onClick={() => {
-            onClick([name]);
-            copy(name);
-          }}
-        />
-        <Icon
-          name={name}
-          color="onBackground"
-          size={4}
-          sx={{ margin: 'auto' }}
-          onClick={() => {
-            onClick(name);
-            copy(name);
-          }}
-        />
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-          {name}_color
-        </Text>
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-          {name}
-        </Text>
-        <Text sx={{ margin: 'auto', px: 2 }} variant="small">
-          {name}
-        </Text>
+      {children}
+    </Flex>
+  );
+};
+
+const LogoDisplay = ({ name, activeIcon, onClick }) => {
+  return (
+    <Grid gap={2} columns={1} key={name}>
+      <Grid
+        columns={3}
+        gap={0}
+        sx={{ bg: 'background', borderRadius: 'roundish' }}
+      >
+        <LogoContainer selected={activeIcon === `${name}_color`}>
+          <Icon
+            name={`${name}_color`}
+            size={4}
+            onClick={() => {
+              onClick(`${name}_color`);
+              copy(`${name}_color`);
+            }}
+          />
+          <Text variant="microText">{name}_color</Text>
+        </LogoContainer>
+        <LogoContainer
+          selected={Array.isArray(activeIcon) && activeIcon[0] === name}
+        >
+          <CircularIcon
+            name={name}
+            sx={{ margin: 'auto' }}
+            onClick={() => {
+              onClick([name]);
+              copy(name);
+            }}
+          />
+          <Text variant="microText">{name}</Text>
+        </LogoContainer>
+        <LogoContainer selected={activeIcon === name}>
+          <Icon
+            name={name}
+            color="onBackground"
+            size={4}
+            sx={{ margin: 'auto' }}
+            onClick={() => {
+              onClick(name);
+              copy(name);
+            }}
+          />
+          <Text variant="microText">{name}</Text>
+        </LogoContainer>
       </Grid>
     </Grid>
   );
@@ -148,9 +157,7 @@ const Icons = () => {
   const allBrandingIcons = Object.keys(brandingIcons);
   const allStandardIcons = Object.keys(standardIcons);
 
-  const mainLogos = allBrandingIcons.filter(
-    (name) => !name.includes('_') && !social.includes(name)
-  );
+  const mainLogos = allBrandingIcons.filter((name) => !name.includes('_'));
 
   const queryFilter = (name) =>
     query === undefined ? name : name.includes(query);
@@ -190,7 +197,7 @@ const Icons = () => {
           This set contains the collection of standard UI Icons.
         </Text>
         <Grid columns={[2, 4, 6]} p={3}>
-          {[...allStandardIcons, ...social].filter(queryFilter).map((name) => {
+          {allStandardIcons.filter(queryFilter).map((name) => {
             return (
               <WrappedIcon
                 key={name}
@@ -215,8 +222,8 @@ const Icons = () => {
             <LogoDisplay
               key={name}
               name={name}
-              selected={activeIcon === name}
               onClick={setActiveIcon}
+              activeIcon={activeIcon}
             />
           ))}
         </Grid>
@@ -253,14 +260,7 @@ const Icons = () => {
 
   return (
     <Container>
-      <Heading
-        variant="h1"
-        sx={{
-          fontSize: 8,
-        }}
-      >
-        Icons
-      </Heading>
+      <Heading variant="largeHeading">Icons</Heading>
 
       <Box py="3" pb="4">
         <CollapsableCard
