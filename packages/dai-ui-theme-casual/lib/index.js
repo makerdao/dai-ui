@@ -12,6 +12,7 @@ const theme = {
     background: "#F6F8F9",
     surface: "#FFF",
     text: "#25273D",
+    textAlt: "rgba(37, 39, 61, 0.67)",
     onBackground: "#9FAFB9",
     onPrimary: "#FFFFFF",
     onSurface: "#708390",
@@ -71,7 +72,8 @@ const theme = {
 
   radii: {
     small: 3,
-    medium: 12,
+    medium: 6,
+    large: 12,
     roundish: 20,
     round: 32,
   },
@@ -210,6 +212,7 @@ const theme = {
       fontWeight: "semiBold",
       bg: "primary",
       lineHeight: "buttons",
+      transition: "150ms cubic-bezier(0.215,0.61,0.355,1)",
       "&:hover": {
         bg: "primaryEmphasis",
       },
@@ -218,23 +221,11 @@ const theme = {
         pointerEvents: "none",
       },
     },
-    outline: {
+    primaryMedium: {
       variant: "buttons.primary",
-      fontSize: 3,
-      borderRadius: "round",
-      fontWeight: "semiBold",
-      border: "light",
-      borderColor: "muted",
-      bg: "surface",
-      color: "primary",
-      "&:hover": {
-        borderColor: "mutedAlt",
-        boxShadow: "surface",
-      },
-      "&:disabled": {
-        color: "muted",
-        pointerEvents: "none",
-      },
+      fontSize: 4,
+      minWidth: "130px",
+      boxShadow: "medium",
     },
     primaryBig: {
       variant: "buttons.primary",
@@ -254,10 +245,33 @@ const theme = {
       borderRadius: "roundish",
       boxShadow: "light",
     },
+    outline: {
+      variant: "buttons.primary",
+      fontSize: 3,
+      borderRadius: "round",
+      fontWeight: "semiBold",
+      border: "light",
+      borderColor: "muted",
+      bg: "surface",
+      color: "primary",
+      "&:hover": {
+        borderColor: "mutedAlt",
+        boxShadow: "surface",
+      },
+      "&:disabled": {
+        color: "muted",
+        pointerEvents: "none",
+      },
+    },
+    outlineSquare: {
+      variant: "buttons.outline",
+      borderRadius: "large",
+      fontWeight: "body",
+    },
     secondary: {
       variant: "buttons.primary",
       fontSize: 5,
-      borderRadius: "small",
+      borderRadius: "medium",
       fontWeight: "semiBold",
       bg: "secondary",
       color: "onSecondary",
@@ -297,7 +311,7 @@ const theme = {
     },
     input: {
       outline: "none",
-      borderRadius: "medium",
+      borderRadius: "large",
       border: "light",
       borderColor: "muted",
       color: "onSurface",
@@ -340,6 +354,7 @@ const theme = {
     primaryWithHover: {
       variant: "cards.primary",
       cursor: "pointer",
+      transition: "150ms cubic-bezier(0.215,0.61,0.355,1)",
       "&:hover": {
         borderColor: "mutedAlt",
         boxShadow: "surface",
@@ -352,7 +367,7 @@ const theme = {
     },
     secondaryRounded: {
       variant: "cards.secondary",
-      borderRadius: "medium",
+      borderRadius: "large",
     },
   },
 
@@ -364,6 +379,7 @@ const theme = {
       letterSpacing: "0.4px",
       color: "text",
       cursor: "pointer",
+      transition: "150ms cubic-bezier(0.215,0.61,0.355,1)",
       "&:hover": {
         color: "primary",
         cursor: "pointer",
@@ -421,6 +437,13 @@ const theme = {
     appContainerWide: {
       variant: "layout.container",
       maxWidth: "632px",
+    },
+    modal: {
+      variant: "layout.appContainer",
+    },
+    modalHalf: {
+      variant: "layout.modal",
+      minHeight: "50vh",
     },
   },
   metadata: {
