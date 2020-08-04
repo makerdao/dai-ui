@@ -461,14 +461,15 @@ const theme = {
         color: "primary",
       },
 
-      // applies to single-backticks
-      inlineCode: {
-        fontFamily: 'monospace',
-        fontSize: 3,
-        bg: 'primaryMuted',
-        color: 'primaryAlt',
-        px: 1,
-      },
+    },
+
+    // applies to single-backticks
+    inlineCode: {
+      fontFamily: 'monospace',
+      fontSize: 3,
+      bg: 'primaryMuted',
+      color: 'primaryAlt',
+      px: 1,
     },
   },
   layout: {
