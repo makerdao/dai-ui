@@ -5,22 +5,24 @@ import { icons as brandIcons } from '@makerdao/dai-ui-icons-branding';
 // import maker from "../../dai-ui-theme-maker";
 import maker from '@makerdao/dai-ui-theme-maker';
 import makerNeue from '@makerdao/dai-ui-theme-maker-neue';
-import makerDev from '@makerdao/dai-ui-theme-maker-dev';
+// import makerDev from '@makerdao/dai-ui-theme-maker-dev';
 import pen from '@makerdao/dai-ui-theme-pen';
 import oasis from '@makerdao/dai-ui-theme-oasis';
 
 import casual from '@makerdao/dai-ui-theme-casual';
 import commDev from '../data/commdevTheme';
+import makerDev from '../data/makerDevTheme';
 const icons = { ...standardIcons, ...brandIcons };
 
 const themes = {
-  MakerDefault: { ...maker, icons },
   MakerNeue: { ...makerNeue, icons },
-  MakerDev: { ...makerDev, icons },
+  MakerCommunity: commDev,
+  MakerDev: makerDev,
+  // MakerDev: { ...makerDev, icons },
   OasisDex: { ...oasis, icons },
   Pen: { ...pen, icons },
   CryptoCasual: { ...casual, icons },
-  MakerCommunity: commDev,
+  MakerDefault: { ...maker, icons },
 };
 
 const selectors = {
