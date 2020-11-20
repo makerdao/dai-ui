@@ -1,22 +1,26 @@
-import create from "zustand";
-import { icons as standardIcons } from "@makerdao/dai-ui-icons";
-import { icons as brandIcons } from "@makerdao/dai-ui-icons-branding";
+import create from 'zustand';
+import { icons as standardIcons } from '@makerdao/dai-ui-icons';
+import { icons as brandIcons } from '@makerdao/dai-ui-icons-branding';
 
 // import maker from "../../dai-ui-theme-maker";
-import maker from "@makerdao/dai-ui-theme-maker";
-import makerNeue from "@makerdao/dai-ui-theme-maker-neue";
-import pen from "@makerdao/dai-ui-theme-pen";
-import oasis from "@makerdao/dai-ui-theme-oasis";
-import casual from "@makerdao/dai-ui-theme-casual";
+import maker from '@makerdao/dai-ui-theme-maker';
+import makerNeue from '@makerdao/dai-ui-theme-maker-neue';
+import makerDev from '@makerdao/dai-ui-theme-maker-dev';
+import pen from '@makerdao/dai-ui-theme-pen';
+import oasis from '@makerdao/dai-ui-theme-oasis';
 
+import casual from '@makerdao/dai-ui-theme-casual';
+import commDev from '../data/commdevTheme';
 const icons = { ...standardIcons, ...brandIcons };
 
 const themes = {
   MakerDefault: { ...maker, icons },
   MakerNeue: { ...makerNeue, icons },
+  MakerDev: { ...makerDev, icons },
   OasisDex: { ...oasis, icons },
   Pen: { ...pen, icons },
   CryptoCasual: { ...casual, icons },
+  MakerCommunity: commDev,
 };
 
 const selectors = {
@@ -25,7 +29,7 @@ const selectors = {
 };
 
 const [useSystemStore, sysAPI] = create((set) => ({
-  currentTheme: "MakerNeue",
+  currentTheme: 'MakerNeue',
   featureFlags: [],
 
   setCurrentTheme: (val) => {

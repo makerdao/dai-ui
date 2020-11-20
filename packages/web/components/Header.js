@@ -1,28 +1,60 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import { Icon } from '@makerdao/dai-ui-icons';
 
-import { Container, Flex, Heading, NavLink } from "theme-ui";
+// import { Container, Flex, Heading, NavLink } from "theme-ui";
+import {
+  Container,
+  jsx,
+  Link as ThemeLink,
+  NavLink,
+  Flex,
+  Heading,
+  Text,
+  Card,
+  Grid,
+  useColorMode,
+  Button,
+  IconButton,
+  Input,
+  Box,
+} from 'theme-ui';
 
+const ColorModeToggle = (props) => {
+  const [mode, setMode] = useColorMode();
+  return (
+    <Icon
+      name={'moon'}
+      color="text"
+      size={3}
+      onClick={(e) => {
+        const next = mode === 'dark' ? 'light' : 'dark';
+        setMode(next);
+      }}
+    />
+  );
+};
 const Header = () => {
   return (
     <Container mb={5} mt={4}>
       <Flex
         sx={{
-          alignItems: "center",
+          alignItems: 'center',
         }}
       >
         <Heading variant="mediumHeading">Dai UI</Heading>
         <Flex
           as="nav"
           sx={{
-            ml: [0, "auto"],
+            ml: [0, 'auto'],
+            alignItems: 'center',
           }}
         >
           <Link href="/">
             <NavLink
               href="/"
               sx={{
-                cursor: "default",
+                cursor: 'default',
               }}
             >
               Styleguide
@@ -32,7 +64,7 @@ const Header = () => {
             <NavLink
               href="/icons"
               sx={{
-                cursor: "default",
+                cursor: 'default',
               }}
             >
               Icons
@@ -42,7 +74,7 @@ const Header = () => {
             <NavLink
               href="/recipes"
               sx={{
-                cursor: "default",
+                cursor: 'default',
               }}
             >
               Recipes
@@ -53,7 +85,7 @@ const Header = () => {
               target="_blank"
               href="/playroom"
               sx={{
-                cursor: "default",
+                cursor: 'default',
               }}
             >
               Playroom
@@ -68,6 +100,9 @@ const Header = () => {
           >
             GitHub
           </NavLink>
+          <Box ml={3}>
+            <ColorModeToggle />
+          </Box>
         </Flex>
       </Flex>
     </Container>
