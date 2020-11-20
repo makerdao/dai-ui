@@ -656,6 +656,88 @@ export const icons = {
     ),
     viewBox: '0 0 24 24',
   },
+  mana: {
+    path: (
+      <g>
+        <circle cx="12" cy="12" r="10" fill="currentColor" />
+        <path
+          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+          fill="currentColor"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.08496 8.5V16H15.335L9.08496 8.5Z"
+          fill="#5A5A5A"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M2.83496 16H9.08496V8.5L2.83496 16Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M6 20C7.67 21.255 9.75 22 12 22C14.25 22 16.33 21.255 18 20H6Z"
+          fill="currentColor"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4 18C4.57 18.755 5.245 19.43 6 20H18C18.755 19.43 19.43 18.755 20 18H4Z"
+          fill="#5A5A5A"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 16H2.83496C3.14496 16.715 3.53996 17.385 3.99996 18H15.42V16H15.415Z"
+          fill="currentColor"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 12.5V18H20L15.415 12.5Z"
+          fill="#5A5A5A"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M10.835 18H15.415V12.5L10.835 18Z"
+          fill="white"
+        />
+        <path
+          d="M15.415 11C16.7958 11 17.915 9.88071 17.915 8.5C17.915 7.11929 16.7958 6 15.415 6C14.0343 6 12.915 7.11929 12.915 8.5C12.915 9.88071 14.0343 11 15.415 11Z"
+          fill="white"
+        />
+        <path
+          d="M9.08496 7C9.77532 7 10.335 6.44036 10.335 5.75C10.335 5.05964 9.77532 4.5 9.08496 4.5C8.3946 4.5 7.83496 5.05964 7.83496 5.75C7.83496 6.44036 8.3946 7 9.08496 7Z"
+          fill="white"
+        />
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+  usdt: {
+    path: (
+      <path
+        d="M22 11.7472C22 10.4861 18.5685 9.43389 14.0084 9.19114L14.0081 7.18179H19.7019V3H4.13268V7.18179H9.82602V9.20097C5.34899 9.46036 2 10.5016 2 11.7472C2 12.993 5.34899 14.0342 9.82602 14.2932V21.5087H14.0081V14.303C18.5685 14.0608 22 13.0083 22 11.7472ZM12 12.9895C7.10533 12.9895 3.13734 12.232 3.13734 11.2969C3.13734 10.5052 5.98259 9.84051 9.82602 9.65557V10.1321H9.82646V12.085C10.5194 12.1239 11.2476 12.1442 12 12.1442C12.6927 12.1442 13.3654 12.1266 14.0085 12.0944V9.64831C17.9352 9.82192 20.8627 10.4936 20.8627 11.2969C20.8627 12.232 16.8946 12.9895 12 12.9895Z"
+        fill="currentColor"
+      />
+    ),
+    viewBox: '0 0 24 24',
+  },
+  lrc: {
+    path: (
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.5757 11.7377H22V11.7886L8.8423 19.8146L15.3721 14.5945L13.5757 11.7377ZM8.66233 4V19.9206L2 14.5945L8.66233 4Z"
+        fill="currentColor"
+      />
+    ),
+    viewBox: '0 0 24 24',
+  },
 
   // Logo Color
   coinbase_color: {
@@ -1038,6 +1120,123 @@ export const icons = {
         clipRule="evenodd"
         d="M13.1722 2.08031L18.2756 5.83137C18.5033 6.00147 18.4801 6.33718 18.2291 6.47594L10.6716 10.6567L12.5354 2.3086C12.5959 2.03108 12.9352 1.90574 13.1722 2.08031ZM18.4416 16.2764L10.9701 12.0026L18.4416 7.72416C18.704 7.57523 19.0299 7.76027 19.0299 8.06264V15.938C19.0299 16.2358 18.704 16.4254 18.4416 16.2764ZM13.1674 21.9217L18.2751 18.1697C18.5029 17.9996 18.4796 17.6638 18.2333 17.525L10.6716 13.3433L12.5353 21.6933C12.5911 21.9709 12.935 22.0918 13.1674 21.9217ZM10.9608 2.77371L9.029 11.853L10.9608 20.9278C11.0368 21.2846 10.6343 21.5421 10.3481 21.3208L5.40245 17.5084C5.14757 17.3141 5 17.007 5 16.6863V7.01523C5 6.69452 5.14757 6.38736 5.40245 6.19313L10.3481 2.38072C10.6343 2.15939 11.0368 2.41686 10.9608 2.77371Z"
         fill="#31CB9E"
+      />
+    ),
+    viewBox: '0 0 24 24',
+  },
+  mana_color: {
+    path: (
+      <g>
+        <path
+          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+          fill="url(#mana_paint0_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.08496 8.5V16H15.335L9.08496 8.5Z"
+          fill="url(#mana_paint1_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M2.83496 16H9.08496V8.5L2.83496 16Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M6 20C7.67 21.255 9.75 22 12 22C14.25 22 16.33 21.255 18 20H6Z"
+          fill="#FF2D55"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4 18C4.57 18.755 5.245 19.43 6 20H18C18.755 19.43 19.43 18.755 20 18H4Z"
+          fill="#FC9965"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 16H2.83496C3.14496 16.715 3.53996 17.385 3.99996 18H15.42V16H15.415Z"
+          fill="#FFBC5B"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 12.5V18H20L15.415 12.5Z"
+          fill="url(#mana_paint2_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M10.835 18H15.415V12.5L10.835 18Z"
+          fill="white"
+        />
+        <path
+          d="M15.415 11C16.7958 11 17.915 9.88071 17.915 8.5C17.915 7.11929 16.7958 6 15.415 6C14.0343 6 12.915 7.11929 12.915 8.5C12.915 9.88071 14.0343 11 15.415 11Z"
+          fill="#FFC95B"
+        />
+        <path
+          d="M9.08496 7C9.77532 7 10.335 6.44036 10.335 5.75C10.335 5.05964 9.77532 4.5 9.08496 4.5C8.3946 4.5 7.83496 5.05964 7.83496 5.75C7.83496 6.44036 8.3946 7 9.08496 7Z"
+          fill="#FFC95B"
+        />
+        <defs>
+          <linearGradient
+            id="mana_paint0_linear"
+            x1="19.0711"
+            y1="4.92893"
+            x2="4.92893"
+            y2="19.0711"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#FF2D55" />
+            <stop offset="1" stopColor="#FFBC5B" />
+          </linearGradient>
+          <linearGradient
+            id="mana_paint1_linear"
+            x1="12.2079"
+            y1="8.5"
+            x2="12.2079"
+            y2="16"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#A524B3" />
+            <stop offset="1" stopColor="#FF2D55" />
+          </linearGradient>
+          <linearGradient
+            id="mana_paint2_linear"
+            x1="17.706"
+            y1="12.5"
+            x2="17.706"
+            y2="18"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#A524B3" />
+            <stop offset="1" stopColor="#FF2D55" />
+          </linearGradient>
+        </defs>
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+
+  usdt_color: {
+    path: (
+      <path
+        d="M22 11.7472C22 10.4861 18.5685 9.43389 14.0084 9.19114L14.0081 7.18179H19.7019V3H4.13268V7.18179H9.82602V9.20097C5.34899 9.46036 2 10.5016 2 11.7472C2 12.993 5.34899 14.0342 9.82602 14.2932V21.5087H14.0081V14.303C18.5685 14.0608 22 13.0083 22 11.7472ZM12 12.9895C7.10533 12.9895 3.13734 12.232 3.13734 11.2969C3.13734 10.5052 5.98259 9.84051 9.82602 9.65557V10.1321H9.82646V12.085C10.5194 12.1239 11.2476 12.1442 12 12.1442C12.6927 12.1442 13.3654 12.1266 14.0085 12.0944V9.64831C17.9352 9.82192 20.8627 10.4936 20.8627 11.2969C20.8627 12.232 16.8946 12.9895 12 12.9895Z"
+        fill="#27A17B"
+      />
+    ),
+    viewBox: '0 0 24 24',
+  },
+  lrc_color: {
+    path: (
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M13.5757 11.7377H22V11.7886L8.8423 19.8146L15.3721 14.5945L13.5757 11.7377ZM8.66233 4V19.9206L2 14.5945L8.66233 4Z"
+        fill="#1C42FF"
       />
     ),
     viewBox: '0 0 24 24',
@@ -1574,6 +1773,43 @@ export const icons = {
     ),
     viewBox: '0 0 24 24',
   },
+  aave_circle_color: {
+    path: (
+    <g>
+    <defs>
+    <linearGradient
+    id="aave_a"
+    x1="0.907"
+    y1="0.227"
+    x2="0.163"
+    y2="0.853"
+    gradientUnits="objectBoundingBox"
+      >
+      <stop offset="0" stopColor="#b6509e" />
+      <stop offset="1" stopColor="#2ebac6" />
+      </linearGradient>
+      <clipPath id="aave_c">
+      <rect width="800" height="800" />
+      </clipPath>
+      </defs>
+      <g id="aave_b" clipPath="url(#aave_c)">
+      <circle
+    cx="388"
+    cy="388"
+    r="388"
+    transform="translate(12 12)"
+    fill="url(#aave_a)"
+      />
+      <path
+    d="M343.986,341.581,212.753,24.422C205.337,8.033,194.374,0,179.864,0H168.257c-14.51,0-25.473,8.033-32.889,24.422L78.3,162.6H35.089a23.63,23.63,0,0,0-23.538,23.458v.321a23.63,23.63,0,0,0,23.538,23.458H58.3L3.812,341.581a27.793,27.793,0,0,0-1.612,9c0,7.391,2.257,13.175,6.449,17.674S18.644,375,26.061,375A23.574,23.574,0,0,0,39.6,370.5c4.192-2.892,7.094-7.069,9.351-11.889l59.974-148.779h41.595a23.63,23.63,0,0,0,23.538-23.458v-.643a23.63,23.63,0,0,0-23.538-23.458H128.274L174.06,48.2,298.845,358.612c2.257,4.82,5.159,9,9.351,11.889a23.574,23.574,0,0,0,13.543,4.5q11.124,0,17.412-6.748c4.192-4.5,6.449-10.283,6.449-17.674A21.246,21.246,0,0,0,343.986,341.581Z"
+    transform="translate(225.8 213)"
+    fill="#fff"
+      />
+      </g>
+      </g>
+  ),
+    viewBox: '0 0 800 800',
+  },
   kyber_circle_color: {
     path: (
       <g>
@@ -1589,5 +1825,136 @@ export const icons = {
         />
       </g>
     ),
+    viewBox: '0 0 24 24',
+  },
+  mana_circle_color: {
+    path: (
+      <g>
+        <path
+          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+          fill="url(#mana_paint0_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M9.08496 8.5V16H15.335L9.08496 8.5Z"
+          fill="url(#mana_paint1_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M2.83496 16H9.08496V8.5L2.83496 16Z"
+          fill="white"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M6 20C7.67 21.255 9.75 22 12 22C14.25 22 16.33 21.255 18 20H6Z"
+          fill="#FF2D55"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M4 18C4.57 18.755 5.245 19.43 6 20H18C18.755 19.43 19.43 18.755 20 18H4Z"
+          fill="#FC9965"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 16H2.83496C3.14496 16.715 3.53996 17.385 3.99996 18H15.42V16H15.415Z"
+          fill="#FFBC5B"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.415 12.5V18H20L15.415 12.5Z"
+          fill="url(#mana_paint2_linear)"
+        />
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M10.835 18H15.415V12.5L10.835 18Z"
+          fill="white"
+        />
+        <path
+          d="M15.415 11C16.7958 11 17.915 9.88071 17.915 8.5C17.915 7.11929 16.7958 6 15.415 6C14.0343 6 12.915 7.11929 12.915 8.5C12.915 9.88071 14.0343 11 15.415 11Z"
+          fill="#FFC95B"
+        />
+        <path
+          d="M9.08496 7C9.77532 7 10.335 6.44036 10.335 5.75C10.335 5.05964 9.77532 4.5 9.08496 4.5C8.3946 4.5 7.83496 5.05964 7.83496 5.75C7.83496 6.44036 8.3946 7 9.08496 7Z"
+          fill="#FFC95B"
+        />
+        <defs>
+          <linearGradient
+            id="mana_paint0_linear"
+            x1="19.0711"
+            y1="4.92893"
+            x2="4.92893"
+            y2="19.0711"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#FF2D55" />
+            <stop offset="1" stopColor="#FFBC5B" />
+          </linearGradient>
+          <linearGradient
+            id="mana_paint1_linear"
+            x1="12.2079"
+            y1="8.5"
+            x2="12.2079"
+            y2="16"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#A524B3" />
+            <stop offset="1" stopColor="#FF2D55" />
+          </linearGradient>
+          <linearGradient
+            id="mana_paint2_linear"
+            x1="17.706"
+            y1="12.5"
+            x2="17.706"
+            y2="18"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stopColor="#A524B3" />
+            <stop offset="1" stopColor="#FF2D55" />
+          </linearGradient>
+        </defs>
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+  usdt_circle_color: {
+    path: (
+      <g>
+        <circle cx="12" cy="12" r="10" fill="#27A17B" />
+        <path
+          d="M18.0056 12.2283C18.0056 11.4745 15.9545 10.8456 13.2289 10.7005L13.2287 9.49951H16.6319V7H7.326V9.49951H10.729V10.7064C8.05301 10.8615 6.05127 11.4838 6.05127 12.2283C6.05127 12.9729 8.05301 13.5953 10.729 13.7501V18.0629H13.2287V13.756C15.9545 13.6112 18.0056 12.9821 18.0056 12.2283ZM12.0284 12.9709C9.1028 12.9709 6.73107 12.5181 6.73107 11.9592C6.73107 11.486 8.43172 11.0887 10.729 10.9781V11.263H10.7293V12.4302C11.1434 12.4535 11.5787 12.4656 12.0284 12.4656C12.4424 12.4656 12.8446 12.4551 13.2289 12.4358V10.9738C15.576 11.0776 17.3258 11.479 17.3258 11.9592C17.3257 12.5181 14.954 12.9709 12.0284 12.9709Z"
+          fill="white"
+        />
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+  lrc_circle_color: {
+    path: (
+      <g>
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="12" cy="12" r="10" fill="#1C42FF" />
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M12.9454 11.6426H18V11.6732L10.1054 16.4888L14.0233 13.3567L12.9454 11.6426ZM9.9974 7V16.5524L6 13.3567L9.9974 7Z"
+            fill="white"
+          />
+        </svg>
+      </g>
+    ),
+    viewBox: '0 0 24 24',
   },
 };
