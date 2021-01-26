@@ -1,0 +1,41 @@
+{
+  "name": "@makerdao/dai-ui-theme-borrow",
+  "version": "0.0.66",
+  "description": "Dai UI Borrow Theme",
+  "author": "Adrian le Bas <adrianleb@gmail.com>",
+  "homepage": "https://github.com/makerdao/design-system#readme",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "source": "lib/index.js",
+  "module": "dist/index.m.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makerdao/dai-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "microbundle --globals @theme-ui/color=color",
+    "build:watch": "microbundle watch --globals @theme-ui/color=color",
+    "prepublishOnly": "yarn && yarn build"
+  },
+  "bugs": {
+    "url": "https://github.com/makerdao/dai-ui/issues"
+  },
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.8"
+  },
+  "gitHead": "f3318a188b486573a2f76bd78db2e92c5ce886e1",
+  "dependencies": {
+    "@theme-ui/color": "^0.3.1"
+  }
+}
