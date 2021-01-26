@@ -1,7 +1,7 @@
 {
-  "name": "@makerdao/dai-ui-theme-casual",
+  "name": "@makerdao/dai-ui-theme-borrow",
   "version": "0.0.66",
-  "description": "Dai UI Casual Theme",
+  "description": "Dai UI Borrow Theme",
   "author": "Adrian le Bas <adrianleb@gmail.com>",
   "homepage": "https://github.com/makerdao/design-system#readme",
   "license": "Apache-2.0",
