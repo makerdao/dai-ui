@@ -25,7 +25,7 @@
     "@theme-ui/prism": "^0.3.0",
     "copy-to-clipboard": "^3.3.1",
     "next": "^9.0.2",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-live": "^2.2.2",
